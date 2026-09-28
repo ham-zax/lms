@@ -4,16 +4,16 @@
 
 This report calibrates question-generation style from public **recall-based reconstructions**, not official NBEMS question papers.
 
-Observed source set:
+Evidence basis for this report is intentionally explicit. Where a source appears in the manifests, the manifest evidence class controls what may be claimed; the two 2025 independent public recall reconstructions named below are used only as qualitative, non-denominator sources:
 
-- 2021: PrepLadder December 2021 recall PDF.
-- 2022: PrepLadder June 2022 recall PDF.
-- 2023: PrepLadder January 2023 recall PDF.
-- 2024: PrepLadder January and June 2024 recall PDFs.
-- 2025: public January 2025 subject-wise 300-question recall and July 2025 subject-wise recall, cross-checked against PrepLadder's current PYQ/trend pages.
-- Current format constraint: NBEMS FMGE information bulletin for time-bound sections.
+- 2021: the PrepLadder December 2021 direct PDF URL was verified, but the PDF content was **not inspected** in the recorded research. It is discovery evidence only (R5), so no detailed 2021 content pattern is treated as established here.
+- 2022: the PrepLadder June 2022 recall PDF was inspected as a 149-page provider recall document (R1). This is the strongest full-recall evidence in the current repository record.
+- 2023: FMGEPrep public previews are available as small samples (R3). The PrepLadder January 2023 PDF is listed and its mirror relationship is verified, but its content is still recorded as **not inspected**; no whole-paper 2023 frequency or detailed content claim is made.
+- 2024: FMGEPrep public previews are available as small samples (R3). The PrepLadder January/June 2024 PDFs are listed but their content is recorded as **not inspected**; no whole-paper 2024 frequency or detailed content claim is made.
+- 2025: public January and July subject-wise recall reconstructions named in the Sources section were used qualitatively for pattern inspection. They are not treated as complete-paper denominator evidence, and the PrepLadder 2025 PDF binaries themselves remain uninspected in the manifest.
+- Current format constraint: the NBEMS FMGE information bulletin is authoritative for time-bound sections and exam structure, not recalled question wording.
 
-The 2025 PrepLadder PDF binaries were listed publicly but were not reliably fetchable through the research tool during this pass, so 2025 conclusions use independent recall reconstructions rather than pretending those binaries were inspected.
+Accordingly, the stable generator recommendations below are qualitative synthesis, not a claim that every listed provider PDF for every year was fully inspected. R3 samples may illustrate a question form but may not support whole-paper percentages or prevalence claims.
 
 Do not interpret recall-provider answer keys as authoritative medical truth.
 
@@ -38,13 +38,9 @@ The generator should reproduce this mixture rather than making every higher-tier
 
 ### 2021
 
-The December 2021 recall already contains a strong mixture of direct and image-assisted items. Examples include an image-led dermatology feature question, image/anatomy identification, a clinical lesion followed by treatment choice, and short direct association questions.
+**Evidence limit:** the direct PrepLadder PDF URL is verified, but its contents are recorded as not inspected (R5). The repository therefore does not currently support a detailed 2021 content-pattern claim.
 
-Pattern:
-- direct recall remains substantial;
-- images are not decorative - they often carry the diagnostic clue;
-- many questions require one relationship: image/condition -> structure, cause, treatment or feature;
-- options are generally same-domain alternatives.
+Use 2021 only as a discovery/historical source until the PDF is actually inspected and the manifest is upgraded with page/hash/inspection evidence.
 
 ### 2022
 
@@ -58,24 +54,15 @@ Pattern:
 
 ### 2023
 
-The January 2023 recall continues the mixture rather than replacing direct recall. The same early section contains culture-media recall, molecular mechanism, histology identification, nerve supply, embryology from a neck mass, gait localization, barium-swallow interpretation, lymphatic spread and physiology.
+**Evidence limit:** the recorded full PrepLadder January 2023 PDF content is not inspected (R5). Public FMGEPrep previews exist as R3 samples and can illustrate individual stem forms, but they cannot establish a whole-paper distribution.
 
-Pattern:
-- direct and clinical questions coexist in the same subject block;
-- basic sciences are frequently clinically framed;
-- image/diagram interpretation is routine;
-- questions often ask for a mechanism, localization or downstream relationship instead of the fact exactly as memorized.
+The defensible qualitative takeaway from the available samples is limited: direct and short applied questions both occur. Stronger claims about overall image frequency, subject mix, or year-wide trends should wait for an R1 inspection.
 
 ### 2024
 
-January and June 2024 recall material remains compact. January opens with very direct anesthesia facts; June includes both direct factual questions and short clinical/application items, including DNA-repair syndromes, ENT diagnosis, seizure management, drug adverse-effect management, immune deficiency and ocular diagnosis.
+**Evidence limit:** the PrepLadder January and June 2024 PDFs are recorded as uninspected (R5). Public FMGEPrep previews are R3 samples and may illustrate examples, not whole-paper frequencies.
 
-Pattern:
-- one-line direct questions remain normal;
-- short clinical scenarios are common but usually contain only the clues needed;
-- management/next-step questions are prominent in clinical and pharmacology material;
-- negative/EXCEPT questions occur, but are a minority and should not be overgenerated;
-- visual identification and instrument/anatomy questions remain important.
+From those samples, it is reasonable only to retain the broad observation that both direct factual and short clinical/application formats are present. Claims about the prevalence of management items, negative/EXCEPT items, visual items, or subject-wide balance remain provisional until a full recall is inspected.
 
 ### 2025
 

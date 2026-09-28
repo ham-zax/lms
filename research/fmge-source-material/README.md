@@ -30,22 +30,22 @@ This is **not a question paper**. It is an implementation/reference document pub
 
 - `official/` - authoritative NBEMS reference documents.
 - `manifests/` - source discovery, provenance, quality classes, aliases and local-asset inventory.
-- `corpus/2022/` ... `corpus/2026/` - locally available recall source documents for the primary five-year window; `corpus/2021/` remains available for supplemental historical work.
+- `corpus/2022/` ... `corpus/2026/` - locally available recall source documents for the 2022-2026 research/discovery window; `corpus/2021/` remains available for the separate historical calibration view.
 - `extracted/` - normalized question-level extraction schema/data.
 - `analysis/` - derived counts, trends and prompt-calibration findings.
 
 [`manifests/local-assets.csv`](manifests/local-assets.csv) is the authoritative inventory of PDF/files actually present locally.
 
-## Primary analysis window: 2022-2026
+## Research/discovery window: 2022-2026
 
-The working catalog is [`manifests/paper-catalog-2022-2026.csv`](manifests/paper-catalog-2022-2026.csv). It records the publicly located recall-paper resources from FMGEPrep, Careers360, NEETFMGE Plans and PrepLadder and assigns an evidence class based on what has actually been checked. The catalog records source links, not imported questions or answers.
+The working **research/discovery** catalog is [`manifests/paper-catalog-2022-2026.csv`](manifests/paper-catalog-2022-2026.csv). It records the publicly located recall-paper resources from FMGEPrep, Careers360, NEETFMGE Plans and PrepLadder and assigns an evidence class based on what has actually been checked. The catalog records source links, not imported questions or answers.
 
-[`manifests/paper-catalog-2021-2025.csv`](manifests/paper-catalog-2021-2025.csv) preserves the alternative five-completed-years view as supplemental research. It is not the primary denominator. Neither catalog establishes a whole-paper denominator until the underlying source has been inspected for completeness and duplicate questions.
+[`manifests/paper-catalog-2021-2025.csv`](manifests/paper-catalog-2021-2025.csv) is the **historical pattern-calibration window** used by the five-year report and prompt calibration. It is distinct from the 2022-2026 research/discovery window. Neither catalog establishes a whole-paper denominator until the underlying source has been inspected for completeness and duplicate questions.
 
 Important supporting files:
 
 - [`manifests/source-quality-rubric.md`](manifests/source-quality-rubric.md) - grades official, full recall, sample, mirror and landing-page sources.
-- [`manifests/session-aliases-2022-2026.csv`](manifests/session-aliases-2022-2026.csv) - preserves provider month labels in the primary window and marks possible June/July or December/January aliases for later fingerprint verification.
+- [`manifests/session-aliases-2022-2026.csv`](manifests/session-aliases-2022-2026.csv) - preserves provider month labels in the research/discovery window and marks possible June/July or December/January aliases for later fingerprint verification.
 - [`analysis/session-source-findings-2026-09-28.md`](analysis/session-source-findings-2026-09-28.md) - facts added from the current research session, including the verified PrepLadder December 2021 direct-PDF URL.
 - [`extracted/question-schema.md`](extracted/question-schema.md) - the per-question classification schema used for pattern extraction.
 

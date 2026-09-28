@@ -1,6 +1,6 @@
 # Recall corpus
 
-Primary analysis window: **2022-2026**. The `2021/` directory is reserved for supplemental historical material.
+Research/discovery window: **2022-2026**. The `2021/` directory is supplemental to that discovery window but remains part of the separate **2021-2025 historical pattern-calibration window**.
 
 This directory is for local source documents that are actually available for analysis. A URL in a manifest is not a corpus file.
 

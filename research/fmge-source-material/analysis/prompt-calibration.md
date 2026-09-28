@@ -2,7 +2,7 @@
 
 ## Version
 
-v4 - calibrated against 2021-2025 public FMGE recall patterns and current NBEMS exam-speed constraints, with explicit source, tier, exclusion and audit gates.
+v5 - calibrated against the 2021-2025 historical pattern-calibration window using only the evidence levels recorded in the research manifests, plus current NBEMS exam-speed constraints, with explicit source, truth-compatibility, spatial-relation, tier, exclusion and audit gates.
 
 ---
 
@@ -18,7 +18,7 @@ The goal is NOT to reproduce questions already present in the PDF.
 
 The goal is to extract the medical knowledge in the PDF and create new questions that test the same concepts in the **compressed mixed style repeatedly seen in recent FMGE recalls**.
 
-GOLDEN RULE: Every question must be solvable, defensible, explainable and distinct from prior questions using only the uploaded PDF. A medically true answer, a plausible FMGE style or a correct option appearing somewhere in the PDF is insufficient. The decisive stem clue, answer, elimination of plausible distractors, reasoning bridge, calculation assumptions and teaching review must all stay within E0-E2. Extract small source details aggressively without adding outside examinable knowledge or repeating Question DNA.
+GOLDEN RULE: Every question must be solvable, defensible, explainable and distinct from prior questions using only the uploaded PDF, and the fact being taught must also be medically/technically defensible. The usable question space is the intersection of **PDF-supported knowledge** and **truth-compatible knowledge**. A medically true answer without PDF support is forbidden, and a PDF statement that appears false, unsafe, overgeneralized, obsolete without a time qualifier, or spatially misread must not be turned into a canonical teaching question. External knowledge may validate or veto a candidate but must never silently become examinable knowledge. Extract small source details aggressively without adding outside examinable knowledge or repeating Question DNA.
 
 ---
 
@@ -81,6 +81,18 @@ Source support applies to the **entire examinable item**. For each candidate ver
 
 SOURCE-ONLY ELIMINATION TEST: Could a learner whose examinable knowledge consists only of this PDF select one best answer using E0-E2? Familiar entities absent from the PDF may appear as distractors only when no outside fact about them is needed to eliminate them. Do not rely on general medical knowledge to make an option obviously wrong. Apply this especially to contraindications, vaccine schedules, drugs, adverse effects, organisms, staging, guideline thresholds, calculations and mechanisms.
 
+TRUTH-COMPATIBILITY GATE: The PDF is the examinable source, but it is not assumed infallible. Before accepting a candidate, perform a truth sanity check. For facts that are dynamic, safety-relevant, unusually specific, annotation-dependent, or plausibly erroneous/outdated - especially doses, schedules, cutoffs, contraindications, device principles, disease-specific definitions, programme status, treatment rules and current guidelines - verify against an authoritative source when available. This external material is **validation-only**: it may approve, qualify, veto or force a rewrite, but it must not supply a hidden step needed to solve the question.
+
+Use the following rule:
+- PDF-supported + medically defensible -> may be tested.
+- PDF-supported but externally contradicted/unsafe -> reject, or narrow/reframe to the shared true statement if that statement is still supported by the PDF.
+- Externally true but absent from the PDF -> do not test.
+- Version/formulation/program-dependent -> include the necessary qualifier only when the PDF supports that qualifier; otherwise exclude.
+- Historically true but no longer current -> time-anchor the stem if the PDF clearly supports the historical frame; otherwise exclude.
+- Do **not** use “according to the PDF” as a loophole for teaching a false or unsafe claim.
+
+When external verification is unavailable for a high-risk or apparently conflicting claim, prefer exclusion over confident teaching. Do not silently correct the PDF into an outside answer.
+
 If answering, eliminating a plausible option or defending it in the review requires an unstated dose, cutoff, guideline, staging rule, contraindication, diagnostic criterion or other important fact, remove the unsupported explanation or revise/reject the item. Removing text is allowed only if the item remains defensible from the PDF.
 
 Tier 3 must be inference, not hallucination.
@@ -90,6 +102,8 @@ Tier 3 must be inference, not hallucination.
 # 3. COMPLETE DOCUMENT INGESTION
 
 Before generating Question 1, inspect the entire accessible PDF.
+
+For scanned/image-heavy PDFs, **the rendered page image is authoritative over OCR, transcription, extracted markdown, or image-to-text summaries**. OCR/extracted text may be used for navigation, but any candidate that depends on handwriting, arrows, table alignment, spatial grouping, or a visual relationship must be checked against the rendered page itself before it enters the Concept Ledger.
 
 Build an internal CONCEPT LEDGER containing:
 
@@ -146,11 +160,20 @@ Use CLEAR handwriting.
 
 Do not generate an item whose correctness depends on PARTIALLY CLEAR or UNREADABLE handwriting.
 
+SPATIAL-RELATION GATE: A handwritten fact can be legible yet still be attached to the wrong printed concept if page geometry is misread. For every handwritten or free-floating annotation, inspect the rendered page and determine what it modifies using explicit arrows/leader lines, row or column alignment, shared underline/highlight, color continuity, enclosing boxes, labels, and only then proximity. Do **not** assign an annotation to the nearest text merely because empty space was used for writing.
+
+Internally grade the relation:
+- HIGH = explicit arrow/line/box/row alignment or multiple converging spatial cues.
+- MEDIUM = plausible association but only one weak spatial cue.
+- LOW = free-floating, crowded, or multiple nearby targets.
+
+Use HIGH-confidence relations. MEDIUM may be used only if a second page or independent cue corroborates the same relation. LOW is forbidden. If needed, re-render the page at higher resolution before deciding.
+
 If handwritten information conflicts with printed information, flag it and exclude the disputed fact unless the PDF itself resolves the conflict.
 
-Never invent missing handwriting.
+Never invent missing handwriting, missing arrows, implied row membership, or the target of a note.
 
-Apply the same rule to conflicting years, schedules, recommendations or versions anywhere in the PDF. If the PDF clearly identifies the applicable version, use it and cite the resolving viewer page. Otherwise exclude items whose correctness depends on the conflict and list the conflict in the ingestion report. Do not silently repair the PDF with an external guideline unless external-knowledge mode is enabled.
+Apply the same rule to conflicting years, schedules, recommendations or versions anywhere in the PDF. If the PDF clearly identifies the applicable version, use it and cite the resolving viewer page. Otherwise exclude items whose correctness depends on the conflict and list the conflict in the ingestion report. Do not silently repair the PDF with an external guideline. External authoritative material may be used only through the truth-compatibility gate above, to validate/veto/reframe rather than to become the examinable source.
 
 ---
 
@@ -640,11 +663,13 @@ Before displaying each question, internally ask:
 6. If E2, are both cited facts necessary and is the bridge source-supported?
 7. If a calculation, are all inputs, factors and interpretation supplied?
 8. Are conflicts and uncertain handwriting excluded or resolved within the PDF?
-9. Are distractors plausible and same-domain without importing required outside facts?
-10. Is the difficulty medical rather than linguistic, and is the stem concise and source-native?
-11. Is the item FMGE-like rather than NEET-PG/super-specialty escalation?
-12. Have I already tested this micro-competency?
-13. If image-based, is the actual visual or a faithful self-contained translation available?
+9. If handwriting/layout is involved, is the annotation-to-target relationship HIGH-confidence on the rendered page?
+10. Does the tested claim pass the truth-compatibility gate, including version/formulation/time qualifiers where needed?
+11. Are distractors plausible and same-domain without importing required outside facts?
+12. Is the difficulty medical rather than linguistic, and is the stem concise and source-native?
+13. Is the item FMGE-like rather than NEET-PG/super-specialty escalation?
+14. Have I already tested this micro-competency?
+15. If image-based, is the actual visual or a faithful self-contained translation available?
 
 Rewrite or reject any failing item.
 
@@ -657,7 +682,7 @@ Do not expose hidden chain-of-thought.
 For a 70-100+ page PDF:
 
 PHASE 1 - INGEST
-Read/index the entire accessible PDF in page ranges if needed. Lock citations to PDF viewer page numbers. If pages remain unprocessed because of a tool or context limit, stop and report them before generating.
+Read/index the entire accessible PDF in page ranges if needed. For scanned/image-heavy pages, inspect rendered page images rather than relying on OCR alone, and record ambiguous spatial associations. Lock citations to PDF viewer page numbers. If pages remain unprocessed because of a tool or context limit, stop and report them before generating.
 
 PHASE 2 - EXCLUSION MAP
 Identify the Question DNA of PDF solved questions, prior conversation blocks and any user-supplied comparison bank. Remap external-bank page citations when supplied; an item without a verifiable page still belongs in the semantic exclusion set.
@@ -672,7 +697,7 @@ PHASE 5 - CANDIDATE POOL
 Before drafting full questions, consider 1.5-2 times the requested block size in candidate Question DNAs (75-100 for a 50-question block). Each candidate records only viewer page(s), concept, competency, tier, archetype, correct-answer relationship, closest distractor and discriminator. Do not fabricate candidate counts; if this pool cannot be tracked reliably, use a smaller block and report the limitation.
 
 PHASE 6 - ADVERSARIAL QC
-Compare candidates with the full exclusion set. Reject duplicate DNA, weak support, E3 dependence, artificial tier inflation, poor distractors, incomplete calculations, source conflicts, uncertain handwriting and redundant microfacts. Record one primary rejection reason per candidate so counts reconcile. Downgrades and explanation trims are tracked separately.
+Compare candidates with the full exclusion set. Reject duplicate DNA, weak support, E3 dependence, artificial tier inflation, poor distractors, incomplete calculations, source conflicts, uncertain handwriting, ambiguous annotation-to-target linkage, truth conflicts and redundant microfacts. For dynamic/safety-relevant/suspicious facts, perform validation-only authoritative verification. If the PDF claim conflicts with defensible truth, reject it or rewrite to the PDF x truth intersection; never replace the answer with an outside-only fact. Record one primary rejection reason per candidate so counts reconcile. Downgrades, truth-compatible reframes and explanation trims are tracked separately.
 
 PHASE 7 - QUESTION DESIGN AND DELIVERY
 Write full stems and options only for accepted candidates. Recheck the completed items, then deliver in 50-question blocks unless I request another size or source/context limits require a smaller block.
@@ -695,7 +720,9 @@ Start with a compact:
 - visual/table material detected: Yes/No;
 - existing solved questions detected: approximate count if feasible;
 - unreadable/uncertain pages;
+- pages/annotations with unresolved spatial linkage;
 - significant source/version conflicts and whether the PDF resolves them;
+- source-truth conflicts detected, and whether each was excluded or safely reframed;
 - external-bank page numbers remapped and verified, if applicable;
 - pages not processed.
 
@@ -792,6 +819,8 @@ Never fabricate a page citation.
 
 PDF viewer page number is authoritative. Printed slide/page numbering may appear secondarily but never replaces it. Before using Question DNA from an external/generated bank, verify and remap its page numbers against this PDF; never inherit those citations unverified.
 
+External truth-validation sources are **not** substitutes for PDF citations and are not part of the learner's examinable evidence. They function only as a quality-control veto/qualification layer. If external validation materially changes the claim, rewrite or reject the item so the final answer remains fully supported by the PDF.
+
 Tier 1 usually cites one direct source location.
 Tier 2 may cite one or more.
 Tier 3 may cite multiple pages.
@@ -843,13 +872,17 @@ Rejected for E3 dependence:
 Rejected for distractor ambiguity:
 Rejected for tier inflation:
 Rejected for unclear handwriting:
+Rejected for ambiguous spatial annotation linkage:
 Rejected for source conflict:
+Rejected for source-truth conflict:
 Rejected for calculation incompleteness:
 Rejected for excessive similarity to previous generated banks:
 Rejected for other reasons (specify):
 
 Tier downgrades during QC:
 Tier upgrades during QC:
+Truth-compatible reframes during QC:
+High-risk facts externally validated:
 Explanations trimmed for outside knowledge:
 Questions remapped because of page-number mismatch:
 
@@ -871,8 +904,12 @@ Printed text: USE
 Clear handwriting: USE
 Tables/diagrams: USE
 External examinable knowledge: OFF
+External truth validation: ON AS VETO/QUALIFICATION ONLY
 Full-item source boundary: REQUIRED
 Source-only elimination test: REQUIRED
+Truth-compatibility gate: REQUIRED
+Rendered-page authority for scanned/image PDFs: REQUIRED
+Spatial annotation linkage: HIGH CONFIDENCE REQUIRED
 Cross-page inference: ON
 Tier 3 two-step synthesis: ON
 Tier 3 long-vignette inflation: OFF

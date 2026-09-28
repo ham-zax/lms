@@ -2,11 +2,13 @@
 
 These are research observations established during the ChatGPT session and not binary PDF assets.
 
-## Target window
+## Target windows
 
-Primary historical pattern window: **2022-2026**. The 2021 material remains supplemental.
+Research/discovery window: **2022-2026**.
 
-The 2026 official bulletin describes the current exam blueprint. The 2026 recall links belong to the primary discovery window, but their public samples and landing pages cannot supply a whole-paper denominator.
+Historical pattern-calibration window: **2021-2025**. Thus 2021 is supplemental to the discovery window but part of the five-year historical calibration window.
+
+The 2026 official bulletin describes the current exam blueprint. The 2026 recall links belong to the research/discovery window, but their public samples and landing pages cannot supply a whole-paper denominator.
 
 ## Added from this session
 
