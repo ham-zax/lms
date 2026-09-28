@@ -15,9 +15,13 @@ Examples:
 
 ## Current status
 
-No third-party recall PDF binary is in this repository. The manifests contain source URLs and research observations; a URL is not a local corpus asset.
+The PrepLadder recall PDFs (Dec 2021, Jun 2022, Jan 2023, Jan/Jun 2024 selections, Jan/Jul 2025 Parts 1-2) are downloaded here for local analysis, together with cached FMGEPrep sample pages (`fmgeprep/`) and the extracted full-text `recall-questions-full.csv`. All of these are **gitignored**: they are third-party recall material and are never committed. Rebuild them with:
 
-The only local PDF currently verified in this research tree is the official NBEMS 2026 information bulletin under `../official/`.
+    uv run scripts/fmge/extract_recall_questions.py --fetch   # needs the PDFs listed in the script
+    uv run scripts/fmge/analyse_recall_questions.py
+
+Only the text-free `../extracted/question-patterns.csv` and the analysis files are committed.
+
 
 When a recall document is added with permission to store it, record its provenance in `../manifests/paper-catalog-2022-2026.csv` and mark `corpus_status=local`.
 

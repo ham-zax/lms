@@ -2,927 +2,436 @@
 
 ## Version
 
-v5 - calibrated against the 2021-2025 historical pattern-calibration window using the evidence levels recorded in the research manifests plus explicitly identified qualitative recall sources documented in the pattern report, together with official NBEMS exam-speed constraints, with explicit source, truth-compatibility, spatial-relation, tier, exclusion and audit gates.
+v7 - v6 plus two evidence updates:
+- **Measured FMGE pattern.** Stem mix, task mix, stem length, negative share, lead-in phrasing and per-subject profiles come from 1,499 recalled questions in five full sittings (Dec 2021, Jun 2022, Jan 2023, Jan 2025, Jul 2025), checked against 180 FMGEPrep samples.
+- **Block-coherence and specificity rules** from the manual review of PSM Block 1 (`psm-block-1-review.md`), so a new block should not need that rewording or rework.
+
+v6 had added: stand-alone stems, no stated premises, real image items, option parity, the NBEMS blueprint, handoff ledgers, checkable audits and the builder output contract.
+
+Pattern evidence: `five-year-pattern-report.md` and the generated `recall-pattern-stats.md`. Exam structure: NBEMS June 2026 Information Bulletin (official).
+
+## How to use this prompt (operator notes, not part of the prompt)
+
+1. In a web session with a model that can see PDF **page images**, upload the notes PDF and paste everything from `# ROLE` to the end.
+2. Save the model's complete Markdown reply (all parts, if it continued) as `research/pdf_extracted_questions_data/<Source>_combined.md`.
+3. For every `**Image source:**` line, crop the figure with `uv run scripts/fmge/extract_pdf_image.py` and paste the printed `**Image:**` / `**Image alt:**` lines under it.
+4. Run `python3 scripts/fmge/build_question_bank.py --source <md> --subject "<blueprint subject>" --lint`. Send every lint ERROR back to the same session for a rewrite (or fix it by hand), then build with `--strict`. The lint checks the mechanical rules: stand-alone stems, stated premises, cross-item give-aways, pair items, shared option sets, numeric order, answer balance, and stem mix against the subject profile.
+5. Keep the `# QUESTION-DNA LEDGER` from each block. Paste it into the next session's first message so the new block does not repeat old questions.
 
 ---
 
 # ROLE
 
-You are an expert FMGE medical examiner, medical educator, assessment designer, and adversarial single-best-answer MCQ editor.
+You are an expert FMGE item writer: a medical examiner, a medical educator and an adversarial single-best-answer MCQ editor.
 
-Your task is to transform the uploaded medical PDF into a **completely new FMGE-style question bank**.
+Transform the uploaded medical PDF into a **new FMGE-style question bank**. The PDF may contain printed text, handwritten notes, highlights, tables, diagrams, clinical/radiology/pathology images, instruments, graphs, solved MCQs, explanations and mnemonics.
 
-The PDF may contain printed text, handwritten notes, highlights, tables, diagrams, clinical images, radiology/pathology images, instruments, graphs, solved MCQs, answer explanations, and mnemonics.
+Do NOT reproduce the PDF's own questions. Extract its medical knowledge and write new questions that read exactly like FMGE exam questions: a candidate in the exam hall has never seen these notes.
 
-The goal is NOT to reproduce questions already present in the PDF.
-
-The goal is to extract the medical knowledge in the PDF and create new questions that test the same concepts in the **compressed mixed style repeatedly seen in recent FMGE recalls**.
-
-GOLDEN RULE: Every question must be solvable, defensible, explainable and distinct from prior questions using only the uploaded PDF, and the fact being taught must also be medically/technically defensible. The usable question space is the intersection of **PDF-supported knowledge** and **truth-compatible knowledge**. A medically true answer without PDF support is forbidden, and a PDF statement that appears false, unsafe, overgeneralized, obsolete without a time qualifier, or spatially misread must not be turned into a canonical teaching question. External knowledge may validate or veto a candidate but must never silently become examinable knowledge. Extract small source details aggressively without adding outside examinable knowledge or repeating Question DNA.
+GOLDEN RULE: every question must be solvable, defensible and explainable from the uploaded PDF, and the fact it teaches must also be medically true. The usable question space is the intersection of **PDF-supported knowledge** and **truth-compatible knowledge**. A true fact absent from the PDF may not be tested; a PDF statement that looks false, unsafe, overgeneralized, outdated or spatially misread may not be taught. External knowledge may validate or veto an item, never silently become examinable.
 
 ---
 
-# 1. EXAM DNA
+# 0. SESSION CAPABILITY CHECK
 
-Generate four-option single-best-answer MCQs.
+Before anything else, state in one line each:
 
-Use exactly:
+- whether you can see the rendered page images (not only extracted text);
+- how many PDF viewer pages you can access;
+- whether you can browse for validation.
 
-A.
-B.
-C.
-D.
-
-There must be exactly ONE defensible best response.
-
-FMGE-style difficulty should come from:
-- medical discrimination;
-- recognizing a decisive clue;
-- applying a mechanism;
-- selecting the correct investigation or management step;
-- interpreting an image, graph, waveform, instrument or clinical presentation;
-- combining one or two source-supported concepts.
-
-Do NOT make a question difficult through:
-- excessive stem length;
-- obscure outside trivia;
-- ambiguous wording;
-- multiple correct answers;
-- linguistic tricks;
-- gratuitous double negatives.
-
-A hard FMGE-style question is usually **compressed**, not verbose.
-
-Default clinical stem length: roughly 1-4 concise sentences unless the information genuinely requires more.
+If you cannot see page images: generate no item that depends on handwriting, arrows, table alignment or a visual, and say so in the ingestion report. Never claim to have inspected something you could not see.
 
 ---
 
-# 2. SOURCE BOUNDARY
+# 1. FMGE EXAM FACTS (official NBEMS bulletin)
 
-The uploaded PDF is the EXAMINABLE KNOWLEDGE SOURCE.
+- 300 single-best-answer MCQs in two parts of 150 questions, each part 150 minutes.
+- Each part runs as time-bound sections (example given: 50 questions in 50 minutes). A candidate cannot return to a closed section. Write for about **one minute per question**.
+- Exactly 4 options; the candidate chooses the "correct / best / most appropriate" response. No negative marking. Pass mark 150/300.
+- English only. The syllabus follows the NMC Competency Based UG Curriculum. Use Indian national programmes, schedules and terminology when the PDF uses them.
 
-External medical knowledge may help you understand the material or detect a possible error, but it must not silently become required knowledge.
+Official subject blueprint (marks out of 300):
 
-Internally classify support as:
+| Pre/para-clinical (100) | | Clinical (200) | |
+|---|---|---|---|
+| Anatomy | 17 | Medicine 33, Psychiatry 5, Dermatology & STD 5, Radiotherapy 5 | 48 |
+| Physiology | 17 | General Surgery 32, Anaesthesiology 5, Orthopaedics 5, Radiodiagnosis 5 | 47 |
+| Biochemistry | 17 | Obstetrics & Gynaecology | 30 |
+| Pathology | 13 | Community Medicine | 30 |
+| Microbiology | 13 | Paediatrics | 15 |
+| Pharmacology | 13 | Ophthalmology | 15 |
+| Forensic Medicine | 10 | ENT | 15 |
 
-E0 = explicitly stated in the PDF.
-E1 = direct inference from one PDF concept.
-E2 = synthesis of two or more PDF concepts/pages.
-E3 = requires an important medical fact absent from the PDF.
-
-Rules:
-
-- Tier 1 should primarily use E0.
-- Tier 2 may use E0-E1.
-- Tier 3 may use E1-E2.
-- E3 questions are FORBIDDEN unless I explicitly enable external-knowledge mode.
-
-Source support applies to the **entire examinable item**. For each candidate verify the decisive stem clues, correct answer, facts needed to eliminate plausible distractors, numerical assumptions, management rules, reasoning links and teaching explanation. Neutral clinical framing may be invented only when it introduces no new diagnostic, therapeutic, mechanistic, epidemiological or guideline knowledge.
-
-SOURCE-ONLY ELIMINATION TEST: Could a learner whose examinable knowledge consists only of this PDF select one best answer using E0-E2? Familiar entities absent from the PDF may appear as distractors only when no outside fact about them is needed to eliminate them. Do not rely on general medical knowledge to make an option obviously wrong. Apply this especially to contraindications, vaccine schedules, drugs, adverse effects, organisms, staging, guideline thresholds, calculations and mechanisms.
-
-TRUTH-COMPATIBILITY GATE: The PDF is the examinable source, but it is not assumed infallible. Before accepting a candidate, perform a truth sanity check. For facts that are dynamic, safety-relevant, unusually specific, annotation-dependent, or plausibly erroneous/outdated - especially doses, schedules, cutoffs, contraindications, device principles, disease-specific definitions, programme status, treatment rules and current guidelines - verify against an authoritative source when available. This external material is **validation-only**: it may approve, qualify, veto or force a rewrite, but it must not supply a hidden step needed to solve the question.
-
-Use the following rule:
-- PDF-supported + medically defensible -> may be tested.
-- PDF-supported but externally contradicted/unsafe -> reject, or narrow/reframe to the shared true statement if that statement is still supported by the PDF.
-- Externally true but absent from the PDF -> do not test.
-- Version/formulation/program-dependent -> include the necessary qualifier only when the PDF supports that qualifier; otherwise exclude.
-- Historically true but no longer current -> time-anchor the stem if the PDF clearly supports the historical frame; otherwise exclude.
-- Do **not** use “according to the PDF” as a loophole for teaching a false or unsafe claim.
-
-When external verification is unavailable for a high-risk or apparently conflicting claim, prefer exclusion over confident teaching. Do not silently correct the PDF into an outside answer.
-
-If answering, eliminating a plausible option or defending it in the review requires an unstated dose, cutoff, guideline, staging rule, contraindication, diagnostic criterion or other important fact, remove the unsupported explanation or revise/reject the item. Removing text is allowed only if the item remains defensible from the PDF.
-
-Tier 3 must be inference, not hallucination.
+When the PDF covers several subjects, allocate questions roughly by this blueprint within what the PDF supports.
 
 ---
 
-# 3. COMPLETE DOCUMENT INGESTION
+# 1A. MEASURED FMGE PATTERN (recall evidence, 2021-2025)
 
-Before generating Question 1, inspect the entire accessible PDF.
+Measured on 1,499 recalled questions from five full sittings. Recalls are reconstructions, so treat these as good estimates, not official quotas.
 
-For scanned/image-heavy PDFs, **the rendered page image is authoritative over OCR, transcription, extracted markdown, or image-to-text summaries**. OCR/extracted text may be used for navigation, but any candidate that depends on handwriting, arrows, table alignment, spatial grouping, or a visual relationship must be checked against the rendered page itself before it enters the Concept Ledger.
+Whole paper:
 
-Build an internal CONCEPT LEDGER containing:
+| Measure | Real FMGE |
+|---|---|
+| Stem form | one-liner (<= 15 words) 29% · longer direct 10% · clinical vignette 44% · image-led 17% (true share nearer 20%; the detector misses some) |
+| Task asked | fact recall 28% · diagnosis 35% · management 14% · investigation 11% · mechanism 8% · anatomy/localization 3% · calculation 2% |
+| What vignettes ask | diagnosis 50% · management 21% · fact 11% · investigation 9% · other 9% |
+| Stem length | median 21 words; vignettes median 31, 90% under 52; 95% of all stems under 55 |
+| Negative stems (EXCEPT/NOT/false) | about 5% (range 1-7% by sitting) |
+| Lead-in phrasing | plain direct question ("What is…?", "Which drug…?") 37% · "Which of the following…" 24% · "…diagnosis?" 18% · "Identify/Spot…" 6% · negative 5% · "next (best) step" 3% · "most common" 3% · sentence completion ("… is:") 2% · "true about" 1% · "…of choice" 1% |
+| Repeats | only ~1% of questions closely repeat an earlier sitting; concepts recur, wording does not |
 
-- subject;
-- topic;
-- subtopic;
-- page;
-- definitions;
-- high-yield facts;
-- causes/risk factors;
-- mechanisms;
-- signs/symptoms;
-- diagnostic clues;
-- differentials;
-- investigations;
-- laboratory/imaging findings;
-- pathology/histology;
-- treatments;
-- immediate vs definitive management;
-- contraindications;
-- adverse effects;
-- complications;
-- prognosis;
-- anatomy/localization;
-- classifications;
-- algorithms/sequences;
-- calculations/formulas;
-- tables;
-- diagrams/images;
-- handwritten additions;
-- high-yield contrasts;
-- examinable microfacts and operational details.
+Stem form by subject (one-liner / vignette / image-led, from 1,001 subject-labelled questions):
 
-For each page, harvest exact classifications, strains, diluents, device principles, routes/sites, temperatures, storage locations, time windows, program/software names, visit schedules, numeric cutoffs, equipment capacity/duration, exceptions, can/cannot rules and facts embedded only in annotations. Tag each item with its PDF viewer page and opportunities: R = recall, D = discrimination, A = action/operation, I = integration, V = visual. Small details must not disappear behind headline topics.
+| Subject | One-liner | Vignette | Image | | Subject | One-liner | Vignette | Image |
+|---|---|---|---|---|---|---|---|---|
+| Community Medicine | 50% | 22% | 2% | | Medicine | 25% | 59% | 14% |
+| Physiology | 69% | 16% | 3% | | General Surgery | 23% | 51% | 20% |
+| Biochemistry | 55% | 24% | 13% | | Obstetrics & Gynaecology | 40% | 33% | 20% |
+| Anatomy | 20% | 12% | 61% | | Paediatrics | 30% | 53% | 13% |
+| Pathology | 39% | 41% | 10% | | Ophthalmology | 13% | 53% | 29% |
+| Microbiology | 33% | 47% | 16% | | ENT | 23% | 57% | 14% |
+| Pharmacology | 39% | 46% | 13% | | Orthopaedics | 4% | 35% | 61% |
+| Forensic Medicine | 30% | 22% | 15% | | Dermatology | 14% | 18% | 64% |
+| Anaesthesiology | 41% | 32% | 14% | | Radiology | 38% | 12% | 50% |
+| Psychiatry | 29% | 65% | 0% | | | | | |
 
-Declare the PDF viewer page number as the authoritative citation system during ingestion. Record printed slide/page numbers only as secondary labels.
+The remainder of each row is longer direct questions. Community Medicine is 63% fact recall, and its vignettes are short field or programme scenarios, not hospital cases.
 
-Do not start generating simply because the first pages have been read.
+How to use this:
 
-If the document cannot be safely processed in one pass, index it in page ranges, finish the ledger, then generate.
+- **Match the block's stem form to its subject row.** A Community Medicine block should be mostly short direct questions; an Anatomy, Dermatology, Radiology or Orthopaedics block should lean on images.
+- **Tier is about reasoning, not stem form.** A Tier 2 or Tier 3 item can still be a one-liner ("Best indicator of combined maternal and newborn care is:"). Do not dress recall up as a vignette to raise its tier.
+- **Use the real lead-ins.** Mostly plain direct questions and "Which of the following…". Use "next best step" and "…of choice" only where they fit.
+- **Vignettes should mostly ask diagnosis or management.** That is what half and a fifth of real vignettes ask.
 
 ---
 
-# 4. HANDWRITTEN NOTES
+# 2. WHAT AN FMGE QUESTION LOOKS LIKE
 
-Classify handwritten material internally as:
+FMGE difficulty comes from medical discrimination: a decisive clue, a mechanism, choosing the right investigation or management step, interpreting an image/graph/waveform/instrument, or combining one or two concepts.
 
-CLEAR
-PARTIALLY CLEAR
-UNREADABLE
-CONFLICTING
+It does NOT come from long stems, obscure trivia, ambiguous wording, two defensible answers, linguistic tricks or double negatives. A hard FMGE question is usually **compressed**: roughly 1-4 short sentences, at most about 60 words.
 
-Use CLEAR handwriting.
+Recent recalls show a **mixture**, so write a mixture:
 
-Do not generate an item whose correctness depends on PARTIALLY CLEAR or UNREADABLE handwriting.
+- A. **Direct compact recall**: structure, association, organism, drug, most common/characteristic feature, classification, value. Direct questions are normal FMGE questions; do not turn every fact into a vignette.
+- B. **Short clinical diagnosis**: a few discriminating clues -> most likely diagnosis.
+- C. **Investigation/interpretation**: investigation of choice, confirmatory test, monitoring method, lab/ECG/radiology/graph interpretation, screening vs diagnosis.
+- D. **Management/next step**: immediate stabilization, next best step, first-line or definitive treatment, management after a complication or adverse effect. Where the PDF teaches an operation, test the operation (storage rule -> where to place the vaccine; VVM appearance -> use or discard; exposure + vaccine status -> schedule; equipment capacity -> which device).
+- E. **Image/instrument/waveform**: see section 10.
+- F. **Mechanism -> consequence**: drug action -> adverse effect; lesion -> deficit; enzyme defect -> presentation.
+- G. **PSM/biostatistics application**: rates and ratios, study design, test choice, screening logic, programme application, immunization, biomedical waste. Not programme-name recall only.
+- H. **Close discrimination**: two or three options look plausible; one clue settles it.
+- I. **Two-step integration** (mainly Tier 3): clues -> diagnosis -> next step; image -> diagnosis -> management; drug -> mechanism -> consequence.
 
-SPATIAL-RELATION GATE: A handwritten fact can be legible yet still be attached to the wrong printed concept if page geometry is misread. For every handwritten or free-floating annotation, inspect the rendered page and determine what it modifies using explicit arrows/leader lines, row or column alignment, shared underline/highlight, color continuity, enclosing boxes, labels, and only then proximity. Do **not** assign an annotation to the nearest text merely because empty space was used for writing.
-
-Internally grade the relation:
-- HIGH = explicit arrow/line/box/row alignment or multiple converging spatial cues.
-- MEDIUM = plausible association but only one weak spatial cue.
-- LOW = free-floating, crowded, or multiple nearby targets.
-
-Use HIGH-confidence relations. MEDIUM may be used only if a second page or independent cue corroborates the same relation. LOW is forbidden. If needed, re-render the page at higher resolution before deciding.
-
-If handwritten information conflicts with printed information, flag it and exclude the disputed fact unless the PDF itself resolves the conflict.
-
-Never invent missing handwriting, missing arrows, implied row membership, or the target of a note.
-
-Apply the same rule to conflicting years, schedules, recommendations or versions anywhere in the PDF. If the PDF clearly identifies the applicable version, use it and cite the resolving viewer page. Otherwise exclude items whose correctness depends on the conflict and list the conflict in the ingestion report. Do not silently repair the PDF with an external guideline. External authoritative material may be used only through the truth-compatibility gate above, to validate/veto/reframe rather than to become the examinable source.
+Basic sciences should be clinically portable when the PDF allows it (anatomy -> lesion/deficit, physiology -> waveform/changed variable, biochemistry -> enzyme/presentation, pathology -> morphology/marker, microbiology -> syndrome/organism/test, pharmacology -> mechanism/ADR/antidote), but a direct fact stays direct when that is the more authentic FMGE form.
 
 ---
 
-# 5. SEMANTIC QUESTION EXCLUSION SET
+# 3. STEM RULES (hard rules - an item that breaks one is rejected)
 
-The semantic QUESTION EXCLUSION SET includes solved questions in the PDF, questions previously generated in this conversation, and any external candidate bank the user supplies for comparison or calibration. Add their Question DNA before generating the next block. If an earlier bank or its ledger is unavailable, request it before generating another block rather than claiming cross-block deduplication.
-
-Do not:
-- copy;
-- lightly paraphrase;
-- change only age/sex;
-- change only laboratory values;
-- reverse positive/negative wording;
-- rearrange options;
-- preserve the same concept -> answer relationship with cosmetic changes.
-
-Maintain a QUESTION-DNA LEDGER:
-
-- concept;
-- direction tested;
-- stem archetype;
-- correct-answer relationship;
-- source PDF viewer page(s) for PDF/generated items; remapped viewer pages for external-bank items that claim a source page, or `unverified` when the external bank supplies none.
-
-For every candidate, compare its Question DNA against the entire available exclusion set and the other candidates. Reject it when any of these tests succeeds:
-
-1. Knowing an existing answer directly reveals the new answer.
-2. It asks the opposite, exception, negative or converse of the same relationship.
-3. The same option set works with minor editing.
-4. The disease -> fact relationship is unchanged despite reversed stem direction.
-5. Only age, sex, numbers, chronology or presentation changed cosmetically.
-6. A learner who memorized the old item without understanding the topic could substantially answer the new one.
-
-This is the MEMORY-LEAK TEST. Reusing a topic requires a different tested competency, such as identification -> management, classification -> consequence, mechanism -> expected finding, investigation -> interpretation, equipment identification -> operational decision or schedule recall -> patient-specific selection.
-
-Example:
-
-Existing question:
-Disease X -> affected nerve?
-
-Bad new question:
-Patient with Disease X -> which nerve is injured?
-
-Still the same question.
-
-Better new directions:
-- nerve lesion -> expected deficit;
-- deficit -> localization;
-- anatomy -> mechanism;
-- disease -> complication;
-- disease -> investigation;
-- treatment -> adverse effect.
-
-The learner should not be able to solve the new bank merely by memorizing the solved questions in the notes.
-
-External/generated banks may reveal uncovered PDF concepts, useful archetypes, missed visuals and integration opportunities. They are calibration input, never a source of examinable facts absent from the PDF.
+1. **Stand-alone stem.** The stem must read as an exam question. It must never mention or point at the study material: no "in the notes", "shown in the source", "according to the PDF/table/figure/slide", "the schedule displayed", "as annotated", "the source identifies…", "on page…". Test the fact itself: write "The diluent used to reconstitute BCG vaccine is:", not "Which diluent is shown for BCG?". Page citations belong only in the answer key.
+2. **No stated premise.** The stem must not hand over the fact that decides the answer. Bad: "Measles vaccine given within 3 days of exposure is protective. A child exposed 48 hours ago… best action?" Good: "An unvaccinated 14-month-old had household contact with measles 48 hours ago. Best action?" If an item can only be solved once the stem states the key fact, it is reading comprehension: reject it or make it Tier 1 recall of that fact.
+3. **"Shown" only with an image.** Use "shown", "displayed" or "depicted" only when the item carries an image (section 10).
+4. **One question, one task.** End with a clear lead-in ("Most likely diagnosis is:", "Next best step is:", "Which of the following…?").
+5. **Compression.** For every sentence ask: can it go without losing the discriminator? If yes, delete it. Age, sex and occupation appear only when they discriminate.
+6. **Negatives sparingly.** Real FMGE has about 5% negative stems: aim for 2-3 per 50-item block, "EXCEPT/NOT" in capitals, never double negatives.
+7. **Time anchors.** A historical, programme-status or version-dependent fact needs a time or version qualifier that the PDF supports ("Under the 2016 switch…"), or it is excluded.
+8. **Name the population, product or version.** When the answer differs by age group, population, product, programme or guideline version, the stem names it. Bad: "The Anemia Mukt Bharat tablet contains:" (dose differs by group). Good: "Under Anemia Mukt Bharat, the IFA tablet for pregnant women contains:". Bad: "Cervavac schedule at 13 years?" (WHO also endorses a single dose). Good: "As per its licensed schedule, Cervavac at 13 years is given as:".
+9. **Named authorities are fine; the notes are not.** "According to the Biomedical Waste Management Rules 2016…", "Under the UIP…" or "As per WHO…" are normal FMGE wording when the PDF supports that framework. "According to the notes/source/table" is never allowed.
+10. **Length.** Real stems: median about 20 words, vignettes about 30, and almost none over 55. Keep one-liners at 15 words or fewer.
 
 ---
 
-# 6. FIVE-YEAR FMGE PATTERN ENGINE
+# 4. OPTION RULES (hard rules)
 
-Model the bank as a **mixture**, not as one universal question style.
-
-Recent recall material supports all of the following:
-
-## A. Direct compact recall
-
-Examples of task form:
-- structure;
-- classic association;
-- organism;
-- drug;
-- mechanism;
-- most common/characteristic feature;
-- classification;
-- factual relationship.
-
-Direct questions are still normal FMGE questions.
-
-Do not convert every fact into a vignette.
-
-## B. Short clinical diagnosis
-
-Use a few discriminating clinical clues.
-
-Avoid unnecessary history.
-
-Typical form:
-
-presentation + key clue -> most likely diagnosis
-
-## C. Investigation / interpretation
-
-Test:
-- investigation of choice;
-- confirmatory test;
-- monitoring method;
-- interpretation of labs;
-- ECG/radiology/graph finding;
-- screening vs diagnosis.
-
-## D. Management / next step
-
-Recent FMGE recalls frequently test action.
-
-Use:
-- immediate stabilization;
-- next best step;
-- first-line treatment;
-- definitive treatment;
-- management after a complication;
-- treatment of an adverse effect.
-
-Use adjacent management steps as distractors.
-
-When the PDF supports an action, prefer an operational transformation over repeating a static fact: storage rule -> placement, VVM appearance -> use/discard, surveillance definition -> field method, exposure plus vaccine status -> schedule, equipment capability -> service level, prevention definition -> intervention class, outbreak curve -> transmission pattern, or indicator definition -> system failure. Do not invent an action when the PDF teaches only a name or fact.
-
-## E. Visual / instrument / waveform
-
-When the source PDF contains enough usable visual material, create meaningful questions from:
-- anatomy diagrams;
-- radiology;
-- pathology/histology;
-- dermatology;
-- ophthalmology;
-- obstetric images;
-- ECG/waveforms;
-- instruments;
-- graphs/curves;
-- procedures.
-
-The visual must contain information needed for the item.
-
-Do not refer to an image that will not actually be available to the learner.
-
-As a heuristic, when the source supports it, roughly **10-20%** of a large bank may be visual-led.
-
-This is a generation calibration, not an official NBEMS quota.
-
-## F. Mechanism -> consequence
-
-Examples:
-- drug mechanism -> adverse effect;
-- lesion -> deficit;
-- physiological change -> expected finding;
-- mutation/enzyme defect -> presentation.
-
-## G. PSM / biostatistics application
-
-When present in the source, include:
-- incidence/prevalence;
-- study design;
-- statistical test;
-- normal distribution/basic calculation;
-- screening logic;
-- public-health program application;
-- immunization;
-- biomedical waste.
-
-Do not reduce PSM to program-name recall only.
-
-CALCULATION GATE: Allow a calculation only when the PDF states or directly supports the formula, every variable, any weighting or conversion factor, and the interpretation of the result. Never supply an omitted disability weight, risk-ratio formula, screening transformation, correction factor, age weighting, discounting, standard denominator or guideline cutoff from memory. Reject the calculation if any required parameter is absent; do not simplify a medical index into an unsupported arithmetic formula.
-
-## H. Close-discrimination item
-
-Two or three options may initially seem plausible.
-
-ONE clue must settle the answer.
-
-Good discriminator axes:
-- age;
-- timing;
-- anatomical site;
-- chronology;
-- lab pattern;
-- imaging finding;
-- mechanism;
-- pregnancy status;
-- severity;
-- initial vs definitive treatment;
-- screening vs confirmatory test;
-- most sensitive vs most specific;
-- cause vs complication.
-
-## I. Two-step integration
-
-Use mainly for Tier 3.
-
-Common structures:
-
-clues -> diagnosis -> next implication
-
-drug -> mechanism -> consequence
-
-lesion -> structure -> deficit
-
-image -> diagnosis -> management
-
-finding -> pathology -> complication
-
-source concept on page X + source concept on page Y -> answer
-
-Do not routinely exceed two meaningful reasoning hops.
+- Exactly four options, A-D, one best answer; all options homogeneous (same category, grammatical form and unit style).
+- No "all of the above", "none of the above", "both A and B" or combined-letter options.
+- No duplicate or near-duplicate options; no two options that are both defensible.
+- **Length parity**: the correct option must not regularly be the longest or the most qualified. Across the block, the correct option is the unique longest in no more than about a third of items.
+- Distractors come from the same neighbourhood: same disease family, drug class, adjacent management steps, competing investigations, nearby anatomical structures, similar organisms, related complications. A Tier 2/3 distractor should often be right in a nearby scenario but wrong for this stem.
+- Every distractor must be plausible **for the setting in the stem** (no walk-in cooler offered for a subcentre outreach session, no tertiary procedure for a field-level question).
+- No joke options, irrelevant organ systems, grammatical giveaways or repeated absolute words.
+- **Numeric options in ascending order** (doses, years, rates, ranges), as FMGE papers print them.
+- **One relationship per item.** No "Which pair/combination correctly gives X and Y?" items that join two unrelated recalls. Only use a matched pair when the pairing itself is the fact being tested (e.g. vaccine -> diluent).
+- **Answer-letter balance**: across a 50-item block each letter is correct 10-15 times, with no run of more than 3 identical letters and no visible pattern. Decide letter positions deliberately after writing the options.
 
 ---
 
-# 7. BASIC SCIENCE MUST BE CLINICALLY PORTABLE
+# 5. SOURCE BOUNDARY AND TRUTH GATE
 
-When supported by the PDF, generate:
+The uploaded PDF is the **examinable knowledge source**.
 
-Anatomy -> lesion/localization/functional deficit
-Physiology -> waveform/response/changed variable
-Biochemistry -> enzyme/deficiency/metabolic presentation
-Pathology -> morphology/marker/diagnosis
-Microbiology -> syndrome/organism/test/treatment
-Pharmacology -> mechanism/drug choice/adverse effect/antidote
+Support classes (internal, reported in the key):
 
-Do not force a clinical vignette when a direct fact is the more authentic FMGE form.
+- E0 = explicitly stated in the PDF.
+- E1 = direct inference from one PDF concept.
+- E2 = synthesis of two or more PDF concepts/pages.
+- E3 = needs an important fact absent from the PDF -> FORBIDDEN unless I enable external-knowledge mode.
+
+Source support applies to the **whole item**: decisive stem clues, correct answer, the facts needed to eliminate each plausible distractor, numbers, management rules, reasoning links and the explanation. Neutral clinical framing (age, setting) may be invented only when it adds no diagnostic, therapeutic, mechanistic, epidemiological or guideline knowledge.
+
+SOURCE-ONLY ELIMINATION TEST: could a learner who knows only this PDF pick one best answer using E0-E2? A familiar entity absent from the PDF may be a distractor only if no outside fact is needed to rule it out. Apply this especially to contraindications, schedules, drugs, adverse effects, organisms, staging, thresholds, calculations and mechanisms.
+
+TRUTH-COMPATIBILITY GATE: the PDF is not assumed infallible. For dynamic, safety-relevant, unusually specific, annotation-dependent or suspicious facts (doses, schedules, cutoffs, contraindications, device principles, definitions, programme status, current guidelines), check against an authoritative source if you can browse, otherwise against well-established medical knowledge, and say which you used in the audit. Validation may approve, qualify, veto or force a rewrite; it may never supply a hidden step.
+
+- PDF-supported and defensible -> may be tested.
+- PDF-supported but contradicted/unsafe -> reject, or narrow to the shared true statement if the PDF still supports it.
+- True but absent from the PDF -> do not test.
+- Version/formulation/programme-dependent -> include the qualifier only if the PDF supports it; otherwise exclude.
+- Historically true, no longer current -> time-anchor if the PDF supports the historical frame; otherwise exclude.
+- "According to the PDF" is never a loophole for teaching a false or unsafe claim, and never appears in a stem.
+
+If defending the answer or eliminating a distractor needs an unstated dose, cutoff, guideline, staging rule, contraindication or criterion, rewrite or reject the item. Tier 3 is inference, not hallucination.
+
+CALCULATION GATE: a calculation is allowed only when the PDF states or directly supports the formula, every variable, any weighting or conversion factor, and the interpretation. Give the learner every number they need in the stem. Never supply an omitted disability weight, correction factor, denominator or cutoff from memory.
+
+---
+
+# 6. INGESTION
+
+Before Question 1, inspect the entire accessible PDF. If it cannot be processed in one pass, index it in page ranges, finish, then generate.
+
+For scanned or image-heavy PDFs, **the rendered page image outranks OCR or extracted text**. Anything that depends on handwriting, arrows, table alignment, spatial grouping or a visual relation must be checked on the rendered page.
+
+The **PDF viewer page number** is the citation system (printed slide/page numbers are secondary labels only). Never fabricate a page.
+
+Build a concept ledger by page: definitions, high-yield facts, causes, mechanisms, clinical clues, differentials, investigations, findings, pathology, treatments (immediate vs definitive), contraindications, adverse effects, complications, anatomy, classifications, algorithms, formulas, tables, images, handwritten additions and contrasts. Harvest small operational details aggressively: strains, diluents, routes/sites, temperatures, storage locations, time windows, schedules, numeric cutoffs, equipment capacity/duration, exceptions and can/cannot rules. Tag each with R (recall), D (discrimination), A (action), I (integration), V (visual). Small details must not disappear behind headline topics.
+
+HANDWRITING: classify as CLEAR / PARTIALLY CLEAR / UNREADABLE / CONFLICTING. Use only CLEAR handwriting.
+
+SPATIAL-RELATION GATE: a legible annotation can still be attached to the wrong printed concept. Decide what it modifies from arrows/leader lines, row/column alignment, shared underline/highlight, colour, boxes and labels, and only then proximity. Grade it HIGH (explicit link or several converging cues), MEDIUM (one weak cue) or LOW (free-floating/crowded). Use HIGH; MEDIUM only if another page corroborates it; never LOW. Never invent missing handwriting, arrows, row membership or note targets.
+
+CONFLICTS: if handwriting conflicts with print, or years/schedules/versions conflict anywhere, use the version the PDF itself identifies as applicable (cite the resolving page); otherwise exclude items that depend on the conflict and list it in the ingestion report.
+
+---
+
+# 7. QUESTION EXCLUSION AND DUPLICATION
+
+The exclusion set is: the PDF's own solved questions, every question already generated in this conversation, and any QUESTION-DNA LEDGER or bank I paste in. If I say earlier blocks exist but have not pasted their ledger, ask for it before generating; never claim cross-block deduplication you cannot check.
+
+Question DNA = concept + direction tested + stem archetype + correct-answer relationship + viewer page(s).
+
+A pasted bank or ledger from another session is calibration input only: it may reveal uncovered concepts, archetypes or missed visuals, never examinable facts. Verify and remap its page numbers against this PDF before relying on them; an item without a verifiable page still belongs in the exclusion set.
+
+Reject a candidate when:
+
+1. knowing an existing answer directly reveals the new answer;
+2. it asks the opposite, exception, negative or converse of the same relationship;
+3. the same option set works with minor edits;
+4. the disease -> fact relationship is unchanged despite a reversed stem;
+5. only age, sex, numbers, chronology or presentation changed cosmetically;
+6. a learner who memorized the old item without understanding the topic could answer the new one.
+
+BLOCK COHERENCE (items in the same block are seen together):
+
+- No stem may contain another item's answer or deciding fact. For example, a calculation that states "vitamin A solution 1 lakh IU/mL" gives away a recall item asking that strength. State the number differently, or drop one of the two.
+- No two items on the same micro-fact, even from different directions (e.g. "carrier holds 16-20 vials" and "which device for 16-20 vials").
+- Do not reuse an option set: two items must not share three or more options.
+
+Reusing a topic needs a different competency (identification -> management, mechanism -> expected finding, investigation -> interpretation, equipment -> operational decision, schedule recall -> patient-specific selection). Two items may share a disease only if they test different competencies. A dense page may yield several items with different DNA; a thin page may yield none.
 
 ---
 
 # 8. THREE TIERS
 
-Assign tiers by the **minimum cognitive operations needed**, not by stem appearance. A vignette, long stem or calculation does not by itself raise the tier. Apply the tier challenge after writing each item: if one memorized fact solves a Tier 2 or Tier 3 item, downgrade it; if Tier 3 needs an unstated third fact, reject it as E3.
+Assign the tier by the **minimum cognitive operations needed**, not by stem length. A wrapper, long stem or calculation does not raise a tier. After writing each item, challenge it: if one memorized fact solves a Tier 2/3 item, downgrade it; if a Tier 3 item needs an unstated third fact, reject it as E3.
 
-## TIER 1 - DIRECT / RECOGNITION
+**TIER 1 - Direct / recognition** ("I studied this.")
+Mainly E0; one source relationship answers it; direct fact, classic presentation, straightforward image identification, association, or a clearly taught treatment/investigation. Plausible same-category distractors, no artificial trick.
 
-Mental experience:
+**TIER 2 - Discriminative application** ("I know both possibilities; one clue makes one better.")
+E0-E1; exactly one meaningful discrimination or inference; at least two genuinely plausible source-supported options; one decisive discriminator (initial vs definitive, screening vs confirmatory, similar drugs/organisms, adjacent structures, most likely vs merely possible, timing/lab/imaging distinction). If one memorized line answers it without the discriminator, it is Tier 1.
 
-"I studied this."
+**TIER 3 - Compressed two-step application** ("The answer was not a sentence in my notes, but the concepts to derive it were.")
+E1-E2; two distinct source-supported propositions, both necessary, **both recalled by the learner rather than printed in the stem**; concise stem. Forms: finding -> diagnosis -> expected finding; diagnosis -> next investigation/management; drug action -> change -> adverse effect; lesion -> structure -> deficit; image -> diagnosis -> next step; two PDF concepts -> necessary inference. For each E2 item record Fact A (page X), Fact B (page Y) and the conclusion; reject if A alone answers it, B is decorative, or an unstated Fact C is needed.
 
-Requirements:
-- primarily E0;
-- explicit PDF knowledge;
-- new question, not copied;
-- one source relationship sufficient to answer;
-- clear FMGE wording;
-- plausible same-category distractors.
-
-Adding age, sex, occupation or a clinical wrapper does not raise this tier.
-
-Tier 1 may be:
-- direct factual;
-- classic presentation;
-- straightforward image identification;
-- mechanism;
-- association;
-- clearly taught treatment/investigation.
-
-Do not make distractors absurd.
+HARD LIMIT: Tier 3 is the hardest source-supported FMGE-style item a well-prepared candidate can solve in about a minute. Not a long USMLE case, not super-specialty, not a three-guideline memory test. Prefer two hops; three only when every component is clearly taught.
 
 ---
 
-## TIER 2 - DISCRIMINATIVE APPLICATION
+# 9. BLOCK MIX
 
-Mental experience:
+Default block: 50 questions = Tier 1: 15, Tier 2: 20, Tier 3: 15. This is a training design, not an official FMGE difficulty distribution. If the PDF cannot sustain it honestly, deliver the honest counts and say so; never inflate a tier.
 
-"I know both possibilities; one clue makes one answer better."
+Stem-form target: use the PDF subject's row in section 1A. For a mixed-subject PDF, use the whole-paper mix: about 30% one-liners, 10% longer direct, 45% vignettes and 15-20% image-led. Image items only when the PDF has usable figures. Stay within about 15 percentage points of the target, and report the actual mix in the audit.
 
-Usually:
-- E0-E1;
-- exactly one meaningful discrimination or inference;
-- short vignette or close-option direct question;
-- at least two genuinely plausible source-supported possibilities;
-- one decisive medical discriminator.
-
-If the answer can be retrieved from one memorized PDF line or table entry without using the discriminator, classify it as Tier 1.
-
-Preferred forms:
-- close differential;
-- initial vs definitive management;
-- screening vs diagnosis;
-- similar drugs/mechanisms;
-- similar organisms;
-- adjacent anatomical structures;
-- related pathology patterns;
-- most likely vs merely possible;
-- subtle but meaningful chronology/lab/imaging distinction.
-
-There must NOT actually be two correct answers.
+Task target: in a clinical subject, diagnosis is the most common task, then management and investigation. In Community Medicine, Physiology, Biochemistry and Anaesthesiology, direct fact recall dominates. Cover mechanism/consequence, anatomy/localization, drug/ADR/antidote and calculation/study design where the PDF supports them. Do not force a quota the source cannot support.
 
 ---
 
-## TIER 3 - COMPRESSED TWO-STEP APPLICATION
+# 10. IMAGE ITEMS
 
-Mental experience:
+Do not ignore the PDF's diagrams, photographs, radiographs, specimens, instruments, charts, curves and tables. For each usable visual decide whether it supports: direct identification; finding -> diagnosis; image + clue -> diagnosis; image -> investigation/management; marked structure -> function/deficit; graph/waveform -> interpretation. Tier 1 usually uses the first; Tier 2 the middle; Tier 3 the last three.
 
-"The exact answer was not written as a sentence in my notes, but the concepts needed to derive it were."
+An image item uses the **real figure**, which will be cropped from the PDF after you finish. Mark it on its own line directly under the stem, before the options:
 
-Usually:
-- E1-E2;
-- at least two distinct source-supported propositions that both materially contribute to the answer;
-- concise FMGE-style stem;
-- integration across concepts or pages.
+    **Image source:** p.<viewer page> | <where the figure is on the page and what it is, e.g. "lower-left photo, vaccine carrier with ice packs">
 
-Removing either proposition must make the item unsolvable or materially change the reasoning. A decorative second source fact does not qualify.
+Rules:
 
-Preferred forms:
-
-finding -> diagnosis -> expected finding
-
-diagnosis -> next investigation/management
-
-drug action -> physiological change -> adverse effect
-
-anatomical lesion -> structure -> deficit
-
-pathology -> mechanism -> clinical consequence
-
-image -> diagnosis -> next best step
-
-two PDF concepts -> novel but necessary inference
-
-For each E2 candidate record internally: Fact A (viewer page X), Fact B (viewer page Y), and the necessary conclusion from A + B. Reject it if an unstated Fact C or outside textbook bridge is needed, if A alone answers the question, or if B is merely decorative.
-
-HARD LIMIT:
-
-Tier 3 is the hardest **source-supported FMGE-style** question that can reasonably be solved in about a minute by a well-prepared candidate.
-
-Do NOT turn it into:
-- a long USMLE-style case;
-- a super-specialty question;
-- a three-guideline memory test;
-- outside textbook trivia.
-
-Prefer two reasoning hops. Rarely use three, and only when every component is clearly taught in the PDF.
+- The stem says "The image shown…", "The instrument shown…", "The curve shown…". It must not describe the finding in words, because that gives the answer away.
+- The figure must contain the examinable information and must not have the answer printed on it (label, caption, arrow text). If the only usable figure is labelled with the answer, say in the audit that it needs masking, or skip it.
+- If the figure is too small, unclear or ambiguous on the rendered page, do not use it.
+- Never refer to an image that is not marked with an `**Image source:**` line.
 
 ---
 
-# 9. DEFAULT TRAINING MIX
+# 11. WORKFLOW
 
-Target per 50-question training block:
+1. **Ingest** the whole PDF (section 6). If pages remain unprocessed, stop and report them before generating.
+2. **Exclusion map** (section 7).
+3. **Coverage matrix**: topics, pages, concept density, contrasts, visuals, handwritten notes, solved-question contamination, and Tier 1/2/3 opportunities. Do not generate one question per page. For each major topic check which distinct competencies it supports: identify, distinguish, calculate, interpret, act, anticipate a consequence, select equipment, choose an investigation, choose management. Allocate by concept density and medical relevance; topic-name coverage alone is not enough. Preserve the PDF's conceptual level: an operational public-health fact becomes an operational question, a table tests its relationship, a visual becomes an image item. Do not turn every fact into a tertiary-care vignette.
+4. **Candidates**: draft about 1.5-2 times the block size in candidate DNAs (75-100 for a 50-question block) before writing full items; for each note page(s), concept, competency, tier, archetype, answer relationship, closest distractor and discriminator. If you cannot track that many reliably, use a smaller block and say so.
+5. **Adversarial QC** of every candidate. Reject or rewrite anything that fails:
+   1. stem rules (section 3) - stand-alone stem, no stated premise, "shown" only with an image, population/product/version named, length;
+   2. option rules (section 4) - including ascending numbers and one relationship per item;
+   3. semantic exclusion, memory-leak and block-coherence tests (no stem gives away another item's answer; no shared option sets; no repeated micro-fact);
+   4. whole-item E0-E2 support and the source-only elimination test;
+   5. one clearly best answer;
+   6. the tier challenge; for E2, both facts necessary;
+   7. calculation gate;
+   8. handwriting, spatial-relation and conflict gates;
+   9. truth-compatibility gate;
+   10. medical (not linguistic) difficulty; FMGE level, not NEET-PG/super-specialty;
+   11. image item has a real, answer-free figure.
+6. **Write** the accepted items, recheck them, and deliver.
 
-- Tier 1: 15
-- Tier 2: 20
-- Tier 3: 15
-
-This 30/40/30 mix is a training design, not an assertion about an official FMGE difficulty distribution.
-
-The mix is a target, not a reason to inflate a tier or invent source support. If the PDF cannot sustain it, use the honest tier counts and state the deviation in the audit.
-
-Across a sufficiently rich PDF, use these rough STEM-MODE priors:
-
-- 30-40% direct/compact factual;
-- 40-50% short clinical/application;
-- 10-20% visual/data/instrument-led when the source supports it.
-
-Do not force quotas when the PDF cannot support them legitimately.
-
-Task types may overlap with these stem modes.
-
-Ensure the complete bank includes an appropriate mixture of:
-- diagnosis/identification;
-- investigation;
-- management;
-- mechanism/consequence;
-- anatomy/localization;
-- drug/adverse effect/antidote;
-- interpretation;
-- calculation/study design where appropriate.
+Do not expose private chain-of-thought; give concise teaching reasoning only.
 
 ---
 
-# 10. DISTRACTOR ENGINEERING
+# 12. OUTPUT CONTRACT (exact format - it is parsed by a script)
 
-Distractors are a major part of FMGE difficulty.
+Deliver sections in this order. Use these headings **exactly**. Do not add answers, tiers-in-stem, bold text or commentary inside the question section.
 
-Use real candidate errors.
+## Part 1
 
-Prefer distractors from:
-- the same disease family;
-- the same drug class;
-- adjacent management steps;
-- competing investigations;
-- nearby anatomical structures;
-- similar organisms;
-- related pathological entities;
-- related complications.
-
-A Tier 2/3 distractor should often be correct in a nearby scenario but wrong for THIS stem.
-
-Do not use:
-- joke options;
-- irrelevant organ systems;
-- grammatical giveaways;
-- one very long correct option beside three short ones;
-- repeated absolute words;
-- technically defensible multiple answers.
-
-Before accepting the item, identify the closest distractor, the exact clue that defeats it, and the PDF page(s) supporting that distinction. Check the other plausible distractors against the same source boundary.
-
-If you cannot support those distinctions from the PDF, simplify the options or reject the question.
-
----
-
-# 11. STEM COMPRESSION RULE
-
-Current FMGE uses time-bound sections. Write for rapid decision-making.
-
-Preserve the PDF's conceptual level: an operational public-health fact should become an operational question, a table should test its relationship, and a visual should be used or faithfully translated. Do not turn every fact into a tertiary-care vignette. Clinical framing must improve discrimination rather than merely look sophisticated.
-
-For every clinical stem, ask:
-
-Can any sentence be removed without losing the discriminator?
-
-If yes, remove it.
-
-Difficulty should come from inference density, not reading burden.
-
----
-
-# 12. VISUAL HANDLING
-
-Do not ignore diagrams, tables and images in the PDF.
-
-For every usable visual, determine whether it can support:
-
-1. direct identification;
-2. finding -> diagnosis;
-3. image + clinical clue -> diagnosis;
-4. image -> next investigation/management;
-5. marked structure -> function/deficit;
-6. graph/waveform -> physiological interpretation.
-
-Tier 1 commonly uses (1).
-Tier 2 commonly uses (2)-(3).
-Tier 3 commonly uses (4)-(6) when source-supported.
-
-If the output cannot include the visual reliably, convert it into a self-contained textual item or exclude it.
-
----
-
-# 13. COVERAGE MATRIX
-
-Do not generate one question per page.
-
-Before generation, map:
-
-- topic;
-- pages;
-- number of distinct examinable concepts;
-- high-yield contrasts;
-- handwritten notes;
-- tables/images;
-- solved-question contamination;
-- Tier 1 opportunities;
-- Tier 2 discriminators;
-- Tier 3 integration opportunities.
-
-Allocate questions by concept density and medical relevance.
-
-For each major topic check distinct competencies: identify, distinguish, calculate, interpret, act, anticipate a consequence, select equipment, choose an investigation or choose management. A dense topic may yield several questions only when their Question DNA differs. A low-density page may yield none; topic-name coverage alone is insufficient.
-
-Avoid repeatedly testing the same micro-fact.
-
----
-
-# 14. GLOBAL REDUNDANCY CONTROL
-
-Maintain a QUESTION LEDGER across all batches and compare it with the exclusion set in section 5 before each new block.
-
-Two questions may share a disease only if they test genuinely different competencies.
-
-Allowed:
-- diagnosis;
-- mechanism;
-- investigation;
-- management;
-- complication.
-
-Not allowed:
-four cosmetic versions of the same diagnostic clue.
-
-Deduplicate semantically across all generated batches.
-
----
-
-# 15. ADVERSARIAL ITEM REVIEW
-
-Before displaying each question, internally ask:
-
-1. Does it pass every semantic-exclusion and memory-leak test against the available banks?
-2. Are stem clues, answer, distractor distinctions and explanation supported by E0-E2?
-3. Could a PDF-only learner eliminate each plausible distractor without an unstated fact?
-4. Could another option reasonably be defended, or is there one clear best response?
-5. Does the tier survive the cognitive-operation challenge?
-6. If E2, are both cited facts necessary and is the bridge source-supported?
-7. If a calculation, are all inputs, factors and interpretation supplied?
-8. Are conflicts and uncertain handwriting excluded or resolved within the PDF?
-9. If handwriting/layout is involved, is the annotation-to-target relationship HIGH-confidence on the rendered page?
-10. Does the tested claim pass the truth-compatibility gate, including version/formulation/time qualifiers where needed?
-11. Are distractors plausible and same-domain without importing required outside facts?
-12. Is the difficulty medical rather than linguistic, and is the stem concise and source-native?
-13. Is the item FMGE-like rather than NEET-PG/super-specialty escalation?
-14. Have I already tested this micro-competency?
-15. If image-based, is the actual visual or a faithful self-contained translation available?
-
-Rewrite or reject any failing item.
-
-Do not expose hidden chain-of-thought.
-
----
-
-# 16. LONG-PDF WORKFLOW
-
-For a 70-100+ page PDF:
-
-PHASE 1 - INGEST
-Read/index the entire accessible PDF in page ranges if needed. For scanned/image-heavy pages, inspect rendered page images rather than relying on OCR alone, and record ambiguous spatial associations. Lock citations to PDF viewer page numbers. If pages remain unprocessed because of a tool or context limit, stop and report them before generating.
-
-PHASE 2 - EXCLUSION MAP
-Identify the Question DNA of PDF solved questions, prior conversation blocks and any user-supplied comparison bank. Remap external-bank page citations when supplied; an item without a verifiable page still belongs in the semantic exclusion set.
-
-PHASE 3 - CONCEPT LEDGER
-Map major concepts, microfacts, operations, contrasts, visuals, annotations and source conflicts with viewer-page citations and R/D/A/I/V tags.
-
-PHASE 4 - COVERAGE MATRIX
-Determine distinct competencies, concept density and legitimate Tier 1/2/3 material. Zero questions from a low-density page is acceptable.
-
-PHASE 5 - CANDIDATE POOL
-Before drafting full questions, consider 1.5-2 times the requested block size in candidate Question DNAs (75-100 for a 50-question block). Each candidate records only viewer page(s), concept, competency, tier, archetype, correct-answer relationship, closest distractor and discriminator. Do not fabricate candidate counts; if this pool cannot be tracked reliably, use a smaller block and report the limitation.
-
-PHASE 6 - ADVERSARIAL QC
-Compare candidates with the full exclusion set. Reject duplicate DNA, weak support, E3 dependence, artificial tier inflation, poor distractors, incomplete calculations, source conflicts, uncertain handwriting, ambiguous annotation-to-target linkage, truth conflicts and redundant microfacts. For dynamic/safety-relevant/suspicious facts, perform validation-only authoritative verification. If the PDF claim conflicts with defensible truth, reject it or rewrite to the PDF x truth intersection; never replace the answer with an outside-only fact. Record one primary rejection reason per candidate so counts reconcile. Downgrades, truth-compatible reframes and explanation trims are tracked separately.
-
-PHASE 7 - QUESTION DESIGN AND DELIVERY
-Write full stems and options only for accepted candidates. Recheck the completed items, then deliver in 50-question blocks unless I request another size or source/context limits require a smaller block.
-
-Maintain the concept, exclusion, candidate and accepted-question ledgers across blocks. Never claim cross-block deduplication if a prior ledger or bank is unavailable.
-
----
-
-# 17. TRAINING MODE OUTPUT
-
-Start with a compact:
-
+```
 ## DOCUMENT INGESTION REPORT
+- Page images visible: Yes/No
+- Viewer pages: <total>; interpreted: <n>; not processed: <list or none>
+- Citation system: PDF viewer page number
+- Subjects/topics: …
+- Microfacts and operational details harvested (approximate count and main kinds): …
+- Handwritten notes: Yes/No; visuals/tables: Yes/No; usable visuals for image items: <pages>
+- Solved questions in PDF: <approximate count>
+- Uncertain handwriting / unresolved spatial links: <pages or none>
+- Source/version conflicts and how resolved: …
+- Source-truth conflicts excluded or reframed: …
 
-- total PDF viewer pages and pages successfully interpreted;
-- citation system: PDF viewer page number;
-- main subjects/topics;
-- microfact and operational details harvested;
-- handwritten notes detected: Yes/No;
-- visual/table material detected: Yes/No;
-- existing solved questions detected: approximate count if feasible;
-- unreadable/uncertain pages;
-- pages/annotations with unresolved spatial linkage;
-- significant source/version conflicts and whether the PDF resolves them;
-- source-truth conflicts detected, and whether each was excluded or safely reframed;
-- external-bank page numbers remapped and verified, if applicable;
-- pages not processed.
+# QUESTION BANK — BLOCK <N>
 
-Do not start the bank if pages remain unprocessed or the required exclusion material is unavailable. Report what is missing instead. Exclude uncertain material on pages that were inspected.
+## TIER 1 — DIRECT / RECOGNITION
 
-Then:
+### Q1
+<stem>
 
-# QUESTION BANK - BLOCK [X]
+A. <option>
+B. <option>
+C. <option>
+D. <option>
 
-## TIER 1
-Q1...
-A.
-B.
-C.
-D.
+### Q2
+<stem>
+**Image source:** p.34 | lower-left photo, instrument on a tray
 
-## TIER 2
-...
+A. <option>
+B. <option>
+C. <option>
+D. <option>
 
-## TIER 3
-...
+## TIER 2 — DISCRIMINATIVE APPLICATION
 
-Do NOT show answers beside questions.
+### Q16
+…
 
----
+## TIER 3 — COMPRESSED TWO-STEP APPLICATION
 
-# 18. SIMULATION MODE
+### Q36
+…
+```
 
-If I request SIMULATION MODE:
+Format rules for the question section:
 
-- target 50 questions; if source support or context limits prevent that, report the accepted count rather than padding the block;
-- mix all tiers rather than labeling them;
-- do not show topic/tier/source before answers;
-- preserve a realistic mixture of direct, clinical, management, interpretation, visual and calculation items;
-- avoid obvious correct-option sequences;
-- write questions for approximately one-minute decision cadence.
+- The question heading is exactly `### Q<number>` with nothing else on the line. Number continuously from 1 through the block.
+- The stem is plain text: no citation, tier, topic or answer hint.
+- Each option is on its own line as `A. `, `B. `, `C. `, `D. `.
+- `**Image source:**` goes only on image items, between the stem and the options.
 
-After the final question, show the review separately.
+## Part 2
 
----
+```
+# ANSWER KEY AND TEACHING REVIEW
 
-# 19. ANSWER KEY AND TEACHING REVIEW
+### Q1 — **B — <exact text of option B>**
+**Archetype:** <direct recall / short clinical diagnosis / investigation / management / mechanism / image / calculation / close discrimination / two-step integration>
+**Topic:** <topic — subtopic>
+**Source:** PDF p.<n>[, p.<m>] | E0/E1/E2 | Printed/Handwritten/Table/Diagram/Multi-page
+**Closest distractor:** <option letter and text> — defeated by <discriminator>, p.<n>
+**Concept link:** <Tier 3 only: Fact A (p.X) + Fact B (p.Y) -> conclusion>
+<Teaching explanation: 1-3 sentences a student reads after answering. State why the answer is right and, in one clause, why the closest distractor is wrong. Source-supported facts only. No page numbers, no "the notes/PDF/source", no evidence grades.>
+```
 
-After all questions, provide:
+Answer-key rules:
 
-Q[number] - [correct option] - [answer]
+- The heading is exactly `### Q<n> — **<letter> — <option text>**`, using em dashes.
+- `**Source:**` must contain at least one `p.<n>` viewer page for the answer, plus the page that defeats the closest distractor if different.
+- The teaching explanation is the only plain paragraph. It is shown to students, so write it as teaching, not as an audit note. Do not add textbook enrichment, external mechanisms, timing rules or guidelines merely because they are true.
 
-Tier:
-Question archetype:
-Topic:
-Subtopic:
-Answer-support PDF page(s):
-Evidence class: E0 / E1 / E2
-Source type: Printed / Handwritten / Table / Diagram / Multi-page synthesis
+## Part 3
 
-Why correct:
-Concise explanation limited to source-supported facts.
+```
+# FINAL PATTERN AUDIT
+- Total; Tier 1 / 2 / 3:
+- Stem form: one-liner / longer direct / vignette / image-led (count only items with an **Image source:** line as image-led), next to the section 1A target for this subject:
+- Lead-in forms used (direct question / which of the following / diagnosis / next step / other):
+- Task modes: diagnosis / investigation / management / mechanism / anatomy / drug-ADR / calculation:
+- Correct-option distribution A / B / C / D:
+- Items where the correct option is the unique longest:
+- Negative (EXCEPT/NOT) stems:
+- Subjects (for multi-subject PDFs) vs blueprint:
+- Source pages represented:
+- Truth validation: which facts were checked, and against what (browsing or established knowledge):
+- Notable rejections: up to 10, one line each (concept — reason)
+- Deviations from the target mix, and why:
+- Images needing answer masking:
 
-Closest distractor:
-The most tempting wrong option.
+# QUESTION-DNA LEDGER
+| Q | Tier | Concept | Direction tested | Archetype | Answer relationship | Pages |
+|---|---|---|---|---|---|---|
+| 1 | 1 | … | … | … | … | … |
+```
 
-Key discriminator:
-The exact clue that makes it wrong.
+Audit rules: report only counts you can read off the delivered block. Do not print "0 ambiguous questions" or any other pass claim you did not actually check item by item. The DNA ledger is how the next block avoids repeats, so fill every row.
 
-Closest-distractor exclusion PDF page(s):
-The page-specific PDF fact that supports the discriminator, paraphrased briefly.
-
-For Tier 3:
-
-Concept link:
-Which PDF concepts/pages must be combined.
-
-For visual items:
-
-Visual discriminator:
-The relevant visual feature.
-
-For calculations:
-
-Formula:
-PDF-supported formula, each supplied variable/factor, result and interpretation.
-
-SOURCE-BOUND TEACHING REVIEW: Restate, compare, calculate, connect or clarify only E0-E2 PDF concepts. Do not add textbook enrichment, an external mechanism, timing rule, contraindication, guideline, pathophysiology or epidemiological fact merely because it is medically true. Explain the closest distractor only with the source-supported clue that defeats it. Remove unsupported enrichment; if it is necessary to defend the answer, reject or rewrite the question.
-
-Do not provide private chain-of-thought. Give only concise teaching reasoning.
-
----
-
-# 20. SOURCE TRACEABILITY
-
-Every generated question must cite PDF page(s) supporting its correct answer and the distinction that excludes its closest distractor.
-
-Never fabricate a page citation.
-
-PDF viewer page number is authoritative. Printed slide/page numbering may appear secondarily but never replaces it. Before using Question DNA from an external/generated bank, verify and remap its page numbers against this PDF; never inherit those citations unverified.
-
-External truth-validation sources are **not** substitutes for PDF citations and are not part of the learner's examinable evidence. They function only as a quality-control veto/qualification layer. If external validation materially changes the claim, rewrite or reject the item so the final answer remains fully supported by the PDF.
-
-Tier 1 usually cites one direct source location.
-Tier 2 may cite one or more.
-Tier 3 may cite multiple pages.
-
-State the viewer-page convention in the ingestion report.
+DELIVERY: if the reply would be cut off, stop at the end of a complete question or answer-key entry and write `CONTINUE FROM Q<n>`. When I reply "continue", resume with exactly the next item and the same headings. Do not restart or renumber.
 
 ---
 
-# 21. BLOCK AUDIT
+# 13. SIMULATION MODE
 
-At the end of every block, report actual tracked counts. Do not print an automatic zero or claim a check passed merely because it was requested. If a count could not be tracked, say so and explain the limitation.
-
-PATTERN AUDIT
-
-Total:
-Tier 1:
-Tier 2:
-Tier 3:
-
-Stem modes:
-- Direct/compact factual:
-- Short clinical/application:
-- Visual/data/instrument-led:
-
-Task modes:
-- Diagnosis/identification:
-- Investigation/interpretation:
-- Management/next step:
-- Mechanism/consequence:
-- Anatomy/localization:
-- Drug/ADR/antidote:
-- Calculation/study design:
-
-Correct-option distribution:
-A:
-B:
-C:
-D:
-
-Source pages represented:
-
-FAILURE AUDIT
-
-Candidate questions considered:
-Final questions accepted:
-Candidates held for a future block:
-Rejected for semantic duplication:
-Rejected for E3 dependence:
-Rejected for distractor ambiguity:
-Rejected for tier inflation:
-Rejected for unclear handwriting:
-Rejected for ambiguous spatial annotation linkage:
-Rejected for source conflict:
-Rejected for source-truth conflict:
-Rejected for calculation incompleteness:
-Rejected for excessive similarity to previous generated banks:
-Rejected for other reasons (specify):
-
-Tier downgrades during QC:
-Tier upgrades during QC:
-Truth-compatible reframes during QC:
-High-risk facts externally validated:
-Explanations trimmed for outside knowledge:
-Questions remapped because of page-number mismatch:
-
-Count each rejected candidate once under its primary reason. Candidate questions considered must equal final questions accepted plus candidates held for a future block plus all rejections. Downgrades, upgrades, trims and remappings are separate event counts, not additional candidates.
+If I request SIMULATION MODE: produce the same output contract (tier headings are still required for the parser, and the app mixes the tiers when it builds the section). Spread subjects by the blueprint, follow each subject's section 1A stem form, aim at the whole-paper task mix (diagnosis ~35%, fact recall ~28%, management ~14%, investigation ~11%, mechanism ~8%), and write strictly for one-minute decisions.
 
 ---
 
-# 22. DEFAULT SETTINGS
+# 14. DEFAULT SETTINGS
 
-Target: FMGE
-Question format: four-option single-best-answer
-Block size: 50
-Tier mix: 15 / 20 / 15
-Direct questions: PRESERVE
-Short clinical framing: EMPHASIZE WHEN APPROPRIATE
-Visual/instrument/graph questions: USE WHEN SOURCE SUPPORTS
-Existing PDF solved questions: STRICT SEMANTIC EXCLUSION
-Printed text: USE
-Clear handwriting: USE
-Tables/diagrams: USE
-External examinable knowledge: OFF
-External truth validation: ON AS VETO/QUALIFICATION ONLY
-Full-item source boundary: REQUIRED
-Source-only elimination test: REQUIRED
-Truth-compatibility gate: REQUIRED
-Rendered-page authority for scanned/image PDFs: REQUIRED
-Spatial annotation linkage: HIGH CONFIDENCE REQUIRED
-Cross-page inference: ON
-Tier 3 two-step synthesis: ON
-Tier 3 long-vignette inflation: OFF
-Candidate Question-DNA pool: 1.5-2x requested block size when trackable
-Answers beside questions: OFF
-Answer explanations: ON
-Page traceability: PDF viewer page numbers REQUIRED
-Semantic deduplication: STRICT
-Audit counts: ACTUAL TRACKED COUNTS ONLY
-Hallucination tolerance: ZERO
+Target: FMGE · four-option single best answer · block size 50 · tier mix 15/20/15
+Direct questions: PRESERVE · short clinical framing: WHERE IT DISCRIMINATES · image items: REAL FIGURES WHEN THE PDF SUPPORTS
+Stand-alone stems (no reference to notes/source): REQUIRED · stated premises in stems: FORBIDDEN · population/product/version named when the answer depends on it: REQUIRED
+Stem form: MATCH THE SUBJECT PROFILE (section 1A) · negatives ~5% · stems at or under ~55 words
+Block coherence (no cross-item give-aways, no shared option sets, no repeated micro-facts): REQUIRED
+Option parity, ascending numeric options and answer-letter balance: REQUIRED · all/none of the above and pair/combination items: FORBIDDEN
+Existing PDF solved questions and earlier blocks: STRICT SEMANTIC EXCLUSION
+Printed text, clear handwriting, tables, diagrams: USE
+External examinable knowledge: OFF · external truth validation: VETO/QUALIFY ONLY
+Rendered-page authority for scanned PDFs · HIGH-confidence annotation linkage: REQUIRED
+Cross-page inference and Tier 3 two-step synthesis: ON · long-vignette inflation: OFF
+Answers beside questions: OFF · teaching explanations: ON · viewer-page citations: REQUIRED
+Audit: CHECKABLE COUNTS ONLY · hallucination tolerance: ZERO
 
-BEGIN:
-
-Ingest and map the complete accessible PDF.
-
-Do not generate Question 1 until the Concept Ledger, Question Exclusion Set, Coverage Matrix and candidate pool are established.
+BEGIN: report the session capability check, ingest and map the complete accessible PDF, then generate. Do not write Question 1 until the concept ledger, exclusion set and coverage matrix are complete.

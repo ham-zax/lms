@@ -23,7 +23,9 @@ The 2026 official bulletin describes the current exam blueprint. The 2026 recall
 
 ## Binary asset status
 
-No third-party recall PDF binary is stored in this repository. The PrepLadder June 2022 PDF was inspected through Khiip outside the repository; it is a 149-page provider recall document.
+No third-party recall PDF binary is committed to this repository. The PrepLadder June 2022 PDF was first inspected through Khiip outside the repository; it is a 149-page provider recall document.
+
+Later on 2026-09-28 all nine PrepLadder PDFs in the catalog were downloaded into `corpus/` for local analysis (gitignored, never committed) and 1,601 questions were extracted, plus 220 FMGEPrep public samples. NEETFMGE Plans 2024 and 2025 were confirmed as image-only copies of PrepLadder PDFs. See `five-year-pattern-report.md` and `recall-pattern-stats.md`.
 
 The provenance data are captured in the manifests instead of being represented falsely as local corpus files.
 

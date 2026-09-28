@@ -24,6 +24,29 @@ Generate or validate the packaged bank:
     python3 scripts/fmge/build_question_bank.py
     python3 scripts/fmge/build_question_bank.py --check
 
+`--check` also prints a one-line summary of the FMGE style lint. The currently live PSM block predates the lint and still reports its known style errors; it builds unchanged.
+
+## Making a new or replacement block
+
+1. Run the v6 prompt (`research/fmge-source-material/analysis/prompt-calibration.md`) in a web session that can see the PDF's page images, and save the whole reply as `research/pdf_extracted_questions_data/<Source>_combined.md`. The prompt's output contract is exactly the Markdown this builder parses.
+2. Crop each `**Image source:** p.N | …` figure and paste the printed lines under it:
+
+       uv run scripts/fmge/extract_pdf_image.py --page N --preview /tmp/page.png   # pick the box
+       uv run scripts/fmge/extract_pdf_image.py --page N --crop L,T,R,B --name psm-b2-q012 --alt "…"
+
+   Images land in `lms/public/fmge/images/` and are served from `/assets/lms/fmge/images/`. The build fails while any `**Image source:**` line has no `**Image:**` line.
+3. Lint, fix every ERROR (send it back to the same web session or edit by hand), then build strictly (tiers are mixed through the section by default, as in the real exam; `--order source` keeps Markdown order):
+
+       python3 scripts/fmge/build_question_bank.py --source <md> --lint
+       python3 scripts/fmge/build_question_bank.py --source <md> --strict
+
+   The lint blocks stems that point at the notes ("shown in the notes", "according to the source"), stems that state the deciding fact, duplicate options and all/none-of-the-above. It warns on long stems, a correct option much longer than its distractors, a skewed or streaky answer key, and a block with no image items. For a new block, also pass `--bank-id`, `--id-prefix`, `--title` and `--subject`.
+4. Keep the reply's `# QUESTION-DNA LEDGER` and paste it into the next session so the next block does not repeat questions.
+
+Replacing PSM Block 1 in place: keep the default `--bank-id fmge-psm-block-1` and `--id-prefix PSM-B1`, then rerun the installer below. Questions are matched by `PSM-B1-Q###`, so each number's content is overwritten.
+
+Builder tests: `python3 -m unittest scripts/fmge/test_build_question_bank.py`.
+
 Once this app is installed in a Frappe Bench/site, create the quiz and its native course lesson with:
 
     bench --site <site> execute lms.fmge.importer.install_psm_block_1
