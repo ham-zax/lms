@@ -54,4 +54,6 @@ Both modes allow first/last navigation, Mark for Review, and finishing from any 
 
 The notes PDF is served from `lms/public/fmge/day2-psm-notes.pdf`, a symlink to `research/pdf_extracted_questions_data/Day2_PSM_combined.pdf`, so page references in the bank (`p.60`, `pp.78–79`) are PDF page numbers.
 
+The public copy is served through a Cloudflare Tunnel; see [HOSTING.md](HOSTING.md) for the setup, what must be running, and how to change it safely.
+
 This is currently a 50-question PSM section, not a complete 300-question FMGE exam.
