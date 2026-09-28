@@ -6,7 +6,7 @@ This folder contains legally safe source material and a research index for build
 
 NBEMS states that FMGE examination content is confidential, proprietary, and owned by NBEMS. Its published non-disclosure terms prohibit reproducing, transmitting, or publishing examination content, and NBEMS says it will not provide the examination content or answer keys.
 
-Because of that, this repository does **not** copy third-party "previous year paper" PDFs that are reconstructed from candidate recall. Those resources are useful for research, but they are unofficial and may reproduce protected exam content.
+Because of that, third-party "previous year paper" PDFs reconstructed from candidate recall are treated as **unofficial research sources**, not official FMGE papers. This repository does not automatically mirror them from provider sites. If a source document is legitimately available for local analysis, it belongs under `corpus/` with its provenance recorded in the manifests.
 
 Official references:
 
@@ -26,13 +26,32 @@ Historical official bulletins remain linked from the NBEMS sources above rather 
 
 This is **not a question paper**. It is an implementation/reference document published by NBEMS.
 
-## Five-year paper source catalog (2022–2026)
+## Layout
 
-[`paper-catalog-2022-2026.csv`](paper-catalog-2022-2026.csv) records the publicly listed FMGE recall-paper resources from FMGEPrep, Careers360, NEETFMGE Plans and PrepLadder. Each row gives the year, session, paper part, provider, resource type, access method, URL and date observed on the provider's page. These are links and metadata, not imported exam questions or answers. The listed providers describe their material as recall-based; do not present it as an official NBEMS paper.
+- `official/` - authoritative NBEMS reference documents.
+- `manifests/` - source discovery, provenance, quality classes, aliases and local-asset inventory.
+- `corpus/2022/` ... `corpus/2026/` - locally available recall source documents for the primary five-year window; `corpus/2021/` remains available for supplemental historical work.
+- `extracted/` - normalized question-level extraction schema/data.
+- `analysis/` - derived counts, trends and prompt-calibration findings.
 
-FMGEPrep lists 18 part pages across 2022–2026 with 10 public sample questions per part and gated full practice. PrepLadder lists eight direct PDFs for 2022–2025. NEETFMGE Plans lists four annual PDFs for 2022–2025; its 2022 PDF is byte-identical to PrepLadder's 2022 PDF. Careers360 lists 2026 and 2025 download landing pages, while its article points to a registration step for a 2024 PDF and has a 2023 recall section. No 2022 Careers360-specific PDF or 2026 PrepLadder/NEETFMGE Plans PDF was verified in this pass.
+[`manifests/local-assets.csv`](manifests/local-assets.csv) is the authoritative inventory of PDF/files actually present locally.
 
-The publisher terms restrict copying and redistribution: [FMGEPrep](https://fmgeprep.com/terms) also prohibits automated scraping of its platform, and [Careers360](https://www.careers360.com/terms-of-use) and [PrepLadder](https://www.prepladder.com/terms) require permission to reproduce their content. The catalog therefore retains links without storing provider PDFs, question stems, answer choices or explanations in this repository. A site listing a free download does not establish permission to republish it.
+## Primary analysis window: 2022-2026
+
+The working catalog is [`manifests/paper-catalog-2022-2026.csv`](manifests/paper-catalog-2022-2026.csv). It records the publicly located recall-paper resources from FMGEPrep, Careers360, NEETFMGE Plans and PrepLadder and assigns an evidence class based on what has actually been checked. The catalog records source links, not imported questions or answers.
+
+[`manifests/paper-catalog-2021-2025.csv`](manifests/paper-catalog-2021-2025.csv) preserves the alternative five-completed-years view as supplemental research. It is not the primary denominator. Neither catalog establishes a whole-paper denominator until the underlying source has been inspected for completeness and duplicate questions.
+
+Important supporting files:
+
+- [`manifests/source-quality-rubric.md`](manifests/source-quality-rubric.md) - grades official, full recall, sample, mirror and landing-page sources.
+- [`manifests/session-aliases-2022-2026.csv`](manifests/session-aliases-2022-2026.csv) - preserves provider month labels in the primary window and marks possible June/July or December/January aliases for later fingerprint verification.
+- [`analysis/session-source-findings-2026-09-28.md`](analysis/session-source-findings-2026-09-28.md) - facts added from the current research session, including the verified PrepLadder December 2021 direct-PDF URL.
+- [`extracted/question-schema.md`](extracted/question-schema.md) - the per-question classification schema used for pattern extraction.
+
+FMGEPrep sample pages are treated as examples rather than whole-paper denominators. The 2022 and 2023 NEETFMGE Plans PDFs are byte-identical to the corresponding PrepLadder PDFs and are not counted as independent recalls. The 2024 and 2025 NEETFMGE Plans PDFs have not been verified as mirrors.
+
+Provider terms and permissions still matter. A public download URL is provenance, not automatic permission to republish the material.
 
 ## Ten-year search index: 2017-2026
 
@@ -63,7 +82,7 @@ For 2017, recall material also appears in older educational blogs/videos, but it
 
 ## Provider / recall catalog
 
-See `provider-resources.md` and `provider-resources.csv` for public recall sessions and sample-resource pages from Cerebellum Academy, PrepLadder, Marrow, Careers360, and DBMCI.
+See `manifests/provider-resources.md` and `manifests/provider-resources.csv` for public recall sessions and sample-resource pages from Cerebellum Academy, PrepLadder, Marrow, Careers360, and DBMCI.
 
 ## What to use for question generation
 

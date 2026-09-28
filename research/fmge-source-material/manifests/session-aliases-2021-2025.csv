@@ -1,0 +1,18 @@
+alias_group,source_label,provider,equivalence_status,notes
+2021-year-end,December 2021,PrepLadder,observed,FMGE conducted 12 Dec 2021 per provider page
+2022-midyear,June 2022,PrepLadder,observed,full recall PDF listed
+2022-midyear,June 2022,FMGEPrep,observed,public preview parts 1 and 2
+2022-year-end,January 2023,PrepLadder,observed,provider session label
+2022-year-end,January 2023,FMGEPrep,observed,provider session label
+2022-year-end,December 2022,Careers360,possible_alias_needs_fingerprint_check,do not merge only from month label
+2023-midyear,July 2023,FMGEPrep,observed,public preview parts 1 and 2
+2023-year-end,December 2023,Careers360,possible_alias_needs_fingerprint_check,article recall section
+2023-year-end,January 2024,PrepLadder,possible_alias_needs_fingerprint_check,likely same exam cycle but verify question overlap
+2023-year-end,January 2024,FMGEPrep,possible_alias_needs_fingerprint_check,likely same exam cycle but verify question overlap
+2024-midyear,June 2024,PrepLadder,possible_alias_needs_fingerprint_check,full recall PDF
+2024-midyear,July 2024,FMGEPrep,possible_alias_needs_fingerprint_check,verify against June source before merging
+2024-year-end,January 2025,PrepLadder,observed,parts 1 and 2
+2024-year-end,January 2025,FMGEPrep,observed,parts 1 and 2
+2025-midyear,June 2025,Careers360,possible_alias_needs_fingerprint_check,download landing page
+2025-midyear,July 2025,PrepLadder,possible_alias_needs_fingerprint_check,parts 1 and 2
+2025-midyear,July 2025,FMGEPrep,possible_alias_needs_fingerprint_check,parts 1 and 2
