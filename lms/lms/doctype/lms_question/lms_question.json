@@ -13,6 +13,13 @@
   "type",
   "multiple",
   "marks",
+  "fmge_metadata_section",
+  "fmge_question_id",
+  "fmge_bank_id",
+  "fmge_tier",
+  "fmge_difficulty",
+  "fmge_source",
+  "fmge_explanation",
   "section_break_ytxi",
   "option_1",
   "is_correct_1",
@@ -104,6 +111,57 @@
    "in_list_view": 1,
    "label": "Marks",
    "non_negative": 1
+  },
+  {
+   "depends_on": "eval:doc.fmge_question_id",
+   "fieldname": "fmge_metadata_section",
+   "fieldtype": "Section Break",
+   "label": "FMGE Metadata"
+  },
+  {
+   "fieldname": "fmge_question_id",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "FMGE Question ID",
+   "read_only": 1,
+   "search_index": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "fmge_bank_id",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "FMGE Bank ID",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "fmge_tier",
+   "fieldtype": "Int",
+   "in_standard_filter": 1,
+   "label": "FMGE Tier",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "fmge_difficulty",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "FMGE Difficulty",
+   "options": "direct\nmoderate\nhard",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fmge_source",
+   "fieldtype": "Small Text",
+   "label": "FMGE Source",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fmge_explanation",
+   "fieldtype": "Text",
+   "label": "FMGE Explanation",
+   "read_only": 1
   },
   {
    "depends_on": "eval:doc.type == \"Choices\";",

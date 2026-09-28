@@ -13,6 +13,10 @@ export interface LMSQuizResult {
 	question?: string
 	/**	Users Response : Small Text	*/
 	answer?: string
+	/**	Correct Answer : Small Text	*/
+	correct_answer?: string
+	/**	Explanation : Text	*/
+	explanation?: string
 	/**	Is Correct : Check	*/
 	is_correct?: 0 | 1
 	/**	Question Name : Link - LMS Question	*/

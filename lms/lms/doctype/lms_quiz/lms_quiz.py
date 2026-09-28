@@ -186,6 +186,7 @@ def submit_quiz(
 			"marks_to_cut",
 			"enable_proctoring",
 			"max_violations",
+			"max_attempts",
 		],
 		as_dict=1,
 	)
@@ -197,6 +198,7 @@ def submit_quiz(
 	if not can_access_quiz(quiz):
 		frappe.throw(_("You are not authorized to submit this quiz."), frappe.PermissionError)
 
+	_validate_attempt_limit(quiz_details)
 	data = process_results(results, quiz_details)
 	is_open_ended = data["is_open_ended"]
 
@@ -226,6 +228,25 @@ def submit_quiz(
 		"percentage": percentage,
 		"is_open_ended": is_open_ended,
 	}
+
+
+def _validate_attempt_limit(quiz_details: dict) -> None:
+	max_attempts = cint(quiz_details.max_attempts)
+	if not max_attempts:
+		return
+
+	# Serialize submissions made by the same learner so two simultaneous requests
+	# cannot both observe the old count and spend the same final attempt.
+	frappe.db.get_value("User", frappe.session.user, "name", for_update=True)
+	attempts = frappe.db.count(
+		"LMS Quiz Submission",
+		{"quiz": quiz_details.name, "member": frappe.session.user},
+	)
+	if attempts >= max_attempts:
+		frappe.throw(
+			_("You have reached the maximum number of attempts for this quiz."),
+			frappe.ValidationError,
+		)
 
 
 def _build_proctoring_record(
@@ -501,6 +522,23 @@ def _attach_frame_urls(logs: list[dict]):
 		log["frame"] = by_log.get(log["name"])
 
 
+def _add_fmge_review_feedback(result: dict, question: str) -> None:
+	fmge_explanation = frappe.db.get_value("LMS Question", question, "fmge_explanation")
+	if not fmge_explanation:
+		return
+
+	question_details = get_question_details(question)
+	correct_answers = [
+		question_details[option_field]
+		for option_field, correctness_field in zip(
+			QUESTION_OPTION_FIELDS, QUESTION_CORRECTNESS_FIELDS, strict=True
+		)
+		if question_details[correctness_field] and question_details[option_field]
+	]
+	result["correct_answer"] = ", ".join(correct_answers)
+	result["explanation"] = fmge_explanation
+
+
 def process_results(results: list, quiz_details: dict):
 	is_open_ended = False
 
@@ -536,6 +574,7 @@ def process_results(results: list, quiz_details: dict):
 			else:
 				result["marks"] = -quiz_details.marks_to_cut if quiz_details.enable_negative_marking else 0
 			result["is_correct"] = 1 if correct else 0
+			_add_fmge_review_feedback(result, question_details.question)
 
 		else:
 			is_open_ended = True

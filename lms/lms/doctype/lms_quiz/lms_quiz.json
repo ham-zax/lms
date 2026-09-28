@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "title",
+  "fmge_bank_id",
   "max_attempts",
   "show_answers",
   "show_submission_history",
@@ -37,6 +38,15 @@
    "in_list_view": 1,
    "label": "Title",
    "reqd": 1
+  },
+  {
+   "fieldname": "fmge_bank_id",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "FMGE Bank ID",
+   "read_only": 1,
+   "search_index": 1,
+   "unique": 1
   },
   {
    "fieldname": "questions",

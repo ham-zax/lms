@@ -10,7 +10,7 @@ Because of that, third-party "previous year paper" PDFs reconstructed from candi
 
 Official references:
 
-- FMGE exam index: https://www.natboard.edu.in/viewnbeexam?exam=fmge
+- FMGE exam portal/current-session index (verified 2026-09-28; lists October 2026): https://www.natboard.edu.in/viewnbeexam?exam=fmge
 - FMGE June 2026 Information Bulletin: https://nbe.edu.in/IB/FMGE%20JUNE%202026%20information%20bulletin.pdf
 - FMGE December 2024 Information Bulletin (time-bound sections): https://natboard.edu.in/viewUpload?xyz=cUtIMVEvdzBwS1QzQXBtRjZPUzR4QT09
 - FMGE December 2023 Information Bulletin (contains the NDA language): https://natboard.edu.in/viewUpload?xyz=a2lIYW44SEp1N01TSlNNcmU5cGp0QT09
@@ -20,7 +20,7 @@ Official references:
 
 The `official/` directory currently contains:
 
-- `FMGE_June_2026_Information_Bulletin.pdf` - the current official examination scheme, syllabus/blueprint, timing and candidate instructions.
+- `FMGE_June_2026_Information_Bulletin.pdf` - the locally archived official June 2026 examination scheme, syllabus/blueprint, timing and candidate instructions. As verified on 2026-09-28, the NBEMS FMGE portal lists October 2026 as the current session.
 
 Historical official bulletins remain linked from the NBEMS sources above rather than being treated as question papers.
 

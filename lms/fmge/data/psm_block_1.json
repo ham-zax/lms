@@ -1,0 +1,917 @@
+{
+  "schema_version": 1,
+  "bank_id": "fmge-psm-block-1",
+  "title": "FMGE PSM Mock 1 - Section 1",
+  "subject": "Community Medicine",
+  "description": "FMGE-style 50-question PSM section generated from the reviewed Day 2 PSM source.",
+  "expected_questions": 50,
+  "duration_minutes": 50,
+  "max_attempts": 1,
+  "passing_percentage": 50,
+  "show_answers": 0,
+  "show_submission_history": 1,
+  "shuffle_questions": 0,
+  "enable_negative_marking": 0,
+  "questions": [
+    {
+      "id": "PSM-B1-Q001",
+      "number": 1,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The routine cold-chain temperature range shown for maintenance of vaccines from manufacture until administration is:",
+      "options": [
+        "-15°C to -25°C",
+        "+2°C to +8°C",
+        "0°C to +2°C",
+        "+8°C to +15°C"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.60 | Evidence: E0 | Printed/handwritten.",
+      "explanation": "The cold-chain page explicitly shows vaccine temperature maintenance from manufacture until administration at +2°C to +8°C.",
+      "answer_label": "+2°C to +8°C",
+      "answer": "+2°C to +8°C"
+    },
+    {
+      "id": "PSM-B1-Q002",
+      "number": 2,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which chemical is associated with the Vizag industrial gas tragedy in the notes?",
+      "options": [
+        "Styrene",
+        "Methyl isocyanate",
+        "Chlorine",
+        "Ammonia"
+      ],
+      "correct_option": "A",
+      "source": "p.7 | Evidence: E0 | Handwritten.",
+      "explanation": "The Vizag tragedy is annotated as styrene gas. Methyl isocyanate is associated on the same page with Bhopal, making it the closest distractor.",
+      "answer_label": "Styrene",
+      "answer": "Styrene"
+    },
+    {
+      "id": "PSM-B1-Q003",
+      "number": 3,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "According to the Rangarajan Committee figure shown in the notes, the urban per-capita poverty-line expenditure threshold is:",
+      "options": [
+        "<₹32/person/day",
+        "<₹38/person/day",
+        "<₹47/person/day",
+        "<₹64/person/day"
+      ],
+      "correct_option": "C",
+      "source": "p.6 | E0.",
+      "explanation": "The Rangarajan Committee annotation gives rural <₹32 and urban <₹47/person/day. The rural ₹32 figure is the main competing option.",
+      "answer_label": "<₹47/person/day",
+      "answer": "<₹47/person/day"
+    },
+    {
+      "id": "PSM-B1-Q004",
+      "number": 4,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "In ICD-11, “Mental, Behavioral, or Neurodevelopmental Disorders” are shown under:",
+      "options": [
+        "Chapter 06",
+        "Chapter 11",
+        "Chapter 21",
+        "Chapter 26"
+      ],
+      "correct_option": "A",
+      "source": "p.33 | E0.",
+      "explanation": "The source places mental, behavioral and neurodevelopmental disorders in Chapter 06. Chapter 21 is separately annotated for disorders of unknown etiology.",
+      "answer_label": "Chapter 06",
+      "answer": "Chapter 06"
+    },
+    {
+      "id": "PSM-B1-Q005",
+      "number": 5,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which diluent is shown for reconstitution of BCG vaccine?",
+      "options": [
+        "Normal saline",
+        "Distilled water",
+        "Phosphate-buffered saline",
+        "Citrate-bicarbonate buffer"
+      ],
+      "correct_option": "A",
+      "source": "p.67 | E0 | Table.",
+      "explanation": "The source table pairs BCG with normal saline (NaCl). Distilled water is shown for measles/MR/MMR, while PBS is shown for JE. Always reconstitute a vaccine with the diluent supplied for it.",
+      "answer_label": "Normal saline",
+      "answer": "Normal saline"
+    },
+    {
+      "id": "PSM-B1-Q006",
+      "number": 6,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which strain is shown for the live Japanese encephalitis vaccine?",
+      "options": [
+        "Nakayama",
+        "Edmonston-Zagreb",
+        "SA-14-14-2",
+        "17D"
+      ],
+      "correct_option": "C",
+      "source": "p.68 | E0.",
+      "explanation": "The live JE strain is SA-14-14-2; Nakayama is shown for killed JE.",
+      "answer_label": "SA-14-14-2",
+      "answer": "SA-14-14-2"
+    },
+    {
+      "id": "PSM-B1-Q007",
+      "number": 7,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The date shown for global eradication of smallpox is:",
+      "options": [
+        "13 January 2011",
+        "March 2014",
+        "July 2016",
+        "8 May 1980"
+      ],
+      "correct_option": "D",
+      "source": "p.17 | E0.",
+      "explanation": "The source explicitly gives 08 May 1980 for smallpox eradication.",
+      "answer_label": "8 May 1980",
+      "answer": "8 May 1980"
+    },
+    {
+      "id": "PSM-B1-Q008",
+      "number": 8,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which tablet-based application is shown as being used by ANMs for RCH data entry?",
+      "options": [
+        "Nikshay",
+        "CoWIN",
+        "Kilkari",
+        "ANMOL"
+      ],
+      "correct_option": "D",
+      "source": "p.103 | E0 | Handwritten.",
+      "explanation": "ANMOL is described as ANM On Line, a tablet-based software system used for RCH data entry.",
+      "answer_label": "ANMOL",
+      "answer": "ANMOL"
+    },
+    {
+      "id": "PSM-B1-Q009",
+      "number": 9,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which indigenous COVID-19 vaccine in the notes is administered by the intranasal route?",
+      "options": [
+        "Covishield",
+        "Covaxin",
+        "Corbevax",
+        "iNCOVACC"
+      ],
+      "correct_option": "D",
+      "source": "p.76 | E0.",
+      "explanation": "iNCOVACC is shown as an intranasal vaccine, administered as drops into the nostrils.",
+      "answer_label": "iNCOVACC",
+      "answer": "iNCOVACC"
+    },
+    {
+      "id": "PSM-B1-Q010",
+      "number": 10,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The dose of Human Rabies Immunoglobulin shown in the notes is:",
+      "options": [
+        "20 IU/kg",
+        "40 IU/kg",
+        "10 IU/kg",
+        "50 IU/kg"
+      ],
+      "correct_option": "A",
+      "source": "p.79 | E0.",
+      "explanation": "HRIG is shown at 20 IU/kg; ERIG is shown at 40 IU/kg, which is the key discriminator.",
+      "answer_label": "20 IU/kg",
+      "answer": "20 IU/kg"
+    },
+    {
+      "id": "PSM-B1-Q011",
+      "number": 11,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The interval between symptom onset in a primary case and symptom onset in the linked secondary case is termed:",
+      "options": [
+        "Incubation period",
+        "Median incubation period",
+        "Serial interval",
+        "Generation time"
+      ],
+      "correct_option": "C",
+      "source": "p.29 | E0-E1.",
+      "explanation": "Serial interval is the gap between the onset of the primary case and the onset of the secondary case. Generation time is separately defined on the page as extending from organism entry to maximum infectivity.",
+      "answer_label": "Serial interval",
+      "answer": "Serial interval"
+    },
+    {
+      "id": "PSM-B1-Q012",
+      "number": 12,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Approximately how many vaccine vials can the vaccine carrier shown in the notes hold?",
+      "options": [
+        "6–10",
+        "16–20",
+        "25–30",
+        "40–50"
+      ],
+      "correct_option": "B",
+      "source": "p.64 | E0.",
+      "explanation": "The vaccine carrier is annotated as holding approximately 16–20 vaccine vials.",
+      "answer_label": "16–20 vials",
+      "answer": "16–20"
+    },
+    {
+      "id": "PSM-B1-Q013",
+      "number": 13,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The RCH programme is shown as beginning in:",
+      "options": [
+        "1951",
+        "1992",
+        "2005",
+        "1997"
+      ],
+      "correct_option": "D",
+      "source": "p.98 | E0.",
+      "explanation": "The sequence shown is NFPP 1951 → CSSM 1992 → RCH 1997.",
+      "answer_label": "1997",
+      "answer": "1997"
+    },
+    {
+      "id": "PSM-B1-Q014",
+      "number": 14,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The Anemia Mukt Bharat tablet shown contains:",
+      "options": [
+        "100 mg iron + 500 µg folic acid",
+        "60 mg iron + 500 µg folic acid",
+        "60 mg iron + 5 mg folic acid",
+        "30 mg iron + 250 µg folic acid"
+      ],
+      "correct_option": "B",
+      "source": "p.107 | E0.",
+      "explanation": "The displayed tablet composition is 60 mg iron + 500 µg folic acid.",
+      "answer_label": "60 mg iron + 500 µg folic acid",
+      "answer": "60 mg iron + 500 µg folic acid"
+    },
+    {
+      "id": "PSM-B1-Q015",
+      "number": 15,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The vitamin A solution shown has a strength of:",
+      "options": [
+        "1 lakh IU/mL",
+        "2 lakh IU/mL",
+        "5 lakh IU/mL",
+        "10 lakh IU/mL"
+      ],
+      "correct_option": "A",
+      "source": "p.71 | E0.",
+      "explanation": "The solution strength is explicitly shown as 1 lakh IU/mL.",
+      "answer_label": "1 lakh IU/mL",
+      "answer": "1 lakh IU/mL"
+    },
+    {
+      "id": "PSM-B1-Q016",
+      "number": 16,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "After a single banquet meal, cases of acute gastroenteritis rise sharply and then fall sharply, with the cluster confined to one incubation period. Which epidemic pattern best fits?",
+      "options": [
+        "Propagated epidemic",
+        "Single-exposure point-source epidemic",
+        "Cyclical epidemic",
+        "Multiple-exposure point-source epidemic"
+      ],
+      "correct_option": "B",
+      "source": "p.10 | E1.",
+      "explanation": "A sudden rise and fall with cases clustered within one incubation period is the pattern shown for a single-exposure point source.",
+      "answer_label": "Single-exposure point-source epidemic",
+      "answer": "Single-exposure point-source epidemic"
+    },
+    {
+      "id": "PSM-B1-Q017",
+      "number": 17,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Residents repeatedly draw water from the same contaminated well over several days. The epidemic curve develops successive waves corresponding to repeated exposure. This is:",
+      "options": [
+        "Propagated epidemic",
+        "Secular trend",
+        "Single-exposure epidemic",
+        "Multiple-exposure point-source epidemic"
+      ],
+      "correct_option": "D",
+      "source": "p.11 | E1.",
+      "explanation": "Repeated exposure to the same contaminated source produces repeated waves.",
+      "answer_label": "Multiple-exposure point-source epidemic",
+      "answer": "Multiple-exposure point-source epidemic"
+    },
+    {
+      "id": "PSM-B1-Q018",
+      "number": 18,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A multipurpose worker visits households once every fortnight to actively search for malaria cases. This is:",
+      "options": [
+        "Active surveillance",
+        "Passive surveillance",
+        "Sentinel surveillance",
+        "Routine mortality surveillance"
+      ],
+      "correct_option": "A",
+      "source": "p.19 | E1.",
+      "explanation": "The slide specifically places malaria MPW-M household activity once per fortnight under active surveillance. Passive surveillance waits for spontaneous reporting.",
+      "answer_label": "Active surveillance",
+      "answer": "Active surveillance"
+    },
+    {
+      "id": "PSM-B1-Q019",
+      "number": 19,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A healthy motorcyclist routinely wears a helmet to reduce injury risk. According to the prevention examples in the notes, this is:",
+      "options": [
+        "Primordial prevention",
+        "Primary prevention — specific protection",
+        "Secondary prevention",
+        "Tertiary prevention"
+      ],
+      "correct_option": "B",
+      "source": "p.24 | E1.",
+      "explanation": "Seat belt/helmet use is located under primary specific protection. The person is healthy and protection is being applied before disease/injury occurs.",
+      "answer_label": "Primary prevention — specific protection",
+      "answer": "Primary prevention — specific protection"
+    },
+    {
+      "id": "PSM-B1-Q020",
+      "number": 20,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "An 18-month-old child presents for routine immunization. According to the 16-24 month row of the national schedule shown in the notes, which vaccine set is due?",
+      "options": [
+        "MR2 + DPT booster + OPV booster + JE2",
+        "BCG + OPV0 + Hepatitis B birth dose",
+        "DPT2 + OPV2 + Hepatitis B2 + Hib2 + RVV2",
+        "Td only"
+      ],
+      "correct_option": "A",
+      "source": "p.53 | E1 | Schedule/table.",
+      "explanation": "The 16-24 month row of the immunization schedule shows MR2, DPT booster, OPV booster, and JE2. The birth-dose set belongs to the at-birth row, while the DPT2/OPV2/HepB2/Hib2/RVV2 set belongs to 10 weeks.",
+      "answer_label": "MR2 + DPT booster + OPV booster + JE2",
+      "answer": "MR2 + DPT booster + OPV booster + JE2"
+    },
+    {
+      "id": "PSM-B1-Q021",
+      "number": 21,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "After a road-traffic accident, a man loses his right hand and can no longer drive or write. His inability to perform those activities represents:",
+      "options": [
+        "Disease",
+        "Impairment",
+        "Disability",
+        "Handicap"
+      ],
+      "correct_option": "C",
+      "source": "p.27 | E1.",
+      "explanation": "Loss of the hand is the impairment; inability to write or drive is the disability. Handicap appears when the person cannot fulfil the expected social role.",
+      "answer_label": "Disability",
+      "answer": "Disability"
+    },
+    {
+      "id": "PSM-B1-Q022",
+      "number": 22,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "During an outbreak investigation, the patient who first brings the disease to the investigator's attention is the:",
+      "options": [
+        "Index case",
+        "Primary case",
+        "Secondary case",
+        "Carrier case"
+      ],
+      "correct_option": "A",
+      "source": "p.28 | E0.",
+      "explanation": "The index case is the first case coming to the investigator's notice. It does not necessarily have to be the primary case.",
+      "answer_label": "Index case",
+      "answer": "Index case"
+    },
+    {
+      "id": "PSM-B1-Q023",
+      "number": 23,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A public-health strategy explicitly integrates reproductive, maternal, newborn, child, and adolescent health. Which framework shown in the notes matches this description?",
+      "options": [
+        "CSSM",
+        "JSY",
+        "JSSK",
+        "RMNCH+A"
+      ],
+      "correct_option": "D",
+      "source": "p.99 | E1 | Diagram/handwriting.",
+      "explanation": "The strategy diagram expands RMNCH+A into reproductive, maternal, newborn, child, and adolescent health. The decisive clue is the explicit addition of adolescent health.",
+      "answer_label": "RMNCH+A",
+      "answer": "RMNCH+A"
+    },
+    {
+      "id": "PSM-B1-Q024",
+      "number": 24,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Healthy contacts of a case are detained until the maximum incubation period has elapsed. This is:",
+      "options": [
+        "Isolation of cases until recovery",
+        "Sentinel surveillance",
+        "Quarantine of healthy contacts",
+        "Active surveillance"
+      ],
+      "correct_option": "C",
+      "source": "p.32 | E0.",
+      "explanation": "Quarantine applies to healthy contacts and extends to the maximum incubation period. Isolation applies to cases and continues until recovery.",
+      "answer_label": "Quarantine",
+      "answer": "Quarantine of healthy contacts"
+    },
+    {
+      "id": "PSM-B1-Q025",
+      "number": 25,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Among 250 cases of a disease, 10 patients die. Using the formula shown in the notes, the case-fatality rate is:",
+      "options": [
+        "0.4%",
+        "2%",
+        "4%",
+        "10%"
+      ],
+      "correct_option": "C",
+      "source": "p.34 | E1.",
+      "explanation": "Formula: deaths among cases / total cases ×100. 10/250 × 100 = 4%.",
+      "answer_label": "4%",
+      "answer": "4%"
+    },
+    {
+      "id": "PSM-B1-Q026",
+      "number": 26,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A vaccine vial monitor has an inner square clearly lighter than the surrounding outer circle, and the expiry date has not passed. What should be done?",
+      "options": [
+        "Discard the vial",
+        "Perform a shake test first",
+        "Keep it unused for 24 hours",
+        "The vaccine remains usable"
+      ],
+      "correct_option": "D",
+      "source": "p.74 | E1.",
+      "explanation": "The VVM diagram marks the lighter-inner-square stages as usable. The later darkened stages are marked unusable.",
+      "answer_label": "Vaccine remains usable",
+      "answer": "The vaccine remains usable"
+    },
+    {
+      "id": "PSM-B1-Q027",
+      "number": 27,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A previously unvaccinated person presents immediately after a bleeding dog bite. What is the first local wound-care step shown in the notes?",
+      "options": [
+        "Wash vigorously with soap and water for 15–20 minutes",
+        "Perform immediate primary suturing",
+        "Infiltrate immunoglobulin before washing",
+        "Apply concentrated alcohol without water"
+      ],
+      "correct_option": "A",
+      "source": "p.79 | E0.",
+      "explanation": "The rabies wound-management diagram gives soap + water for 15–20 min and marks suturing as contraindicated.",
+      "answer_label": "Wash with soap and water for 15–20 minutes",
+      "answer": "Wash vigorously with soap and water for 15–20 minutes"
+    },
+    {
+      "id": "PSM-B1-Q028",
+      "number": 28,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A 24×7 PHC provides all Basic Emergency Obstetric and Newborn Care functions. Which requirement would move the patient beyond BEmONC to comprehensive emergency care?",
+      "options": [
+        "Manual removal of placenta",
+        "Parenteral anticonvulsant administration",
+        "Assisted vaginal delivery",
+        "Blood transfusion"
+      ],
+      "correct_option": "D",
+      "source": "p.100 | E1.",
+      "explanation": "BEmONC contains the first seven emergency obstetric/newborn functions. Blood transfusion and surgery are additional comprehensive functions.",
+      "answer_label": "Blood transfusion",
+      "answer": "Blood transfusion"
+    },
+    {
+      "id": "PSM-B1-Q029",
+      "number": 29,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "For a home delivery, the ASHA postnatal schedule shown is:",
+      "options": [
+        "Days 3, 7 and 42",
+        "Days 1, 3, 7 and 42",
+        "Days 1, 3, 7, 14, 21, 28 and 42",
+        "Days 3, 7, 14, 21, 28 and 42"
+      ],
+      "correct_option": "C",
+      "source": "p.102 | E0.",
+      "explanation": "For home delivery, the ASHA schedule includes seven visits, beginning on day 1. Institutional delivery begins on day 3 and has six.",
+      "answer_label": "Days 1, 3, 7, 14, 21, 28 and 42",
+      "answer": "Days 1, 3, 7, 14, 21, 28 and 42"
+    },
+    {
+      "id": "PSM-B1-Q030",
+      "number": 30,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Which cold-chain equipment pair is shown at the district/CHC level?",
+      "options": [
+        "Large ILR + large deep freezer",
+        "Walk-in cooler + walk-in freezer",
+        "Vaccine carrier + ice packs",
+        "Small ILR only"
+      ],
+      "correct_option": "A",
+      "source": "p.61 | E0 | Cold-chain hierarchy table.",
+      "explanation": "The district/CHC level is shown with a large ILR and large deep freezer, with approximately one month of storage.",
+      "answer_label": "Large ILR + large deep freezer",
+      "answer": "Large ILR + large deep freezer"
+    },
+    {
+      "id": "PSM-B1-Q031",
+      "number": 31,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Which vaccine is linked with brachial neuritis on the AEFI chart?",
+      "options": [
+        "OPV",
+        "TT/Td",
+        "Rotavirus vaccine",
+        "MMR"
+      ],
+      "correct_option": "B",
+      "source": "p.59 | E0.",
+      "explanation": "The AEFI chart associates brachial neuritis with TT/Td. Intussusception is linked with rotavirus vaccine and thrombocytopenia with MMR.",
+      "answer_label": "TT/Td",
+      "answer": "TT/Td"
+    },
+    {
+      "id": "PSM-B1-Q032",
+      "number": 32,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Two districts have the same number of maternal deaths and the same number of live births. District Y, however, has twice as many women aged 15–49 years as District X. Which statement follows from the formulas in the notes?",
+      "options": [
+        "Maternal mortality ratio is lower in District Y",
+        "Maternal mortality rate is lower in District Y, while the ratio is unchanged",
+        "Both maternal mortality rate and ratio are unchanged",
+        "Maternal mortality rate is unchanged, while the ratio is lower"
+      ],
+      "correct_option": "B",
+      "source": "p.104 | E1.",
+      "explanation": "MMRate uses women aged 15–49 as its denominator, whereas MMRatio uses live births. Doubling only the reproductive-age female denominator lowers the rate while leaving the ratio unchanged.",
+      "answer_label": "Maternal mortality rate falls; ratio unchanged",
+      "answer": "Maternal mortality rate is lower in District Y, while the ratio is unchanged"
+    },
+    {
+      "id": "PSM-B1-Q033",
+      "number": 33,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "When preparing the ice pack shown in the notes, the correct method is to:",
+      "options": [
+        "Fill completely to the brim",
+        "Add salt before freezing",
+        "Fill to the horizontal water-level line without additives",
+        "Fill with warm water immediately before use"
+      ],
+      "correct_option": "C",
+      "source": "p.65 | E0 | Equipment diagram.",
+      "explanation": "The ice pack shows a horizontal water-level line and explicitly states that nothing should be added to the water.",
+      "answer_label": "Fill to the line with no additive",
+      "answer": "Fill to the horizontal water-level line without additives"
+    },
+    {
+      "id": "PSM-B1-Q034",
+      "number": 34,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A 13-year-old girl is receiving Cervavac according to the schedule displayed in the source. Which regimen is shown?",
+      "options": [
+        "One dose only",
+        "Two doses at 0 and 6 months",
+        "Two doses at 0 and 1 month",
+        "Three doses at 0, 2 and 6 months"
+      ],
+      "correct_option": "B",
+      "source": "p.80 | E1.",
+      "explanation": "The Cervavac annotation shows 9–14 years: two doses at 0 and 6 months.",
+      "answer_label": "Two doses at 0 and 6 months",
+      "answer": "Two doses at 0 and 6 months"
+    },
+    {
+      "id": "PSM-B1-Q035",
+      "number": 35,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Which vaccine matches the following description from the source: killed vaccine, two doses, 4–6 weeks apart, 0.5 mL IM?",
+      "options": [
+        "Covishield",
+        "Covaxin",
+        "Corbevax",
+        "iNCOVACC"
+      ],
+      "correct_option": "B",
+      "source": "p.75 | E1.",
+      "explanation": "Covaxin is shown as killed, two doses, 4–6 weeks apart, 0.5 mL IM. Covishield is labelled viral-vector based with a longer interval.",
+      "answer_label": "Covaxin",
+      "answer": "Covaxin"
+    },
+    {
+      "id": "PSM-B1-Q036",
+      "number": 36,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "An unvaccinated 14-month-old child has household exposure to measles. The child is brought 48 hours after exposure. The notes state that the measles vaccine should be administered within 3 days of exposure to be effective. What is the best action?",
+      "options": [
+        "Wait until symptoms appear",
+        "Vaccinate only after 7 days",
+        "Administer measles/MR vaccine now",
+        "Do not vaccinate after exposure"
+      ],
+      "correct_option": "C",
+      "source": "pp.57–58 | E2.",
+      "explanation": "The source states that measles vaccine should be given within 3 days of exposure and separately illustrates the post-exposure timing relationship. At 48 hours, the child remains within that window.",
+      "answer_label": "Administer measles/MR vaccine now",
+      "answer": "Administer measles/MR vaccine now"
+    },
+    {
+      "id": "PSM-B1-Q037",
+      "number": 37,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A vial of reconstituted measles vaccine was prepared at 9 AM and the final dose was administered from the same vial at 4 PM. Which vaccine-associated event is the source particularly warning against in this situation?",
+      "options": [
+        "VAPP",
+        "Brachial neuritis",
+        "Intussusception",
+        "Toxic shock syndrome"
+      ],
+      "correct_option": "D",
+      "source": "pp.59, 67 | E2.",
+      "explanation": "The lyophilized-vaccine page says reconstituted vaccine should be used within 4 hours and links failure to this handling rule with TSS; the AEFI chart also associates TSS with measles vaccine.",
+      "answer_label": "Toxic shock syndrome",
+      "answer": "Toxic shock syndrome"
+    },
+    {
+      "id": "PSM-B1-Q038",
+      "number": 38,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A region that has been polio-free for years detects one new laboratory-confirmed wild poliovirus case. Given the source definition of an epidemic as occurrence above normal expectation, how should this event be classified?",
+      "options": [
+        "Endemic baseline activity",
+        "Epidemic occurrence",
+        "Seasonal fluctuation",
+        "Sporadic expected occurrence"
+      ],
+      "correct_option": "B",
+      "source": "pp.15, 18 | E2.",
+      "explanation": "The epidemic definition is occurrence clearly above normal expectation. The source also records India as polio-free; therefore a new wild-virus case when the expected background is zero represents epidemic occurrence.",
+      "answer_label": "Epidemic occurrence",
+      "answer": "Epidemic occurrence"
+    },
+    {
+      "id": "PSM-B1-Q039",
+      "number": 39,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A veterinarian previously completed rabies vaccination and now sustains another rabies-risk bite. After appropriate wound washing, which vaccine regimen is shown for a previously vaccinated person?",
+      "options": [
+        "Two IM doses on days 0 and 3",
+        "Five IM doses on days 0, 3, 7, 14 and 28",
+        "Intradermal 2-2-2-0-2 regimen",
+        "No vaccine doses"
+      ],
+      "correct_option": "A",
+      "source": "pp.78–79 | E2.",
+      "explanation": "The rabies schedule explicitly gives post-exposure in vaccinated: IM day 0 and day 3. The wound-care page supplies the initial washing step already completed in the stem.",
+      "answer_label": "Two IM doses on days 0 and 3",
+      "answer": "Two IM doses on days 0 and 3"
+    },
+    {
+      "id": "PSM-B1-Q040",
+      "number": 40,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "The notes show that wild poliovirus type 2 had been eradicated before the 2016 switch from trivalent OPV to bivalent OPV, and also annotate circulating VDPV as most commonly type 2. Which explanation best fits the switch?",
+      "options": [
+        "Type 1 was removed because it caused most VAPP",
+        "Type 2 antigen could not tolerate routine cold-chain temperature",
+        "Wild type 2 had been eradicated while vaccine-derived type 2 remained a concern",
+        "OPV was replaced because IPV had become unavailable"
+      ],
+      "correct_option": "C",
+      "source": "pp.59, 72 | E2.",
+      "explanation": "The switch page states that P2 had been eradicated before tOPV was changed to bOPV, while the AEFI/OPV notes identify circulating vaccine-derived poliovirus most commonly with type 2.",
+      "answer_label": "Wild P2 eradicated while vaccine-derived type 2 remained a concern",
+      "answer": "Wild type 2 had been eradicated while vaccine-derived type 2 remained a concern"
+    },
+    {
+      "id": "PSM-B1-Q041",
+      "number": 41,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A district records 12 maternal deaths and 30,000 live births in one year. Which pair correctly gives the maternal mortality ratio and the healthcare domain the source associates most directly with that indicator?",
+      "options": [
+        "40/100,000 — socioeconomic development",
+        "40/100,000 — maternal care",
+        "400/100,000 — maternal care",
+        "400/100,000 — newborn care"
+      ],
+      "correct_option": "B",
+      "source": "pp.104, 106 | E2.",
+      "explanation": "Formula: 12/30,000 × 100,000 = 40. The indicator map associates MMR with maternal care.",
+      "answer_label": "40/100,000 — maternal care",
+      "answer": "40/100,000 — maternal care"
+    },
+    {
+      "id": "PSM-B1-Q042",
+      "number": 42,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A pregnant woman completes only the minimum RCH antenatal schedule and later has an institutional delivery. Which combination correctly matches the minimum antenatal visits and the ASHA postnatal visits shown in the source?",
+      "options": [
+        "8 antenatal + 7 postnatal",
+        "8 antenatal + 6 postnatal",
+        "4 antenatal + 6 postnatal",
+        "4 antenatal + 7 postnatal"
+      ],
+      "correct_option": "C",
+      "source": "pp.101–102 | E2.",
+      "explanation": "The ANC page explicitly labels 4 visits as the RCH minimum and separately shows 8 visits for WHO, so the four-visit figure is not being treated as a universal minimum. For institutional delivery, the ASHA schedule shows 6 postnatal visits on days 3, 7, 14, 21, 28 and 42.",
+      "answer_label": "4 antenatal + 6 postnatal",
+      "answer": "4 antenatal + 6 postnatal"
+    },
+    {
+      "id": "PSM-B1-Q043",
+      "number": 43,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A subcentre has no fixed cold-chain equipment and needs to take approximately 16–20 vaccine vials for an outreach session lasting less than a day. Which device best fits both facts shown in the source?",
+      "options": [
+        "Vaccine carrier",
+        "Ice-Lined Refrigerator",
+        "Walk-in cooler",
+        "Large deep freezer"
+      ],
+      "correct_option": "A",
+      "source": "pp.61, 64 | E2.",
+      "explanation": "The subcentre has no fixed storage equipment in the hierarchy, while the vaccine carrier is shown as holding 16–20 vials for approximately 12–24 hours.",
+      "answer_label": "Vaccine carrier",
+      "answer": "Vaccine carrier"
+    },
+    {
+      "id": "PSM-B1-Q044",
+      "number": 44,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Which indicator–value pair shown in the notes corresponds to the best indicator of combined maternal and newborn care?",
+      "options": [
+        "IMR — 26/1000",
+        "MMR — 88/100,000",
+        "NNMR — 20/1000",
+        "PNMR — 18/1000"
+      ],
+      "correct_option": "D",
+      "source": "pp.105–106 | E2.",
+      "explanation": "The indicator table gives PNMR = 18, and the following diagram labels PNMR as the best indicator of combined maternal and newborn care.",
+      "answer_label": "PNMR — 18/1000",
+      "answer": "PNMR — 18/1000"
+    },
+    {
+      "id": "PSM-B1-Q045",
+      "number": 45,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A population has 8 existing leprosy cases among 100,000 people. The source marks the leprosy elimination level as <1 per 10,000 population. Using the source prevalence logic and that elimination threshold, which interpretation is correct?",
+      "options": [
+        "The elimination level is not met",
+        "The elimination level is met",
+        "The disease is globally eradicated",
+        "The prevalence cannot be interpreted from these data"
+      ],
+      "correct_option": "B",
+      "source": "pp.18, 34 | E2 | Threshold + prevalence/rate logic.",
+      "explanation": "Eight existing cases in 100,000 people correspond to 0.8 per 10,000, which is below the source's leprosy elimination level of <1 per 10,000 population.",
+      "answer_label": "The elimination level is met",
+      "answer": "The elimination level is met"
+    },
+    {
+      "id": "PSM-B1-Q046",
+      "number": 46,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Routine clinical reporting captures mainly the visible tip of a disease iceberg. A programme wants both a surveillance approach aimed at hidden/missing cases and a method for detecting subclinical individuals. Which pairing matches the two source diagrams?",
+      "options": [
+        "Passive surveillance + diagnosis",
+        "Active surveillance + rehabilitation",
+        "Quarantine + case diagnosis",
+        "Sentinel surveillance + screening"
+      ],
+      "correct_option": "D",
+      "source": "pp.19, 31 | E2.",
+      "explanation": "The surveillance page labels sentinel surveillance as a way to identify hidden/missing cases, while the iceberg page labels screening as the method used to detect the hidden/submerged subclinical pool. They are two different tools, not synonyms.",
+      "answer_label": "Sentinel surveillance + screening",
+      "answer": "Sentinel surveillance + screening"
+    },
+    {
+      "id": "PSM-B1-Q047",
+      "number": 47,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Following an accident, a patient has permanent impairment, cannot perform routine activities, and has difficulty fulfilling his previous social role. Which intervention belongs to the prevention level directed at these established consequences?",
+      "options": [
+        "Specific protection",
+        "Early diagnosis",
+        "Health promotion",
+        "Rehabilitation"
+      ],
+      "correct_option": "D",
+      "source": "pp.21, 27 | E2.",
+      "explanation": "The patient has progressed from impairment to disability and difficulty fulfilling a social role. Tertiary prevention contains disability limitation and rehabilitation.",
+      "answer_label": "Rehabilitation",
+      "answer": "Rehabilitation"
+    },
+    {
+      "id": "PSM-B1-Q048",
+      "number": 48,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A pregnant woman requests Qdenga vaccination. The source identifies Qdenga as a live attenuated vaccine, while pregnancy is listed under live-vaccine contraindications. What follows from the source?",
+      "options": [
+        "Qdenga should not be administered during pregnancy",
+        "Give Qdenga because it is tetravalent",
+        "Give only one 0.5 mL dose",
+        "Substitute live JE vaccine"
+      ],
+      "correct_option": "A",
+      "source": "pp.55, 77 | E2.",
+      "explanation": "Qdenga is labelled live attenuated, while pregnancy is listed among contraindications to live vaccination.",
+      "answer_label": "Do not administer Qdenga during pregnancy",
+      "answer": "Qdenga should not be administered during pregnancy"
+    },
+    {
+      "id": "PSM-B1-Q049",
+      "number": 49,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "An 18-month-old child is due for a 2 lakh IU vitamin A dose. The solution supplied contains 1 lakh IU/mL. How much solution is required?",
+      "options": [
+        "1 mL",
+        "2 mL",
+        "5 mL",
+        "10 mL"
+      ],
+      "correct_option": "B",
+      "source": "pp.54, 71 | E2.",
+      "explanation": "At this age the source shows a 2 lakh IU dose. The solution contains 1 lakh IU/mL. Formula: 2 lakh IU ÷ 1 lakh IU/mL = 2 mL.",
+      "answer_label": "2 mL",
+      "answer": "2 mL"
+    },
+    {
+      "id": "PSM-B1-Q050",
+      "number": 50,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A newborn is due for both BCG and hepatitis B vaccine. Which administration plan matches the birth schedule and the route/site table in the source?",
+      "options": [
+        "BCG 0.5 mL IM in right arm + Hep B 0.05 mL intradermal in thigh",
+        "BCG 0.05 mL subcutaneous in right arm + Hep B 0.5 mL intradermal in left deltoid",
+        "BCG 0.05 mL intradermal over left deltoid + Hep B 0.5 mL IM in anterolateral thigh",
+        "BCG 0.5 mL intradermal in thigh + Hep B 0.05 mL subcutaneous in right arm"
+      ],
+      "correct_option": "C",
+      "source": "pp.53, 70 | E2.",
+      "explanation": "Both vaccines are due at birth. The route/site table gives newborn BCG 0.05 mL intradermal over the left deltoid and hepatitis B 0.5 mL IM in the anterolateral thigh.",
+      "answer_label": "BCG 0.05 mL ID left deltoid + Hep B 0.5 mL IM anterolateral thigh",
+      "answer": "BCG 0.05 mL intradermal over left deltoid + Hep B 0.5 mL IM in anterolateral thigh"
+    }
+  ]
+}

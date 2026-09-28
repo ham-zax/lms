@@ -2,7 +2,7 @@
 
 ## Version
 
-v5 - calibrated against the 2021-2025 historical pattern-calibration window using only the evidence levels recorded in the research manifests, plus current NBEMS exam-speed constraints, with explicit source, truth-compatibility, spatial-relation, tier, exclusion and audit gates.
+v5 - calibrated against the 2021-2025 historical pattern-calibration window using the evidence levels recorded in the research manifests plus explicitly identified qualitative recall sources documented in the pattern report, together with official NBEMS exam-speed constraints, with explicit source, truth-compatibility, spatial-relation, tier, exclusion and audit gates.
 
 ---
 

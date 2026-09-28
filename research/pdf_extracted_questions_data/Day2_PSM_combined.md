@@ -444,7 +444,7 @@ D. BCG 0.5 mL intradermal in thigh + Hep B 0.05 mL subcutaneous in right arm
 **Archetype:** Direct compact recall
 **Topic:** Cold chain — temperature maintenance
 **Source:** PDF p.60 | **Evidence:** E0 | Printed/handwritten.
-The cold-chain page explicitly shows vaccine temperature maintenance from manufacture until administration at **+2°C to +8°C**. This replaces the earlier dial-thermometer-principle item, whose handwritten principle was visually clear but not safe to teach as a general technical fact.
+The cold-chain page explicitly shows vaccine temperature maintenance from manufacture until administration at **+2°C to +8°C**.
 
 ### Q2 — **A — Styrene**
 **Archetype:** Direct compact recall
@@ -465,7 +465,7 @@ The source places mental, behavioral and neurodevelopmental disorders in **Chapt
 ### Q5 — **A — Normal saline**
 **Topic:** Lyophilized vaccines and diluents
 **Source:** p.67 | **E0** | Table.
-The source table pairs BCG with **normal saline (NaCl)**. Distilled water is shown for measles/MR/MMR, while PBS is shown for JE. The item is limited to the source's vaccine-diluent pairing rather than a generic instruction to substitute diluents across products.
+The source table pairs BCG with **normal saline (NaCl)**. Distilled water is shown for measles/MR/MMR, while PBS is shown for JE. Always reconstitute a vaccine with the diluent supplied for it.
 
 ### Q6 — **C — SA-14-14-2**
 **Topic:** Vaccine strains
@@ -495,7 +495,7 @@ HRIG is shown at **20 IU/kg**; ERIG is shown at 40 IU/kg, which is the key discr
 ### Q11 — **C — Serial interval**
 **Topic:** Epidemiological time intervals
 **Source:** p.29 | **E0-E1**.
-The source abbreviates serial interval as the gap between the primary and secondary case; the stem states the medically precise onset-to-onset relationship. Generation time is separately defined on the page as extending from organism entry to maximum infectivity.
+Serial interval is the gap between the onset of the primary case and the onset of the secondary case. Generation time is separately defined on the page as extending from organism entry to maximum infectivity.
 
 ### Q12 — **B — 16–20 vials**
 **Topic:** Vaccine carrier
@@ -544,7 +544,7 @@ Seat belt/helmet use is located under **primary specific protection**. The perso
 
 ### Q20 — **A — MR2 + DPT booster + OPV booster + JE2**
 **Source:** p.53 | **E1** | Schedule/table.
-The 16-24 month row of the immunization schedule shows **MR2, DPT booster, OPV booster, and JE2**. The birth-dose set belongs to the at-birth row, while the DPT2/OPV2/HepB2/Hib2/RVV2 set belongs to 10 weeks. This replaces the earlier malaria-source-reduction prevention-level item because the page placement was visually clear but the classification was not robust enough to teach as a canonical fact.
+The 16-24 month row of the immunization schedule shows **MR2, DPT booster, OPV booster, and JE2**. The birth-dose set belongs to the at-birth row, while the DPT2/OPV2/HepB2/Hib2/RVV2 set belongs to 10 weeks.
 
 ### Q21 — **C — Disability**
 **Source:** p.27 | **E1**.
@@ -556,7 +556,7 @@ The index case is the **first case coming to the investigator's notice**. It doe
 
 ### Q23 — **D — RMNCH+A**
 **Source:** p.99 | **E1** | Diagram/handwriting.
-The strategy diagram expands **RMNCH+A** into reproductive, maternal, newborn, child, and adolescent health. The decisive clue is the explicit addition of adolescent health. This replaces the earlier enteric-fever chronic-carrier vignette, which over-applied a generic handwritten duration rule to a disease-specific scenario.
+The strategy diagram expands **RMNCH+A** into reproductive, maternal, newborn, child, and adolescent health. The decisive clue is the explicit addition of adolescent health.
 
 ### Q24 — **C — Quarantine**
 **Source:** p.32 | **E0**.
@@ -566,7 +566,7 @@ Quarantine applies to **healthy contacts** and extends to the **maximum incubati
 **Topic:** Case-fatality rate
 **Source:** p.34 | **E1**.
 Formula: deaths among cases / total cases ×100.
-\(10/250 \times100 = 4\%\).
+10/250 × 100 = 4%.
 
 ### Q26 — **D — Vaccine remains usable**
 **Archetype:** Visual/operational decision
@@ -643,7 +643,7 @@ The switch page states that **P2 had been eradicated** before tOPV was changed t
 
 ### Q41 — **B — 40/100,000 — maternal care**
 **Source:** pp.104, 106 | **E2**.
-Formula: \(12/30,000 \times 100,000 = 40\). The indicator map associates **MMR with maternal care**.
+Formula: 12/30,000 × 100,000 = 40. The indicator map associates **MMR with maternal care**.
 **Concept link:** calculate the indicator → interpret what it reflects.
 
 ### Q42 — **C — 4 antenatal + 6 postnatal**
@@ -669,7 +669,7 @@ Eight existing cases in 100,000 people correspond to **0.8 per 10,000**, which i
 
 ### Q46 — **D — Sentinel surveillance + screening**
 **Source:** pp.19, 31 | **E2**.
-The surveillance page labels sentinel surveillance as a way to identify **hidden/missing cases**, while the iceberg page labels **screening** as the method used to detect the hidden/submerged subclinical pool. The two terms are paired here for their separate source-defined roles rather than treated as synonyms.
+The surveillance page labels sentinel surveillance as a way to identify **hidden/missing cases**, while the iceberg page labels **screening** as the method used to detect the hidden/submerged subclinical pool. They are two different tools, not synonyms.
 **Concept link:** surveillance strategy for hidden/missing cases + detection method for subclinical disease.
 
 ### Q47 — **D — Rehabilitation**
@@ -684,7 +684,7 @@ Qdenga is labelled **live attenuated**, while pregnancy is listed among contrain
 ### Q49 — **B — 2 mL**
 **Source:** pp.54, 71 | **E2**.
 At this age the source shows a **2 lakh IU** dose. The solution contains **1 lakh IU/mL**.
-Formula: \(2\,\text{lakh IU} \div 1\,\text{lakh IU/mL}=2\,\text{mL}\).
+Formula: 2 lakh IU ÷ 1 lakh IU/mL = 2 mL.
 
 ### Q50 — **C — BCG 0.05 mL ID left deltoid + Hep B 0.5 mL IM anterolateral thigh**
 **Source:** pp.53, 70 | **E2**.

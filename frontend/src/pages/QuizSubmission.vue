@@ -136,6 +136,28 @@
 								</span>
 								<span v-safe-html:rich="row.answer" />
 							</div>
+							<div
+								v-if="row.correct_answer && !row.is_correct"
+								class="text-base leading-6 text-ink-green-7 [&_p]:m-0 [&_p]:inline"
+							>
+								<span
+									class="me-2 text-xs font-medium uppercase tracking-wide text-ink-gray-4"
+								>
+									{{ __('Correct answer:') }}
+								</span>
+								<span v-safe-html:rich="row.correct_answer" />
+							</div>
+							<div
+								v-if="row.explanation"
+								class="rounded-md bg-surface-gray-2 p-3 text-sm leading-5 text-ink-gray-7"
+							>
+								<div
+									class="mb-1 text-xs font-medium uppercase tracking-wide text-ink-gray-4"
+								>
+									{{ __('Explanation') }}
+								</div>
+								<p class="whitespace-pre-line">{{ row.explanation }}</p>
+							</div>
 						</div>
 						<!-- Only an open-ended answer is a judgement call; a choice was
 						     already marked when it was submitted. -->

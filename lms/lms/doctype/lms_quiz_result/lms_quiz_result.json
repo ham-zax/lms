@@ -10,6 +10,8 @@
   "question_name",
   "question_type",
   "answer",
+  "correct_answer",
+  "explanation",
   "column_break_flus",
   "marks",
   "marks_out_of",
@@ -28,6 +30,18 @@
    "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Users Response",
+   "read_only": 1
+  },
+  {
+   "fieldname": "correct_answer",
+   "fieldtype": "Small Text",
+   "label": "Correct Answer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "explanation",
+   "fieldtype": "Text",
+   "label": "Explanation",
    "read_only": 1
   },
   {

@@ -19,9 +19,9 @@ Do not interpret recall-provider answer keys as authoritative medical truth.
 
 ## Core finding
 
-FMGE is best modeled as a **compressed mixed-format exam**.
+For question-generation purposes, the available inspected and qualitative recall evidence supports modeling FMGE as a **compressed mixed-format exam**.
 
-Difficulty does not come mainly from long stems. Recent recalls repeatedly mix:
+Difficulty should not be manufactured mainly through long stems. The available recall evidence contains a recurring mixture of:
 
 1. very short factual/association questions;
 2. short clinical vignettes with one decisive clue;
@@ -66,7 +66,7 @@ From those samples, it is reasonable only to retain the broad observation that b
 
 ### 2025
 
-January 2025 and July 2025 recalls show the strongest shift toward **compressed clinical + visual/application framing**, while still preserving many direct facts.
+The available January 2025 and July 2025 recall reconstructions contain substantial **compressed clinical + visual/application framing**, while still preserving many direct facts. Because earlier years are not supported by equivalently complete inspected recall sets, this report does **not** claim a measured year-over-year "strongest shift."
 
 January examples include:
 - unstable rhythm -> cardioversion;
@@ -92,12 +92,12 @@ July examples include:
 - image recognition linked to management or investigation.
 
 Pattern:
-- images/instruments/waveforms are used across several subjects, not only radiology/pathology;
-- "recognize -> act" questions are increasingly important;
+- images/instruments/waveforms appear across several subjects, not only radiology/pathology;
+- "recognize -> act" constructions recur in the available 2025 material;
 - short stems can still be difficult when options are close;
-- two-hop questions exist, but the exam rarely needs an unnecessarily long narrative.
+- two-hop questions occur without requiring an unnecessarily long narrative.
 
-## Stable five-year FMGE question DNA
+## Evidence-bounded FMGE generator DNA
 
 ### 1. Four-option single-best-answer
 
@@ -127,7 +127,7 @@ A realistic block should deliberately contain both:
 - direct fact/association questions; and
 - short application/vignette questions.
 
-The recent trend is toward more applied framing, but direct questions remain a meaningful scoring component.
+Available recent recall material supports substantial applied framing, while direct questions remain a meaningful component. This is a qualitative generator conclusion, not a measured five-year frequency trend.
 
 ### 4. Visual literacy
 
@@ -177,7 +177,7 @@ Distractors should often be adjacent steps in the same algorithm.
 
 Do not reserve clinical framing for Medicine/Surgery.
 
-Recent and older recalls support:
+The available recall evidence supports using:
 - Anatomy -> lesion/localization/deficit;
 - Physiology -> waveform/response/changed variable;
 - Biochemistry -> enzyme/deficiency/metabolic presentation;
@@ -278,9 +278,9 @@ Across the bank, ensure meaningful coverage of:
 - calculation/study design where relevant;
 - classification/sequence/EXCEPT sparingly.
 
-## Current exam-speed constraint
+## Exam-speed constraint
 
-Current NBEMS bulletins use time-bound sections; the published example is 50 questions in 50 minutes. The generator should therefore favor high information density and avoid unnecessarily long stems.
+As verified on 2026-09-28, NBEMS lists the October 2026 FMGE session on its official FMGE portal. The locally archived June 2026 official bulletin documents the time-bound-section scheme and gives the worked example of 50 questions in 50 answering minutes. The generator should therefore target roughly one-minute decision density and avoid unnecessarily long stems. This timing constraint comes from official NBEMS material, not recall-provider pattern inference.
 
 ## Consequence for the PDF question-bank prompt
 
@@ -310,5 +310,7 @@ It should say:
   https://www.scribd.com/document/821382459/19-1-25-300-Final-Fmge-Jan-2025-Subject-Wise-All-300
 - July 2025 subject-wise recall used for pattern inspection:
   https://www.scribd.com/document/896472684/Fmge-July-25-Recall-Subject-Final
-- NBEMS FMGE portal:
+- NBEMS FMGE portal (current-session index; verified 2026-09-28 to list October 2026 and earlier sessions):
   https://www.natboard.edu.in/viewnbeexam?exam=fmge
+- NBEMS June 2026 Information Bulletin (archived locally; official exam-structure/timing reference):
+  https://nbe.edu.in/IB/FMGE%20JUNE%202026%20information%20bulletin.pdf

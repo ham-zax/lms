@@ -1777,8 +1777,9 @@ def get_quiz_with_questions(quiz: str) -> dict:
 			"type",
 			"multiple",
 			*QUESTION_OPTION_FIELDS,
-			*QUESTION_EXPLANATION_FIELDS,
 		]
+		if quiz_doc.get("show_answers"):
+			fields.extend(QUESTION_EXPLANATION_FIELDS)
 		rows = frappe.get_all(
 			"LMS Question",
 			filters=[["name", "in", question_names]],

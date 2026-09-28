@@ -1,10 +1,14 @@
 <template>
-	<PageHeader v-if="!fromLesson" :breadcrumbs="breadcrumbs" />
+	<PageHeader v-if="!fromLesson && !publicFMGE" :breadcrumbs="breadcrumbs" />
 	<div
 		class="md:w-7/12 md:mx-auto mx-4 py-10"
 		:class="{ 'pt-4 md:w-full': fromLesson }"
 	>
-		<Quiz :quizName="quizID" />
+		<Quiz
+			:quizName="quizID"
+			:publicFMGE="publicFMGE"
+			:learnerName="learnerName"
+		/>
 	</div>
 </template>
 <script setup>
@@ -21,7 +25,7 @@ const router = useRouter()
 const fromLesson = ref(false)
 
 onMounted(() => {
-	if (!user.data) {
+	if (!user.data && !props.publicFMGE) {
 		router.push({ name: 'Courses' })
 	}
 
@@ -35,6 +39,14 @@ const props = defineProps({
 		type: String,
 		required: true,
 	},
+	publicFMGE: {
+		type: Boolean,
+		default: false,
+	},
+	learnerName: {
+		type: String,
+		default: '',
+	},
 })
 
 const title = createResource({
@@ -46,7 +58,7 @@ const title = createResource({
 			name: props.quizID,
 		},
 	},
-	auto: true,
+	auto: !props.publicFMGE,
 })
 
 const breadcrumbs = computed(() => {
@@ -65,7 +77,11 @@ const breadcrumbs = computed(() => {
 
 usePageMeta(() => {
 	return {
-		title: `${title.data?.title}`,
+		title: props.publicFMGE
+			? props.learnerName
+				? __("{0}'s PSM Mock").format(props.learnerName)
+				: __('FMGE PSM Mock')
+			: `${title.data?.title}`,
 		icon: brand.favicon,
 	}
 })

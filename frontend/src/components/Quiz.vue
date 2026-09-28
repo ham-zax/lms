@@ -11,13 +11,26 @@
 			v-if="
 				activeQuestion > 0 &&
 				!quizSubmission.data &&
-				(quiz.data.duration || quiz.data.enable_proctoring)
+				(quiz.data.duration || quiz.data.enable_proctoring || publicFMGE)
 			"
 			class="flex items-center justify-between mb-4"
 		>
 			<!-- Timer pill -->
 			<div
-				v-if="quiz.data.duration"
+				v-if="practiceMode"
+				class="inline-flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-full bg-surface-gray-3 text-ink-gray-7"
+			>
+				<span class="lucide-book-open-check size-4" />
+				{{
+					__('{0}/{1} checked · {2} correct').format(
+						practiceTally.checked,
+						questions.length,
+						practiceTally.correct
+					)
+				}}
+			</div>
+			<div
+				v-else-if="quiz.data.duration"
 				class="inline-flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-full transition-colors"
 				:class="{
 					'bg-surface-red-1 text-ink-red-6': timerUrgency === 'critical',
@@ -41,6 +54,14 @@
 				@camera-ready="() => {}"
 				@camera-denied="() => {}"
 			/>
+			<Button
+				v-if="publicFMGE"
+				variant="solid"
+				:disabled="quizSubmission.loading"
+				@click="handleSubmitClick()"
+			>
+				{{ practiceMode ? __('Finish practice') : __('Finish exam') }}
+			</Button>
 		</div>
 
 		<div v-if="activeQuestion == 0" class="space-y-4">
@@ -48,8 +69,20 @@
 			<div class="border rounded-xl overflow-hidden">
 				<div class="px-5 pt-5 pb-4 space-y-3 text-center">
 					<h2 class="text-xl font-semibold text-ink-gray-9 leading-snug">
-						{{ quiz.data.title }}
+						{{
+							learnerName
+								? __("Hi {0}, let's roll!").format(learnerName)
+								: quiz.data.title
+						}}
 					</h2>
+					<template v-if="learnerName">
+						<div class="text-base font-medium text-ink-gray-8">
+							{{ __('PSM Mock · Community Medicine') }}
+						</div>
+						<p class="text-sm leading-5 text-ink-gray-6">
+							{{ __('Made for you from your Day 2 PSM notes.') }}
+						</p>
+					</template>
 					<div class="flex flex-wrap gap-1.5 justify-center">
 						<span
 							class="inline-flex items-center gap-1.5 bg-surface-gray-3 text-ink-gray-7 text-xs font-medium px-2.5 py-1 rounded-full"
@@ -114,9 +147,11 @@
 								aria-hidden="true"
 							/>
 							{{
-								__(
-									'Closing or refreshing the page will submit your quiz automatically.'
-								)
+								publicFMGE
+									? __('Closing or refreshing the page will end this attempt.')
+									: __(
+											'Closing or refreshing the page will submit your quiz automatically.'
+									  )
 							}}
 						</p>
 					</div>
@@ -182,9 +217,11 @@
 						/>
 						<div class="text-sm text-ink-gray-7">
 							{{
-								__(
-									'Closing or refreshing the page will submit your quiz automatically.'
-								)
+								publicFMGE
+									? __('Closing or refreshing the page will end this attempt.')
+									: __(
+											'Closing or refreshing the page will submit your quiz automatically.'
+									  )
 							}}
 						</div>
 					</div>
@@ -195,9 +232,13 @@
 						<span class="lucide-timer size-4 shrink-0 text-ink-gray-5 mt-0.5" />
 						<div class="text-sm text-ink-gray-7">
 							{{
-								__(
-									'The quiz will be submitted automatically when the timer runs out.'
-								)
+								publicFMGE
+									? __(
+											'In the timed mock, your answers are submitted automatically when the timer runs out.'
+									  )
+									: __(
+											'The quiz will be submitted automatically when the timer runs out.'
+									  )
 							}}
 						</div>
 					</div>
@@ -246,11 +287,51 @@
 						}}</Button>
 					</template>
 					<template v-else>
-						<div class="flex items-center justify-center gap-2">
+						<div v-if="publicFMGE" class="grid gap-3 sm:grid-cols-2 text-start">
+							<button
+								type="button"
+								class="rounded-lg border border-outline-gray-2 p-4 text-start hover:bg-surface-gray-2 focus-visible:ring-2 focus-visible:ring-outline-gray-3"
+								@click="startQuiz('practice')"
+							>
+								<div
+									class="flex items-center gap-2 font-semibold text-ink-gray-9"
+								>
+									<span class="lucide-book-open-check size-4" />
+									{{ __('Practice') }}
+								</div>
+								<p class="mt-1 text-sm leading-5 text-ink-gray-6">
+									{{
+										__(
+											'No timer. Check each answer when you like, with the explanation and the page in your notes.'
+										)
+									}}
+								</p>
+							</button>
+							<button
+								type="button"
+								class="rounded-lg border border-outline-gray-2 p-4 text-start hover:bg-surface-gray-2 focus-visible:ring-2 focus-visible:ring-outline-gray-3"
+								@click="startQuiz('timed')"
+							>
+								<div
+									class="flex items-center gap-2 font-semibold text-ink-gray-9"
+								>
+									<span class="lucide-timer size-4" />
+									{{ __('Timed mock') }}
+								</div>
+								<p class="mt-1 text-sm leading-5 text-ink-gray-6">
+									{{
+										__(
+											'{0} minutes, exam conditions. Answers and explanations appear after you finish.'
+										).format(quiz.data.duration)
+									}}
+								</p>
+							</button>
+						</div>
+						<div v-else class="flex items-center justify-center gap-2">
 							<Button
 								variant="solid"
 								:disabled="!!quiz.data.enable_proctoring && !cameraReady"
-								@click="startQuiz"
+								@click="startQuiz()"
 							>
 								{{ __('Start Quiz') }}
 							</Button>
@@ -401,10 +482,22 @@
 					v-if="qtidx == activeQuestion - 1 && questionDetails.data"
 					class="border rounded-lg p-5"
 				>
-					<div class="flex flex-wrap items-baseline justify-between gap-x-4">
-						<div class="min-w-0 text-sm text-ink-gray-5">
-							{{ __('Question {0}').format(activeQuestion) }} -
-							{{ getInstructions(questionDetails.data) }}
+					<div class="flex items-start justify-between gap-x-4">
+						<div
+							class="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 text-sm text-ink-gray-5"
+						>
+							<span>
+								{{ __('Question {0}').format(activeQuestion) }} -
+								{{ getInstructions(questionDetails.data) }}
+							</span>
+							<span
+								v-if="tierLabel(questionDetails.data.fmge_tier)"
+								class="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium"
+								:class="tierClass(questionDetails.data.fmge_tier)"
+							>
+								<span class="lucide-layers size-3" />
+								{{ tierLabel(questionDetails.data.fmge_tier) }}
+							</span>
 						</div>
 						<div class="shrink-0 text-ink-gray-9 text-sm-semibold">
 							{{ question.marks }}
@@ -422,13 +515,15 @@
 					>
 						<label
 							v-if="questionDetails.data[`option_${index}`]"
-							class="flex items-center bg-surface-gray-3 rounded-md p-3 mt-4 w-full min-w-0 cursor-pointer focus:border-blue-600"
+							class="flex items-center rounded-md p-3 mt-4 w-full min-w-0 focus:border-blue-600"
+							:class="practiceOptionClass(index)"
 						>
 							<input
 								v-if="!showAnswers.length && !questionDetails.data.multiple"
 								type="radio"
 								:name="encodeURIComponent(questionDetails.data.question)"
-								class="w-3.5 h-3.5 shrink-0 text-ink-gray-9 focus:ring-outline-elevation-2"
+								class="w-3.5 h-3.5 shrink-0 bg-surface-base border-outline-gray-4 text-ink-blue-6 focus:ring-outline-blue-3"
+								:disabled="!!currentFeedback"
 								@change="markAnswer(index)"
 								:checked="selectedOptions[index - 1]"
 							/>
@@ -437,7 +532,7 @@
 								v-else-if="!showAnswers.length && questionDetails.data.multiple"
 								type="checkbox"
 								:name="encodeURIComponent(questionDetails.data.question)"
-								class="w-3.5 h-3.5 shrink-0 text-ink-gray-9 rounded-sm focus:ring-outline-elevation-2"
+								class="w-3.5 h-3.5 shrink-0 bg-surface-base border-outline-gray-4 text-ink-blue-6 rounded-sm focus:ring-outline-blue-3"
 								@change="markAnswer(index)"
 								:checked="selectedOptions[index - 1]"
 							/>
@@ -468,6 +563,16 @@
 								v-safe-html:rich="questionDetails.data[`option_${index}`]"
 							>
 							</span>
+							<span
+								v-if="practiceOptionState(index) == 'correct'"
+								class="lucide-check-circle ms-2 size-4 shrink-0 text-ink-green-6"
+								:aria-label="__('Correct answer')"
+							/>
+							<span
+								v-else-if="practiceOptionState(index) == 'wrong'"
+								class="lucide-x-circle ms-2 size-4 shrink-0 text-ink-red-6"
+								:aria-label="__('Your answer')"
+							/>
 						</label>
 						<div
 							v-if="questionDetails.data[`explanation_${index}`]"
@@ -509,8 +614,60 @@
 							editorClass="prose-sm max-w-none border-b border-x border-outline-elevation-2 bg-surface-gray-2 rounded-b-md py-1 px-2 min-h-[7rem]"
 						/>
 					</div>
-					<div class="flex items-center mt-8 gap-4">
-						<div class="flex-1">
+					<div
+						v-if="currentFeedback"
+						role="status"
+						class="mt-6 rounded-lg border p-4 space-y-3"
+						:class="
+							currentFeedback.is_correct
+								? 'border-outline-green-2 bg-surface-green-1'
+								: 'border-outline-red-2 bg-surface-red-1'
+						"
+					>
+						<div
+							class="flex items-center gap-2 font-semibold"
+							:class="
+								currentFeedback.is_correct
+									? 'text-ink-green-7'
+									: 'text-ink-red-7'
+							"
+						>
+							<span
+								class="size-4"
+								:class="
+									currentFeedback.is_correct
+										? 'lucide-check-circle'
+										: 'lucide-x-circle'
+								"
+							/>
+							{{ feedbackMessage }}
+						</div>
+						<p
+							v-if="!currentFeedback.is_correct"
+							class="text-sm text-ink-gray-8"
+						>
+							{{ __('Correct answer') }}:
+							<span
+								class="font-medium [&_p]:inline [&_p]:m-0"
+								v-safe-html:rich="currentFeedback.correct_answer"
+							/>
+						</p>
+						<div v-if="currentFeedback.explanation">
+							<div
+								class="text-xs font-medium uppercase tracking-wide text-ink-gray-5"
+							>
+								{{ __('Why') }}
+							</div>
+							<p
+								class="mt-1 whitespace-pre-line text-sm leading-6 text-ink-gray-8"
+							>
+								{{ currentFeedback.explanation }}
+							</p>
+						</div>
+						<SourceReference :item="currentFeedback" />
+					</div>
+					<div class="flex flex-wrap items-center mt-8 gap-4">
+						<div class="flex-1 whitespace-nowrap">
 							<Checkbox
 								v-if="!quiz.data.show_answers"
 								:label="__('Mark for review')"
@@ -521,8 +678,17 @@
 						<nav
 							v-if="!quiz.data.show_answers"
 							:aria-label="__('Question navigation')"
-							class="flex flex-wrap items-center gap-2"
+							class="order-last flex basis-full flex-wrap items-center justify-center gap-2 sm:order-none sm:basis-auto"
 						>
+							<Button
+								v-if="publicFMGE"
+								class="max-sm:hidden"
+								:label="__('First question')"
+								@click="switchQuestion(1)"
+								:disabled="activeQuestion == 1"
+							>
+								{{ __('First') }}
+							</Button>
 							<Button
 								:label="__('Previous question')"
 								@click="switchQuestion(activeQuestion - 1)"
@@ -565,10 +731,27 @@
 									<span class="lucide-chevron-right size-4" />
 								</template>
 							</Button>
+							<Button
+								v-if="publicFMGE"
+								class="max-sm:hidden"
+								:label="__('Last question')"
+								@click="switchQuestion(questions.length)"
+								:disabled="activeQuestion == questions.length"
+							>
+								{{ __('Last') }}
+							</Button>
 						</nav>
 						<div class="flex-1 flex justify-end">
 							<Button
-								v-if="
+								v-if="practiceMode && !currentFeedback"
+								variant="solid"
+								:loading="checkingPractice"
+								@click="checkPracticeAnswer()"
+							>
+								<span>{{ __('Check answer') }}</span>
+							</Button>
+							<Button
+								v-else-if="
 									quiz.data.show_answers &&
 									!showAnswers.length &&
 									questionDetails.data.type != 'Open Ended'
@@ -736,6 +919,32 @@
 							)
 						}}
 					</div>
+					<div
+						v-if="learnerName && !quizSubmission.data.is_open_ended"
+						class="font-medium text-ink-gray-8"
+					>
+						{{ summaryMessage }}
+					</div>
+					<div
+						v-if="tierBreakdown.length"
+						class="flex flex-wrap justify-center gap-2 pt-1"
+					>
+						<span
+							v-for="row in tierBreakdown"
+							:key="row.tier"
+							class="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium"
+							:class="tierClass(row.tier)"
+						>
+							{{ tierLabel(row.tier) }}: {{ row.correct }}/{{ row.total }}
+						</span>
+					</div>
+					<div v-if="publicFMGE" class="text-sm text-ink-gray-6">
+						{{
+							__(
+								'This result is not saved. You can retake it as often as you like.'
+							)
+						}}
+					</div>
 					<div class="flex items-center justify-center gap-x-2 pt-1">
 						<Button
 							@click="resetQuiz()"
@@ -753,6 +962,83 @@
 						</Button>
 					</div>
 				</div>
+			</div>
+			<div
+				v-if="publicFMGE && quizSubmission.data.review?.length"
+				class="space-y-2"
+			>
+				<div class="flex items-center justify-between gap-4">
+					<div class="font-semibold text-ink-gray-9">
+						{{ __('Review') }}
+					</div>
+					<Checkbox
+						v-model="reviewOnlyMistakes"
+						:label="
+							__('Only mistakes ({0})').format(
+								quizSubmission.data.review.filter((item) => !item.is_correct)
+									.length
+							)
+						"
+					/>
+				</div>
+				<template
+					v-for="(item, index) in quizSubmission.data.review"
+					:key="index"
+				>
+					<details
+						v-if="!reviewOnlyMistakes || !item.is_correct"
+						class="border rounded-lg px-4 py-3"
+					>
+						<summary class="cursor-pointer text-sm font-medium text-ink-gray-9">
+							<span
+								class="me-1 inline-block size-4 align-middle"
+								:class="
+									item.is_correct
+										? 'lucide-check-circle text-ink-green-6'
+										: 'lucide-x-circle text-ink-red-6'
+								"
+							/>
+							{{ __('Question {0}').format(index + 1) }}
+							<span v-if="item.tier" class="font-normal text-ink-gray-5">
+								({{ __('Tier {0}').format(item.tier) }})
+							</span>
+							—
+							{{
+								item.is_correct
+									? __('Correct')
+									: item.answer
+									? __('Incorrect')
+									: __('Unanswered')
+							}}
+						</summary>
+						<div class="mt-3 space-y-2 text-sm text-ink-gray-8">
+							<div v-safe-html:rich="item.question" />
+							<p class="text-ink-gray-7">
+								{{ __('Your answer') }}:
+								<span
+									v-if="item.answer"
+									class="[&_p]:inline [&_p]:m-0"
+									v-safe-html:rich="item.answer"
+								/>
+								<span v-else>{{ __('Unanswered') }}</span>
+							</p>
+							<p class="text-ink-green-7">
+								{{ __('Correct answer') }}:
+								<span
+									class="font-medium [&_p]:inline [&_p]:m-0"
+									v-safe-html:rich="item.correct_answer"
+								/>
+							</p>
+							<p
+								v-if="item.explanation"
+								class="whitespace-pre-line leading-6 text-ink-gray-7"
+							>
+								{{ item.explanation }}
+							</p>
+							<SourceReference :item="item" />
+						</div>
+					</details>
+				</template>
 			</div>
 			<!-- Activity log persists into summary view for proctored quizzes -->
 			<div
@@ -938,6 +1224,7 @@ import ProgressBar from '@/components/ProgressBar.vue'
 import ResponsiveListView from '@/components/ResponsiveListView.vue'
 import RichTextEditor from '@/components/RichTextEditor.vue'
 import ProctoringMonitor from '@/components/ProctoringMonitor.vue'
+import SourceReference from '@/components/FMGE/SourceReference.vue'
 
 const user = inject('$user')
 const activeQuestion = ref(0)
@@ -949,6 +1236,11 @@ const questions = ref([])
 const attemptedQuestions = ref([])
 const reviewQuestions = ref([])
 const showSubmissionConfirmation = ref(false)
+// Public FMGE practice: answers checked one at a time, keyed by question name.
+const practiceMode = ref(false)
+const practiceFeedback = ref({})
+const checkingPractice = ref(false)
+const reviewOnlyMistakes = ref(false)
 const possibleAnswer = ref(null)
 const timer = ref(0)
 let timerInterval = null
@@ -970,6 +1262,15 @@ const props = defineProps({
 	preview: {
 		type: Boolean,
 		default: false,
+	},
+	publicFMGE: {
+		type: Boolean,
+		default: false,
+	},
+	// Public FMGE mock only: who it was made for, used in the greeting and summary.
+	learnerName: {
+		type: String,
+		default: '',
 	},
 	inVideo: {
 		type: Boolean,
@@ -1006,7 +1307,7 @@ const serialiseViolationLog = (withFrames = true) =>
 	)
 
 const handlePageHide = () => {
-	if (props.preview) return
+	if (props.preview || props.publicFMGE) return
 	if (activeQuestion.value > 0 && !quizSubmission.data) {
 		const params = new URLSearchParams({
 			quiz: quiz.data.name,
@@ -1041,9 +1342,11 @@ const handleBeforeUnload = (event) => {
 // activeQuestion watcher read from a local map instead of round-tripping.
 const questionsByName = ref({})
 const quiz = createResource({
-	url: 'lms.lms.utils.get_quiz_with_questions',
+	url: props.publicFMGE
+		? 'lms.fmge.public_quiz.get_public_quiz'
+		: 'lms.lms.utils.get_quiz_with_questions',
 	makeParams() {
-		return { quiz: props.quizName }
+		return props.publicFMGE ? {} : { quiz: props.quizName }
 	},
 	// Keep this resource instance-local: its callbacks update component-local
 	// question and timer state on every mount.
@@ -1191,8 +1494,13 @@ watch(
 )
 
 const quizSubmission = createResource({
-	url: 'lms.lms.doctype.lms_quiz.lms_quiz.submit_quiz',
+	url: props.publicFMGE
+		? 'lms.fmge.public_quiz.submit_public_quiz'
+		: 'lms.lms.doctype.lms_quiz.lms_quiz.submit_quiz',
 	makeParams(values) {
+		if (props.publicFMGE) {
+			return { results: localStorage.getItem(quiz.data.title) || '[]' }
+		}
 		return {
 			quiz: quiz.data.name,
 			results: localStorage.getItem(quiz.data.title) || '[]',
@@ -1224,16 +1532,16 @@ watch(activeQuestion, (value) => {
 })
 
 const switchQuestion = (questionNumber) => {
-	let answers = getAnswers()
-	if (answers.length) {
-		if (!attemptedQuestions.value.includes(activeQuestion.value)) {
-			attemptedQuestions.value.push(activeQuestion.value)
-		}
-		addToLocalStorage()
-		resetQuestion()
-	}
-
-	if (questionNumber < 1 || questionNumber > questions.value.length) return
+	if (
+		questionNumber < 1 ||
+		questionNumber > questions.value.length ||
+		questionNumber == activeQuestion.value
+	)
+		return
+	if (getAnswers().length) recordCurrentAttempt()
+	selectedOptions.value.fill(0)
+	showAnswers.length = 0
+	possibleAnswer.value = null
 	activeQuestion.value = questionNumber
 }
 
@@ -1285,14 +1593,17 @@ watch(
 	}
 )
 
-const startQuiz = () => {
+const startQuiz = (mode = 'timed') => {
+	practiceMode.value = props.publicFMGE && mode == 'practice'
+	practiceFeedback.value = {}
+	practiceStreak.value = 0
 	activeQuestion.value = 1
 	localStorage.removeItem(quiz.data.title)
 	// Neither in an author preview. Nothing may be submitted there, so a countdown
 	// would reach zero with no way to end the attempt and the camera would stay on
 	// with it, and a violation cap would do the same.
 	if (props.preview) return
-	if (quiz.data.duration) startTimer()
+	if (quiz.data.duration && !practiceMode.value) startTimer()
 	if (quiz.data.enable_proctoring) proctoringActive.value = true
 }
 
@@ -1549,6 +1860,10 @@ const resetQuiz = () => {
 	possibleAnswer.value = null
 	attemptedQuestions.value = []
 	reviewQuestions.value = []
+	practiceMode.value = false
+	practiceFeedback.value = {}
+	practiceStreak.value = 0
+	reviewOnlyMistakes.value = false
 	quizSubmission.reset()
 	violationCount.value = 0
 	proctoringActive.value = false
@@ -1626,7 +1941,146 @@ const paginationWindow = computed(() => {
 // The current page wins over the attempted tint, so it reads as "here", not "answered".
 const pageTheme = (questionNumber) => {
 	if (activeQuestion.value == questionNumber) return 'gray'
+	const feedback =
+		practiceFeedback.value[questions.value[questionNumber - 1]?.question]
+	if (feedback) return feedback.is_correct ? 'green' : 'red'
 	return attemptedQuestions.value.includes(questionNumber) ? 'blue' : 'gray'
+}
+
+const practiceStreak = ref(0)
+
+const CORRECT_MESSAGES = [
+	__('Spot on, {0}!'),
+	__('Nailed it, {0}!'),
+	__("That's the one, {0}. Keep going!"),
+	__('Brilliant, {0}! You know this.'),
+	__('Right again, {0}. Doctor mode on!'),
+]
+const WRONG_MESSAGES = [
+	__('Not quite, {0}. Read why, and it will stick.'),
+	__('Close, {0}! This is exactly how you learn it.'),
+	__("Not this time, {0}. Next time it's yours."),
+	__('Good try, {0}. Have a look at the notes page below.'),
+	__('No worries, {0}. Every miss here is one less in the exam.'),
+]
+
+const feedbackMessage = computed(() => {
+	const feedback = currentFeedback.value
+	if (!feedback) return ''
+	if (!props.learnerName)
+		return feedback.is_correct ? __('Correct') : __('Not quite')
+	if (feedback.is_correct && feedback.streak >= 3)
+		return __("{0} in a row, {1}! You're on fire.").format(
+			feedback.streak,
+			props.learnerName
+		)
+	const messages = feedback.is_correct ? CORRECT_MESSAGES : WRONG_MESSAGES
+	return messages[feedback.messageIndex % messages.length].format(
+		props.learnerName
+	)
+})
+
+// End-of-attempt line, pitched to how it went rather than a bare pass/fail.
+const summaryMessage = computed(() => {
+	const percentage = quizSubmission.data?.percentage || 0
+	const name = props.learnerName
+	if (percentage >= 80)
+		return __('Outstanding, {0}! You really know your PSM.').format(name)
+	if (percentage >= 50)
+		return __("Well done, {0}! A few more rounds and it's locked in.").format(
+			name
+		)
+	return __(
+		'Keep going, {0}. Go through the mistakes below; each one is a mark saved in the exam.'
+	).format(name)
+})
+
+const currentFeedback = computed(() =>
+	practiceMode.value ? practiceFeedback.value[currentQuestion.value] : null
+)
+
+const practiceTally = computed(() => {
+	const checked = Object.values(practiceFeedback.value)
+	return {
+		checked: checked.length,
+		correct: checked.filter((feedback) => feedback.is_correct).length,
+	}
+})
+
+// 'correct' marks the keyed option, 'wrong' the learner's pick when it missed.
+const practiceOptionState = (index) => {
+	const feedback = currentFeedback.value
+	if (!feedback) return null
+	const option = questionDetails.data?.[`option_${index}`]
+	if (option == feedback.correct_answer) return 'correct'
+	if (option == feedback.answer) return 'wrong'
+	return null
+}
+
+const practiceOptionClass = (index) => {
+	const state = practiceOptionState(index)
+	if (state == 'correct')
+		return 'bg-surface-green-1 ring-1 ring-outline-green-2'
+	if (state == 'wrong') return 'bg-surface-red-1 ring-1 ring-outline-red-2'
+	if (currentFeedback.value) return 'bg-surface-gray-3 opacity-70'
+	// Mark the whole row, not just the radio, so the choice reads in both themes.
+	return selectedOptions.value[index - 1]
+		? 'bg-surface-blue-1 ring-1 ring-outline-blue-3 cursor-pointer'
+		: 'bg-surface-gray-3 cursor-pointer'
+}
+
+// Bank tiers, easiest first; the labels mirror the headings in the source bank.
+const TIER_LABELS = {
+	1: __('Tier 1 · Direct recall'),
+	2: __('Tier 2 · Application'),
+	3: __('Tier 3 · Two-step'),
+}
+const tierLabel = (tier) => TIER_LABELS[tier] || ''
+const tierClass = (tier) =>
+	({
+		1: 'bg-surface-green-1 text-ink-green-7',
+		2: 'bg-surface-amber-1 text-ink-amber-7',
+		3: 'bg-surface-red-1 text-ink-red-7',
+	}[tier] || 'bg-surface-gray-3 text-ink-gray-7')
+
+const tierBreakdown = computed(() => {
+	const rows = {}
+	for (const item of quizSubmission.data?.review || []) {
+		if (!item.tier) continue
+		rows[item.tier] ||= { tier: item.tier, correct: 0, total: 0 }
+		rows[item.tier].total++
+		if (item.is_correct) rows[item.tier].correct++
+	}
+	return Object.values(rows).sort((a, b) => a.tier - b.tier)
+})
+
+const checkPracticeAnswer = () => {
+	const answers = getAnswers()
+	if (!answers.length) {
+		toast.warning(__('Please select an option'))
+		return
+	}
+	recordCurrentAttempt()
+	const question = currentQuestion.value
+	checkingPractice.value = true
+	call('lms.fmge.public_quiz.check_public_answer', {
+		question,
+		answer: answers[0],
+	})
+		.then((feedback) => {
+			// Streak and message are fixed at check time, so revisiting a question
+			// shows the same line instead of a freshly shuffled one.
+			practiceStreak.value = feedback.is_correct ? practiceStreak.value + 1 : 0
+			feedback.streak = practiceStreak.value
+			feedback.messageIndex = Math.floor(Math.random() * 5)
+			practiceFeedback.value[question] = feedback
+		})
+		.catch((err) => {
+			toast.error(err?.messages?.[0] || __('Could not check this answer.'))
+		})
+		.finally(() => {
+			checkingPractice.value = false
+		})
 }
 
 const markForReview = (event, questionNumber) => {

@@ -13,6 +13,8 @@ export interface LMSQuiz {
 	idx?: number
 	/**	Title : Data	*/
 	title: string
+	/**	FMGE Bank ID : Data	*/
+	fmge_bank_id?: string
 	/**	Questions : Table - LMS Quiz Question	*/
 	questions?: LMSQuizQuestion[]
 	/**	Lesson : Link - Course Lesson	*/
