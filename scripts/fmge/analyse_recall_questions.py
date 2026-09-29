@@ -131,6 +131,9 @@ TASKS = [
 ]
 TASK_RES = [(name, re.compile(pattern, re.IGNORECASE)) for name, pattern in TASKS]
 
+# Model subject predictions at or above this probability are treated as usable (see the printed check).
+CONFIDENT = 0.2
+
 FIELDS = [
 	"question_id",
 	"year",
@@ -141,6 +144,7 @@ FIELDS = [
 	"source_question_number",
 	"subject",
 	"subject_method",
+	"subject_confidence",
 	"stem_words",
 	"stem_type",
 	"task",
@@ -216,10 +220,17 @@ def main() -> int:
 	vectorizer = TfidfVectorizer(ngram_range=(1, 2), min_df=1, sublinear_tf=True, stop_words="english")
 	x_all = vectorizer.fit_transform(texts)
 	model = LogisticRegression(max_iter=3000, C=8, class_weight="balanced")
-	cv_pred = cross_val_predict(model, x_all[labelled], y, cv=5)
+	cv_proba = cross_val_predict(model, x_all[labelled], y, cv=5, method="predict_proba")
+	classes = np.unique(y)
+	cv_pred = classes[cv_proba.argmax(axis=1)]
 	cv_accuracy = float((cv_pred == y).mean())
+	confident = cv_proba.max(axis=1) >= CONFIDENT
+	confident_accuracy = float((cv_pred[confident] == y[confident]).mean()) if confident.any() else 0.0
+	confident_share = float(confident.mean())
 	model.fit(x_all[labelled], y)
-	predicted = model.predict(x_all)
+	proba = model.predict_proba(x_all)
+	predicted = model.classes_[proba.argmax(axis=1)]
+	confidence = proba.max(axis=1)
 
 	# Duplicates: FMGEPrep samples that are the same recalled item as a PrepLadder question.
 	prepladder = [i for i, r in enumerate(rows) if r["provider"] == "PrepLadder"]
@@ -263,6 +274,7 @@ def main() -> int:
 				"source_question_number": r["source_question_number"],
 				"subject": SUBJECT_MAP.get(provider_subject, predicted[i]),
 				"subject_method": "provider label" if provider_subject in SUBJECT_MAP else "model",
+				"subject_confidence": "1.00" if provider_subject in SUBJECT_MAP else f"{confidence[i]:.2f}",
 				**features,
 				"provider_answer": r["provider_answer"],
 				"duplicate_of": duplicate_of.get(i, ""),
@@ -291,6 +303,9 @@ def main() -> int:
 	)
 	print(f"Wrote {len(out)} rows to {PATTERNS_CSV}")
 	print(f"Subject model 5-fold accuracy {cv_accuracy:.1%} on {len(labelled)} labelled questions")
+	print(
+		f"  at confidence >= {CONFIDENT}: accuracy {confident_accuracy:.1%} on {confident_share:.0%} of questions"
+	)
 	print(f"Image detector vs FMGEPrep flag: recall {image_recall:.0%}, precision {image_precision:.0%}")
 	print(f"Wrote {STATS_MD}")
 	return 0

@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "bank_id": "fmge-psm-day3-section-4",
+  "title": "Day 3 PSM — Section 4",
+  "subject": "Community Medicine",
+  "description": "FMGE Community Medicine practice from the reviewed Day 3 PSM question bank, section 4 of 4.",
+  "expected_questions": 26,
+  "duration_minutes": 26,
+  "max_attempts": 1,
+  "passing_percentage": 50,
+  "show_answers": 0,
+  "show_submission_history": 1,
+  "shuffle_questions": 0,
+  "enable_negative_marking": 0,
+  "questions": [
+    {
+      "id": "PSM-D3-S4-Q001",
+      "number": 1,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Daily iron–folic acid prophylaxis with the red pregnancy tablet begins in which trimester?",
+      "options": [
+        "First trimester",
+        "Second trimester",
+        "Third trimester",
+        "After delivery"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.3 | E0 | Handwritten",
+      "explanation": "The daily red iron–folic acid tablet is started in the second trimester.",
+      "answer_label": "Second trimester",
+      "answer": "Second trimester"
+    },
+    {
+      "id": "PSM-D3-S4-Q017",
+      "number": 17,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A parent stops providing an evening meal because the child eats the school mid-day meal. Correct advice?",
+      "options": [
+        "Continue the usual home meals",
+        "Replace the evening meal",
+        "Stop the school meal",
+        "Rely only on school meals"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.25 | E1 | Printed/Handwritten",
+      "explanation": "The school mid-day meal adds to the child’s home diet; it does not replace home meals.",
+      "answer_label": "Continue the usual home meals",
+      "answer": "Continue the usual home meals"
+    },
+    {
+      "id": "PSM-D3-S4-Q002",
+      "number": 2,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which measurement is being recorded with the instrument shown?",
+      "options": [
+        "Infant weight",
+        "Recumbent length",
+        "Head circumference",
+        "Mid-upper arm circumference"
+      ],
+      "image_url": "/assets/lms/fmge/images/psm-d3-s4-q002-hanging-scale.png",
+      "image_alt": "Child in a fabric sling suspended from a dial instrument",
+      "image_source": "p.8 | lower-left photograph of a child suspended from a hanging scale; crop out the page heading",
+      "correct_option": "A",
+      "source": "PDF p.8 | E0 | Diagram/Handwritten",
+      "explanation": "A hanging Salter scale measures an infant’s weight.",
+      "answer_label": "Infant weight",
+      "answer": "Infant weight"
+    },
+    {
+      "id": "PSM-D3-S4-Q003",
+      "number": 3,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The approximate energy content of human milk per 100 mL is:",
+      "options": [
+        "45 kcal",
+        "55 kcal",
+        "65 kcal",
+        "75 kcal"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.12 | E0 | Handwritten",
+      "explanation": "Human milk provides approximately 65 kcal per 100 mL.",
+      "answer_label": "65 kcal",
+      "answer": "65 kcal"
+    },
+    {
+      "id": "PSM-D3-S4-Q018",
+      "number": 18,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "For screening to improve outcome, disease must be detected before its:",
+      "options": [
+        "Onset",
+        "First possible detection",
+        "Final critical point",
+        "Usual clinical diagnosis"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.39 | E1 | Diagram",
+      "explanation": "Useful screening detects disease after it first becomes detectable but before the final critical point for effective intervention.",
+      "answer_label": "Final critical point",
+      "answer": "Final critical point"
+    },
+    {
+      "id": "PSM-D3-S4-Q004",
+      "number": 4,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The daily Anganwadi supplementary-energy allocation for a pregnant or lactating woman is:",
+      "options": [
+        "400 kcal",
+        "500 kcal",
+        "600 kcal",
+        "800 kcal"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.24 | E0 | Table",
+      "explanation": "The daily supplementary allocation for pregnant and lactating women is 600 kcal.",
+      "answer_label": "600 kcal",
+      "answer": "600 kcal"
+    },
+    {
+      "id": "PSM-D3-S4-Q027",
+      "number": 27,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A woman starts breastfeeding immediately after vaginal delivery. Which hormone-mediated maternal response helps limit postpartum blood loss?",
+      "options": [
+        "Uterine relaxation from prolactin",
+        "Cervical dilation from progesterone",
+        "Reduced clotting from oestrogen",
+        "Uterine contraction from oxytocin"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.14 | E2 | Diagram/Handwritten",
+      "explanation": "Early suckling releases oxytocin and stimulates uterine contraction. This physiological effect should not be presented as proven prevention of postpartum haemorrhage.",
+      "answer_label": "Uterine contraction from oxytocin",
+      "answer": "Uterine contraction from oxytocin"
+    },
+    {
+      "id": "PSM-D3-S4-Q005",
+      "number": 5,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which amino acid in human milk is identified with brain development?",
+      "options": [
+        "Methionine",
+        "Cysteine",
+        "Tryptophan",
+        "Taurine"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.12–13 | E0 | Handwritten",
+      "explanation": "Taurine is the breast-milk amino acid linked here to brain development.",
+      "answer_label": "Taurine",
+      "answer": "Taurine"
+    },
+    {
+      "id": "PSM-D3-S4-Q020",
+      "number": 20,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A PHC screens a large, apparently healthy population before individual diagnostic referral. Which test profile fits?",
+      "options": [
+        "Slow, inexpensive testing",
+        "Rapid, costly testing",
+        "Slow, costly testing",
+        "Rapid, inexpensive testing"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.37–38 | E1 | Table/Multi-page",
+      "explanation": "An initial population screening test should be quick and inexpensive; individual diagnostic assessment follows when indicated.",
+      "answer_label": "Rapid, inexpensive testing",
+      "answer": "Rapid, inexpensive testing"
+    },
+    {
+      "id": "PSM-D3-S4-Q006",
+      "number": 6,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Bimanual oral palpation is used in screening for which cancer?",
+      "options": [
+        "Cervical cancer",
+        "Oral cancer",
+        "Breast cancer",
+        "Prostate cancer"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.50 | E0 | Table",
+      "explanation": "Bimanual oral palpation is listed as an oral-cancer screening examination.",
+      "answer_label": "Oral cancer",
+      "answer": "Oral cancer"
+    },
+    {
+      "id": "PSM-D3-S4-Q007",
+      "number": 7,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which stain is listed for examining a specimen for acid-fast bacilli?",
+      "options": [
+        "Ziehl–Neelsen stain",
+        "JSB stain",
+        "Gram stain",
+        "Papanicolaou stain"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.43 | E0 | Diagram/Handwritten",
+      "explanation": "Ziehl–Neelsen staining demonstrates acid-fast bacilli; this does not make smear microscopy the default definitive initial test for tuberculosis.",
+      "answer_label": "Ziehl–Neelsen stain",
+      "answer": "Ziehl–Neelsen stain"
+    },
+    {
+      "id": "PSM-D3-S4-Q021",
+      "number": 21,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A used scalpel has undergone sterilization in the white sharps stream. What follows before final disposal?",
+      "options": [
+        "Recycle it intact",
+        "Send it directly to a foundry",
+        "Shred or mutilate it",
+        "Transfer it to the blue stream"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.69 | E1 | Table",
+      "explanation": "Sterilized waste sharps are rendered unusable by shredding or mutilation before final disposal.",
+      "answer_label": "Shred or mutilate it",
+      "answer": "Shred or mutilate it"
+    },
+    {
+      "id": "PSM-D3-S4-Q008",
+      "number": 8,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which spore indicator checks biomedical-waste microwave treatment?",
+      "options": [
+        "*Bacillus subtilis*",
+        "*Geobacillus stearothermophilus*",
+        "*Clostridium sporogenes*",
+        "*Bacillus atrophaeus*"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.71–72 | E0 | Table/Handwritten",
+      "explanation": "*B. atrophaeus* spores are used to check microwave treatment.",
+      "answer_label": "*Bacillus atrophaeus*",
+      "answer": "*Bacillus atrophaeus*"
+    },
+    {
+      "id": "PSM-D3-S4-Q009",
+      "number": 9,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The specified lower temperature boundary for hot-air oven treatment is:",
+      "options": [
+        "100°C",
+        "121°C",
+        "132°C",
+        "160°C"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.72 | E0 | Table",
+      "explanation": "The hot-air oven entry specifies treatment above 160°C.",
+      "answer_label": "160°C",
+      "answer": "160°C"
+    },
+    {
+      "id": "PSM-D3-S4-Q022",
+      "number": 22,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Which water-treatment method provides a continuing disinfectant residual?",
+      "options": [
+        "Boiling",
+        "Ultraviolet treatment",
+        "Ozonation",
+        "Chlorination"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.104, p.106 | E1 | Handwritten/Multi-page",
+      "explanation": "Chlorination can leave free residual chlorine in treated water.",
+      "answer_label": "Chlorination",
+      "answer": "Chlorination"
+    },
+    {
+      "id": "PSM-D3-S4-Q010",
+      "number": 10,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Disaster triage considers which factor when assigning treatment priority?",
+      "options": [
+        "Likelihood of survival",
+        "Injury severity alone",
+        "Distance from hospital",
+        "Order of arrival"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.91 | E0 | Handwritten",
+      "explanation": "Mass-casualty triage weighs the likelihood of survival when assigning priority.",
+      "answer_label": "Likelihood of survival",
+      "answer": "Likelihood of survival"
+    },
+    {
+      "id": "PSM-D3-S4-Q011",
+      "number": 11,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Candela is a unit of:",
+      "options": [
+        "Luminous flux",
+        "Luminous intensity",
+        "Illuminance",
+        "Luminance"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.126 | E0 | Table",
+      "explanation": "Candela measures luminous intensity.",
+      "answer_label": "Luminous intensity",
+      "answer": "Luminous intensity"
+    },
+    {
+      "id": "PSM-D3-S4-Q023",
+      "number": 23,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "After a tap is prepared for bacteriological water sampling, the sample should be collected:",
+      "options": [
+        "From a jet splashing against the bottle",
+        "From a gentle stream without splashing",
+        "From standing water at the outlet",
+        "With the bottle mouth touching the tap"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.112 | E0 | Handwritten",
+      "explanation": "Collect the sample from a gentle stream without splashing or touching the bottle opening to the tap.",
+      "answer_label": "From a gentle stream without splashing",
+      "answer": "From a gentle stream without splashing"
+    },
+    {
+      "id": "PSM-D3-S4-Q012",
+      "number": 12,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which vector transmits plague?",
+      "options": [
+        "Sandfly",
+        "Blackfly",
+        "Rat flea",
+        "Tsetse fly"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.127 | E0 | Table",
+      "explanation": "The rat flea is the listed vector of plague.",
+      "answer_label": "Rat flea",
+      "answer": "Rat flea"
+    },
+    {
+      "id": "PSM-D3-S4-Q028",
+      "number": 28,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A discarded drug bears the symbol shown. Which biomedical-waste colour stream receives the drug?",
+      "options": [
+        "Blue",
+        "Yellow",
+        "Red",
+        "White"
+      ],
+      "image_url": "/assets/lms/fmge/images/psm-d3-s4-q028-c-symbol.png",
+      "image_alt": "Black triangular warning symbol with a large white letter C",
+      "image_source": "p.68 | lower-left triangular “C” symbol only; crop out the handwritten hazard name",
+      "correct_option": "B",
+      "source": "PDF p.68, p.70 | E2 | Diagram/Multi-page",
+      "explanation": "The symbol identifies a cytotoxic drug. Discarded cytotoxic drugs belong in the yellow biomedical-waste stream.",
+      "answer_label": "Yellow",
+      "answer": "Yellow"
+    },
+    {
+      "id": "PSM-D3-S4-Q013",
+      "number": 13,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which vector transmits Chagas disease?",
+      "options": [
+        "Tsetse fly",
+        "Sandfly",
+        "Rat flea",
+        "Reduviid bug"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.127 | E0 | Table",
+      "explanation": "The reduviid, or kissing, bug transmits Chagas disease.",
+      "answer_label": "Reduviid bug",
+      "answer": "Reduviid bug"
+    },
+    {
+      "id": "PSM-D3-S4-Q024",
+      "number": 24,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Untreated sewage contaminates a village water supply. Transmission of which disease is supported?",
+      "options": [
+        "Poliomyelitis",
+        "Plague",
+        "Kala-azar",
+        "Kyasanur Forest disease"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.123, p.127–128 | E1 | Multi-page",
+      "explanation": "Sewage containing human excreta can support poliovirus transmission; the other listed diseases have vector associations.",
+      "answer_label": "Poliomyelitis",
+      "answer": "Poliomyelitis"
+    },
+    {
+      "id": "PSM-D3-S4-Q014",
+      "number": 14,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which vector is associated with epidemic typhus?",
+      "options": [
+        "Rat flea",
+        "Hard tick",
+        "Body louse",
+        "Blackfly"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.127–128 | E0 | Table",
+      "explanation": "The body louse transmits epidemic typhus; rat fleas are associated with endemic typhus.",
+      "answer_label": "Body louse",
+      "answer": "Body louse"
+    },
+    {
+      "id": "PSM-D3-S4-Q015",
+      "number": 15,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "*Anopheles* eggs are characteristically:",
+      "options": [
+        "Boat-shaped",
+        "Raft-like",
+        "Barrel-shaped",
+        "Spherical"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.129 | E0 | Table/Diagram",
+      "explanation": "*Anopheles* eggs have the characteristic boat-shaped appearance.",
+      "answer_label": "Boat-shaped",
+      "answer": "Boat-shaped"
+    },
+    {
+      "id": "PSM-D3-S4-Q025",
+      "number": 25,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A worker’s predicted sweat loss is 1.2 L/hour over four hours. The P4SR category is:",
+      "options": [
+        "Comfort zone",
+        "Just tolerable",
+        "Intolerable",
+        "Below comfort range"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.118 | E1 | Table",
+      "explanation": "At 1.2 L per hour, predicted loss over four hours is 4.8 L, above the listed 4.5 L limit.",
+      "answer_label": "Intolerable",
+      "answer": "Intolerable"
+    },
+    {
+      "id": "PSM-D3-S4-Q016",
+      "number": 16,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The unit of luminous flux is the:",
+      "options": [
+        "Candela",
+        "Lumen",
+        "Lux",
+        "Lambert"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.126 | E0 | Table",
+      "explanation": "Lumen measures luminous flux, or the flow of light.",
+      "answer_label": "Lumen",
+      "answer": "Lumen"
+    }
+  ]
+}

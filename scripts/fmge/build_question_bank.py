@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_SOURCE = ROOT / "research/pdf_extracted_questions_data/Day2_PSM_combined.md"
 DEFAULT_OUTPUT = ROOT / "lms/fmge/data/psm_block_1.json"
 ANSWER_KEY_HEADING = "# ANSWER KEY AND TEACHING REVIEW"
+# A long PDF is delivered as several mock sections in one reply thread, each headed like this.
+SECTION_HEADING_RE = re.compile(r"^#\s+SECTION\s+(\d+)\s+OF\s+(\d+)\b.*$", re.MULTILINE | re.IGNORECASE)
 PUBLIC_DIR = ROOT / "lms/public"
 DIFFICULTY_BY_TIER = {1: "direct", 2: "moderate", 3: "hard"}
 
@@ -86,6 +88,28 @@ def clean_inline(value: str) -> str:
 def strip_code_fences(text: str) -> str:
 	"""Web sessions often wrap parts of the reply in ``` fences; they carry no content."""
 	return "\n".join(line for line in text.splitlines() if not line.strip().startswith("```"))
+
+
+def select_section(text: str, section: int | None) -> str:
+	"""Return one section of a multi-section source; a single-section source is returned whole."""
+	text = strip_code_fences(text)
+	headings = list(SECTION_HEADING_RE.finditer(text))
+	if not headings:
+		if section not in (None, 1):
+			raise ValueError(f"Source has no '# SECTION {section} OF N' heading")
+		return text
+	numbers = [int(match.group(1)) for match in headings]
+	if len(set(numbers)) != len(numbers):
+		raise ValueError(f"Duplicate section headings: {numbers}")
+	if section is None:
+		if len(headings) > 1:
+			raise ValueError(f"Source holds sections {numbers}; choose one with --section")
+		section = numbers[0]
+	if section not in numbers:
+		raise ValueError(f"Section {section} not found; source holds sections {numbers}")
+	index = numbers.index(section)
+	end = headings[index + 1].start() if index + 1 < len(headings) else len(text)
+	return text[headings[index].end() : end]
 
 
 def parse_question_blocks(text: str, id_prefix: str = "PSM-B1") -> list[dict]:
@@ -230,17 +254,22 @@ def build_bank(
 	*,
 	bank_id: str = "fmge-psm-block-1",
 	id_prefix: str = "PSM-B1",
-	title: str = "FMGE PSM Mock 1 - Section 1",
+	title: str = "FMGE PSM Day 2 Mock",
 	subject: str = "Community Medicine",
 	description: str = "FMGE-style 50-question PSM section generated from the reviewed Day 2 PSM source.",
-	expected_questions: int = 50,
+	expected_questions: int | None = None,
 	order: str = "source",
+	section: int | None = None,
 ) -> dict:
-	text = source.read_text(encoding="utf-8")
+	text = select_section(source.read_text(encoding="utf-8"), section)
 	questions = parse_question_blocks(text, id_prefix)
 	answers = parse_answer_key(text)
 
-	if len(questions) != expected_questions:
+	if not questions:
+		raise ValueError("No questions found")
+	if expected_questions is None:
+		expected_questions = len(questions)
+	elif len(questions) != expected_questions:
 		raise ValueError(f"Expected {expected_questions} questions, found {len(questions)}")
 	if set(answers) != {question["number"] for question in questions}:
 		raise ValueError("Answer key does not cover exactly the parsed question set")
@@ -368,7 +397,8 @@ def lint_bank(bank: dict) -> tuple[list[str], list[str]]:
 	if total:
 		counts = {letter: sum(q["correct_option"] == letter for q in questions) for letter in "ABCD"}
 		for letter, count in counts.items():
-			if not 0.15 <= count / total <= 0.35:
+			# Letter shares mean little in a very short section.
+			if total >= 12 and not 0.15 <= count / total <= 0.35:
 				warnings.append(f"answer key: {letter} is correct in {count}/{total} questions")
 		keys = "".join(q["correct_option"] for q in questions)
 		run = re.search(r"([A-D])\1{3,}", keys)
@@ -439,13 +469,22 @@ def main() -> int:
 	parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
 	parser.add_argument("--bank-id", default="fmge-psm-block-1")
 	parser.add_argument("--id-prefix", default="PSM-B1", help="Question IDs become <prefix>-Q001...")
-	parser.add_argument("--title", default="FMGE PSM Mock 1 - Section 1")
+	parser.add_argument("--title", default="FMGE PSM Day 2 Mock")
 	parser.add_argument("--subject", default="Community Medicine")
 	parser.add_argument(
 		"--description",
 		default="FMGE-style 50-question PSM section generated from the reviewed Day 2 PSM source.",
 	)
-	parser.add_argument("--expected", type=int, default=50, help="Questions in the section (1 minute each)")
+	parser.add_argument(
+		"--expected",
+		type=int,
+		help="Fail unless the section has exactly this many questions (default: take the count found)",
+	)
+	parser.add_argument(
+		"--section",
+		type=int,
+		help="Section number to build when the source holds several '# SECTION k OF m' parts",
+	)
 	parser.add_argument(
 		"--order",
 		choices=("source", "interleaved"),
@@ -470,6 +509,7 @@ def main() -> int:
 		description=args.description,
 		expected_questions=args.expected,
 		order=args.order,
+		section=args.section,
 	)
 	_check_local_images(bank)
 	errors, warnings = lint_bank(bank)

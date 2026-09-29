@@ -18,6 +18,11 @@ from lms.lms.utils import get_editorjs_blocks, get_lms_route
 
 DATA_DIR = Path(__file__).with_name("data")
 FMGE_OPTION_COUNT = 4
+DAY2_BANK_ID = "fmge-psm-block-1"
+DAY2_COURSE_NAME = "fmge-mock-exams"
+DAY2_COURSE_TITLE = "FMGE PSM Day 2"
+DAY2_CHAPTER_TITLE = "Day 2 PSM Practice"
+DAY2_SHORT_INTRODUCTION = "A 50-question Community Medicine mock from the Day 2 PSM notes."
 
 
 def _load_bank(filename: str) -> dict:
@@ -240,17 +245,32 @@ def _place_psm_quiz_in_course(quiz_name: str) -> dict:
 				_("FMGE quiz is linked to a lesson that no longer contains it."),
 				frappe.ValidationError,
 			)
+		if quiz.fmge_bank_id == DAY2_BANK_ID:
+			if lesson.course != DAY2_COURSE_NAME:
+				frappe.throw(_("The Day 2 quiz is linked to an unexpected course."), frappe.ValidationError)
+			course = frappe.get_doc("LMS Course", lesson.course)
+			course.title = DAY2_COURSE_TITLE
+			course.short_introduction = DAY2_SHORT_INTRODUCTION
+			course.description = _public_course_description()
+			course.save(ignore_permissions=True)
+			chapter = frappe.get_doc("Course Chapter", lesson.chapter)
+			chapter.title = DAY2_CHAPTER_TITLE
+			chapter.save(ignore_permissions=True)
+			lesson.title = quiz.title
+			lesson.save(ignore_permissions=True)
 		return _course_location(lesson.course, lesson.name)
 
 	course = frappe.new_doc("LMS Course")
-	course.title = _("FMGE Mock Exams")
-	course.short_introduction = _("Timed FMGE practice using Frappe Learning quizzes.")
+	course.title = DAY2_COURSE_TITLE
+	course.short_introduction = DAY2_SHORT_INTRODUCTION
 	course.description = _public_course_description()
+	if quiz.fmge_bank_id == DAY2_BANK_ID:
+		course.name = DAY2_COURSE_NAME
 	course.append("instructors", {"instructor": quiz.owner})
 	course.insert(ignore_permissions=True)
 
 	chapter = frappe.new_doc("Course Chapter")
-	chapter.title = _("Community Medicine (PSM)")
+	chapter.title = DAY2_CHAPTER_TITLE
 	chapter.course = course.name
 	chapter.insert(ignore_permissions=True)
 	course.reload()
@@ -278,7 +298,8 @@ def _place_psm_quiz_in_course(quiz_name: str) -> dict:
 
 def _public_course_description() -> str:
 	return (
-		f"<p>{html.escape(_('Take an FMGE-style mock section and review your result after submission.'))}</p>"
+		"<p>Practice 50 Community Medicine questions from the Day 2 PSM notes. "
+		"Review the answer, explanation, and source page after submission.</p>"
 		f'<p><a href="{html.escape(get_lms_route("fmge/mock"), quote=True)}">'
 		f"{html.escape(_('Take the mock without signing in'))}</a>.</p>"
 	)

@@ -75,12 +75,16 @@
 								: quiz.data.title
 						}}
 					</h2>
-					<template v-if="learnerName">
+					<template v-if="publicFMGE">
 						<div class="text-base font-medium text-ink-gray-8">
 							{{ __('PSM Mock · Community Medicine') }}
 						</div>
 						<p class="text-sm leading-5 text-ink-gray-6">
-							{{ __('Made for you from your Day 2 PSM notes.') }}
+							{{
+								day3Mock
+									? __('Practice from the Day 3 PSM notes.')
+									: __('Practice from the Day 2 PSM notes.')
+							}}
 						</p>
 					</template>
 					<div class="flex flex-wrap gap-1.5 justify-center">
@@ -947,7 +951,7 @@
 					</div>
 					<div class="flex items-center justify-center gap-x-2 pt-1">
 						<Button
-							@click="resetQuiz()"
+							@click="tryAgain()"
 							v-if="
 								!quiz.data.max_attempts ||
 								attempts?.data.length < quiz.data.max_attempts
@@ -1267,6 +1271,10 @@ const props = defineProps({
 		type: Boolean,
 		default: false,
 	},
+	day3Mock: {
+		type: Boolean,
+		default: false,
+	},
 	// Public FMGE mock only: who it was made for, used in the greeting and summary.
 	learnerName: {
 		type: String,
@@ -1342,7 +1350,9 @@ const handleBeforeUnload = (event) => {
 // activeQuestion watcher read from a local map instead of round-tripping.
 const questionsByName = ref({})
 const quiz = createResource({
-	url: props.publicFMGE
+	url: props.day3Mock
+		? 'lms.fmge.day3_mock.get_public_day3_quiz'
+		: props.publicFMGE
 		? 'lms.fmge.public_quiz.get_public_quiz'
 		: 'lms.lms.utils.get_quiz_with_questions',
 	makeParams() {
@@ -1494,12 +1504,17 @@ watch(
 )
 
 const quizSubmission = createResource({
-	url: props.publicFMGE
+	url: props.day3Mock
+		? 'lms.fmge.day3_mock.submit_public_day3_quiz'
+		: props.publicFMGE
 		? 'lms.fmge.public_quiz.submit_public_quiz'
 		: 'lms.lms.doctype.lms_quiz.lms_quiz.submit_quiz',
 	makeParams(values) {
 		if (props.publicFMGE) {
-			return { results: localStorage.getItem(quiz.data.title) || '[]' }
+			return {
+				results: localStorage.getItem(quiz.data.title) || '[]',
+				...(props.day3Mock && { selection_token: quiz.data.selection_token }),
+			}
 		}
 		return {
 			quiz: quiz.data.name,
@@ -1874,6 +1889,11 @@ const resetQuiz = () => {
 	setupTimer()
 }
 
+const tryAgain = () => {
+	resetQuiz()
+	if (props.day3Mock) quiz.reload()
+}
+
 const getInstructions = (question) => {
 	if (question.type == 'Choices')
 		if (question.multiple) return __('Choose all answers that apply')
@@ -2063,10 +2083,16 @@ const checkPracticeAnswer = () => {
 	recordCurrentAttempt()
 	const question = currentQuestion.value
 	checkingPractice.value = true
-	call('lms.fmge.public_quiz.check_public_answer', {
-		question,
-		answer: answers[0],
-	})
+	call(
+		props.day3Mock
+			? 'lms.fmge.day3_mock.check_public_day3_answer'
+			: 'lms.fmge.public_quiz.check_public_answer',
+		{
+			question,
+			answer: answers[0],
+			...(props.day3Mock && { selection_token: quiz.data.selection_token }),
+		}
+	)
 		.then((feedback) => {
 			// Streak and message are fixed at check time, so revisiting a question
 			// shows the same line instead of a freshly shuffled one.

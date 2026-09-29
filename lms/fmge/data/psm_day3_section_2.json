@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "bank_id": "fmge-psm-day3-section-2",
+  "title": "Day 3 PSM — Section 2",
+  "subject": "Community Medicine",
+  "description": "FMGE Community Medicine practice from the reviewed Day 3 PSM question bank, section 2 of 4.",
+  "expected_questions": 26,
+  "duration_minutes": 26,
+  "max_attempts": 1,
+  "passing_percentage": 50,
+  "show_answers": 0,
+  "show_submission_history": 1,
+  "shuffle_questions": 0,
+  "enable_negative_marking": 0,
+  "questions": [
+    {
+      "id": "PSM-D3-S2-Q001",
+      "number": 1,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The red Anemia Mukt Bharat tablet for pregnant women contains how much elemental iron?",
+      "options": [
+        "30 mg",
+        "60 mg",
+        "100 mg",
+        "200 mg"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.3 | E0 | Handwritten",
+      "explanation": "The red tablet contains 60 mg elemental iron and 500 µg folic acid.",
+      "answer_label": "60 mg",
+      "answer": "60 mg"
+    },
+    {
+      "id": "PSM-D3-S2-Q015",
+      "number": 15,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Under Anganwadi supplementary nutrition norms, the daily energy allocation for a severely malnourished child aged 6–72 months is:",
+      "options": [
+        "300 kcal",
+        "450 kcal",
+        "600 kcal",
+        "800 kcal"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.24 | E0 | Table",
+      "explanation": "The allocation for a severely malnourished child is 800 kcal daily, higher than the allocation for pregnant and lactating women.",
+      "answer_label": "800 kcal",
+      "answer": "800 kcal"
+    },
+    {
+      "id": "PSM-D3-S2-Q003",
+      "number": 3,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Exclusive breastfeeding is recommended for the first:",
+      "options": [
+        "6 months",
+        "9 months",
+        "12 months",
+        "24 months"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.11 | E0 | Handwritten",
+      "explanation": "Infants should receive only breast milk for the first six months, apart from permitted medical supplements or treatment.",
+      "answer_label": "6 months",
+      "answer": "6 months"
+    },
+    {
+      "id": "PSM-D3-S2-Q016",
+      "number": 16,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A woman has a positive VIA screening result. Which procedure can establish the cervical diagnosis?",
+      "options": [
+        "Colposcopic punch biopsy",
+        "Repeat VIA",
+        "Pap smear",
+        "Colposcopy without biopsy"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.38, p.49 | E1 | Table/Multi-page",
+      "explanation": "VIA and cytology are screening procedures. A colposcopically directed punch biopsy provides diagnostic tissue.",
+      "answer_label": "Colposcopic punch biopsy",
+      "answer": "Colposcopic punch biopsy"
+    },
+    {
+      "id": "PSM-D3-S2-Q004",
+      "number": 4,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "ICDS services are delivered locally through the:",
+      "options": [
+        "School health clinic",
+        "Primary health centre",
+        "Anganwadi centre",
+        "District hospital"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.23 | E0 | Handwritten",
+      "explanation": "Anganwadi centres deliver ICDS services to mothers and children.",
+      "answer_label": "Anganwadi centre",
+      "answer": "Anganwadi centre"
+    },
+    {
+      "id": "PSM-D3-S2-Q017",
+      "number": 17,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A test gives 60 true-negative and 20 false-negative results. Its negative predictive value is:",
+      "options": [
+        "50%",
+        "60%",
+        "75%",
+        "80%"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.52 | E1 | Diagram",
+      "explanation": "Negative predictive value is TN/(TN + FN), so it is 60/80, or 75%.",
+      "answer_label": "75%",
+      "answer": "75%"
+    },
+    {
+      "id": "PSM-D3-S2-Q027",
+      "number": 27,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Well water remains hard after boiling. Which process can soften it?",
+      "options": [
+        "Further boiling",
+        "Permutit ion exchange",
+        "Chlorination",
+        "Sedimentation"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.109 | E2 | Table",
+      "explanation": "Hardness persisting after boiling requires a method for permanent hardness. Permutit ion exchange is the listed method.",
+      "answer_label": "Permutit ion exchange",
+      "answer": "Permutit ion exchange"
+    },
+    {
+      "id": "PSM-D3-S2-Q005",
+      "number": 5,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which skin finding is a clinical clue to leprosy?",
+      "options": [
+        "Itchy wheal",
+        "Hypoesthetic patch",
+        "Painful vesicle",
+        "Purpuric patch"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.45 | E0 | Handwritten",
+      "explanation": "A skin patch with reduced sensation is an important clinical clue to leprosy.",
+      "answer_label": "Hypoesthetic patch",
+      "answer": "Hypoesthetic patch"
+    },
+    {
+      "id": "PSM-D3-S2-Q018",
+      "number": 18,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A clinic visitor is offered a screening test during an unrelated appointment. This is:",
+      "options": [
+        "Mass screening",
+        "Opportunistic screening",
+        "Selective screening",
+        "Prescriptive screening"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.41–42 | E1 | Table",
+      "explanation": "Screening offered because a person is already in contact with a service is opportunistic screening.",
+      "answer_label": "Opportunistic screening",
+      "answer": "Opportunistic screening"
+    },
+    {
+      "id": "PSM-D3-S2-Q006",
+      "number": 6,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "GeneXpert MTB/RIF can detect tuberculosis and resistance to:",
+      "options": [
+        "Isoniazid",
+        "Pyrazinamide",
+        "Ethambutol",
+        "Rifampicin"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.44 | E0 | Handwritten",
+      "explanation": "GeneXpert MTB/RIF detects *M. tuberculosis* and rifampicin resistance.",
+      "answer_label": "Rifampicin",
+      "answer": "Rifampicin"
+    },
+    {
+      "id": "PSM-D3-S2-Q019",
+      "number": 19,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Liquid chemical biomedical waste requires which step before discharge?",
+      "options": [
+        "Chemical treatment",
+        "Dry-heat sterilization",
+        "Incineration",
+        "Deep burial"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.70 | E0 | Table/Handwritten",
+      "explanation": "Liquid chemical biomedical waste is treated before it enters the drain.",
+      "answer_label": "Chemical treatment",
+      "answer": "Chemical treatment"
+    },
+    {
+      "id": "PSM-D3-S2-Q007",
+      "number": 7,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Comparison of a test with a gold standard assesses its:",
+      "options": [
+        "Criterion validity",
+        "External validity",
+        "Repeatability",
+        "Generalizability"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.57 | E0 | Handwritten",
+      "explanation": "Criterion validity is assessed by comparing the test against a gold standard.",
+      "answer_label": "Criterion validity",
+      "answer": "Criterion validity"
+    },
+    {
+      "id": "PSM-D3-S2-Q008",
+      "number": 8,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The principal disinfecting form of free chlorine in water is:",
+      "options": [
+        "Chloride ion",
+        "Chloramine",
+        "Hypochlorous acid",
+        "Calcium carbonate"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.104 | E0 | Handwritten",
+      "explanation": "Hypochlorous acid provides the main disinfecting action of free chlorine.",
+      "answer_label": "Hypochlorous acid",
+      "answer": "Hypochlorous acid"
+    },
+    {
+      "id": "PSM-D3-S2-Q020",
+      "number": 20,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Solidification with cement and lime is used for large quantities of toxic biomedical waste. The process is:",
+      "options": [
+        "Deep burial",
+        "Microwaving",
+        "Inertization",
+        "Autoclaving"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.73 | E0 | Diagram/Handwritten",
+      "explanation": "Inertization incorporates toxic waste into a solid mixture using cement and lime.",
+      "answer_label": "Inertization",
+      "answer": "Inertization"
+    },
+    {
+      "id": "PSM-D3-S2-Q009",
+      "number": 9,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The instrument shown measures which environmental parameter?",
+      "options": [
+        "Low air velocity",
+        "Air humidity",
+        "Illuminance",
+        "Free residual chlorine"
+      ],
+      "image_url": "/assets/lms/fmge/images/psm-d3-s2-q009-psychrometer.png",
+      "image_alt": "Handheld frame with two slender instruments mounted side by side",
+      "image_source": "p.114 | lower-right photograph of the handheld rotating instrument; crop out the written heading and answer",
+      "correct_option": "B",
+      "source": "PDF p.114 | E0 | Diagram/Handwritten",
+      "explanation": "The pictured sling psychrometer measures air humidity.",
+      "answer_label": "Air humidity",
+      "answer": "Air humidity"
+    },
+    {
+      "id": "PSM-D3-S2-Q022",
+      "number": 22,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "The microwave frequency listed for biomedical-waste treatment is:",
+      "options": [
+        "915 MHz",
+        "1,210 MHz",
+        "1,800 MHz",
+        "2,450 MHz"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.72 | E0 | Table/Handwritten",
+      "explanation": "The microwave-treatment frequency specified is 2,450 MHz.",
+      "answer_label": "2,450 MHz",
+      "answer": "2,450 MHz"
+    },
+    {
+      "id": "PSM-D3-S2-Q010",
+      "number": 10,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which organism serves as a biological indicator of air pollution?",
+      "options": [
+        "Coliforms",
+        "Algae",
+        "Mosquitoes",
+        "Lichens"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.113 | E0 | Handwritten",
+      "explanation": "Lichens are biological indicators of air pollution.",
+      "answer_label": "Lichens",
+      "answer": "Lichens"
+    },
+    {
+      "id": "PSM-D3-S2-Q023",
+      "number": 23,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "All of the following describe green disaster triage EXCEPT:",
+      "options": [
+        "The patient can walk",
+        "Immediate resuscitation is required",
+        "The injuries are minor",
+        "Treatment has low urgency"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.91 | E0 | Table",
+      "explanation": "Green identifies ambulatory casualties with minor injuries. Immediate resuscitation places a casualty in a higher-priority category.",
+      "answer_label": "Immediate resuscitation is required",
+      "answer": "Immediate resuscitation is required"
+    },
+    {
+      "id": "PSM-D3-S2-Q011",
+      "number": 11,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The principal indicator of faecal contamination of drinking water is:",
+      "options": [
+        "*Escherichia coli*",
+        "*Clostridium perfringens*",
+        "*Bacillus subtilis*",
+        "*Geobacillus stearothermophilus*"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.111 | E0 | Handwritten",
+      "explanation": "*E. coli* is the principal indicator of faecal contamination in drinking water.",
+      "answer_label": "*Escherichia coli*",
+      "answer": "*Escherichia coli*"
+    },
+    {
+      "id": "PSM-D3-S2-Q028",
+      "number": 28,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A programme targets the larvae of mosquitoes transmitting malaria. Which biological control is listed?",
+      "options": [
+        "Gambusia fish",
+        "DDT",
+        "Pyrethrum",
+        "Malathion"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.129–130 | E2 | Table/Multi-page",
+      "explanation": "*Anopheles* transmits malaria, and Gambusia is the listed fish for its larval control.",
+      "answer_label": "Gambusia fish",
+      "answer": "Gambusia fish"
+    },
+    {
+      "id": "PSM-D3-S2-Q024",
+      "number": 24,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "During war, minor injuries are given priority so personnel can return to duty. This is:",
+      "options": [
+        "Reverse triage",
+        "START triage",
+        "Routine disaster triage",
+        "Diagnostic screening"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.91–92 | E1 | Multi-page",
+      "explanation": "Reverse triage can prioritize personnel with minor injuries for prompt return to duty.",
+      "answer_label": "Reverse triage",
+      "answer": "Reverse triage"
+    },
+    {
+      "id": "PSM-D3-S2-Q012",
+      "number": 12,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The preferred method listed for disposal of municipal refuse is:",
+      "options": [
+        "Open dumping",
+        "Deep burial",
+        "Sanitary landfill",
+        "Sewer discharge"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.124 | E0 | Printed/Handwritten",
+      "explanation": "Sanitary landfill is the preferred refuse-disposal method listed here.",
+      "answer_label": "Sanitary landfill",
+      "answer": "Sanitary landfill"
+    },
+    {
+      "id": "PSM-D3-S2-Q025",
+      "number": 25,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Under the persons-per-room overcrowding criterion, three rooms accommodate at most:",
+      "options": [
+        "3 persons",
+        "4 persons",
+        "5 persons",
+        "6 persons"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.120 | E1 | Table",
+      "explanation": "The persons-per-room table allows up to five people in a three-room dwelling.",
+      "answer_label": "5 persons",
+      "answer": "5 persons"
+    },
+    {
+      "id": "PSM-D3-S2-Q013",
+      "number": 13,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The vector of kala-azar is the:",
+      "options": [
+        "Tsetse fly",
+        "Sandfly",
+        "Blackfly",
+        "Rat flea"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.127 | E0 | Table",
+      "explanation": "Sandflies transmit kala-azar.",
+      "answer_label": "Sandfly",
+      "answer": "Sandfly"
+    },
+    {
+      "id": "PSM-D3-S2-Q026",
+      "number": 26,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Solid waste originating from a household kitchen is termed:",
+      "options": [
+        "Sewage",
+        "Sullage",
+        "Industrial refuse",
+        "Garbage"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.123 | E0 | Table",
+      "explanation": "Kitchen-origin solid waste is termed garbage.",
+      "answer_label": "Garbage",
+      "answer": "Garbage"
+    },
+    {
+      "id": "PSM-D3-S2-Q014",
+      "number": 14,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "A healthy infant’s length is approximately how much at the end of the first year?",
+      "options": [
+        "50 cm",
+        "60 cm",
+        "70 cm",
+        "75 cm"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.7 | E0 | Handwritten",
+      "explanation": "Infant length rises from about 50 cm at birth to about 75 cm by one year.",
+      "answer_label": "75 cm",
+      "answer": "75 cm"
+    }
+  ]
+}

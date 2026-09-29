@@ -57,7 +57,9 @@ def _correct_answer(question) -> str:
 	return correct[0]
 
 
-def _source_reference(source: str | None) -> dict:
+def _source_reference(
+	source: str | None, source_document: str = SOURCE_DOCUMENT, source_pdf_url: str = SOURCE_PDF_URL
+) -> dict:
 	"""Turn a bank source note into what a learner needs to find it in the notes."""
 	source = source or ""
 	match = SOURCE_PAGES_RE.search(source)
@@ -69,14 +71,19 @@ def _source_reference(source: str | None) -> dict:
 		if part.strip() and not EVIDENCE_RE.match(part.strip())
 	]
 	return {
-		"source_document": SOURCE_DOCUMENT,
+		"source_document": source_document,
 		"source_pages": pages,
 		"source_detail": ", ".join(details),
-		"source_url": f"{SOURCE_PDF_URL}#page={first_page}" if first_page else SOURCE_PDF_URL,
+		"source_url": f"{source_pdf_url}#page={first_page}" if first_page else source_pdf_url,
 	}
 
 
-def _feedback(question, chosen: str | None) -> dict:
+def _feedback(
+	question,
+	chosen: str | None,
+	source_document: str = SOURCE_DOCUMENT,
+	source_pdf_url: str = SOURCE_PDF_URL,
+) -> dict:
 	correct_answer = _correct_answer(question)
 	return {
 		"answer": chosen,
@@ -84,7 +91,7 @@ def _feedback(question, chosen: str | None) -> dict:
 		"is_correct": chosen == correct_answer,
 		"tier": cint(question.fmge_tier),
 		"explanation": question.fmge_explanation or "",
-		**_source_reference(question.fmge_source),
+		**_source_reference(question.fmge_source, source_document, source_pdf_url),
 	}
 
 

@@ -28,7 +28,7 @@ Generate or validate the packaged bank:
 
 ## Making a new or replacement block
 
-1. Run the v6 prompt (`research/fmge-source-material/analysis/prompt-calibration.md`) in a web session that can see the PDF's page images, and save the whole reply as `research/pdf_extracted_questions_data/<Source>_combined.md`. The prompt's output contract is exactly the Markdown this builder parses.
+1. In a web session whose model can see the PDF's page images, upload the notes PDF and paste `research/fmge-source-material/analysis/prompt-calibration.md` (everything below its first line). The prompt is self-contained: it includes the measured FMGE pattern, a gallery of real recalled questions with levels and traps, and a pattern library. Optionally paste extra real questions for the subject below it (`python3 scripts/fmge/reference_set.py --subject "Community Medicine"` draws about 15 from the local recall corpus; `--seed N` gives a different set). The session first lists every examinable unit in the PDF (UNIT INVENTORY), sets the question count to that list's length, and stops; check the plan and reply "go". It then delivers the bank as sections of up to 50 questions, each headed `# SECTION s OF k`; reply "next section" to get each one. Save the whole thread's reply as `research/pdf_extracted_questions_data/<Source>_combined.md`. Its output contract is exactly the Markdown this builder parses.
 2. Crop each `**Image source:** p.N | …` figure and paste the printed lines under it:
 
        uv run scripts/fmge/extract_pdf_image.py --page N --preview /tmp/page.png   # pick the box
@@ -40,7 +40,11 @@ Generate or validate the packaged bank:
        python3 scripts/fmge/build_question_bank.py --source <md> --lint
        python3 scripts/fmge/build_question_bank.py --source <md> --strict
 
-   The lint blocks stems that point at the notes ("shown in the notes", "according to the source"), stems that state the deciding fact, duplicate options and all/none-of-the-above. It warns on long stems, a correct option much longer than its distractors, a skewed or streaky answer key, and a block with no image items. For a new block, also pass `--bank-id`, `--id-prefix`, `--title` and `--subject`.
+   The lint blocks stems that point at the notes ("shown in the notes", "according to the source"), stems that state the deciding fact, duplicate options and all/none-of-the-above. It warns on long stems, a correct option much longer than its distractors, a skewed or streaky answer key, and a block with no image items. For a new block, also pass `--bank-id`, `--id-prefix`, `--title` and `--subject`. The question count and timer (1 minute per question) come from the file; `--expected N` makes the build fail on any other count. When the file holds several sections, build each one separately as its own block:
+
+       python3 scripts/fmge/build_question_bank.py --source <md> --section 2 --bank-id fmge-psm-block-2 --id-prefix PSM-B2 --title "FMGE PSM Mock 1 - Section 2" --output lms/fmge/data/psm_block_2.json
+
+   The installer and public mock currently serve only PSM Block 1, so extra sections need an installer entry before students can take them.
 4. Keep the reply's `# QUESTION-DNA LEDGER` and paste it into the next session so the next block does not repeat questions.
 
 Replacing PSM Block 1 in place: keep the default `--bank-id fmge-psm-block-1` and `--id-prefix PSM-B1`, then rerun the installer below. Questions are matched by `PSM-B1-Q###`, so each number's content is overwritten.
@@ -66,7 +70,7 @@ The builder carries those lines into `image_url` / `image_alt` in the generated 
 
 ## Taking the mock
 
-The installer creates a published `FMGE Mock Exams` course, a Community Medicine chapter, and a lesson with Frappe Learning's native quiz block. Signed-in students can enroll and take the quiz through the normal course flow. The installer preserves that placement on rerun.
+The installer creates a published `FMGE PSM Day 2` course at the existing `/lms/courses/fmge-mock-exams` URL, a Day 2 PSM Practice chapter, and a lesson with Frappe Learning's native quiz block. Signed-in students can enroll and take the quiz through the normal course flow. The installer preserves that placement and URL on rerun.
 
 Anyone can instead open `/lms/fmge/mock` and take this section without signing in, even on a site that keeps the rest of the LMS behind a login. This public route reuses Frappe Learning's quiz screen and serves only questions from the published FMGE bank. It offers two modes:
 
@@ -80,3 +84,15 @@ The notes PDF is served from `lms/public/fmge/day2-psm-notes.pdf`, a symlink to 
 The public copy is served through a Cloudflare Tunnel; see [HOSTING.md](HOSTING.md) for the setup, what must be running, and how to change it safely.
 
 This is currently a 50-question PSM section, not a complete 300-question FMGE exam.
+
+## Day 3 compact course
+
+`lms.fmge.day3_course.install_day3_psm_course` imports the four Day 3 section banks as a 106-question pool and creates one course lesson, **FMGE PSM Day 3 Mock**. The course page links to `/lms/fmge/day3/mock`, which works without signing in while the course is published.
+
+Each new page load or **Try Again** draws 54 questions from the full pool: 27 Tier 1, 21 Tier 2, and 6 Tier 3. The tier slots follow a fixed repeating pattern, while the questions within each tier change. The other 52 questions are set aside for that attempt. Timed and practice modes grade only the selected questions; a signed selection token binds the answer request to that draw. Results are anonymous and not saved.
+
+On the local bench, start the services described in [HOSTING.md](HOSTING.md), then run:
+
+    /home/hamza/repo/AVO/frappe-bench/env/bin/python -m frappe.utils.bench_helper frappe --site fmge.localhost execute lms.fmge.day3_course.install_day3_psm_course
+
+Run that command from the bench's `sites/` directory. The local mock is `http://fmge.localhost:8000/lms/fmge/day3/mock`. The source bank is `research/pdf_extracted_questions_data/Day3_PSM.md`; page links open the matching Day 3 PDF.

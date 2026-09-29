@@ -214,6 +214,37 @@ class BuilderTestCase(unittest.TestCase):
 		_, warnings = builder.lint_bank(self.build(render(questions)))
 		self.assertIn("answer key: 4 consecutive 'A' answers", warnings)
 
+	def test_count_comes_from_the_source_by_default(self):
+		with tempfile.TemporaryDirectory() as tmp:
+			path = Path(tmp) / "bank.md"
+			path.write_text(render(CLEAN_QUESTIONS[:3]), encoding="utf-8")
+			bank = builder.build_bank(path)
+		self.assertEqual((bank["expected_questions"], bank["duration_minutes"]), (3, 3))
+
+	def test_builds_one_section_of_a_multi_section_reply(self):
+		text = "\n".join(
+			[
+				"# BANK PLAN",
+				"Sections: 2 (2 + 2 questions)",
+				"# SECTION 1 OF 2 — Q1-Q2",
+				render(CLEAN_QUESTIONS[:2]),
+				"# FINAL PATTERN AUDIT",
+				"- Total: 2",
+				"# SECTION 2 OF 2 — Q1-Q2",
+				render(
+					[(n - 2, stem, options, key) for n, stem, options, key in CLEAN_QUESTIONS[2:]]
+				),
+			]
+		)
+		first = self.build(text, expected=2, section=1)
+		second = self.build(text, expected=2, section=2)
+		self.assertEqual([q["correct_option"] for q in first["questions"]], ["B", "B"])
+		self.assertEqual([q["correct_option"] for q in second["questions"]], ["A", "C"])
+		with self.assertRaisesRegex(ValueError, "choose one with --section"):
+			self.build(text, expected=2)
+		with self.assertRaisesRegex(ValueError, "Section 3 not found"):
+			self.build(text, expected=2, section=3)
+
 
 if __name__ == "__main__":
 	unittest.main()

@@ -1,10 +1,13 @@
-# Hosting the FMGE mock
+# Hosting the FMGE mocks
 
 Everything a new session needs to operate, update or debug the published FMGE mock.
 
 | What | URL |
 | --- | --- |
-| Mock (share this) | https://fmge.hamza.my.id/lms/fmge/mock |
+| Day 2 mock | https://fmge.hamza.my.id/lms/fmge/mock |
+| Day 3 mock | https://fmge.hamza.my.id/lms/fmge/day3/mock |
+| Day 2 course | https://fmge.hamza.my.id/lms/courses/fmge-mock-exams |
+| Day 3 course | https://fmge.hamza.my.id/lms/courses/fmge-psm-day-3 |
 | Frappe desk | https://fmge.hamza.my.id/app |
 | LMS home | https://fmge.hamza.my.id/lms |
 
@@ -67,6 +70,7 @@ F="$HOME/frappe-bench/env/bin/python -m frappe.utils.bench_helper frappe --site 
 $F migrate
 $F clear-cache
 $F execute lms.fmge.importer.install_psm_block_1
+$F execute lms.fmge.day3_course.install_day3_psm_course
 $F backup --with-files               # -> sites/fmge.localhost/private/backups/
 sudo systemctl restart fmge-web      # after any Python change
 ```
@@ -83,7 +87,7 @@ The VM is too small to build the frontend, and packages must not be re-resolved 
   sudo systemctl restart fmge-web
   ```
   Run `$F migrate` too if doctypes or patches changed.
-- **Question bank changes**: edit the Markdown source, run `scripts/fmge/build_question_bank.py`, and commit and push the output. Pull on the VM as above, then `$F execute lms.fmge.importer.install_psm_block_1`.
+- **Question bank changes**: edit the Markdown source, run `scripts/fmge/build_question_bank.py`, and commit and push the output. Pull on the VM as above, then run the installer for the changed bank: `$F execute lms.fmge.importer.install_psm_block_1` for Day 2 or `$F execute lms.fmge.day3_course.install_day3_psm_course` for Day 3.
 - **Frontend changes**: build on the dev PC (see "Frontend build gotcha"). The build output is git-ignored, so copy it up:
   ```sh
   cd ~/repo/AVO/exam-question-preparation
@@ -108,7 +112,7 @@ Data (questions, users) lives only in the VM database. The dev bench database is
 
 - The whole site is reachable, including `/login` and the Frappe desk. The Administrator password is not the default (see above).
 - The mock needs no account. Its endpoints (`lms.fmge.public_quiz`) are rate limited and never create users or submissions.
-- The notes PDF is public at `/assets/lms/fmge/day2-psm-notes.pdf`, because practice feedback links to pages in it.
+- The notes PDFs are public at `/assets/lms/fmge/day2-psm-notes.pdf` and `/assets/lms/fmge/day3-psm-notes.pdf`, because practice feedback links to pages in them.
 - The VM firewall (iptables) only allows SSH inbound. The old relay port 5000 rules were removed; Frappe, nginx, MariaDB and Redis all bind to 127.0.0.1.
 
 ## The dev PC (WSL) bench

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "bank_id": "fmge-psm-block-1",
-  "title": "FMGE PSM Mock 1 - Section 1",
+  "title": "FMGE PSM Day 2 Mock",
   "subject": "Community Medicine",
   "description": "FMGE-style 50-question PSM section generated from the reviewed Day 2 PSM source.",
   "expected_questions": 50,

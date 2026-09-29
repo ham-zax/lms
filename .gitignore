@@ -19,3 +19,4 @@ frappe-semgrep-rules
 research/fmge-source-material/corpus/**/*.pdf
 research/fmge-source-material/corpus/recall-questions-full.csv
 research/fmge-source-material/corpus/fmgeprep/
+research/fmge-source-material/corpus/reference-sets/

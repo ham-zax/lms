@@ -254,13 +254,22 @@ export const routes = [
 		props: true,
 	},
 	{
+		path: '/fmge/day3/mock',
+		name: 'FMGEDay3Mock',
+		component: () => import('@/pages/QuizPage.vue'),
+		props: {
+			quizID: 'fmge-psm-day-3-compact-mock',
+			publicFMGE: true,
+			day3Mock: true,
+		},
+	},
+	{
 		path: '/fmge/mock',
 		name: 'FMGEPublicMock',
 		component: () => import('@/pages/QuizPage.vue'),
 		props: {
 			quizID: 'fmge-psm-mock-1-section-1',
 			publicFMGE: true,
-			learnerName: 'Fatema',
 		},
 	},
 	{

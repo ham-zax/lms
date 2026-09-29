@@ -1,0 +1,524 @@
+{
+  "schema_version": 1,
+  "bank_id": "fmge-psm-day3-section-1",
+  "title": "Day 3 PSM — Section 1",
+  "subject": "Community Medicine",
+  "description": "FMGE Community Medicine practice from the reviewed Day 3 PSM question bank, section 1 of 4.",
+  "expected_questions": 28,
+  "duration_minutes": 28,
+  "max_attempts": 1,
+  "passing_percentage": 50,
+  "show_answers": 0,
+  "show_submission_history": 1,
+  "shuffle_questions": 0,
+  "enable_negative_marking": 0,
+  "questions": [
+    {
+      "id": "PSM-D3-S1-Q012",
+      "number": 12,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A child has low weight-for-height but normal height-for-age. This indicates:",
+      "options": [
+        "Acute malnutrition",
+        "Chronic malnutrition",
+        "Acute-on-chronic malnutrition",
+        "Normal nutrition"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.17 | E1 | Printed/Handwritten",
+      "explanation": "Low weight-for-height indicates wasting and acute malnutrition. Normal height-for-age argues against the stunting pattern.",
+      "answer_label": "Acute malnutrition",
+      "answer": "Acute malnutrition"
+    },
+    {
+      "id": "PSM-D3-S1-Q001",
+      "number": 1,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Birth weight normally triples by:",
+      "options": [
+        "6 months",
+        "9 months",
+        "12 months",
+        "18 months"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.5 | E0 | Handwritten",
+      "explanation": "Birth weight approximately doubles by five months and triples by one year.",
+      "answer_label": "12 months",
+      "answer": "12 months"
+    },
+    {
+      "id": "PSM-D3-S1-Q024",
+      "number": 24,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "An Anganwadi worker measures MUAC of 11.2 cm in a 2-year-old. What should she do?",
+      "options": [
+        "Continue routine monthly follow-up",
+        "Refer for medical assessment",
+        "Provide supplementary feeding alone",
+        "Reweigh after six months"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.16 | E2 | Printed/Handwritten",
+      "explanation": "A MUAC of 11.2 cm meets the severe criterion. Referral is appropriate; feeding advice alone does not complete the response.",
+      "answer_label": "Refer for medical assessment",
+      "answer": "Refer for medical assessment"
+    },
+    {
+      "id": "PSM-D3-S1-Q013",
+      "number": 13,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "For a student in Class VII, the school meal programme’s daily energy norm is:",
+      "options": [
+        "350 kcal",
+        "450 kcal",
+        "600 kcal",
+        "700 kcal"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.25 | E1 | Table/Handwritten",
+      "explanation": "Class VII is upper primary, for which the listed meal energy norm is 700 kcal; 450 kcal applies to primary classes.",
+      "answer_label": "700 kcal",
+      "answer": "700 kcal"
+    },
+    {
+      "id": "PSM-D3-S1-Q002",
+      "number": 2,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The predominant immunoglobulin in human milk is:",
+      "options": [
+        "IgA",
+        "IgD",
+        "IgE",
+        "IgG"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.12 | E0 | Handwritten",
+      "explanation": "Secretory IgA is the predominant immunoglobulin in human milk.",
+      "answer_label": "IgA",
+      "answer": "IgA"
+    },
+    {
+      "id": "PSM-D3-S1-Q014",
+      "number": 14,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Blood donated at a camp is screened for HIV before transfusion. This is:",
+      "options": [
+        "Opportunistic screening",
+        "Prescriptive screening",
+        "Prospective screening",
+        "Multiphasic screening"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.41 | E1 | Table/Handwritten",
+      "explanation": "Screening donated blood protects the eventual recipient, fitting prospective screening. Prescriptive screening primarily benefits the person tested.",
+      "answer_label": "Prospective screening",
+      "answer": "Prospective screening"
+    },
+    {
+      "id": "PSM-D3-S1-Q003",
+      "number": 3,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Identify the instrument shown.",
+      "options": [
+        "Stadiometer",
+        "Infantometer",
+        "Salter scale",
+        "Shakir’s tape"
+      ],
+      "image_url": "/assets/lms/fmge/images/psm-d3-s1-q003-infantometer.png",
+      "image_alt": "Horizontal measuring board with a sliding end piece",
+      "image_source": "p.10 | lower-central photograph of the horizontal measuring board only; crop excludes the handwritten title",
+      "correct_option": "B",
+      "source": "PDF p.10 | E0 | Diagram/Handwritten",
+      "explanation": "An infantometer is a horizontal board for measuring an infant’s length. The Salter scale is the hanging weighing instrument.",
+      "answer_label": "Infantometer",
+      "answer": "Infantometer"
+    },
+    {
+      "id": "PSM-D3-S1-Q015",
+      "number": 15,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A large workforce receives blood-pressure, glucose and vision tests in one annual screening visit. This is:",
+      "options": [
+        "Multiphasic screening",
+        "Multipurpose screening",
+        "Mass screening",
+        "Prospective screening"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.42 | E1 | Printed/Handwritten",
+      "explanation": "Several different tests administered in one screening programme make it multiphasic. Multipurpose screening uses one test for several diseases.",
+      "answer_label": "Multiphasic screening",
+      "answer": "Multiphasic screening"
+    },
+    {
+      "id": "PSM-D3-S1-Q025",
+      "number": 25,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A used plastic urinary catheter is collected for biomedical-waste disposal. After treatment, its final pathway is:",
+      "options": [
+        "Incineration",
+        "Deep burial",
+        "Sharps pit",
+        "Recycling"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.69, p.70 | E2 | Multi-page",
+      "explanation": "A used plastic catheter follows the red-category treatment pathway and is then recycled.",
+      "answer_label": "Recycling",
+      "answer": "Recycling"
+    },
+    {
+      "id": "PSM-D3-S1-Q004",
+      "number": 4,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Low height-for-age in a child is termed:",
+      "options": [
+        "Underweight",
+        "Wasting",
+        "Stunting",
+        "Severe acute malnutrition"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.17 | E0 | Printed/Handwritten",
+      "explanation": "Low height-for-age indicates stunting; wasting uses weight-for-height.",
+      "answer_label": "Stunting",
+      "answer": "Stunting"
+    },
+    {
+      "id": "PSM-D3-S1-Q016",
+      "number": 16,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A test finds 90 true positives, 10 false negatives, 20 false positives and 80 true negatives. Its sensitivity is:",
+      "options": [
+        "70%",
+        "80%",
+        "90%",
+        "100%"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.52 | E1 | Table/Handwritten",
+      "explanation": "Sensitivity is \\(90/(90+10)\\times100=90\\%\\). False positives and true negatives are outside its denominator.",
+      "answer_label": "90%",
+      "answer": "90%"
+    },
+    {
+      "id": "PSM-D3-S1-Q005",
+      "number": 5,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The functional unit of implementation in the ICDS scheme is the:",
+      "options": [
+        "Village",
+        "Block",
+        "District",
+        "State"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.23 | E0 | Handwritten",
+      "explanation": "The ICDS project operates at block level, with a Child Development Project Officer in charge.",
+      "answer_label": "Block",
+      "answer": "Block"
+    },
+    {
+      "id": "PSM-D3-S1-Q017",
+      "number": 17,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Three readings are 150/90, 150/90 and 150/90 mmHg; the reference is 120/80 mmHg. They are:",
+      "options": [
+        "Accurate and precise",
+        "Accurate but imprecise",
+        "Inaccurate and imprecise",
+        "Inaccurate but precise"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.56 | E1 | Table/Handwritten",
+      "explanation": "The identical readings are precise. Their distance from the reference value makes them inaccurate.",
+      "answer_label": "Inaccurate but precise",
+      "answer": "Inaccurate but precise"
+    },
+    {
+      "id": "PSM-D3-S1-Q006",
+      "number": 6,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Generalizability of study results to other settings reflects:",
+      "options": [
+        "Criterion validity",
+        "Internal validity",
+        "Precision",
+        "External validity"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.57 | E0 | Handwritten",
+      "explanation": "External validity asks whether results apply in other settings. Internal validity concerns the trustworthiness of results within the study.",
+      "answer_label": "External validity",
+      "answer": "External validity"
+    },
+    {
+      "id": "PSM-D3-S1-Q026",
+      "number": 26,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "At a flood-relief camp, free residual chlorine is 0.1 mg/L one hour after water treatment. The next action is:",
+      "options": [
+        "Increase the chlorine dose",
+        "Keep the dose unchanged",
+        "Repeat sampling next week",
+        "Replace chlorine with UV"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.93, p.106 | E2 | Multi-page",
+      "explanation": "A residual of 0.1 mg/L is inadequate after treatment. Additional chlorine is needed before the supply is accepted.",
+      "answer_label": "Increase the chlorine dose",
+      "answer": "Increase the chlorine dose"
+    },
+    {
+      "id": "PSM-D3-S1-Q018",
+      "number": 18,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "All of the following are suitable for biomedical-waste incineration EXCEPT:",
+      "options": [
+        "Blood-soaked dressing",
+        "Anatomical tissue",
+        "Discarded medicine",
+        "PVC-containing waste"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.70, p.71 | E1 | Multi-page",
+      "explanation": "PVC-containing waste is listed as unsuitable for incineration. The other listed wastes have incineration pathways.",
+      "answer_label": "PVC-containing waste",
+      "answer": "PVC-containing waste"
+    },
+    {
+      "id": "PSM-D3-S1-Q007",
+      "number": 7,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Discarded metallic implants enter which biomedical-waste colour category?",
+      "options": [
+        "Blue",
+        "White",
+        "Red",
+        "Yellow"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.69 | E0 | Handwritten",
+      "explanation": "Discarded metallic implants belong in the blue category; sharps such as needles and blades belong in white.",
+      "answer_label": "Blue",
+      "answer": "Blue"
+    },
+    {
+      "id": "PSM-D3-S1-Q019",
+      "number": 19,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Ten hours after an earthquake, teams arrange casualty transport and sanitation. This belongs to which relief phase?",
+      "options": [
+        "Primary phase",
+        "Secondary follow-up",
+        "Tertiary cleanup",
+        "Reconstruction"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.90 | E1 | Printed/Handwritten",
+      "explanation": "The secondary follow-up phase covers 6–24 hours and includes transport and sanitation work.",
+      "answer_label": "Secondary follow-up",
+      "answer": "Secondary follow-up"
+    },
+    {
+      "id": "PSM-D3-S1-Q008",
+      "number": 8,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Autoclaving sterilizes by:",
+      "options": [
+        "Dry heat oxidation",
+        "Steam under pressure",
+        "Microwave heating",
+        "Chemical inactivation"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.71 | E0 | Table/Handwritten",
+      "explanation": "An autoclave uses steam under pressure. Dry heat is a separate sterilization approach.",
+      "answer_label": "Steam under pressure",
+      "answer": "Steam under pressure"
+    },
+    {
+      "id": "PSM-D3-S1-Q027",
+      "number": 27,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A water sample has hardness due to calcium bicarbonate. Which household measure reduces it?",
+      "options": [
+        "Chlorination",
+        "Boiling",
+        "UV irradiation",
+        "Ozonation"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.109, p.104 | E2 | Table/Handwritten",
+      "explanation": "Bicarbonate hardness is temporary and can be reduced by boiling. Chlorination addresses disinfection.",
+      "answer_label": "Boiling",
+      "answer": "Boiling"
+    },
+    {
+      "id": "PSM-D3-S1-Q020",
+      "number": 20,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Under CPCB’s National Air Quality Index, an AQI of 250 is classified as:",
+      "options": [
+        "Moderate",
+        "Poor",
+        "Very poor",
+        "Severe"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.117 | E1 | Table/Handwritten",
+      "explanation": "An AQI of 250 falls within the poor band of 201–300.",
+      "answer_label": "Poor",
+      "answer": "Poor"
+    },
+    {
+      "id": "PSM-D3-S1-Q009",
+      "number": 9,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The capacity of a health system to expand its disaster response is:",
+      "options": [
+        "Surge capacity",
+        "Disaster mitigation",
+        "Rehabilitation",
+        "Triage"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.88 | E0 | Handwritten",
+      "explanation": "Surge capacity is the health system’s ability to respond when disaster demand rises.",
+      "answer_label": "Surge capacity",
+      "answer": "Surge capacity"
+    },
+    {
+      "id": "PSM-D3-S1-Q021",
+      "number": 21,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Light incident on a classroom desk is measured in:",
+      "options": [
+        "Candela",
+        "Lumen",
+        "Lux",
+        "Lambert"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.126 | E1 | Handwritten",
+      "explanation": "Illuminance at the desk is measured in lux. Lumen is the unit of luminous flux.",
+      "answer_label": "Lux",
+      "answer": "Lux"
+    },
+    {
+      "id": "PSM-D3-S1-Q010",
+      "number": 10,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Domestic liquid waste without human excreta is:",
+      "options": [
+        "Garbage",
+        "Refuse",
+        "Sewage",
+        "Sullage"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.123 | E0 | Table/Handwritten",
+      "explanation": "Sullage is domestic liquid waste without human excreta; sewage includes it.",
+      "answer_label": "Sullage",
+      "answer": "Sullage"
+    },
+    {
+      "id": "PSM-D3-S1-Q022",
+      "number": 22,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A worker checks free residual chlorine in treated drinking water. Which instrument is used?",
+      "options": [
+        "Chloroscope",
+        "Horrocks apparatus",
+        "Winchester quart bottle",
+        "MPN tube set"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.105, p.107 | E1 | Multi-page",
+      "explanation": "A chloroscope checks free residual chlorine in treated water. Horrocks apparatus addresses chlorine demand before dosing.",
+      "answer_label": "Chloroscope",
+      "answer": "Chloroscope"
+    },
+    {
+      "id": "PSM-D3-S1-Q028",
+      "number": 28,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Dengue cases are rising in a ward. Which source-reduction measure targets the main vector’s breeding site?",
+      "options": [
+        "Clear dirty drains",
+        "Remove aquatic weeds",
+        "Empty water-holding containers",
+        "Spray walls with DDT"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.129, p.130 | E2 | Multi-page",
+      "explanation": "Removing water from containers targets the breeding sites of Aedes mosquitoes. Clearing dirty drains targets a different breeding pattern.",
+      "answer_label": "Empty water-holding containers",
+      "answer": "Empty water-holding containers"
+    },
+    {
+      "id": "PSM-D3-S1-Q011",
+      "number": 11,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The vector of onchocerciasis is the:",
+      "options": [
+        "Sand fly",
+        "Hard tick",
+        "Black fly",
+        "Rat flea"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.128, p.127 | E0 | Table/Handwritten",
+      "explanation": "Onchocerciasis is transmitted by the black fly. Sand flies transmit the leishmaniases listed separately.",
+      "answer_label": "Black fly",
+      "answer": "Black fly"
+    },
+    {
+      "id": "PSM-D3-S1-Q023",
+      "number": 23,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Compared with cow’s milk, human milk has a higher proportion of:",
+      "options": [
+        "Casein",
+        "Sodium",
+        "Methionine",
+        "Lactose"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.13 | E0 | Table/Handwritten",
+      "explanation": "Human milk has more lactose, whereas cow’s milk has a higher casein proportion.",
+      "answer_label": "Lactose",
+      "answer": "Lactose"
+    }
+  ]
+}

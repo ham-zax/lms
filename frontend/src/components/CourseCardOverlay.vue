@@ -7,9 +7,17 @@
 		<div class="p-5">
 			<div class="text-3xl-semibold text-ink-gray-9 mb-4">
 				{{ priceLabel }}
-			</div>
-			<div v-if="!readOnlyMode">
-				<div v-if="course.data?.membership" class="space-y-2 mb-8">
+		</div>
+		<div v-if="!readOnlyMode">
+			<a v-if="publicMockUrl" :href="publicMockUrl" class="block mb-2">
+				<Button variant="solid" size="md" class="w-full">
+					<template #prefix>
+						<span class="lucide-timer size-4" />
+					</template>
+					{{ __('Take the mock without signing in') }}
+				</Button>
+			</a>
+			<div v-if="course.data?.membership" class="space-y-2 mb-8">
 					<router-link
 						:to="{
 							name: 'Lesson',
@@ -225,6 +233,28 @@ const is_instructor = (): boolean => {
 const priceLabel = computed<string>(() => {
 	if (props.course.data?.paid_course) return props.course.data?.price || ''
 	return __('Free')
+})
+
+// A course advertises an anonymous mock by linking to it in its description.
+// Keep the card action tied to that same local LMS URL, so every such course
+// gets the button without a separate course-name list.
+const publicMockUrl = computed<string>(() => {
+	const description = props.course.data?.description
+	if (!description) return ''
+	const document = new DOMParser().parseFromString(description, 'text/html')
+	const link = [...document.querySelectorAll('a[href]')].find(
+		(anchor) => anchor.textContent?.trim() === 'Take the mock without signing in'
+	)
+	const href = link?.getAttribute('href')
+	if (!href) return ''
+	try {
+		const url = new URL(href, window.location.origin)
+		return url.origin === window.location.origin && url.pathname.startsWith('/lms/fmge/')
+			? url.pathname + url.search + url.hash
+			: ''
+	} catch {
+		return ''
+	}
 })
 
 const enrolledLabel = computed<string>(() => {

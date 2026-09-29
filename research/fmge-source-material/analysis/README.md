@@ -9,7 +9,7 @@ Current outputs:
 - `five-year-pattern-report.md` - evidence-bounded qualitative pattern extraction; each year section states when evidence is only a preview/discovery lead rather than an inspected full recall.
 - `recall-pattern-stats.md` - generated tables from 1,821 extracted recall questions (`scripts/fmge/analyse_recall_questions.py`).
 - `psm-block-1-review.md` - manual FMGE style/correctness review of the live PSM Block 1.
-- `prompt-calibration.md` - current (v7) FMGE PDF-to-question-bank master prompt, calibrated from that pattern and from the first generated block; its output format is parsed by `scripts/fmge/build_question_bank.py`.
+- `prompt-calibration.md` - current (v9.2, self-contained for web sessions: measured pattern, real-question gallery, pattern library; bank size = the High-yield plus in-budget Medium units of a unit inventory it lists first (each unit mapped to a real FMGE pattern), then it stops for "go"; delivered in sections of at most 50) FMGE PDF-to-question-bank master prompt, calibrated from that pattern and from the first generated block; its output format is parsed by `scripts/fmge/build_question_bank.py`.
 
 Structured outputs:
 

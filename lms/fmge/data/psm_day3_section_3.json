@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "bank_id": "fmge-psm-day3-section-3",
+  "title": "Day 3 PSM — Section 3",
+  "subject": "Community Medicine",
+  "description": "FMGE Community Medicine practice from the reviewed Day 3 PSM question bank, section 3 of 4.",
+  "expected_questions": 26,
+  "duration_minutes": 26,
+  "max_attempts": 1,
+  "passing_percentage": 50,
+  "show_answers": 0,
+  "show_submission_history": 1,
+  "shuffle_questions": 0,
+  "enable_negative_marking": 0,
+  "questions": [
+    {
+      "id": "PSM-D3-S3-Q001",
+      "number": 1,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Birth length approximately doubles by which age?",
+      "options": [
+        "2 years",
+        "4 years",
+        "6 years",
+        "8 years"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.7 | E0 | Handwritten",
+      "explanation": "Birth length approximately doubles by four years of age.",
+      "answer_label": "4 years",
+      "answer": "4 years"
+    },
+    {
+      "id": "PSM-D3-S3-Q015",
+      "number": 15,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A five-month-old is exclusively breastfed and received vitamin K at birth. Which vitamin should be supplemented daily at 400 IU?",
+      "options": [
+        "Vitamin A",
+        "Vitamin D",
+        "Vitamin K",
+        "Vitamin C"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.11 | E1 | Handwritten",
+      "explanation": "Exclusively breastfed infants need 400 IU of vitamin D daily. The vitamin K injection at birth addresses a different deficiency risk.",
+      "answer_label": "Vitamin D",
+      "answer": "Vitamin D"
+    },
+    {
+      "id": "PSM-D3-S3-Q002",
+      "number": 2,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The listed daily IFA course continues for how long after delivery?",
+      "options": [
+        "30 days",
+        "60 days",
+        "90 days",
+        "180 days"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.3 | E0 | Handwritten",
+      "explanation": "Daily IFA continues for 180 days after delivery.",
+      "answer_label": "180 days",
+      "answer": "180 days"
+    },
+    {
+      "id": "PSM-D3-S3-Q016",
+      "number": 16,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "The casein:whey ratio in human milk is approximately:",
+      "options": [
+        "40:60",
+        "60:40",
+        "70:30",
+        "80:20"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.13 | E0 | Table/Handwritten",
+      "explanation": "Human milk has a casein:whey ratio of approximately 40:60, compared with 80:20 in cow’s milk.",
+      "answer_label": "40:60",
+      "answer": "40:60"
+    },
+    {
+      "id": "PSM-D3-S3-Q026",
+      "number": 26,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "For Brugian filariasis vector surveillance, where should larvae be sought?",
+      "options": [
+        "Clean open ponds",
+        "Roots of aquatic plants",
+        "Polluted roadside drains",
+        "Rainwater containers"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.129 | E2 | Table/Diagram",
+      "explanation": "*Mansonia* is the listed vector for Brugian filariasis, and its larvae attach to the roots of aquatic plants.",
+      "answer_label": "Roots of aquatic plants",
+      "answer": "Roots of aquatic plants"
+    },
+    {
+      "id": "PSM-D3-S3-Q003",
+      "number": 3,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "ICDS falls under which Union ministry?",
+      "options": [
+        "Ministry of Education",
+        "Ministry of Health and Family Welfare",
+        "Ministry of Women and Child Development",
+        "Ministry of Rural Development"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.23 | E0 | Handwritten",
+      "explanation": "ICDS is administered through the Ministry of Women and Child Development.",
+      "answer_label": "Ministry of Women and Child Development",
+      "answer": "Ministry of Women and Child Development"
+    },
+    {
+      "id": "PSM-D3-S3-Q017",
+      "number": 17,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A newborn weighs 2.4 kg but is above the tenth weight centile for gestational age. Which designation applies?",
+      "options": [
+        "Extremely low birth weight",
+        "Very low birth weight",
+        "Small for gestational age",
+        "Low birth weight"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.5 | E1 | Table/Handwritten",
+      "explanation": "A birth weight of 2.4 kg meets the low-birth-weight definition. A weight above the tenth gestational centile does not meet the listed small-for-gestational-age criterion.",
+      "answer_label": "Low birth weight",
+      "answer": "Low birth weight"
+    },
+    {
+      "id": "PSM-D3-S3-Q004",
+      "number": 4,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which acetic-acid concentration is appropriate for VIA cervical screening?",
+      "options": [
+        "1%",
+        "2%",
+        "5%",
+        "10%"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.49 | E0 | Handwritten",
+      "explanation": "The handout specifies 5% acetic acid. VIA guidance also accepts 3%, so it is excluded from the options.",
+      "answer_label": "5%",
+      "answer": "5%"
+    },
+    {
+      "id": "PSM-D3-S3-Q005",
+      "number": 5,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Screening seeks unrecognized disease among people who are:",
+      "options": [
+        "Apparently healthy",
+        "Already diagnosed",
+        "Receiving definitive treatment",
+        "Hospitalized for the disease"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.37–38 | E0 | Printed/Handwritten",
+      "explanation": "Screening searches for unrecognized disease in apparently healthy people.",
+      "answer_label": "Apparently healthy",
+      "answer": "Apparently healthy"
+    },
+    {
+      "id": "PSM-D3-S3-Q018",
+      "number": 18,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A screening test is offered to every adult in a village regardless of risk. This is:",
+      "options": [
+        "Selective screening",
+        "Mass screening",
+        "Opportunistic screening",
+        "Prospective screening"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.42 | E1 | Table",
+      "explanation": "Offering screening across a large population regardless of individual risk is mass screening.",
+      "answer_label": "Mass screening",
+      "answer": "Mass screening"
+    },
+    {
+      "id": "PSM-D3-S3-Q007",
+      "number": 7,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "If discarded cytotoxic drugs are incinerated, the temperature must exceed which threshold?",
+      "options": [
+        "121°C",
+        "132°C",
+        "800°C",
+        "1,200°C"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.70–71 | E1 | Table",
+      "explanation": "India's Bio-Medical Waste Management Rules specify above 1,200°C when discarded cytotoxic drugs are incinerated. The figure does not apply to all biomedical-waste incineration; the rules also allow other disposal routes for cytotoxic drugs.",
+      "answer_label": "1,200°C",
+      "answer": "1,200°C"
+    },
+    {
+      "id": "PSM-D3-S3-Q019",
+      "number": 19,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A skin biopsy contains clumps of nonbeaded acid-fast bacilli. Which disease is suggested?",
+      "options": [
+        "Pulmonary tuberculosis",
+        "Falciparum malaria",
+        "Leprosy",
+        "Kala-azar"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.43, p.45 | E1 | Multi-page",
+      "explanation": "Clumps of nonbeaded acid-fast bacilli support leprosy; the contrasting tuberculosis description is beaded.",
+      "answer_label": "Leprosy",
+      "answer": "Leprosy"
+    },
+    {
+      "id": "PSM-D3-S3-Q008",
+      "number": 8,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Disaster mitigation aims primarily to:",
+      "options": [
+        "Assign triage tags",
+        "Expand hospital surge capacity",
+        "Reduce potential disaster damage",
+        "Provide delayed rehabilitation"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.88 | E0 | Handwritten",
+      "explanation": "Mitigation reduces the damage that a hazard could cause.",
+      "answer_label": "Reduce potential disaster damage",
+      "answer": "Reduce potential disaster damage"
+    },
+    {
+      "id": "PSM-D3-S3-Q027",
+      "number": 27,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "The blood film shown is from a patient with fever. Which vector transmits this infection?",
+      "options": [
+        "Sandfly",
+        "*Culex* mosquito",
+        "*Aedes* mosquito",
+        "*Anopheles* mosquito"
+      ],
+      "image_url": "/assets/lms/fmge/images/psm-d3-s3-q027-blood-film.png",
+      "image_alt": "Blood smear showing two curved purple forms highlighted among red cells",
+      "image_source": "p.46 | lower-centre blood-film photograph only; exclude the disease heading and handwritten caption",
+      "correct_option": "D",
+      "source": "PDF p.46, p.129 | E2 | Diagram/Multi-page",
+      "explanation": "The blood film contains falciparum gametocytes. Malaria is transmitted by *Anopheles* mosquitoes.",
+      "answer_label": "*Anopheles* mosquito",
+      "answer": "*Anopheles* mosquito"
+    },
+    {
+      "id": "PSM-D3-S3-Q021",
+      "number": 21,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Which listed treatment operates at 132°C, rather than the autoclave’s 121°C?",
+      "options": [
+        "Incineration",
+        "Microwaving",
+        "Hydroclaving",
+        "Dry-heat sterilization"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.71 | E0 | Table",
+      "explanation": "Hydroclaving is listed at 132°C, while autoclaving is listed at 121°C.",
+      "answer_label": "Hydroclaving",
+      "answer": "Hydroclaving"
+    },
+    {
+      "id": "PSM-D3-S3-Q009",
+      "number": 9,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "START expands to Simple Triage and Rapid:",
+      "options": [
+        "Transfer",
+        "Treatment",
+        "Testing",
+        "Transport"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.92 | E0 | Handwritten",
+      "explanation": "START stands for Simple Triage and Rapid Treatment.",
+      "answer_label": "Treatment",
+      "answer": "Treatment"
+    },
+    {
+      "id": "PSM-D3-S3-Q022",
+      "number": 22,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A room needs removal of stale indoor air. Which ventilation system is designed for this?",
+      "options": [
+        "Exhaust ventilation",
+        "Plenum ventilation",
+        "Natural lighting",
+        "Air humidification"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.115 | E0 | Diagram/Handwritten",
+      "explanation": "Exhaust ventilation removes stale air from a room; plenum ventilation supplies fresh air.",
+      "answer_label": "Exhaust ventilation",
+      "answer": "Exhaust ventilation"
+    },
+    {
+      "id": "PSM-D3-S3-Q010",
+      "number": 10,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which indicator is used in Horrocks’ apparatus?",
+      "options": [
+        "Starch–iodide",
+        "Phenolphthalein",
+        "Methylene blue",
+        "Methyl orange"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.107 | E0 | Handwritten",
+      "explanation": "Horrocks’ apparatus uses starch–iodide indicator to demonstrate a colour change.",
+      "answer_label": "Starch–iodide",
+      "answer": "Starch–iodide"
+    },
+    {
+      "id": "PSM-D3-S3-Q011",
+      "number": 11,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The water seal of an RCA sanitary latrine is at least:",
+      "options": [
+        "0.5 cm",
+        "1 cm",
+        "2 cm",
+        "5 cm"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.125 | E0 | Diagram/Handwritten",
+      "explanation": "The RCA sanitary latrine has a water seal at least 2 cm deep.",
+      "answer_label": "2 cm",
+      "answer": "2 cm"
+    },
+    {
+      "id": "PSM-D3-S3-Q023",
+      "number": 23,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Which water indicator can point to earlier or intermittent faecal contamination?",
+      "options": [
+        "*Clostridium perfringens*",
+        "Faecal streptococci",
+        "*Escherichia coli*",
+        "Total coliforms"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.111 | E0 | Handwritten",
+      "explanation": "*C. perfringens* can indicate faecal pollution that occurred earlier or intermittently.",
+      "answer_label": "*Clostridium perfringens*",
+      "answer": "*Clostridium perfringens*"
+    },
+    {
+      "id": "PSM-D3-S3-Q012",
+      "number": 12,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The vector of African sleeping sickness is the:",
+      "options": [
+        "Sandfly",
+        "Blackfly",
+        "Rat flea",
+        "Tsetse fly"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.127 | E0 | Table",
+      "explanation": "The tsetse fly transmits African sleeping sickness.",
+      "answer_label": "Tsetse fly",
+      "answer": "Tsetse fly"
+    },
+    {
+      "id": "PSM-D3-S3-Q028",
+      "number": 28,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "An asymptomatic adult has a high random glucose result at a screening camp. Which test can establish diabetes?",
+      "options": [
+        "Urine glucose strip",
+        "Two-hour oral glucose tolerance test",
+        "Symptom questionnaire",
+        "Another random capillary glucose check"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.37–38, p.51 | E2 | Table/Multi-page",
+      "explanation": "A high random screening glucose in an asymptomatic person needs diagnostic assessment. The two-hour OGTT is a listed diagnostic test.",
+      "answer_label": "Two-hour oral glucose tolerance test",
+      "answer": "Two-hour oral glucose tolerance test"
+    },
+    {
+      "id": "PSM-D3-S3-Q024",
+      "number": 24,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "After flaming a sampling tap, how long should water run before collection?",
+      "options": [
+        "0 minutes",
+        "1 minute",
+        "2 minutes",
+        "5 minutes"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.112 | E0 | Handwritten",
+      "explanation": "After the tap is flamed, water is allowed to run for two minutes before a sample is collected.",
+      "answer_label": "2 minutes",
+      "answer": "2 minutes"
+    },
+    {
+      "id": "PSM-D3-S3-Q013",
+      "number": 13,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The mosquito-net mesh recommendation exceeds approximately how many holes per square inch?",
+      "options": [
+        "50",
+        "100",
+        "125",
+        "150"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.130 | E0 | Handwritten",
+      "explanation": "The listed mosquito-net specification exceeds 150 holes per square inch.",
+      "answer_label": "150",
+      "answer": "150"
+    },
+    {
+      "id": "PSM-D3-S3-Q025",
+      "number": 25,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Approximately what percentage of sewage is water?",
+      "options": [
+        "70%",
+        "80%",
+        "90%",
+        "99.9%"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.123 | E0 | Handwritten",
+      "explanation": "Sewage is approximately 99.9% water.",
+      "answer_label": "99.9%",
+      "answer": "99.9%"
+    },
+    {
+      "id": "PSM-D3-S3-Q014",
+      "number": 14,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which vector is associated with Kyasanur Forest disease in India?",
+      "options": [
+        "Hard tick",
+        "Soft tick",
+        "Louse",
+        "Blackfly"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.128 | E0 | Table",
+      "explanation": "Hard ticks are vectors of Kyasanur Forest disease in India.",
+      "answer_label": "Hard tick",
+      "answer": "Hard tick"
+    }
+  ]
+}
