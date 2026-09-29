@@ -103,6 +103,7 @@ def _pool_quiz(sections):
 				},
 			)
 	if quiz.is_new():
+		quiz.name = QUIZ_NAME
 		quiz.insert(ignore_permissions=True)
 	else:
 		quiz.save(ignore_permissions=True)
