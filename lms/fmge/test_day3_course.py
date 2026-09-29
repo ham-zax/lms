@@ -13,7 +13,7 @@ class TestDay3PoolQuiz(unittest.TestCase):
 		quiz.name = None
 		quiz.is_new.return_value = True
 		quiz.questions = []
-		quiz.insert.side_effect = lambda **kwargs: self.assertEqual(quiz.name, QUIZ_NAME)
+		quiz.insert.side_effect = lambda **kwargs: setattr(quiz, "name", kwargs["set_name"])
 		section = SimpleNamespace(
 			questions=[
 				SimpleNamespace(question="question-1", question_detail="<p>Question</p>")
@@ -25,7 +25,7 @@ class TestDay3PoolQuiz(unittest.TestCase):
 			patch("lms.fmge.day3_course.frappe.get_doc", return_value=section),
 		):
 			self.assertIs(_pool_quiz([{"quiz": "section"}]), quiz)
-		quiz.insert.assert_called_once_with(ignore_permissions=True)
+		quiz.insert.assert_called_once_with(ignore_permissions=True, set_name=QUIZ_NAME)
 
 
 if __name__ == "__main__":

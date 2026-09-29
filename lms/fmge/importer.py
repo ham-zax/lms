@@ -264,10 +264,11 @@ def _place_psm_quiz_in_course(quiz_name: str) -> dict:
 	course.title = DAY2_COURSE_TITLE
 	course.short_introduction = DAY2_SHORT_INTRODUCTION
 	course.description = _public_course_description()
-	if quiz.fmge_bank_id == DAY2_BANK_ID:
-		course.name = DAY2_COURSE_NAME
 	course.append("instructors", {"instructor": quiz.owner})
-	course.insert(ignore_permissions=True)
+	if quiz.fmge_bank_id == DAY2_BANK_ID:
+		course.insert(ignore_permissions=True, set_name=DAY2_COURSE_NAME)
+	else:
+		course.insert(ignore_permissions=True)
 
 	chapter = frappe.new_doc("Course Chapter")
 	chapter.title = DAY2_CHAPTER_TITLE
