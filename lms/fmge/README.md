@@ -96,3 +96,53 @@ On the local bench, start the services described in [HOSTING.md](HOSTING.md), th
     /home/hamza/repo/AVO/frappe-bench/env/bin/python -m frappe.utils.bench_helper frappe --site fmge.localhost execute lms.fmge.day3_course.install_day3_psm_course
 
 Run that command from the bench's `sites/` directory. The local mock is `http://fmge.localhost:8000/lms/fmge/day3/mock`. The source bank is `research/pdf_extracted_questions_data/Day3_PSM.md`; page links open the matching Day 3 PDF.
+
+## Day 1 course
+
+`lms.fmge.day1_course.install_day1_psm_course` imports the reviewed 41-question
+`psm_day1.json` bank and creates **FMGE PSM Day 1**, one practice chapter and one
+native quiz lesson. The public route `/lms/fmge/day1/mock` offers untimed practice
+with immediate feedback and a 41-minute mock, with explanations and links into
+the matching Day 1 PDF. All 41 questions are used, with tiers interleaved.
+
+The source is `research/pdf_extracted_questions_data/Day1_PSM.md`; the review is
+`research/pdf_extracted_questions_data/Day1_PSM_review.md`. Rebuild or check it:
+
+```sh
+python3 scripts/fmge/build_question_bank.py --source research/pdf_extracted_questions_data/Day1_PSM.md --output lms/fmge/data/psm_day1.json --bank-id fmge-psm-day1 --id-prefix PSM-D1 --title "FMGE PSM Day 1 Mock" --description "A 41-question PSM mock from the reviewed Day 1 notes." --expected 41 --strict
+```
+
+Add `--check` to validate the packaged output without rewriting it. From a bench:
+
+```sh
+bench --site fmge.localhost execute lms.fmge.day1_course.install_day1_psm_course
+bench --site fmge.localhost execute lms.fmge.day1_course.verify_day1_psm_course
+```
+
+The installer reconciles the existing Day 1 records on rerun. The PDF asset is a
+symlink to `research/pdf_extracted_questions_data/Day1 PSM.pdf`; Q40 uses the
+cropped map at `lms/public/fmge/images/psm-d1-q040.png`.
+
+## Day 4 course
+
+`lms.fmge.day4_course.install_day4_psm_course` imports the 38 reviewed questions
+in `psm_day4.json` and publishes **FMGE PSM Day 4** with one chapter and quiz
+lesson. `/lms/fmge/day4/mock` offers untimed practice and a 38-minute timed mock,
+with explanations and page links into `day4-psm-notes.pdf`. Topics include
+biostatistics, contraception, health services, occupational health and demography.
+
+The source and review are `research/pdf_extracted_questions_data/Day4_PSM.md`
+and `Day4_PSM_review.md`. Rebuild with:
+
+```sh
+python3 scripts/fmge/build_question_bank.py --source research/pdf_extracted_questions_data/Day4_PSM.md --output lms/fmge/data/psm_day4.json --bank-id fmge-psm-day4 --id-prefix PSM-D4 --title "FMGE PSM Day 4 Mock" --description "A 38-question PSM mock from the reviewed Day 4 notes." --expected 38 --strict
+bench --site fmge.localhost execute lms.fmge.day4_course.install_day4_psm_course
+bench --site fmge.localhost execute lms.fmge.day4_course.verify_day4_psm_course
+```
+
+Day 1 and Day 4 use the shared `PSMCourse` installer in `course.py`. API tests
+for both banks run safely without touching site data:
+
+```sh
+python -m unittest lms.fmge.test_day1_mock
+```

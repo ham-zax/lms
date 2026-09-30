@@ -81,7 +81,11 @@
 						</div>
 						<p class="text-sm leading-5 text-ink-gray-6">
 							{{
-								day3Mock
+								day1Mock
+									? __('Practice from the Day 1 PSM notes.')
+									: day4Mock
+										? __('Practice from the Day 4 PSM notes.')
+										: day3Mock
 									? __('Practice from the Day 3 PSM notes.')
 									: __('Practice from the Day 2 PSM notes.')
 							}}
@@ -1271,6 +1275,14 @@ const props = defineProps({
 		type: Boolean,
 		default: false,
 	},
+	day1Mock: {
+		type: Boolean,
+		default: false,
+	},
+	day4Mock: {
+		type: Boolean,
+		default: false,
+	},
 	day3Mock: {
 		type: Boolean,
 		default: false,
@@ -1350,7 +1362,11 @@ const handleBeforeUnload = (event) => {
 // activeQuestion watcher read from a local map instead of round-tripping.
 const questionsByName = ref({})
 const quiz = createResource({
-	url: props.day3Mock
+	url: props.day1Mock
+		? 'lms.fmge.day1_mock.get_public_day1_quiz'
+		: props.day4Mock
+		? 'lms.fmge.day4_mock.get_public_day4_quiz'
+		: props.day3Mock
 		? 'lms.fmge.day3_mock.get_public_day3_quiz'
 		: props.publicFMGE
 		? 'lms.fmge.public_quiz.get_public_quiz'
@@ -1504,7 +1520,11 @@ watch(
 )
 
 const quizSubmission = createResource({
-	url: props.day3Mock
+	url: props.day1Mock
+		? 'lms.fmge.day1_mock.submit_public_day1_quiz'
+		: props.day4Mock
+		? 'lms.fmge.day4_mock.submit_public_day4_quiz'
+		: props.day3Mock
 		? 'lms.fmge.day3_mock.submit_public_day3_quiz'
 		: props.publicFMGE
 		? 'lms.fmge.public_quiz.submit_public_quiz'
@@ -2084,7 +2104,11 @@ const checkPracticeAnswer = () => {
 	const question = currentQuestion.value
 	checkingPractice.value = true
 	call(
-		props.day3Mock
+		props.day1Mock
+			? 'lms.fmge.day1_mock.check_public_day1_answer'
+			: props.day4Mock
+			? 'lms.fmge.day4_mock.check_public_day4_answer'
+			: props.day3Mock
 			? 'lms.fmge.day3_mock.check_public_day3_answer'
 			: 'lms.fmge.public_quiz.check_public_answer',
 		{

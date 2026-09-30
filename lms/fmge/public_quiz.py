@@ -26,8 +26,8 @@ SOURCE_PAGES_RE = re.compile(r"\bpp?\.\s*(\d+(?:\s*[–,-]\s*\d+)*)")
 EVIDENCE_RE = re.compile(r"^(?:Evidence:\s*)?E\d(?:-E\d)?\.?$")
 
 
-def _published_quiz():
-	name = frappe.db.get_value("LMS Quiz", {"fmge_bank_id": PUBLIC_BANK_ID}, "name")
+def _published_quiz(bank_id=PUBLIC_BANK_ID):
+	name = frappe.db.get_value("LMS Quiz", {"fmge_bank_id": bank_id}, "name")
 	if not name:
 		frappe.throw(_("FMGE mock is not available."), frappe.DoesNotExistError)
 	quiz = frappe.get_doc("LMS Quiz", name)
@@ -36,11 +36,11 @@ def _published_quiz():
 	return quiz
 
 
-def _question_rows(quiz):
+def _question_rows(quiz, bank_id=PUBLIC_BANK_ID):
 	questions = {}
 	for row in quiz.questions:
 		question = frappe.get_doc("LMS Question", row.question)
-		if question.fmge_bank_id != PUBLIC_BANK_ID or question.type != "Choices":
+		if question.fmge_bank_id != bank_id or question.type != "Choices":
 			frappe.throw(_("FMGE mock question bank is inconsistent."), frappe.ValidationError)
 		questions[question.name] = question
 	return questions
@@ -103,8 +103,12 @@ def _is_option(question, answer) -> bool:
 @rate_limit(limit=60, seconds=60 * 60)
 def get_public_quiz() -> dict:
 	"""Serve only the published FMGE practice questions, without answer keys."""
-	quiz = _published_quiz()
-	questions = _question_rows(quiz)
+	return _get_public_quiz()
+
+
+def _get_public_quiz(bank_id=PUBLIC_BANK_ID) -> dict:
+	quiz = _published_quiz(bank_id)
+	questions = _question_rows(quiz, bank_id)
 	return {
 		"quiz": {
 			"name": quiz.name,
@@ -143,6 +147,15 @@ def get_public_quiz() -> dict:
 @rate_limit(limit=20, seconds=60 * 60)
 def submit_public_quiz(results: str) -> dict:
 	"""Grade one anonymous practice attempt without creating a user or submission."""
+	return _submit_public_quiz(results)
+
+
+def _submit_public_quiz(
+	results: str,
+	bank_id=PUBLIC_BANK_ID,
+	source_document=SOURCE_DOCUMENT,
+	source_pdf_url=SOURCE_PDF_URL,
+) -> dict:
 	if not isinstance(results, str) or len(results.encode("utf-8")) > MAX_RESULTS_BYTES:
 		frappe.throw(_("Invalid FMGE answers."), frappe.ValidationError)
 	try:
@@ -152,8 +165,8 @@ def submit_public_quiz(results: str) -> dict:
 	if not isinstance(answer_rows, list):
 		frappe.throw(_("Invalid FMGE answers."), frappe.ValidationError)
 
-	quiz = _published_quiz()
-	questions = _question_rows(quiz)
+	quiz = _published_quiz(bank_id)
+	questions = _question_rows(quiz, bank_id)
 	if len(answer_rows) > len(questions):
 		frappe.throw(_("Invalid FMGE answers."), frappe.ValidationError)
 	answers = {}
@@ -171,7 +184,7 @@ def submit_public_quiz(results: str) -> dict:
 	review = []
 	for row in quiz.questions:
 		question = questions[row.question]
-		feedback = _feedback(question, answers.get(question.name))
+		feedback = _feedback(question, answers.get(question.name), source_document, source_pdf_url)
 		if feedback["is_correct"]:
 			score += cint(row.marks)
 		review.append({"question": question.question, **feedback})
@@ -192,7 +205,17 @@ def submit_public_quiz(results: str) -> dict:
 @rate_limit(limit=600, seconds=60 * 60)
 def check_public_answer(question: str, answer: str) -> dict:
 	"""Practice mode: mark one answer and explain it, citing the page in the notes."""
-	questions = _question_rows(_published_quiz())
+	return _check_public_answer(question, answer)
+
+
+def _check_public_answer(
+	question: str,
+	answer: str,
+	bank_id=PUBLIC_BANK_ID,
+	source_document=SOURCE_DOCUMENT,
+	source_pdf_url=SOURCE_PDF_URL,
+) -> dict:
+	questions = _question_rows(_published_quiz(bank_id), bank_id)
 	if question not in questions or not _is_option(questions[question], answer):
 		frappe.throw(_("Invalid FMGE answer."), frappe.ValidationError)
-	return _feedback(questions[question], answer)
+	return _feedback(questions[question], answer, source_document, source_pdf_url)

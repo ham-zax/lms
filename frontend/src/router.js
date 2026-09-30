@@ -44,7 +44,7 @@ router.beforeEach(async (to, from, next) => {
 
 	// The FMGE mock is served to guests by its own endpoints, so it stays open
 	// even on a site that keeps the rest of the LMS behind a login.
-	if (!isLoggedIn && to.name !== 'FMGEPublicMock') {
+	if (!isLoggedIn && !['FMGEPublicMock', 'FMGEDay1Mock', 'FMGEDay4Mock'].includes(to.name)) {
 		if (to.name == 'Home') router.push({ name: 'Courses' })
 
 		await settings.promise

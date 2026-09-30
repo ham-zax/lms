@@ -7,6 +7,8 @@
 		<Quiz
 			:quizName="quizID"
 			:publicFMGE="publicFMGE"
+			:day1Mock="day1Mock"
+			:day4Mock="day4Mock"
 			:day3Mock="day3Mock"
 			:learnerName="learnerName"
 		/>
@@ -41,6 +43,14 @@ const props = defineProps({
 		required: true,
 	},
 	publicFMGE: {
+		type: Boolean,
+		default: false,
+	},
+	day1Mock: {
+		type: Boolean,
+		default: false,
+	},
+	day4Mock: {
 		type: Boolean,
 		default: false,
 	},
@@ -82,7 +92,11 @@ const breadcrumbs = computed(() => {
 
 usePageMeta(() => {
 	return {
-		title: props.day3Mock
+		title: props.day1Mock
+			? __('FMGE PSM Day 1 Mock')
+			: props.day4Mock
+			? __('FMGE PSM Day 4 Mock')
+			: props.day3Mock
 			? __('FMGE PSM Day 3 Mock')
 			: props.publicFMGE
 			? props.learnerName

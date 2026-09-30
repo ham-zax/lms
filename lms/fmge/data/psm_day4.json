@@ -1,0 +1,704 @@
+{
+  "schema_version": 1,
+  "bank_id": "fmge-psm-day4",
+  "title": "FMGE PSM Day 4 Mock",
+  "subject": "Community Medicine",
+  "description": "A 38-question PSM mock from the reviewed Day 4 notes.",
+  "expected_questions": 38,
+  "duration_minutes": 38,
+  "max_attempts": 1,
+  "passing_percentage": 50,
+  "show_answers": 0,
+  "show_submission_history": 1,
+  "shuffle_questions": 0,
+  "enable_negative_marking": 0,
+  "questions": [
+    {
+      "id": "PSM-D4-Q001",
+      "number": 1,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which of the following is a qualitative variable?",
+      "options": [
+        "Religion",
+        "Weight",
+        "Blood glucose",
+        "Serum cholesterol"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.5 | E0 | Table/Handwritten",
+      "explanation": "Religion is a qualitative variable; weight is quantitative.",
+      "answer_label": "Religion",
+      "answer": "Religion"
+    },
+    {
+      "id": "PSM-D4-Q018",
+      "number": 18,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A cancer variable records stages I, II, III and IV. Which scale applies?",
+      "options": [
+        "Nominal",
+        "Interval",
+        "Ratio",
+        "Ordinal"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.7 | E1 | Table/Handwritten",
+      "explanation": "Ordered categories use an ordinal scale. Nominal categories classify by name without an inherent order.",
+      "answer_label": "Ordinal",
+      "answer": "Ordinal"
+    },
+    {
+      "id": "PSM-D4-Q002",
+      "number": 2,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The scatter plot shown indicates:",
+      "options": [
+        "Perfect negative correlation",
+        "No correlation",
+        "Positive correlation",
+        "Negative correlation"
+      ],
+      "image_url": "/assets/lms/fmge/images/psm-d4-q002.png",
+      "image_alt": "Scatter plot showing the relationship between X and Y",
+      "image_source": "p.32 | upper-left scatter plot only, cropped before the handwritten correlation labels",
+      "correct_option": "C",
+      "source": "PDF p.32 | E0 | Diagram",
+      "explanation": "An upward scatter pattern indicates positive correlation. No correlation produces no consistent upward or downward relationship.",
+      "answer_label": "Positive correlation",
+      "answer": "Positive correlation"
+    },
+    {
+      "id": "PSM-D4-Q019",
+      "number": 19,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Mean haemoglobin is compared across four independent treatment groups with normally distributed values and equal variances. Which test is appropriate?",
+      "options": [
+        "Paired t-test",
+        "ANOVA",
+        "Chi-square test",
+        "Unpaired t-test"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.19 | E1 | Table/Handwritten",
+      "explanation": "ANOVA compares means across three or more independent groups when quantitative data are normally distributed. An unpaired t-test is for two independent groups.",
+      "answer_label": "ANOVA",
+      "answer": "ANOVA"
+    },
+    {
+      "id": "PSM-D4-Q034",
+      "number": 34,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Two independent random samples have the same SD: A has n=25 and B has n=100. Which statement about the standard error of the mean is correct?",
+      "options": [
+        "A has half the SE of B",
+        "Both have the same SE",
+        "B has half the SE of A and is more precise",
+        "B has twice the SE of A and is less precise"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.9, p.11 | E2 | Multi-page/Formula",
+      "explanation": "SE equals SD divided by √n, so increasing n from 25 to 100 halves the SE. Lower SE means greater precision.",
+      "answer_label": "B has half the SE of A and is more precise",
+      "answer": "B has half the SE of A and is more precise"
+    },
+    {
+      "id": "PSM-D4-Q003",
+      "number": 3,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The nonsteroidal oral contraceptives Saheli and Chhaya contain:",
+      "options": [
+        "Tamoxifen",
+        "Ormeloxifene",
+        "Raloxifene",
+        "Clomiphene"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.69 | E0 | Handwritten/Printed",
+      "explanation": "Saheli/Chhaya is the nonsteroidal oral contraceptive ormeloxifene; it is not raloxifene.",
+      "answer_label": "Ormeloxifene",
+      "answer": "Ormeloxifene"
+    },
+    {
+      "id": "PSM-D4-Q020",
+      "number": 20,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A chi-square test uses a 3 × 4 contingency table. Degrees of freedom?",
+      "options": [
+        "2",
+        "3",
+        "6",
+        "8"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.23 | E1 | Formula/Handwritten",
+      "explanation": "For a 3 × 4 table, degrees of freedom are (3−1)(4−1)=6. Eight results from using four instead of three for the column factor.",
+      "answer_label": "6",
+      "answer": "6"
+    },
+    {
+      "id": "PSM-D4-Q004",
+      "number": 4,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which IUD belongs to the first generation?",
+      "options": [
+        "CuT 7",
+        "Progestasert",
+        "LNG-IUD",
+        "Lippes Loop"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.65 | E0 | Table/Handwritten",
+      "explanation": "Lippes Loop is a first-generation nonmedicated IUD. CuT 7 belongs to a different generation.",
+      "answer_label": "Lippes Loop",
+      "answer": "Lippes Loop"
+    },
+    {
+      "id": "PSM-D4-Q021",
+      "number": 21,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A trial concludes a new drug is superior, but in reality it is not. Which error occurred?",
+      "options": [
+        "Type I error",
+        "Type II error",
+        "No statistical error",
+        "Sampling error"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.40 | E1 | Table/Diagram",
+      "explanation": "Concluding superiority when the null of no superiority is actually true means rejecting a true null hypothesis: Type I error. Type II error means failing to reject a false null hypothesis.",
+      "answer_label": "Type I error",
+      "answer": "Type I error"
+    },
+    {
+      "id": "PSM-D4-Q005",
+      "number": 5,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The basal body temperature rise used for ovulation detection occurs during the:",
+      "options": [
+        "Postovulatory phase",
+        "Menstrual phase",
+        "Preovulatory phase",
+        "Early follicular phase"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.62 | E0 | Diagram/Handwritten",
+      "explanation": "The basal body temperature rise occurs after ovulation; the preovulatory phase precedes this temperature shift.",
+      "answer_label": "Postovulatory phase",
+      "answer": "Postovulatory phase"
+    },
+    {
+      "id": "PSM-D4-Q022",
+      "number": 22,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A woman records cycle dates, basal temperature and cervical mucus to avoid fertile days. Which method is she using?",
+      "options": [
+        "Calendar method",
+        "BBT method",
+        "Cervical mucus method",
+        "Symptothermal method"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.62 | E1 | Handwritten/List",
+      "explanation": "Combining cycle dates, basal body temperature and cervical mucus is the symptothermal method. BBT alone uses only one component.",
+      "answer_label": "Symptothermal method",
+      "answer": "Symptothermal method"
+    },
+    {
+      "id": "PSM-D4-Q035",
+      "number": 35,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Pain is graded mild, moderate or severe in the same patients before and after therapy. Investigators compare the numbers who improve and worsen, excluding ties. Which test is appropriate?",
+      "options": [
+        "Unpaired t-test",
+        "Chi-square test",
+        "Paired t-test",
+        "Sign test"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.7, p.19 | E2 | Multi-page/Diagram/Table",
+      "explanation": "The sign test compares the directions of change in paired ordinal observations, excluding ties. A paired t-test analyzes quantitative within-pair differences; skewness of the original before and after measurements alone does not establish that its assumptions fail.",
+      "answer_label": "Sign test",
+      "answer": "Sign test"
+    },
+    {
+      "id": "PSM-D4-Q006",
+      "number": 6,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Toxic shock syndrome is a recognized complication of which barrier contraceptive?",
+      "options": [
+        "Male condom",
+        "Vaginal sponge",
+        "Female condom",
+        "Spermicide"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.63, p.64 | E0 | Printed/Handwritten",
+      "explanation": "Toxic shock syndrome is a recognized complication of the vaginal sponge. Male condoms are barrier contraception, but they do not share this association.",
+      "answer_label": "Vaginal sponge",
+      "answer": "Vaginal sponge"
+    },
+    {
+      "id": "PSM-D4-Q023",
+      "number": 23,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A woman using a combined OCP asks about adverse effects. Which risk is increased?",
+      "options": [
+        "Iron-deficiency anaemia",
+        "Pelvic inflammatory disease",
+        "Thromboembolism",
+        "Ovarian cysts"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.68 | E1 | Handwritten/Table",
+      "explanation": "Combined OCPs are associated with increased thromboembolism, whereas ovarian cysts are among the effects shown to decrease.",
+      "answer_label": "Thromboembolism",
+      "answer": "Thromboembolism"
+    },
+    {
+      "id": "PSM-D4-Q007",
+      "number": 7,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "All of the following are among the 4As of primary health care EXCEPT:",
+      "options": [
+        "Acceptable",
+        "Accessible",
+        "Affordable",
+        "Achievable"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.84 | E0 | Handwritten",
+      "explanation": "Acceptable, accessible, available and affordable form the 4As; achievable is not one of them.",
+      "answer_label": "Achievable",
+      "answer": "Achievable"
+    },
+    {
+      "id": "PSM-D4-Q024",
+      "number": 24,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Use of ORS at primary-care level illustrates which PHC principle?",
+      "options": [
+        "Equitable distribution",
+        "Appropriate technology",
+        "Community participation",
+        "Intersectoral coordination"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.86 | E1 | Handwritten",
+      "explanation": "ORS is an example of appropriate technology in primary health care. Community participation is a separate PHC principle.",
+      "answer_label": "Appropriate technology",
+      "answer": "Appropriate technology"
+    },
+    {
+      "id": "PSM-D4-Q008",
+      "number": 8,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "In India’s rural public health system, the most peripheral health facility is the:",
+      "options": [
+        "PHC",
+        "Anganwadi centre",
+        "Subcentre",
+        "District hospital"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.88 | E0 | Table/Handwritten",
+      "explanation": "The subcentre is the most peripheral unit for health-care delivery. A PHC remains a primary-level facility but is not the most peripheral.",
+      "answer_label": "Subcentre",
+      "answer": "Subcentre"
+    },
+    {
+      "id": "PSM-D4-Q025",
+      "number": 25,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "In village health work, an ASHA commonly links community members with which frontline health worker?",
+      "options": [
+        "Auxiliary nurse midwife",
+        "Hospital radiographer",
+        "District surgeon",
+        "Medical college professor"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.93 | E1 | Handwritten",
+      "explanation": "ASHA links village residents with the auxiliary nurse midwife (ANM) and the broader public health system, including Anganwadi, subcentre and PHC services.",
+      "answer_label": "Auxiliary nurse midwife",
+      "answer": "Auxiliary nurse midwife"
+    },
+    {
+      "id": "PSM-D4-Q009",
+      "number": 9,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which rural health facility generally provides secondary referral care above the PHC level?",
+      "options": [
+        "CHC",
+        "Primary health centre",
+        "Medical college hospital",
+        "School health clinic"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.88 | E0 | Table/Handwritten",
+      "explanation": "A CHC provides secondary referral care above the PHC level. A designated First Referral Unit must meet additional service requirements; not every CHC is an FRU.",
+      "answer_label": "CHC",
+      "answer": "CHC"
+    },
+    {
+      "id": "PSM-D4-Q036",
+      "number": 36,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A woman wants a nonhormonal IUD that can remain in use for 10 years. Best option?",
+      "options": [
+        "Multiload CuT 375",
+        "CuT 380A",
+        "Progestasert",
+        "LNG-IUD"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.65 | E2 | Table/Handwritten",
+      "explanation": "CuT 380A is a copper, nonhormonal IUD approved for up to 10 years in India’s family-planning programme. CuT 375 is approved for up to 5 years.",
+      "answer_label": "CuT 380A",
+      "answer": "CuT 380A"
+    },
+    {
+      "id": "PSM-D4-Q026",
+      "number": 26,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "At block level, which Panchayati Raj institution corresponds to the administrative tier in the hierarchy?",
+      "options": [
+        "Gram Sabha",
+        "Zila Parishad",
+        "Panchayat Samiti",
+        "Nyaya Panchayat"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.95 | E1 | Handwritten",
+      "explanation": "Panchayat Samiti corresponds to block level, while Zila Parishad is the district-level tier.",
+      "answer_label": "Panchayat Samiti",
+      "answer": "Panchayat Samiti"
+    },
+    {
+      "id": "PSM-D4-Q010",
+      "number": 10,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which of the following is NOT included in AYUSH?",
+      "options": [
+        "Ayurveda",
+        "Unani",
+        "Sowa-Rigpa",
+        "Allopathy"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.97 | E0 | Printed/Handwritten",
+      "explanation": "AYUSH includes Sowa-Rigpa; allopathy is outside this grouping.",
+      "answer_label": "Allopathy",
+      "answer": "Allopathy"
+    },
+    {
+      "id": "PSM-D4-Q027",
+      "number": 27,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A painter develops abdominal colic, a Burtonian gum line and wrist drop. Most likely diagnosis?",
+      "options": [
+        "Arsenic poisoning",
+        "Mercury poisoning",
+        "Organophosphate poisoning",
+        "Lead poisoning"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.112, p.113 | E1 | Diagram/Handwritten/Multi-page",
+      "explanation": "Burtonian line with abdominal colic and wrist drop forms the classic clinical cluster for lead poisoning. The competing poisonings do not match this combination.",
+      "answer_label": "Lead poisoning",
+      "answer": "Lead poisoning"
+    },
+    {
+      "id": "PSM-D4-Q011",
+      "number": 11,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "A textile worker exposed to cotton dust is at risk of:",
+      "options": [
+        "Bagassosis",
+        "Byssinosis",
+        "Siderosis",
+        "Farmer's lung"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.109 | E0 | Handwritten/List",
+      "explanation": "Cotton-fibre exposure is linked to byssinosis. Mouldy-hay exposure is linked to farmer's lung.",
+      "answer_label": "Byssinosis",
+      "answer": "Byssinosis"
+    },
+    {
+      "id": "PSM-D4-Q028",
+      "number": 28,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A dye-industry worker exposed to aromatic amines such as benzidine develops painless hematuria. Most likely occupational malignancy?",
+      "options": [
+        "Transitional cell carcinoma of bladder",
+        "Renal cell carcinoma",
+        "Prostate adenocarcinoma",
+        "Testicular seminoma"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.114 | E1 | Handwritten",
+      "explanation": "Occupational exposure to carcinogenic aromatic amines used in dye production, including benzidine, increases the risk of urothelial (transitional cell) carcinoma of the bladder.",
+      "answer_label": "Transitional cell carcinoma of bladder",
+      "answer": "Transitional cell carcinoma of bladder"
+    },
+    {
+      "id": "PSM-D4-Q012",
+      "number": 12,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Mesothelioma is classically associated with occupational exposure to:",
+      "options": [
+        "Silica dust",
+        "Coal dust",
+        "Asbestos",
+        "Tin dust"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.109, p.111 | E0 | Handwritten",
+      "explanation": "Asbestos exposure is associated with mesothelioma. Coal dust is linked to a different pneumoconiosis.",
+      "answer_label": "Asbestos",
+      "answer": "Asbestos"
+    },
+    {
+      "id": "PSM-D4-Q037",
+      "number": 37,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A woman receives Antara. When should her next injection be scheduled?",
+      "options": [
+        "1 month",
+        "2 months",
+        "3 months",
+        "6 months"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.69 | E2 | Handwritten",
+      "explanation": "Antara is depot medroxyprogesterone acetate (DMPA). The routine repeat-injection interval is 3 months.",
+      "answer_label": "3 months",
+      "answer": "3 months"
+    },
+    {
+      "id": "PSM-D4-Q029",
+      "number": 29,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "In the demographic cycle, birth rate remains high while death rate begins to fall. Which stage is this?",
+      "options": [
+        "High stationary",
+        "Early expanding",
+        "Late expanding",
+        "Low stationary"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.133 | E1 | Table/Handwritten",
+      "explanation": "Early expanding stage has a high birth rate with the death rate starting to fall. In late expanding stage, the birth rate also begins to decline.",
+      "answer_label": "Early expanding",
+      "answer": "Early expanding"
+    },
+    {
+      "id": "PSM-D4-Q013",
+      "number": 13,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Silicosis has a recognized association with:",
+      "options": [
+        "Aspergillosis",
+        "Farmer's lung",
+        "Bagassosis",
+        "Tuberculosis"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.111 | E0 | Handwritten",
+      "explanation": "Silicosis is associated with tuberculosis. Aspergillus is paired with compost-lung exposure rather than silicosis.",
+      "answer_label": "Tuberculosis",
+      "answer": "Tuberculosis"
+    },
+    {
+      "id": "PSM-D4-Q030",
+      "number": 30,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A census counts each person at the place where they are physically present during enumeration. This method is:",
+      "options": [
+        "Sample registration",
+        "De jure census",
+        "Vital registration",
+        "De facto census"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.139 | E1 | Handwritten",
+      "explanation": "De facto census counts people at their actual location during data collection. The de jure alternative does not fit that location rule.",
+      "answer_label": "De facto census",
+      "answer": "De facto census"
+    },
+    {
+      "id": "PSM-D4-Q014",
+      "number": 14,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Occupational exposure to vinyl chloride monomer during PVC manufacture is associated with:",
+      "options": [
+        "Hepatic angiosarcoma",
+        "Squamous cell carcinoma of skin",
+        "Nasal sinus carcinoma",
+        "Osteosarcoma"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.114 | E0 | Handwritten",
+      "explanation": "Vinyl chloride monomer exposure during PVC manufacture is associated with hepatic angiosarcoma. The classic carcinogenic exposure is the monomer, rather than ordinary contact with finished PVC products.",
+      "answer_label": "Hepatic angiosarcoma",
+      "answer": "Hepatic angiosarcoma"
+    },
+    {
+      "id": "PSM-D4-Q031",
+      "number": 31,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Over one year, a district records 240 live births with 12,000 women aged 15–49 years at midyear. The annual GFR per 1,000 is:",
+      "options": [
+        "5",
+        "10",
+        "20",
+        "40"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.143 | E1 | Formula/Handwritten",
+      "explanation": "GFR is live births divided by women aged 15–49 years, multiplied by 1,000. Thus 240/12,000 × 1,000 = 20.",
+      "answer_label": "20",
+      "answer": "20"
+    },
+    {
+      "id": "PSM-D4-Q015",
+      "number": 15,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Occupational leukemia is classically associated with exposure to:",
+      "options": [
+        "Silica dust",
+        "Wood dust",
+        "Benzene",
+        "Iron dust"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.114 | E0 | Handwritten",
+      "explanation": "Benzene exposure is associated with leukemia. Wood dust has a different occupational-cancer association.",
+      "answer_label": "Benzene",
+      "answer": "Benzene"
+    },
+    {
+      "id": "PSM-D4-Q038",
+      "number": 38,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A national vital-statistics system uses dual-record collection. Which indicator can it directly estimate?",
+      "options": [
+        "Couple protection rate",
+        "Pearl index",
+        "Literacy rate",
+        "Infant mortality rate"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.138, p.140 | E2 | Multi-page/Handwritten",
+      "explanation": "The dual-record system identifies SRS, which measures IMR among its vital indicators. Literacy rate belongs to a different demographic measurement context.",
+      "answer_label": "Infant mortality rate",
+      "answer": "Infant mortality rate"
+    },
+    {
+      "id": "PSM-D4-Q032",
+      "number": 32,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A population pyramid has a broad base, narrow top and shorter span. It most likely represents a:",
+      "options": [
+        "Developing population",
+        "Developed population",
+        "Stationary population",
+        "Declining population"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.146 | E1 | Diagram/Handwritten",
+      "explanation": "A developing population has an upright triangular pyramid with a broad base and narrow top. A developed population has a spindle-like profile with a middle bulge.",
+      "answer_label": "Developing population",
+      "answer": "Developing population"
+    },
+    {
+      "id": "PSM-D4-Q016",
+      "number": 16,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "A population pyramid is graphically a:",
+      "options": [
+        "Frequency polygon",
+        "Double histogram",
+        "Line chart",
+        "Pie chart"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.145 | E0 | Diagram/Handwritten",
+      "explanation": "A population pyramid is a double histogram. A line chart is used for a temporal trend.",
+      "answer_label": "Double histogram",
+      "answer": "Double histogram"
+    },
+    {
+      "id": "PSM-D4-Q033",
+      "number": 33,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A town has 10,000 people, including 1,000 children under 7 years. The denominator for literacy rate is:",
+      "options": [
+        "8,000",
+        "9,000",
+        "10,000",
+        "11,000"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.138 | E1 | Formula/Handwritten",
+      "explanation": "Literacy rate uses the population aged 7 years and above. Excluding 1,000 children under 7 from 10,000 leaves a denominator of 9,000.",
+      "answer_label": "9,000",
+      "answer": "9,000"
+    },
+    {
+      "id": "PSM-D4-Q017",
+      "number": 17,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Sex ratio in the Census of India is calculated as:",
+      "options": [
+        "Females / males × 1000",
+        "Males / females × 1000",
+        "Female live births / total live births × 1000",
+        "Girls aged 0–6 years / boys aged 0–6 years × 1000"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.137 | E0 | Handwritten",
+      "explanation": "Sex ratio is females divided by males multiplied by 1,000. Restricting both groups to ages 0–6 gives the child sex ratio instead.",
+      "answer_label": "Females / males × 1000",
+      "answer": "Females / males × 1000"
+    }
+  ]
+}

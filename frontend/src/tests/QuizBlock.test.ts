@@ -6,7 +6,7 @@ import QuizBlock from '@/components/QuizBlock.vue'
 vi.mock('@/components/Quiz.vue', () => ({
 	default: {
 		name: 'QuizStub',
-		props: ['quizName', 'publicFMGE', 'day3Mock'],
+		props: ['quizName', 'publicFMGE', 'day1Mock', 'day4Mock', 'day3Mock'],
 		template: '<div />',
 	},
 }))
@@ -24,6 +24,8 @@ const mountForGuest = (quiz: string) =>
 
 describe('FMGE course quiz lessons', () => {
 	it.each([
+		['fmge-psm-day-1-mock', false],
+		['fmge-psm-day-4-mock', false],
 		['fmge-psm-mock-1-section-1', false],
 		['fmge-psm-day-3-compact-mock', true],
 	])('opens %s with the public mock flow', (quizName, day3Mock) => {
@@ -33,6 +35,8 @@ describe('FMGE course quiz lessons', () => {
 		expect(quiz.props()).toMatchObject({
 			quizName,
 			publicFMGE: true,
+			day1Mock: quizName === 'fmge-psm-day-1-mock',
+			day4Mock: quizName === 'fmge-psm-day-4-mock',
 			day3Mock,
 		})
 	})

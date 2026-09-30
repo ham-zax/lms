@@ -1,0 +1,758 @@
+{
+  "schema_version": 1,
+  "bank_id": "fmge-psm-day1",
+  "title": "FMGE PSM Day 1 Mock",
+  "subject": "Community Medicine",
+  "description": "A 41-question PSM mock from the reviewed Day 1 notes.",
+  "expected_questions": 41,
+  "duration_minutes": 41,
+  "max_attempts": 1,
+  "passing_percentage": 50,
+  "show_answers": 0,
+  "show_submission_history": 1,
+  "shuffle_questions": 0,
+  "enable_negative_marking": 0,
+  "questions": [
+    {
+      "id": "PSM-D1-Q018",
+      "number": 18,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A 10-year exposure cohort loses many participants before outcome assessment. Which problem is most characteristic?",
+      "options": [
+        "Recall bias",
+        "Verification bias",
+        "Loss to follow-up",
+        "Spectrum bias"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.28 | E1 | Table",
+      "explanation": "A long cohort can be distorted when participants disappear before outcome assessment; this is loss to follow-up. Recall bias is not the characteristic limitation emphasized for this design.",
+      "answer_label": "Loss to follow-up",
+      "answer": "Loss to follow-up"
+    },
+    {
+      "id": "PSM-D1-Q001",
+      "number": 1,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Who is credited with the standard definition of epidemiology?",
+      "options": [
+        "William Farr",
+        "John M Last",
+        "Wade Hampton Frost",
+        "Geoffrey Rose"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.5 | E0 | Handwritten/Diagram",
+      "explanation": "John M Last is credited with the standard definition of epidemiology used in this material.",
+      "answer_label": "John M Last",
+      "answer": "John M Last"
+    },
+    {
+      "id": "PSM-D1-Q019",
+      "number": 19,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A researcher wants to study possible risk factors for a very rare cancer. Which of the following designs is most efficient?",
+      "options": [
+        "Case-control study",
+        "Cohort study",
+        "Cross-sectional study",
+        "Community trial"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.28 | E1 | Table",
+      "explanation": "Case-control studies are efficient for rare diseases, whereas a cohort design is comparatively unsuitable for that purpose.",
+      "answer_label": "Case-control study",
+      "answer": "Case-control study"
+    },
+    {
+      "id": "PSM-D1-Q036",
+      "number": 36,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Investigators assign no exposure and compare naturally exposed and unexposed groups specifically to test an exposure-disease hypothesis. How should the study be classified?",
+      "options": [
+        "Descriptive study",
+        "Field trial",
+        "Clinical trial",
+        "Analytical observational study"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.18 | E2 | Table/Diagram",
+      "explanation": "Testing an exposure-disease hypothesis places the study in the analytical category rather than the descriptive category.",
+      "answer_label": "Analytical observational study",
+      "answer": "Analytical observational study"
+    },
+    {
+      "id": "PSM-D1-Q002",
+      "number": 2,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which three dimensions describe disease distribution in epidemiology?",
+      "options": [
+        "Age, sex and occupation",
+        "Source, reservoir and vector",
+        "Exposure, outcome and follow-up",
+        "Time, place and person"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.5 | E0 | Diagram",
+      "explanation": "Disease distribution is classically described in terms of time, place and person.",
+      "answer_label": "Time, place and person",
+      "answer": "Time, place and person"
+    },
+    {
+      "id": "PSM-D1-Q020",
+      "number": 20,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "District-level fluoride exposure is correlated with district-level fluorosis rates. What is the unit of analysis?",
+      "options": [
+        "Individual patient",
+        "Household",
+        "Clinic",
+        "Population"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.41 | E1 | Table",
+      "explanation": "The population or group is the unit of analysis in an ecological study; measurements are aggregated across its members.",
+      "answer_label": "Population",
+      "answer": "Population"
+    },
+    {
+      "id": "PSM-D1-Q003",
+      "number": 3,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which of the following is the principal vector of Japanese encephalitis?",
+      "options": [
+        "Culex tritaeniorhynchus",
+        "Aedes aegypti",
+        "Anopheles stephensi",
+        "Phlebotomus argentipes"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.7 | E0 | Handwritten",
+      "explanation": "Japanese encephalitis is transmitted by Culex tritaeniorhynchus rather than Aedes aegypti.",
+      "answer_label": "Culex tritaeniorhynchus",
+      "answer": "Culex tritaeniorhynchus"
+    },
+    {
+      "id": "PSM-D1-Q021",
+      "number": 21,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Factory workers improve hand-hygiene only because they know they are being observed. Which bias is illustrated?",
+      "options": [
+        "Recall bias",
+        "Hawthorne effect",
+        "Detection bias",
+        "Reporting bias"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.29, p.34 | E1 | Handwritten",
+      "explanation": "The Hawthorne effect is behavioral change because subjects know they are being observed; recall bias instead concerns remembering past exposure.",
+      "answer_label": "Hawthorne effect",
+      "answer": "Hawthorne effect"
+    },
+    {
+      "id": "PSM-D1-Q004",
+      "number": 4,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Duffy-negative individuals are relatively protected against which malaria species?",
+      "options": [
+        "Plasmodium falciparum",
+        "Plasmodium malariae",
+        "Plasmodium vivax",
+        "Plasmodium ovale"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.9 | E0 | Handwritten",
+      "explanation": "Duffy-negative phenotype reduces susceptibility to Plasmodium vivax malaria, but protection is not absolute; infections in Duffy-negative people have been documented.",
+      "answer_label": "Plasmodium vivax",
+      "answer": "Plasmodium vivax"
+    },
+    {
+      "id": "PSM-D1-Q022",
+      "number": 22,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Interviewer bias is most likely when:",
+      "options": [
+        "Outcome is assessed with the same protocol in all participants",
+        "Participants with disease remember past exposure differently",
+        "Cases and controls are questioned with different intensity",
+        "Exposure is recorded before disease develops"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.34 | E1 | Handwritten/Diagram",
+      "explanation": "Interviewer bias results when the interviewer probes comparison groups differently. Unequal remembering by participants is a different error mechanism.",
+      "answer_label": "Cases and controls are questioned with different intensity",
+      "answer": "Cases and controls are questioned with different intensity"
+    },
+    {
+      "id": "PSM-D1-Q037",
+      "number": 37,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Disease-free exposed and unexposed groups are followed forward until outcomes occur. Which of the following measures of association is directly appropriate?",
+      "options": [
+        "Relative risk",
+        "Odds ratio",
+        "Prevalence ratio",
+        "Correlation coefficient"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.19, p.20, p.28 | E2 | Multi-page",
+      "explanation": "Following exposed and unexposed groups forward permits direct comparison of their risks; the resulting ratio is relative risk.",
+      "answer_label": "Relative risk",
+      "answer": "Relative risk"
+    },
+    {
+      "id": "PSM-D1-Q005",
+      "number": 5,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "What age range defines adolescence?",
+      "options": [
+        "5-9 years",
+        "10-19 years",
+        "15-24 years",
+        "18-25 years"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.14 | E0 | Handwritten",
+      "explanation": "Adolescence spans 10-19 years.",
+      "answer_label": "10-19 years",
+      "answer": "10-19 years"
+    },
+    {
+      "id": "PSM-D1-Q023",
+      "number": 23,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Berksonian bias most directly results from:",
+      "options": [
+        "Different rates of hospital admission among comparison groups",
+        "Laboratory misclassification of exposure",
+        "Earlier diagnosis after screening",
+        "Preferential publication of positive studies"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.33, p.34 | E1 | Handwritten",
+      "explanation": "Berksonian bias arises when hospital admission rates differ among comparison groups.",
+      "answer_label": "Different rates of hospital admission among comparison groups",
+      "answer": "Different rates of hospital admission among comparison groups"
+    },
+    {
+      "id": "PSM-D1-Q006",
+      "number": 6,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which of the following broad study categories includes a field trial?",
+      "options": [
+        "Surveillance studies",
+        "Screening studies",
+        "Experimental/interventional studies",
+        "Registry studies"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.18 | E0 | Table/Diagram",
+      "explanation": "Field trials belong to the experimental/interventional class of epidemiological studies.",
+      "answer_label": "Experimental/interventional studies",
+      "answer": "Experimental/interventional studies"
+    },
+    {
+      "id": "PSM-D1-Q024",
+      "number": 24,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Participants and investigators are unaware of treatment allocation, but the data analyst is aware. What is this blinding design?",
+      "options": [
+        "Open-label",
+        "Single-blind",
+        "Triple-blind",
+        "Double-blind"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.35 | E1 | Handwritten",
+      "explanation": "Double blinding keeps both subjects and investigators unaware; triple blinding additionally includes the analyzer.",
+      "answer_label": "Double-blind",
+      "answer": "Double-blind"
+    },
+    {
+      "id": "PSM-D1-Q007",
+      "number": 7,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "What does the Pygmalion effect describe?",
+      "options": [
+        "Improved performance due to higher expectations",
+        "Distorted recall of a past exposure",
+        "Earlier diagnosis without altered outcome",
+        "Change in laboratory measurement over time"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.34 | E0 | Handwritten/Diagram",
+      "explanation": "The Pygmalion effect describes improved performance produced by higher expectations from another person, such as a teacher.",
+      "answer_label": "Improved performance due to higher expectations",
+      "answer": "Improved performance due to higher expectations"
+    },
+    {
+      "id": "PSM-D1-Q025",
+      "number": 25,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Investigators deliberately assign patients with higher fever to the experimental arm. Which design step, used with allocation concealment, reduces this selection bias?",
+      "options": [
+        "Convenience allocation",
+        "Randomization",
+        "Outcome adjudication",
+        "Placebo control"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.44 | E1 | Handwritten/Diagram",
+      "explanation": "Randomization with concealed allocation prevents investigators from choosing the treatment arm for each patient and balances baseline characteristics in expectation. Chance imbalances can still occur, especially in small trials.",
+      "answer_label": "Randomization",
+      "answer": "Randomization"
+    },
+    {
+      "id": "PSM-D1-Q038",
+      "number": 38,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Among cases, 60 were exposed and 20 unexposed; among controls, 30 were exposed and 60 unexposed. What are the odds ratio and interpretation?",
+      "options": [
+        "0.17, inverse association",
+        "1.0, no association",
+        "6.0, positive association",
+        "12.0, positive association"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.25 | E2 | Handwritten/Table",
+      "explanation": "The odds ratio is \\((60 \\times 60)/(20 \\times 30)=6\\). Because it is greater than 1, the association is positive.",
+      "answer_label": "6.0, positive association",
+      "answer": "6.0, positive association"
+    },
+    {
+      "id": "PSM-D1-Q008",
+      "number": 8,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "What is the comparison arm called in a controlled therapeutic trial?",
+      "options": [
+        "Source population",
+        "Sampling frame",
+        "Disease registry",
+        "Reference group"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.43 | E0 | Table",
+      "explanation": "A controlled therapeutic trial compares the experimental group with a reference group.",
+      "answer_label": "Reference group",
+      "answer": "Reference group"
+    },
+    {
+      "id": "PSM-D1-Q026",
+      "number": 26,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "First-in-human testing of a new drug in healthy volunteers primarily assesses what?",
+      "options": [
+        "Safety and tolerability",
+        "Therapeutic efficacy",
+        "Comparative efficacy",
+        "Population effectiveness"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.46 | E1 | Table/Handwritten",
+      "explanation": "First-in-human work in healthy volunteers focuses primarily on safety and non-toxicity/tolerability rather than therapeutic efficacy.",
+      "answer_label": "Safety and tolerability",
+      "answer": "Safety and tolerability"
+    },
+    {
+      "id": "PSM-D1-Q009",
+      "number": 9,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Who proposed the germ theory of disease?",
+      "options": [
+        "Robert Koch",
+        "Louis Pasteur",
+        "Joseph Lister",
+        "Edward Jenner"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.50 | E0 | Handwritten",
+      "explanation": "The germ theory of disease is attributed to Louis Pasteur.",
+      "answer_label": "Louis Pasteur",
+      "answer": "Louis Pasteur"
+    },
+    {
+      "id": "PSM-D1-Q027",
+      "number": 27,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A marketed drug is being monitored for uncommon and long-term adverse effects. Which phase does this represent?",
+      "options": [
+        "Phase 0",
+        "Phase II",
+        "Phase IV",
+        "Phase III"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.46 | E1 | Table/Handwritten",
+      "explanation": "Post-marketing surveillance after launch is Phase IV and is used to identify uncommon or long-term adverse effects.",
+      "answer_label": "Phase IV",
+      "answer": "Phase IV"
+    },
+    {
+      "id": "PSM-D1-Q010",
+      "number": 10,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "What are the three components of the epidemiological triad?",
+      "options": [
+        "Agent, host and environment",
+        "Source, reservoir and vector",
+        "Disease, disability and death",
+        "Exposure, outcome and follow-up"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.53 | E0 | Diagram",
+      "explanation": "The epidemiological triad consists of agent, host and environment.",
+      "answer_label": "Agent, host and environment",
+      "answer": "Agent, host and environment"
+    },
+    {
+      "id": "PSM-D1-Q028",
+      "number": 28,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A chronic disease has several interconnected determinants and multiple possible intervention points. Which causation model best represents this?",
+      "options": [
+        "Direct one-to-one causation",
+        "Spurious association",
+        "Multifactorial causation",
+        "Web of causation"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.50, p.52 | E1 | Multi-page/Diagram",
+      "explanation": "A network of interacting determinants with several possible intervention points is represented by the web of causation.",
+      "answer_label": "Web of causation",
+      "answer": "Web of causation"
+    },
+    {
+      "id": "PSM-D1-Q039",
+      "number": 39,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "In a study of physical inactivity and hypertension, age is related to both exposure and outcome. Investigators want equal age distributions between comparison groups before analysis. Which method should be used?",
+      "options": [
+        "Standardization",
+        "Subgroup analysis",
+        "Random sampling",
+        "Matching"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.32 | E2 | Handwritten/Diagram",
+      "explanation": "Age is acting as a confounder because it is related to both exposure and outcome. Matching equalizes its distribution between comparison groups.",
+      "answer_label": "Matching",
+      "answer": "Matching"
+    },
+    {
+      "id": "PSM-D1-Q011",
+      "number": 11,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "What is the natural history of disease?",
+      "options": [
+        "Frequency of disease in a population",
+        "Effect of treatment on prognosis",
+        "Progression of disease without intervention",
+        "Distribution of disease by geography"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.54 | E0 | Diagram/Handwritten",
+      "explanation": "Natural history is the progression of disease in the body without intervention.",
+      "answer_label": "Progression of disease without intervention",
+      "answer": "Progression of disease without intervention"
+    },
+    {
+      "id": "PSM-D1-Q029",
+      "number": 29,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Pathological changes are present, but symptoms have not yet begun. Which stage of disease is this?",
+      "options": [
+        "Stage of susceptibility",
+        "Stage of subclinical disease",
+        "Stage of clinical disease",
+        "Stage of recovery or disability"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.54, p.55 | E1 | Multi-page/Diagram",
+      "explanation": "Pathological changes before the onset of symptoms correspond to the subclinical stage.",
+      "answer_label": "Stage of subclinical disease",
+      "answer": "Stage of subclinical disease"
+    },
+    {
+      "id": "PSM-D1-Q012",
+      "number": 12,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Where is WHO headquarters located?",
+      "options": [
+        "Nairobi",
+        "Vienna",
+        "Copenhagen",
+        "Geneva"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.73 | E0 | Handwritten",
+      "explanation": "WHO headquarters is in Geneva.",
+      "answer_label": "Geneva",
+      "answer": "Geneva"
+    },
+    {
+      "id": "PSM-D1-Q030",
+      "number": 30,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "During one year, 40 new cases occur among 2,000 disease-free people at risk. What is the incidence per 1,000?",
+      "options": [
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.59 | E1 | Printed/Handwritten",
+      "explanation": "Incidence counts new cases among the population at risk. \\(40/2000 \\times 1000 = 20\\) per 1,000.",
+      "answer_label": "20",
+      "answer": "20"
+    },
+    {
+      "id": "PSM-D1-Q013",
+      "number": 13,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Where is UNICEF headquarters located?",
+      "options": [
+        "Paris",
+        "New York",
+        "Washington, DC",
+        "The Hague"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.75 | E0 | Handwritten",
+      "explanation": "UNICEF headquarters is in New York.",
+      "answer_label": "New York",
+      "answer": "New York"
+    },
+    {
+      "id": "PSM-D1-Q031",
+      "number": 31,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "All of the following are principal bodies of WHO EXCEPT:",
+      "options": [
+        "General Conference",
+        "World Health Assembly",
+        "Executive Board",
+        "Secretariat"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.73 | E1 | Handwritten",
+      "explanation": "WHO's principal bodies include the World Health Assembly, Executive Board and Secretariat; General Conference is not one of them.",
+      "answer_label": "General Conference",
+      "answer": "General Conference"
+    },
+    {
+      "id": "PSM-D1-Q040",
+      "number": 40,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "The epidemiologist associated with this map also compared cholera mortality among households supplied by different water companies without assigning their water source. Which study design was this?",
+      "options": [
+        "Community trial",
+        "Natural experiment",
+        "Case-control study",
+        "Cross-sectional study"
+      ],
+      "image_url": "/assets/lms/fmge/images/psm-d1-q040.png",
+      "image_alt": "Street map with cholera deaths and water-pump locations",
+      "image_source": "p.57 | left street map of cholera deaths and water pumps; crop the map only and exclude the handwritten “SPOT MAP” label",
+      "correct_option": "B",
+      "source": "PDF p.56, p.57, p.58 | E2 | Multi-page/Diagram",
+      "explanation": "The map identifies John Snow’s Broad Street cholera investigation. His separate comparison of households served by different water companies was a natural experiment: water source varied without researcher allocation. The spot map itself is descriptive.",
+      "answer_label": "Natural experiment",
+      "answer": "Natural experiment"
+    },
+    {
+      "id": "PSM-D1-Q014",
+      "number": 14,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "How many Sustainable Development Goals are there?",
+      "options": [
+        "8",
+        "12",
+        "17",
+        "21"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.79 | E0 | Handwritten",
+      "explanation": "The Sustainable Development Goal framework contains 17 goals.",
+      "answer_label": "17",
+      "answer": "17"
+    },
+    {
+      "id": "PSM-D1-Q032",
+      "number": 32,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "All of the following are components of GOBI-FFF EXCEPT:",
+      "options": [
+        "Oral rehydration",
+        "Breastfeeding",
+        "Family planning",
+        "Vitamin A supplementation"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.75 | E1 | Diagram/Handwritten",
+      "explanation": "GOBI-FFF includes oral rehydration, breastfeeding and family planning; vitamin A supplementation is not one of the acronym's components.",
+      "answer_label": "Vitamin A supplementation",
+      "answer": "Vitamin A supplementation"
+    },
+    {
+      "id": "PSM-D1-Q015",
+      "number": 15,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which Sustainable Development Goal is titled Good Health and Well-being?",
+      "options": [
+        "Goal 3",
+        "Goal 4",
+        "Goal 5",
+        "Goal 6"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.79 | E0 | Handwritten",
+      "explanation": "Good Health and Well-being is Sustainable Development Goal 3.",
+      "answer_label": "Goal 3",
+      "answer": "Goal 3"
+    },
+    {
+      "id": "PSM-D1-Q033",
+      "number": 33,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "The global maternal mortality ratio falls to 68 per 100,000 live births. Does this meet the numerical threshold in SDG target 3.1?",
+      "options": [
+        "No, it remains above the target",
+        "Yes, it is within the target",
+        "No, it is exactly at the target",
+        "It cannot be assessed from the value"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.79 | E1 | Handwritten",
+      "explanation": "SDG target 3.1 calls for a global maternal mortality ratio below 70 per 100,000 live births by 2030. A global value of 68 meets that numerical threshold.",
+      "answer_label": "Yes, it is within the target",
+      "answer": "Yes, it is within the target"
+    },
+    {
+      "id": "PSM-D1-Q016",
+      "number": 16,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which of the following is a Category B bioterrorism agent?",
+      "options": [
+        "Smallpox",
+        "Anthrax",
+        "Botulism",
+        "Ricin toxin"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.80 | E0 | Table",
+      "explanation": "Ricin toxin is a Category B bioterrorism agent.",
+      "answer_label": "Ricin toxin",
+      "answer": "Ricin toxin"
+    },
+    {
+      "id": "PSM-D1-Q034",
+      "number": 34,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A surveillance officer must identify an event belonging to the fixed always-notifiable group under IHR. Which of the following qualifies?",
+      "options": [
+        "Measles",
+        "Tuberculosis",
+        "SARS",
+        "Cholera"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.83 | E1 | Handwritten",
+      "explanation": "SARS belongs to the fixed group of conditions requiring notification under the International Health Regulations.",
+      "answer_label": "SARS",
+      "answer": "SARS"
+    },
+    {
+      "id": "PSM-D1-Q041",
+      "number": 41,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Under WHO’s January 2021 guidance, a laboratory moves from non-propagative SARS-CoV-2 diagnostic testing to viral culture and isolation. Which biosafety change was recommended?",
+      "options": [
+        "BSL-1 to BSL-2",
+        "BSL-1 to BSL-3",
+        "BSL-2 to BSL-4",
+        "BSL-2 to BSL-3"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.82 | E2 | Table/Handwritten",
+      "explanation": "WHO’s January 2021 guidance recommended BSL-2-equivalent controls for non-propagative diagnostic work and BSL-3 controls for virus culture. The 2024 update allows less stringent controls for some currently circulating strains following a local risk assessment, so this historical distinction is not a universal current requirement.",
+      "answer_label": "BSL-2 to BSL-3",
+      "answer": "BSL-2 to BSL-3"
+    },
+    {
+      "id": "PSM-D1-Q017",
+      "number": 17,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which of the following best defines emporiatrics?",
+      "options": [
+        "Health of migrant workers",
+        "Health of international travellers",
+        "Health of older adults",
+        "Health of schoolchildren"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.83 | E0 | Handwritten",
+      "explanation": "Emporiatrics concerns the health of international travellers.",
+      "answer_label": "Health of international travellers",
+      "answer": "Health of international travellers"
+    },
+    {
+      "id": "PSM-D1-Q035",
+      "number": 35,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A chronic disease has incidence 2 per 1,000 per year and average duration 4 years. What is the approximate prevalence per 1,000?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "16"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.59 | E1 | Handwritten",
+      "explanation": "Prevalence is approximately incidence multiplied by duration. \\(2 \\times 4 = 8\\) per 1,000.",
+      "answer_label": "8",
+      "answer": "8"
+    }
+  ]
+}

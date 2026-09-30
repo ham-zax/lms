@@ -4,9 +4,13 @@ Everything a new session needs to operate, update or debug the published FMGE mo
 
 | What | URL |
 | --- | --- |
+| Day 1 mock | https://fmge.hamza.my.id/lms/fmge/day1/mock |
 | Day 2 mock | https://fmge.hamza.my.id/lms/fmge/mock |
+| Day 4 mock | https://fmge.hamza.my.id/lms/fmge/day4/mock |
 | Day 3 mock | https://fmge.hamza.my.id/lms/fmge/day3/mock |
+| Day 1 course | https://fmge.hamza.my.id/lms/courses/fmge-psm-day-1 |
 | Day 2 course | https://fmge.hamza.my.id/lms/courses/fmge-mock-exams |
+| Day 4 course | https://fmge.hamza.my.id/lms/courses/fmge-psm-day-4 |
 | Day 3 course | https://fmge.hamza.my.id/lms/courses/fmge-psm-day-3 |
 | Frappe desk | https://fmge.hamza.my.id/app |
 | LMS home | https://fmge.hamza.my.id/lms |
@@ -70,6 +74,8 @@ F="$HOME/frappe-bench/env/bin/python -m frappe.utils.bench_helper frappe --site 
 $F migrate
 $F clear-cache
 $F execute lms.fmge.importer.install_psm_block_1
+$F execute lms.fmge.day1_course.install_day1_psm_course
+$F execute lms.fmge.day4_course.install_day4_psm_course
 $F execute lms.fmge.day3_course.install_day3_psm_course
 $F backup --with-files               # -> sites/fmge.localhost/private/backups/
 sudo systemctl restart fmge-web      # after any Python change
@@ -87,7 +93,7 @@ The VM is too small to build the frontend, and packages must not be re-resolved 
   sudo systemctl restart fmge-web
   ```
   Run `$F migrate` too if doctypes or patches changed.
-- **Question bank changes**: edit the Markdown source, run `scripts/fmge/build_question_bank.py`, and commit and push the output. Pull on the VM as above, then run the installer for the changed bank: `$F execute lms.fmge.importer.install_psm_block_1` for Day 2 or `$F execute lms.fmge.day3_course.install_day3_psm_course` for Day 3.
+- **Question bank changes**: edit the Markdown source, run `scripts/fmge/build_question_bank.py`, and commit and push the output. Pull on the VM as above, then run the installer for the changed bank: `$F execute lms.fmge.importer.install_psm_block_1` for Day 2, `$F execute lms.fmge.day1_course.install_day1_psm_course` for Day 1, `$F execute lms.fmge.day4_course.install_day4_psm_course` for Day 4, or `$F execute lms.fmge.day3_course.install_day3_psm_course` for Day 3.
 - **Frontend changes**: build on the dev PC (see "Frontend build gotcha"). The build output is git-ignored, so copy it up:
   ```sh
   cd ~/repo/AVO/exam-question-preparation

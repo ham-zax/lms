@@ -3,6 +3,8 @@
 		v-if="user.data || publicFMGE"
 		:quizName="quiz"
 		:publicFMGE="publicFMGE"
+		:day1Mock="day1Mock"
+		:day4Mock="day4Mock"
 		:day3Mock="day3Mock"
 	></Quiz>
 	<div v-else class="border rounded-md text-center py-20">
@@ -28,9 +30,11 @@ const props = defineProps({
 		required: true,
 	},
 })
+const day1Mock = computed(() => props.quiz === 'fmge-psm-day-1-mock')
+const day4Mock = computed(() => props.quiz === 'fmge-psm-day-4-mock')
 const day3Mock = computed(() => props.quiz === 'fmge-psm-day-3-compact-mock')
 const publicFMGE = computed(
-	() => day3Mock.value || props.quiz === 'fmge-psm-mock-1-section-1'
+	() => day1Mock.value || day4Mock.value || day3Mock.value || props.quiz === 'fmge-psm-mock-1-section-1'
 )
 
 const redirectToLogin = () => {
