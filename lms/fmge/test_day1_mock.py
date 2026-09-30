@@ -161,6 +161,14 @@ class TestDay1Mock(unittest.TestCase):
 				with self.subTest(section=invalid), self.assertRaises(frappe.ValidationError):
 					operation()
 
+	def test_guest_endpoints_annotate_every_argument(self):
+		# Frappe rejects guest calls whose arguments lack type annotations.
+		for kind in ("get_public_day{}_quiz", "submit_public_day{}_quiz", "check_public_day{}_answer"):
+			func = inspect.unwrap(getattr(self.endpoint, kind.format(self.course.day)))
+			for name in inspect.signature(func).parameters:
+				with self.subTest(func=func.__name__, argument=name):
+					self.assertIn(name, func.__annotations__)
+
 	def test_answers_from_the_other_section_are_rejected(self):
 		other = self.course.section(2 if self.section == 1 else 1)
 		foreign = _load_bank(other["bank_file"])["questions"][0]["id"]
