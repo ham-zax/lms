@@ -147,16 +147,16 @@
       "number": 15,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "A large workforce receives blood-pressure, glucose and vision tests in one annual screening visit. This is:",
+      "stem": "At one sitting, each factory worker has a blood-pressure measurement, a blood-glucose test and a vision test. Giving several different tests at one sitting is called:",
       "options": [
         "Multiphasic screening",
-        "Multipurpose screening",
-        "Mass screening",
-        "Prospective screening"
+        "Selective screening",
+        "Case finding",
+        "Serial testing"
       ],
       "correct_option": "A",
       "source": "PDF p.42 | E1 | Printed/Handwritten",
-      "explanation": "Several different tests administered in one screening programme make it multiphasic. Multipurpose screening uses one test for several diseases.",
+      "explanation": "Giving several different tests at one sitting makes screening multiphasic. Selective screening targets a high-risk group, whatever tests it uses.",
       "answer_label": "Multiphasic screening",
       "answer": "Multiphasic screening"
     },
@@ -219,7 +219,7 @@
       "number": 5,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "The functional unit of implementation in the ICDS scheme is the:",
+      "stem": "A rural ICDS project, headed by a Child Development Project Officer, covers which administrative unit?",
       "options": [
         "Village",
         "Block",

@@ -54,7 +54,7 @@
       "number": 2,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "The listed daily IFA course continues for how long after delivery?",
+      "stem": "Under Anemia Mukt Bharat, daily IFA for a woman after delivery continues for how long?",
       "options": [
         "30 days",
         "60 days",
@@ -63,7 +63,7 @@
       ],
       "correct_option": "D",
       "source": "PDF p.3 | E0 | Handwritten",
-      "explanation": "Daily IFA continues for 180 days after delivery.",
+      "explanation": "Daily IFA continues for 180 days after delivery, matching the 180-day course in pregnancy.",
       "answer_label": "180 days",
       "answer": "180 days"
     },
@@ -153,7 +153,7 @@
       ],
       "correct_option": "C",
       "source": "PDF p.49 | E0 | Handwritten",
-      "explanation": "The handout specifies 5% acetic acid. VIA guidance also accepts 3%, so it is excluded from the options.",
+      "explanation": "VIA uses 3–5% acetic acid; 5% is the concentration in the notes. Acetowhite areas after application suggest a precancerous lesion.",
       "answer_label": "5%",
       "answer": "5%"
     },
@@ -165,13 +165,13 @@
       "stem": "Screening seeks unrecognized disease among people who are:",
       "options": [
         "Apparently healthy",
-        "Already diagnosed",
-        "Receiving definitive treatment",
-        "Hospitalized for the disease"
+        "Symptomatic and seeking care",
+        "Close contacts receiving prophylaxis",
+        "Under follow-up after treatment"
       ],
       "correct_option": "A",
       "source": "PDF p.37–38 | E0 | Printed/Handwritten",
-      "explanation": "Screening searches for unrecognized disease in apparently healthy people.",
+      "explanation": "Screening searches for unrecognized disease in apparently healthy people. Testing someone who presents with symptoms is diagnosis.",
       "answer_label": "Apparently healthy",
       "answer": "Apparently healthy"
     },
@@ -207,7 +207,7 @@
       ],
       "correct_option": "D",
       "source": "PDF p.70–71 | E1 | Table",
-      "explanation": "India's Bio-Medical Waste Management Rules specify above 1,200°C when discarded cytotoxic drugs are incinerated. The figure does not apply to all biomedical-waste incineration; the rules also allow other disposal routes for cytotoxic drugs.",
+      "explanation": "Discarded cytotoxic drugs must be incinerated above 1,200°C under India's Bio-Medical Waste Management Rules. The 800°C figure is the general incinerator's primary-chamber minimum.",
       "answer_label": "1,200°C",
       "answer": "1,200°C"
     },
@@ -273,7 +273,7 @@
       "number": 21,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "Which listed treatment operates at 132°C, rather than the autoclave’s 121°C?",
+      "stem": "Which biomedical-waste treatment operates at about 132°C, compared with 121°C for autoclaving?",
       "options": [
         "Incineration",
         "Microwaving",
@@ -282,7 +282,7 @@
       ],
       "correct_option": "C",
       "source": "PDF p.71 | E0 | Table",
-      "explanation": "Hydroclaving is listed at 132°C, while autoclaving is listed at 121°C.",
+      "explanation": "Hydroclaving operates at about 132°C, while autoclaving operates at 121°C.",
       "answer_label": "Hydroclaving",
       "answer": "Hydroclaving"
     },
@@ -435,7 +435,7 @@
       "number": 13,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "The mosquito-net mesh recommendation exceeds approximately how many holes per square inch?",
+      "stem": "A mosquito net should have at least how many holes per square inch?",
       "options": [
         "50",
         "100",
@@ -444,7 +444,7 @@
       ],
       "correct_option": "D",
       "source": "PDF p.130 | E0 | Handwritten",
-      "explanation": "The listed mosquito-net specification exceeds 150 holes per square inch.",
+      "explanation": "A mosquito net should have at least 150 holes per square inch.",
       "answer_label": "150",
       "answer": "150"
     },

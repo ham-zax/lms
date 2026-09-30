@@ -36,12 +36,12 @@
       "number": 17,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "A parent stops providing an evening meal because the child eats the school mid-day meal. Correct advice?",
+      "stem": "A parent plans to skip the child’s evening meal because the child now eats the school mid-day meal. What is the correct advice?",
       "options": [
         "Continue the usual home meals",
-        "Replace the evening meal",
-        "Stop the school meal",
-        "Rely only on school meals"
+        "Skip it only on school days",
+        "Skip it for upper-primary children",
+        "Skip it when the school meal includes an egg"
       ],
       "correct_option": "A",
       "source": "PDF p.25 | E1 | Printed/Handwritten",
@@ -138,7 +138,7 @@
       ],
       "correct_option": "D",
       "source": "PDF p.14 | E2 | Diagram/Handwritten",
-      "explanation": "Early suckling releases oxytocin and stimulates uterine contraction. This physiological effect should not be presented as proven prevention of postpartum haemorrhage.",
+      "explanation": "Suckling releases oxytocin, which contracts the uterus and helps limit postpartum bleeding. Prolactin drives milk production, not uterine contraction.",
       "answer_label": "Uterine contraction from oxytocin",
       "answer": "Uterine contraction from oxytocin"
     },
@@ -165,18 +165,18 @@
       "number": 20,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "A PHC screens a large, apparently healthy population before individual diagnostic referral. Which test profile fits?",
+      "stem": "A PHC screens a large, apparently healthy population before individual diagnostic referral. Which feature best suits the initial test?",
       "options": [
-        "Slow, inexpensive testing",
-        "Rapid, costly testing",
-        "Slow, costly testing",
-        "Rapid, inexpensive testing"
+        "Tissue confirmation of every result",
+        "Performance only by a specialist",
+        "Diagnostic certainty sufficient to start treatment",
+        "Quick, cheap and acceptable to the population"
       ],
       "correct_option": "D",
       "source": "PDF p.37–38 | E1 | Table/Multi-page",
-      "explanation": "An initial population screening test should be quick and inexpensive; individual diagnostic assessment follows when indicated.",
-      "answer_label": "Rapid, inexpensive testing",
-      "answer": "Rapid, inexpensive testing"
+      "explanation": "An initial population screening test should be quick, inexpensive and acceptable. A positive screen leads to diagnostic assessment; it is not itself the basis for treatment.",
+      "answer_label": "Quick, cheap and acceptable to the population",
+      "answer": "Quick, cheap and acceptable to the population"
     },
     {
       "id": "PSM-D3-S4-Q006",
@@ -201,7 +201,7 @@
       "number": 7,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "Which stain is listed for examining a specimen for acid-fast bacilli?",
+      "stem": "Which stain is used to examine a specimen for acid-fast bacilli?",
       "options": [
         "Ziehl–Neelsen stain",
         "JSB stain",
@@ -210,7 +210,7 @@
       ],
       "correct_option": "A",
       "source": "PDF p.43 | E0 | Diagram/Handwritten",
-      "explanation": "Ziehl–Neelsen staining demonstrates acid-fast bacilli; this does not make smear microscopy the default definitive initial test for tuberculosis.",
+      "explanation": "Ziehl–Neelsen staining demonstrates acid-fast bacilli such as *M. tuberculosis* and *M. leprae*. JSB stain is used for malaria blood films.",
       "answer_label": "Ziehl–Neelsen stain",
       "answer": "Ziehl–Neelsen stain"
     },
@@ -239,14 +239,14 @@
       "difficulty": "direct",
       "stem": "Which spore indicator checks biomedical-waste microwave treatment?",
       "options": [
-        "*Bacillus subtilis*",
+        "*Bacillus cereus*",
         "*Geobacillus stearothermophilus*",
         "*Clostridium sporogenes*",
         "*Bacillus atrophaeus*"
       ],
       "correct_option": "D",
       "source": "PDF p.71–72 | E0 | Table/Handwritten",
-      "explanation": "*B. atrophaeus* spores are used to check microwave treatment.",
+      "explanation": "*B. atrophaeus* spores check microwave treatment, while *G. stearothermophilus* spores check autoclaving.",
       "answer_label": "*Bacillus atrophaeus*",
       "answer": "*Bacillus atrophaeus*"
     },
@@ -255,7 +255,7 @@
       "number": 9,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "The specified lower temperature boundary for hot-air oven treatment is:",
+      "stem": "Hot-air oven sterilization requires a temperature of at least:",
       "options": [
         "100°C",
         "121°C",
@@ -264,7 +264,7 @@
       ],
       "correct_option": "D",
       "source": "PDF p.72 | E0 | Table",
-      "explanation": "The hot-air oven entry specifies treatment above 160°C.",
+      "explanation": "Hot-air oven (dry-heat) sterilization needs at least 160°C; autoclaving uses moist heat at 121°C.",
       "answer_label": "160°C",
       "answer": "160°C"
     },

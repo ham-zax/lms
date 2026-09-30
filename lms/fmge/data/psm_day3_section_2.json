@@ -45,7 +45,7 @@
       ],
       "correct_option": "D",
       "source": "PDF p.24 | E0 | Table",
-      "explanation": "The allocation for a severely malnourished child is 800 kcal daily, higher than the allocation for pregnant and lactating women.",
+      "explanation": "A severely malnourished child aged 6–72 months receives 800 kcal daily under Anganwadi supplementary nutrition.",
       "answer_label": "800 kcal",
       "answer": "800 kcal"
     },
@@ -291,16 +291,16 @@
       "number": 22,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "The microwave frequency listed for biomedical-waste treatment is:",
+      "stem": "Microwave treatment of biomedical waste operates at a frequency of:",
       "options": [
-        "915 MHz",
+        "60 MHz",
         "1,210 MHz",
         "1,800 MHz",
         "2,450 MHz"
       ],
       "correct_option": "D",
       "source": "PDF p.72 | E0 | Table/Handwritten",
-      "explanation": "The microwave-treatment frequency specified is 2,450 MHz.",
+      "explanation": "Biomedical-waste microwave treatment operates at 2,450 MHz.",
       "answer_label": "2,450 MHz",
       "answer": "2,450 MHz"
     },

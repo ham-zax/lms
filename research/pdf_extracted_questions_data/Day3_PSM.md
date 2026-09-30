@@ -67,7 +67,7 @@ C. Stunting
 D. Severe acute malnutrition
 
 ### Q5
-The functional unit of implementation in the ICDS scheme is the:
+A rural ICDS project, headed by a Child Development Project Officer, covers which administrative unit?
 
 A. Village  
 B. Block  
@@ -149,12 +149,12 @@ C. Prospective screening
 D. Multiphasic screening
 
 ### Q15
-A large workforce receives blood-pressure, glucose and vision tests in one annual screening visit. This is:
+At one sitting, each factory worker has a blood-pressure measurement, a blood-glucose test and a vision test. Giving several different tests at one sitting is called:
 
 A. Multiphasic screening  
-B. Multipurpose screening  
-C. Mass screening  
-D. Prospective screening
+B. Selective screening  
+C. Case finding  
+D. Serial testing
 
 ### Q16
 A test finds 90 true positives, 10 false negatives, 20 false positives and 80 true negatives. Its sensitivity is:
@@ -296,7 +296,7 @@ Low height-for-age indicates stunting; wasting uses weight-for-height.
 **Archetype:** direct recall  
 **Topic:** ICDS — implementation structure  
 **Source:** PDF p.23 | E0 | Handwritten  
-**Closest distractor:** C. District — the block is identified as the functional implementation unit, p.23  
+**Closest distractor:** C. District — the ICDS project is organised at block level, p.23  
 The ICDS project operates at block level, with a Child Development Project Officer in charge.
 
 ### Q6 — **D — External validity**
@@ -366,8 +366,8 @@ Screening donated blood protects the eventual recipient, fitting prospective scr
 **Archetype:** close discrimination  
 **Topic:** Screening — multiple tests  
 **Source:** PDF p.42 | E1 | Printed/Handwritten  
-**Closest distractor:** B. Multipurpose screening — that applies one test to more than one disease, p.42  
-Several different tests administered in one screening programme make it multiphasic. Multipurpose screening uses one test for several diseases.
+**Closest distractor:** B. Selective screening — that is defined by targeting a high-risk group, not by the number of tests, p.42  
+Giving several different tests at one sitting makes screening multiphasic. Selective screening targets a high-risk group, whatever tests it uses.
 
 ### Q16 — **C — 90%**
 **Archetype:** calculation  
@@ -680,9 +680,9 @@ C. Inertization
 D. Autoclaving
 
 ### Q22
-The microwave frequency listed for biomedical-waste treatment is:
+Microwave treatment of biomedical waste operates at a frequency of:
 
-A. 915 MHz  
+A. 60 MHz  
 B. 1,210 MHz  
 C. 1,800 MHz  
 D. 2,450 MHz
@@ -835,7 +835,7 @@ Infant length rises from about 50 cm at birth to about 75 cm by one year.
 **Topic:** Anganwadi nutrition — beneficiary norms  
 **Source:** PDF p.24 | E0 | Table  
 **Closest distractor:** C. 600 kcal — that is the allocation for pregnant and lactating women, p.24  
-The allocation for a severely malnourished child is 800 kcal daily, higher than the allocation for pregnant and lactating women.
+A severely malnourished child aged 6–72 months receives 800 kcal daily under Anganwadi supplementary nutrition.
 
 ### Q16 — **A — Colposcopic punch biopsy**
 **Archetype:** investigation  
@@ -876,8 +876,8 @@ Inertization incorporates toxic waste into a solid mixture using cement and lime
 **Archetype:** direct recall  
 **Topic:** Biomedical waste — microwaving  
 **Source:** PDF p.72 | E0 | Table/Handwritten  
-**Closest distractor:** C. 1,800 MHz — the listed operating frequency is 2,450 MHz, p.72  
-The microwave-treatment frequency specified is 2,450 MHz.
+**Closest distractor:** C. 1,800 MHz — a mobile-network band; biomedical-waste microwaving uses 2,450 MHz, p.72  
+Biomedical-waste microwave treatment operates at 2,450 MHz.
 
 ### Q23 — **B — Immediate resuscitation is required**
 **Archetype:** close discrimination  
@@ -987,7 +987,7 @@ C. 6 years
 D. 8 years
 
 ### Q2
-The listed daily IFA course continues for how long after delivery?
+Under Anemia Mukt Bharat, daily IFA for a woman after delivery continues for how long?
 
 A. 30 days  
 B. 60 days  
@@ -1015,9 +1015,9 @@ D. 10%
 Screening seeks unrecognized disease among people who are:
 
 A. Apparently healthy  
-B. Already diagnosed  
-C. Receiving definitive treatment  
-D. Hospitalized for the disease
+B. Symptomatic and seeking care  
+C. Close contacts receiving prophylaxis  
+D. Under follow-up after treatment
 
 ### Q7
 If discarded cytotoxic drugs are incinerated, the temperature must exceed which threshold?
@@ -1068,7 +1068,7 @@ C. Rat flea
 D. Tsetse fly
 
 ### Q13
-The mosquito-net mesh recommendation exceeds approximately how many holes per square inch?
+A mosquito net should have at least how many holes per square inch?
 
 A. 50  
 B. 100  
@@ -1126,7 +1126,7 @@ C. Leprosy
 D. Kala-azar
 
 ### Q21
-Which listed treatment operates at 132°C, rather than the autoclave’s 121°C?
+Which biomedical-waste treatment operates at about 132°C, compared with 121°C for autoclaving?
 
 A. Incineration  
 B. Microwaving  
@@ -1207,8 +1207,8 @@ Birth length approximately doubles by four years of age.
 **Archetype:** direct recall  
 **Topic:** Maternal health — postpartum IFA  
 **Source:** PDF p.3 | E0 | Handwritten  
-**Closest distractor:** C. 90 days — the listed postpartum course is 180 days, p.3  
-Daily IFA continues for 180 days after delivery.
+**Closest distractor:** C. 90 days — the postpartum course is 180 days, p.3  
+Daily IFA continues for 180 days after delivery, matching the 180-day course in pregnancy.
 
 ### Q3 — **C — Ministry of Women and Child Development**
 **Archetype:** direct recall  
@@ -1223,14 +1223,14 @@ ICDS is administered through the Ministry of Women and Child Development.
 **Source:** PDF p.49 | E0 | Handwritten  
 **Closest distractor:** B. 2% — below the 3–5% concentration range used in VIA guidance
 
-The handout specifies 5% acetic acid. VIA guidance also accepts 3%, so it is excluded from the options.
+VIA uses 3–5% acetic acid; 5% is the concentration in the notes. Acetowhite areas after application suggest a precancerous lesion.
 
 ### Q5 — **A — Apparently healthy**
 **Archetype:** direct recall  
 **Topic:** Screening — definition  
 **Source:** PDF p.37–38 | E0 | Printed/Handwritten  
-**Closest distractor:** B. Already diagnosed — screening seeks previously unrecognized disease, p.37–38  
-Screening searches for unrecognized disease in apparently healthy people.
+**Closest distractor:** B. Symptomatic and seeking care — testing them is diagnosis or case-finding, p.37–38  
+Screening searches for unrecognized disease in apparently healthy people. Testing someone who presents with symptoms is diagnosis.
 
 ### Q7 — **D — 1,200°C**
 **Archetype:** direct recall  
@@ -1240,7 +1240,7 @@ Screening searches for unrecognized disease in apparently healthy people.
 
 **Closest distractor:** C. 800°C — the minimum primary-chamber temperature for a general biomedical-waste incinerator, not the cytotoxic-drug threshold
 
-India's Bio-Medical Waste Management Rules specify above 1,200°C when discarded cytotoxic drugs are incinerated. The figure does not apply to all biomedical-waste incineration; the rules also allow other disposal routes for cytotoxic drugs.
+Discarded cytotoxic drugs must be incinerated above 1,200°C under India's Bio-Medical Waste Management Rules. The 800°C figure is the general incinerator's primary-chamber minimum.
 
 ### Q8 — **C — Reduce potential disaster damage**
 **Archetype:** direct recall  
@@ -1282,7 +1282,7 @@ The tsetse fly transmits African sleeping sickness.
 **Topic:** Entomology — mosquito nets  
 **Source:** PDF p.130 | E0 | Handwritten  
 **Closest distractor:** C. 125 — the specified density is greater than 150 holes per square inch, p.130  
-The listed mosquito-net specification exceeds 150 holes per square inch.
+A mosquito net should have at least 150 holes per square inch.
 
 ### Q14 — **A — Hard tick**
 **Archetype:** direct recall  
@@ -1331,8 +1331,8 @@ Clumps of nonbeaded acid-fast bacilli support leprosy; the contrasting tuberculo
 **Archetype:** close discrimination  
 **Topic:** Biomedical waste — thermal treatment  
 **Source:** PDF p.71 | E0 | Table  
-**Closest distractor:** A. Incineration — its listed temperature is much higher, p.71  
-Hydroclaving is listed at 132°C, while autoclaving is listed at 121°C.
+**Closest distractor:** A. Incineration — it runs far hotter, above 800°C, p.71  
+Hydroclaving operates at about 132°C, while autoclaving operates at 121°C.
 
 ### Q22 — **A — Exhaust ventilation**
 **Archetype:** close discrimination  
@@ -1493,7 +1493,7 @@ C. Breast cancer
 D. Prostate cancer
 
 ### Q7
-Which stain is listed for examining a specimen for acid-fast bacilli?
+Which stain is used to examine a specimen for acid-fast bacilli?
 
 A. Ziehl–Neelsen stain  
 B. JSB stain  
@@ -1503,13 +1503,13 @@ D. Papanicolaou stain
 ### Q8
 Which spore indicator checks biomedical-waste microwave treatment?
 
-A. *Bacillus subtilis*  
+A. *Bacillus cereus*  
 B. *Geobacillus stearothermophilus*  
 C. *Clostridium sporogenes*  
 D. *Bacillus atrophaeus*
 
 ### Q9
-The specified lower temperature boundary for hot-air oven treatment is:
+Hot-air oven sterilization requires a temperature of at least:
 
 A. 100°C  
 B. 121°C  
@@ -1575,12 +1575,12 @@ D. Lambert
 ## TIER 2 — DISCRIMINATIVE APPLICATION
 
 ### Q17
-A parent stops providing an evening meal because the child eats the school mid-day meal. Correct advice?
+A parent plans to skip the child’s evening meal because the child now eats the school mid-day meal. What is the correct advice?
 
 A. Continue the usual home meals  
-B. Replace the evening meal  
-C. Stop the school meal  
-D. Rely only on school meals
+B. Skip it only on school days  
+C. Skip it for upper-primary children  
+D. Skip it when the school meal includes an egg
 
 ### Q18
 For screening to improve outcome, disease must be detected before its:
@@ -1591,12 +1591,12 @@ C. Final critical point
 D. Usual clinical diagnosis
 
 ### Q20
-A PHC screens a large, apparently healthy population before individual diagnostic referral. Which test profile fits?
+A PHC screens a large, apparently healthy population before individual diagnostic referral. Which feature best suits the initial test?
 
-A. Slow, inexpensive testing  
-B. Rapid, costly testing  
-C. Slow, costly testing  
-D. Rapid, inexpensive testing
+A. Tissue confirmation of every result  
+B. Performance only by a specialist  
+C. Diagnostic certainty sufficient to start treatment  
+D. Quick, cheap and acceptable to the population
 
 ### Q21
 A used scalpel has undergone sterilization in the white sharps stream. What follows before final disposal?
@@ -1711,21 +1711,21 @@ Bimanual oral palpation is listed as an oral-cancer screening examination.
 **Topic:** Tuberculosis — microscopy  
 **Source:** PDF p.43 | E0 | Diagram/Handwritten  
 **Closest distractor:** B. JSB stain — that is listed with malaria blood-film examination, p.46  
-Ziehl–Neelsen staining demonstrates acid-fast bacilli; this does not make smear microscopy the default definitive initial test for tuberculosis.
+Ziehl–Neelsen staining demonstrates acid-fast bacilli such as *M. tuberculosis* and *M. leprae*. JSB stain is used for malaria blood films.
 
 ### Q8 — **D — *Bacillus atrophaeus***
 **Archetype:** close discrimination  
 **Topic:** Biomedical waste — microwave validation  
 **Source:** PDF p.71–72 | E0 | Table/Handwritten  
 **Closest distractor:** B. *Geobacillus stearothermophilus* — that indicator is assigned to autoclaving, p.71  
-*B. atrophaeus* spores are used to check microwave treatment.
+*B. atrophaeus* spores check microwave treatment, while *G. stearothermophilus* spores check autoclaving.
 
 ### Q9 — **D — 160°C**
 **Archetype:** direct recall  
 **Topic:** Biomedical waste — hot-air oven  
 **Source:** PDF p.72 | E0 | Table  
 **Closest distractor:** C. 132°C — that is the hydroclaving temperature, p.71  
-The hot-air oven entry specifies treatment above 160°C.
+Hot-air oven (dry-heat) sterilization needs at least 160°C; autoclaving uses moist heat at 121°C.
 
 ### Q10 — **A — Likelihood of survival**
 **Archetype:** direct recall  
@@ -1780,7 +1780,7 @@ Lumen measures luminous flux, or the flow of light.
 **Archetype:** management  
 **Topic:** School nutrition — role of the mid-day meal  
 **Source:** PDF p.25 | E1 | Printed/Handwritten  
-**Closest distractor:** B. Replace the evening meal — the school meal is a supplement, p.25  
+**Closest distractor:** B. Skip it only on school days — the school meal is a supplement even on school days, p.25  
 The school mid-day meal adds to the child’s home diet; it does not replace home meals.
 
 ### Q18 — **C — Final critical point**
@@ -1790,12 +1790,12 @@ The school mid-day meal adds to the child’s home diet; it does not replace hom
 **Closest distractor:** D. Usual clinical diagnosis — the opportunity to alter outcome ends at the earlier final critical point, p.39  
 Useful screening detects disease after it first becomes detectable but before the final critical point for effective intervention.
 
-### Q20 — **D — Rapid, inexpensive testing**
+### Q20 — **D — Quick, cheap and acceptable to the population**
 **Archetype:** close discrimination  
 **Topic:** Screening — population test selection  
 **Source:** PDF p.37–38 | E1 | Table/Multi-page  
-**Closest distractor:** B. Rapid, costly testing — speed alone does not match the listed low-cost screening profile, p.38  
-An initial population screening test should be quick and inexpensive; individual diagnostic assessment follows when indicated.
+**Closest distractor:** C. Diagnostic certainty sufficient to start treatment — that is the role of the diagnostic test after referral, p.38  
+An initial population screening test should be quick, inexpensive and acceptable. A positive screen leads to diagnostic assessment; it is not itself the basis for treatment.
 
 ### Q21 — **C — Shred or mutilate it**
 **Archetype:** management  
@@ -1840,7 +1840,7 @@ At 1.2 L per hour, predicted loss over four hours is 4.8 L, above the listed 4.5
 
 **Concept link:** Suckling stimulates oxytocin release (p.14) + oxytocin contracts the uterus (p.14) → contraction helps limit postpartum bleeding.
 
-Early suckling releases oxytocin and stimulates uterine contraction. This physiological effect should not be presented as proven prevention of postpartum haemorrhage.
+Suckling releases oxytocin, which contracts the uterus and helps limit postpartum bleeding. Prolactin drives milk production, not uterine contraction.
 
 ### Q28 — **B — Yellow**
 **Archetype:** image  
