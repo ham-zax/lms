@@ -1223,7 +1223,7 @@ ICDS is administered through the Ministry of Women and Child Development.
 **Source:** PDF p.49 | E0 | Handwritten  
 **Closest distractor:** B. 2% — below the 3–5% concentration range used in VIA guidance
 
-VIA uses 3–5% acetic acid; 5% is the concentration in the notes. Acetowhite areas after application suggest a precancerous lesion.
+VIA applies 5% acetic acid to the cervix. Acetowhite areas after application suggest a precancerous lesion.
 
 ### Q5 — **A — Apparently healthy**
 **Archetype:** direct recall  
@@ -1823,7 +1823,7 @@ Collect the sample from a gentle stream without splashing or touching the bottle
 **Topic:** Sewage — infection transmission  
 **Source:** PDF p.123, p.127–128 | E1 | Multi-page  
 **Closest distractor:** B. Plague — its listed transmission involves the rat flea, p.127  
-Sewage contains human excreta, so it can spread faeco-oral infections such as poliovirus. Plague, kala-azar and Kyasanur Forest disease are vector-borne.
+Sewage contains human excreta, so it can spread faeco-oral infections such as poliomyelitis. Plague, kala-azar and Kyasanur Forest disease are vector-borne.
 
 ### Q25 — **C — Intolerable**
 **Archetype:** calculation  
