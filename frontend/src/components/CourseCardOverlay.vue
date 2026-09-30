@@ -9,14 +9,21 @@
 				{{ priceLabel }}
 		</div>
 		<div v-if="!readOnlyMode">
-			<a v-if="publicMockUrl" :href="publicMockUrl" class="block mb-2">
-				<Button variant="solid" size="md" class="w-full">
-					<template #prefix>
-						<span class="lucide-timer size-4" />
-					</template>
-					{{ __('Take the mock without signing in') }}
-				</Button>
-			</a>
+			<div v-if="publicMocks.length" class="mb-2">
+				<div class="mb-1.5 text-xs text-ink-gray-6">
+					{{ __('Free mock, no sign-in needed') }}
+				</div>
+				<div :class="publicMocks.length > 1 ? 'grid grid-cols-2 gap-2' : ''">
+					<a v-for="mock in publicMocks" :key="mock.url" :href="mock.url" class="block">
+						<Button variant="solid" size="md" class="w-full">
+							<template #prefix>
+								<span class="lucide-timer size-4" />
+							</template>
+							{{ mock.section ? __('Section {0}').format(mock.section) : __('Take the mock') }}
+						</Button>
+					</a>
+				</div>
+			</div>
 			<div v-if="course.data?.membership" class="space-y-2 mb-8">
 					<router-link
 						:to="{
@@ -235,17 +242,24 @@ const priceLabel = computed<string>(() => {
 	return __('Free')
 })
 
-// A course advertises an anonymous mock by linking to it in its description.
-// Keep the card action tied to that same local LMS URL, so every such course
-// gets the button without a separate course-name list.
-const publicMockUrl = computed<string>(() => {
+// A course advertises its anonymous mocks by linking to them in its description
+// ("Take the mock without signing in", or "Take section N without signing in").
+// Keep the card actions tied to those same local LMS URLs, so every such course
+// gets the buttons without a separate course-name list.
+const publicMocks = computed<{ url: string; section: string }[]>(() => {
 	const description = props.course.data?.description
-	if (!description) return ''
+	if (!description) return []
 	const document = new DOMParser().parseFromString(description, 'text/html')
-	const link = [...document.querySelectorAll('a[href]')].find(
-		(anchor) => anchor.textContent?.trim() === 'Take the mock without signing in'
-	)
-	const href = link?.getAttribute('href')
+	return [...document.querySelectorAll('a[href]')].flatMap((anchor) => {
+		const match = anchor.textContent
+			?.trim()
+			.match(/^Take (?:the mock|section (\d+)) without signing in$/)
+		const url = match && localMockUrl(anchor.getAttribute('href'))
+		return url ? [{ url, section: match[1] || '' }] : []
+	})
+})
+
+const localMockUrl = (href: string | null): string => {
 	if (!href) return ''
 	try {
 		const url = new URL(href, window.location.origin)
@@ -255,7 +269,7 @@ const publicMockUrl = computed<string>(() => {
 	} catch {
 		return ''
 	}
-})
+}
 
 const enrolledLabel = computed<string>(() => {
 	const n = props.course.data?.enrollments ?? 0
