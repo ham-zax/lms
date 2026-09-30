@@ -91,6 +91,27 @@ class BuilderTestCase(unittest.TestCase):
 		errors, _ = builder.lint_bank(self.build(render(questions)))
 		self.assertIn("Q4: stem refers to the study material instead of standing alone", errors)
 
+	def test_flags_stems_that_say_listed(self):
+		questions = list(CLEAN_QUESTIONS)
+		questions[3] = (4, "The preferred method listed for refuse disposal is:", *questions[3][2:])
+		errors, _ = builder.lint_bank(self.build(render(questions)))
+		self.assertIn("Q4: stem refers to the study material instead of standing alone", errors)
+
+	def test_flags_audit_notes_in_explanations(self):
+		bank = self.build(render(CLEAN_QUESTIONS))
+		bank["questions"][0]["explanation"] += " The handout value is excluded from the options."
+		_, warnings = builder.lint_bank(bank)
+		self.assertIn("Q1: explanation points at the notes or carries an audit note", warnings)
+
+	def test_flags_explanation_that_argues_for_another_option(self):
+		bank = self.build(render(CLEAN_QUESTIONS))
+		q = bank["questions"][0]
+		q["options"] = ["Sodium and potassium", "Iron and zinc", "Calcium and magnesium", "Copper and lead"]
+		q["correct_option"], q["answer"] = "A", "Sodium and potassium"
+		q["explanation"] = "Hard water needs more soap because of dissolved calcium and magnesium salts."
+		errors, _ = builder.lint_bank(bank)
+		self.assertIn("Q1: explanation names option C, not the keyed answer; check the key", errors)
+
 	def test_flags_premise_leak(self):
 		questions = list(CLEAN_QUESTIONS)
 		questions[1] = (
@@ -231,9 +252,7 @@ class BuilderTestCase(unittest.TestCase):
 				"# FINAL PATTERN AUDIT",
 				"- Total: 2",
 				"# SECTION 2 OF 2 — Q1-Q2",
-				render(
-					[(n - 2, stem, options, key) for n, stem, options, key in CLEAN_QUESTIONS[2:]]
-				),
+				render([(n - 2, stem, options, key) for n, stem, options, key in CLEAN_QUESTIONS[2:]]),
 			]
 		)
 		first = self.build(text, expected=2, section=1)

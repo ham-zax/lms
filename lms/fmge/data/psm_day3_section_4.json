@@ -156,7 +156,7 @@
       ],
       "correct_option": "D",
       "source": "PDF p.12–13 | E0 | Handwritten",
-      "explanation": "Taurine is the breast-milk amino acid linked here to brain development.",
+      "explanation": "Taurine is the amino acid in breast milk linked to brain development; DHA is the essential fatty acid.",
       "answer_label": "Taurine",
       "answer": "Taurine"
     },
@@ -170,13 +170,13 @@
         "Tissue confirmation of every result",
         "Performance only by a specialist",
         "Diagnostic certainty sufficient to start treatment",
-        "Quick, cheap and acceptable to the population"
+        "Quick and inexpensive"
       ],
       "correct_option": "D",
       "source": "PDF p.37–38 | E1 | Table/Multi-page",
-      "explanation": "An initial population screening test should be quick, inexpensive and acceptable. A positive screen leads to diagnostic assessment; it is not itself the basis for treatment.",
-      "answer_label": "Quick, cheap and acceptable to the population",
-      "answer": "Quick, cheap and acceptable to the population"
+      "explanation": "A screening test is quicker and cheaper but less accurate than a diagnostic test. A positive screen leads to diagnostic assessment; it is not itself the basis for treatment.",
+      "answer_label": "Quick and inexpensive",
+      "answer": "Quick and inexpensive"
     },
     {
       "id": "PSM-D3-S4-Q006",
@@ -192,7 +192,7 @@
       ],
       "correct_option": "B",
       "source": "PDF p.50 | E0 | Table",
-      "explanation": "Bimanual oral palpation is listed as an oral-cancer screening examination.",
+      "explanation": "Bimanual oral palpation screens for oral cancer; biopsy confirms the diagnosis.",
       "answer_label": "Oral cancer",
       "answer": "Oral cancer"
     },
@@ -264,7 +264,7 @@
       ],
       "correct_option": "D",
       "source": "PDF p.72 | E0 | Table",
-      "explanation": "Hot-air oven (dry-heat) sterilization needs at least 160°C; autoclaving uses moist heat at 121°C.",
+      "explanation": "Hot-air oven sterilization needs at least 160°C; autoclaving uses steam under pressure at 121°C.",
       "answer_label": "160°C",
       "answer": "160°C"
     },
@@ -354,7 +354,7 @@
       ],
       "correct_option": "C",
       "source": "PDF p.127 | E0 | Table",
-      "explanation": "The rat flea is the listed vector of plague.",
+      "explanation": "The rat flea (*Xenopsylla cheopis*) transmits plague and endemic typhus.",
       "answer_label": "Rat flea",
       "answer": "Rat flea"
     },
@@ -411,7 +411,7 @@
       ],
       "correct_option": "A",
       "source": "PDF p.123, p.127–128 | E1 | Multi-page",
-      "explanation": "Sewage containing human excreta can support poliovirus transmission; the other listed diseases have vector associations.",
+      "explanation": "Sewage contains human excreta, so it can spread faeco-oral infections such as poliovirus. Plague, kala-azar and Kyasanur Forest disease are vector-borne.",
       "answer_label": "Poliomyelitis",
       "answer": "Poliomyelitis"
     },
@@ -465,7 +465,7 @@
       ],
       "correct_option": "C",
       "source": "PDF p.118 | E1 | Table",
-      "explanation": "At 1.2 L per hour, predicted loss over four hours is 4.8 L, above the listed 4.5 L limit.",
+      "explanation": "At 1.2 L per hour, the four-hour sweat rate is 4.8 L. Above 4.5 L is intolerable; 3–4.5 L is just tolerable.",
       "answer_label": "Intolerable",
       "answer": "Intolerable"
     },

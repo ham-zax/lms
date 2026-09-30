@@ -135,7 +135,7 @@
       ],
       "correct_option": "B",
       "source": "PDF p.109 | E2 | Table",
-      "explanation": "Hardness persisting after boiling requires a method for permanent hardness. Permutit ion exchange is the listed method.",
+      "explanation": "Hardness that persists after boiling is permanent hardness from sulphates and chlorides. The permutit (base-exchange) process removes it.",
       "answer_label": "Permutit ion exchange",
       "answer": "Permutit ion exchange"
     },
@@ -363,7 +363,7 @@
       "number": 28,
       "tier": 3,
       "difficulty": "hard",
-      "stem": "A programme targets the larvae of mosquitoes transmitting malaria. Which biological control is listed?",
+      "stem": "A programme targets the larvae of mosquitoes transmitting malaria. Which biological control agent is used?",
       "options": [
         "Gambusia fish",
         "DDT",
@@ -372,7 +372,7 @@
       ],
       "correct_option": "A",
       "source": "PDF p.129–130 | E2 | Table/Multi-page",
-      "explanation": "*Anopheles* transmits malaria, and Gambusia is the listed fish for its larval control.",
+      "explanation": "*Anopheles* transmits malaria, and Gambusia fish eat its larvae. DDT, pyrethrum and malathion are chemical controls.",
       "answer_label": "Gambusia fish",
       "answer": "Gambusia fish"
     },
@@ -399,7 +399,7 @@
       "number": 12,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "The preferred method listed for disposal of municipal refuse is:",
+      "stem": "The preferred method for disposal of municipal refuse is:",
       "options": [
         "Open dumping",
         "Deep burial",
@@ -408,7 +408,7 @@
       ],
       "correct_option": "C",
       "source": "PDF p.124 | E0 | Printed/Handwritten",
-      "explanation": "Sanitary landfill is the preferred refuse-disposal method listed here.",
+      "explanation": "Sanitary landfill (controlled tipping) is the preferred method of refuse disposal.",
       "answer_label": "Sanitary landfill",
       "answer": "Sanitary landfill"
     },

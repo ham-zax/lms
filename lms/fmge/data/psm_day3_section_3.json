@@ -36,7 +36,7 @@
       "number": 15,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "A five-month-old is exclusively breastfed and received vitamin K at birth. Which vitamin should be supplemented daily at 400 IU?",
+      "stem": "An exclusively breastfed newborn receives intramuscular vitamin K at birth. Which vitamin is the most deficient in breast milk?",
       "options": [
         "Vitamin A",
         "Vitamin D",
@@ -45,7 +45,7 @@
       ],
       "correct_option": "B",
       "source": "PDF p.11 | E1 | Handwritten",
-      "explanation": "Exclusively breastfed infants need 400 IU of vitamin D daily. The vitamin K injection at birth addresses a different deficiency risk.",
+      "explanation": "Vitamin D is the most deficient vitamin in breast milk, so exclusively breastfed infants can develop rickets. Vitamin K is the second most deficient, which is why 1 mg is given intramuscularly at birth.",
       "answer_label": "Vitamin D",
       "answer": "Vitamin D"
     },
@@ -99,7 +99,7 @@
       ],
       "correct_option": "B",
       "source": "PDF p.129 | E2 | Table/Diagram",
-      "explanation": "*Mansonia* is the listed vector for Brugian filariasis, and its larvae attach to the roots of aquatic plants.",
+      "explanation": "*Mansonia* transmits Brugian filariasis, and its larvae attach to the roots of aquatic plants such as *Pistia*.",
       "answer_label": "Roots of aquatic plants",
       "answer": "Roots of aquatic plants"
     },
@@ -135,7 +135,7 @@
       ],
       "correct_option": "D",
       "source": "PDF p.5 | E1 | Table/Handwritten",
-      "explanation": "A birth weight of 2.4 kg meets the low-birth-weight definition. A weight above the tenth gestational centile does not meet the listed small-for-gestational-age criterion.",
+      "explanation": "A birth weight of 2.4 kg meets the low-birth-weight definition. Small for gestational age requires a weight below the tenth centile, which this baby is above.",
       "answer_label": "Low birth weight",
       "answer": "Low birth weight"
     },
@@ -207,7 +207,7 @@
       ],
       "correct_option": "D",
       "source": "PDF p.70–71 | E1 | Table",
-      "explanation": "Discarded cytotoxic drugs must be incinerated above 1,200°C under India's Bio-Medical Waste Management Rules. The 800°C figure is the general incinerator's primary-chamber minimum.",
+      "explanation": "Discarded cytotoxic drugs must be incinerated above 1,200°C under India's Bio-Medical Waste Management Rules.",
       "answer_label": "1,200°C",
       "answer": "1,200°C"
     },
@@ -408,7 +408,7 @@
       ],
       "correct_option": "B",
       "source": "PDF p.37–38, p.51 | E2 | Table/Multi-page",
-      "explanation": "A high random screening glucose in an asymptomatic person needs diagnostic assessment. The two-hour OGTT is a listed diagnostic test.",
+      "explanation": "A high random screening glucose in an asymptomatic person needs diagnostic assessment. The two-hour OGTT is a diagnostic test for diabetes.",
       "answer_label": "Two-hour oral glucose tolerance test",
       "answer": "Two-hour oral glucose tolerance test"
     },

@@ -81,7 +81,7 @@
       ],
       "correct_option": "D",
       "source": "PDF p.25 | E1 | Table/Handwritten",
-      "explanation": "Class VII is upper primary, for which the listed meal energy norm is 700 kcal; 450 kcal applies to primary classes.",
+      "explanation": "Class VII is upper primary, where the mid-day meal provides 700 kcal and 20 g protein; primary classes receive 450 kcal.",
       "answer_label": "700 kcal",
       "answer": "700 kcal"
     },
@@ -300,7 +300,7 @@
       ],
       "correct_option": "D",
       "source": "PDF p.70, p.71 | E1 | Multi-page",
-      "explanation": "PVC-containing waste is listed as unsuitable for incineration. The other listed wastes have incineration pathways.",
+      "explanation": "Burning PVC releases dioxins and furans, so chlorinated plastics must not be incinerated. Anatomical waste, soiled dressings and discarded medicines are incinerated.",
       "answer_label": "PVC-containing waste",
       "answer": "PVC-containing waste"
     },
@@ -498,7 +498,7 @@
       ],
       "correct_option": "C",
       "source": "PDF p.128, p.127 | E0 | Table/Handwritten",
-      "explanation": "Onchocerciasis is transmitted by the black fly. Sand flies transmit the leishmaniases listed separately.",
+      "explanation": "Onchocerciasis (river blindness) is transmitted by the *Simulium* black fly. Sand flies transmit kala-azar and oriental sore.",
       "answer_label": "Black fly",
       "answer": "Black fly"
     },

@@ -1,4 +1,4 @@
-# FMGE source-grounded three-tier question-bank master prompt (v9.2)
+# FMGE source-grounded three-tier question-bank master prompt (v9.3)
 
 Paste everything below this line into the web session, together with the notes PDF. The prompt is self-contained.
 
@@ -353,7 +353,7 @@ Basic sciences should be clinically portable when the PDF allows it (anatomy -> 
 
 # 3. STEM RULES (hard rules - an item that breaks one is rejected)
 
-1. **Stand-alone stem.** The stem must read as an exam question. It must never mention or point at the study material: no "in the notes", "shown in the source", "according to the PDF/table/figure/slide", "the schedule displayed", "as annotated", "the source identifies…", "on page…". Test the fact itself: write "The diluent used to reconstitute BCG vaccine is:", not "Which diluent is shown for BCG?". Page citations belong only in the answer key.
+1. **Stand-alone stem.** The stem must read as an exam question. It must never mention or point at the study material: no "in the notes", "shown in the source", "according to the PDF/table/figure/slide", "the schedule displayed", "as annotated", "the source identifies…", "on page…". Test the fact itself: write "The diluent used to reconstitute BCG vaccine is:", not "Which diluent is shown for BCG?". Page citations belong only in the answer key. The words **listed, specified, mentioned, stated** point at the notes even without naming them: write "The preferred method of refuse disposal is:", not "The preferred method listed for refuse disposal is:"; "Which biological control agent is used?", not "Which biological control is listed?".
 2. **No stated premise.** The stem must not hand over the fact that decides the answer. Bad: "Measles vaccine given within 3 days of exposure is protective. A child exposed 48 hours ago… best action?" Good: "An unvaccinated 14-month-old had household contact with measles 48 hours ago. Best action?" If an item can only be solved once the stem states the key fact, it is reading comprehension: reject it or make it Tier 1 recall of that fact.
 3. **"Shown" only with an image.** Use "shown", "displayed" or "depicted" only when the item carries an image (section 10).
 4. **One question, one task.** End with a clear lead-in ("Most likely diagnosis is:", "Next best step is:", "Which of the following…?").
@@ -380,7 +380,15 @@ Basic sciences should be clinically portable when the PDF allows it (anatomy -> 
 - No joke options, irrelevant organ systems, grammatical giveaways or repeated absolute words.
 - **Numeric options in ascending order** (doses, years, rates, ranges), as FMGE papers print them.
 - **One relationship per item.** No "Which pair/combination correctly gives X and Y?" items that join two unrelated recalls. Only use a matched pair when the pairing itself is the fact being tested (e.g. vaccine -> diluent).
-- **Answer-letter balance**: within each section each letter is correct in 20-30% of items, with no run of more than 3 identical letters and no visible pattern. Decide letter positions deliberately after writing the options.
+- **Distractor truth check.** Every distractor must be wrong under current guidance too, not merely absent from the PDF. Before accepting an item, check each distractor for:
+  - an accepted range that includes it (VIA uses 3-5% acetic acid, so 3% cannot be a distractor to 5%);
+  - an old name or synonym of the answer (*Bacillus subtilis* var. *niger* is the old name of *B. atrophaeus*);
+  - another real value for the same thing (915 MHz is also a microwave-treatment frequency, so it cannot be a distractor to 2,450 MHz);
+  - a neighbouring term the stem also fits (blood-pressure, glucose and vision tests at one visit are multiphasic, but arguably also multipurpose or mass screening);
+  - a second option that the stem's wording also satisfies ("Which vitamin is scarce in breast milk?" fits vitamin K as well as vitamin D).
+  If any check hits, replace the distractor or tighten the stem.
+- **No common-sense giveaways.** Each distractor must tempt a candidate who half-knows the topic. If a layperson could reject it without medical knowledge ("Stop the school meal", "Slow, costly testing"), replace it.
+- **Answer-letter balance**: within each section each letter is correct in 20-30% of items, with no run of more than 3 identical letters and no visible pattern. Balance letters by ordering the options **before** writing the answer key; after any reordering, rewrite that item's key heading, closest-distractor letter and explanation. A 6/7/7/8 split is fine. Never move a key to even out a count.
 
 ---
 
@@ -409,6 +417,10 @@ TRUTH-COMPATIBILITY GATE: the PDF is not assumed infallible. For dynamic, safety
 - "According to the PDF" is never a loophole for teaching a false or unsafe claim, and never appears in a stem.
 
 If defending the answer or eliminating a distractor needs an unstated dose, cutoff, guideline, staging rule, contraindication or criterion, rewrite or reject the item. Tier 3 is inference, not hallucination.
+
+SCOPE GATE: a number or rule keeps the exact scope of its source row. If the PDF gives 1,200°C for incinerating **cytotoxic drugs**, the stem must say cytotoxic drugs, not "biomedical-waste incineration". Check the row heading, the population and the product before writing the stem.
+
+OUTCOME GATE: when the PDF claims a clinical benefit ("early breastfeeding reduces postpartum haemorrhage"), check that the evidence supports the outcome itself. If only the mechanism is established (suckling -> oxytocin -> uterine contraction), test the mechanism and do not key the unproven outcome.
 
 CALCULATION GATE: a calculation is allowed only when the PDF states or directly supports the formula, every variable, any weighting or conversion factor, and the interpretation. Give the learner every number they need in the stem. Never supply an omitted disability weight, correction factor, denominator or cutoff from memory.
 
@@ -449,11 +461,15 @@ Reject a candidate when:
 5. only age, sex, numbers, chronology or presentation changed cosmetically;
 6. a learner who memorized the old item without understanding the topic could answer the new one.
 
-BLOCK COHERENCE (items in the same section are seen together; the micro-fact rule applies across the whole bank):
+BANK COHERENCE. The app pools every section and draws fresh mixed mocks from the whole bank, so **any two items may appear together**. Every rule below applies across all sections, not only within one:
 
-- No stem may contain another item's answer or deciding fact. For example, a calculation that states "vitamin A solution 1 lakh IU/mL" gives away a recall item asking that strength. State the number differently, or drop one of the two.
+- No stem, option **or teaching explanation** may contain another item's answer or deciding fact. Explanations count because practice mode shows them straight after each answer: "800 kcal, higher than the 600 kcal for pregnant women" gives away the pregnant-women item. For example, a calculation that states "vitamin A solution 1 lakh IU/mL" gives away a recall item asking that strength. State the number differently, or drop one of the two.
 - No two items on the same micro-fact, even from different directions (e.g. "carrier holds 16-20 vials" and "which device for 16-20 vials").
 - Do not reuse an option set: two items must not share three or more options.
+- One table row is one micro-fact, whichever item it is asked from. "Metallic implants -> blue" and "contaminated glass vials -> blue" test the same row; "LBW is below 2.5 kg" and "2.4 kg, above the 10th centile -> LBW" test the same cutoff.
+- Use each figure once. Two items on the same symbol or photograph (identify it; act on it) count as one micro-fact.
+- **Pattern cap across the bank:** at most 2 items per pattern on one table or topic. Seven "disease -> vector" items from one vector table, or three "unit of light" items, break it: pick the two highest-yield rows and leave the rest.
+- Give every unit a short **micro-fact key** (for example `BMW colour: blue row`, `light units`, `vector table`, `water hardness`) in the UNIT INVENTORY and the DNA ledger. Two units with the same key, or the same pattern past its cap, are merged or cut **at plan time**, so sections keep their planned size.
 
 Reusing a topic needs a different competency (identification -> management, mechanism -> expected finding, investigation -> interpretation, equipment -> operational decision, schedule recall -> patient-specific selection). Two items may share a disease only if they test different competencies. A dense page may yield several items with different DNA; a thin page may yield none.
 
@@ -556,8 +572,10 @@ Rules:
    8. handwriting, spatial-relation and conflict gates;
    9. truth-compatibility gate;
    10. medical (not linguistic) difficulty; FMGE level, not NEET-PG/super-specialty;
-   11. image item has a real, answer-free figure.
-8. **Write** the accepted items, recheck them against the gallery level, and deliver the section. Then the next section, against the ledger of every earlier one.
+   11. image item has a real, answer-free figure;
+   12. key integrity: re-read each key heading against the options exactly as printed. The letter matches the option text, the closest-distractor letter and text match, and the explanation argues for the keyed option, not another one;
+   13. explanation hygiene: no "listed", "specified", "here", "the notes/handout/page", and no editorial caveat ("should not be presented as…", "excluded from the options", "this does not make…"). Truth-gate caveats go in the audit's Truth validation line.
+8. **Write** the accepted items, recheck them against the gallery level, and deliver the section. Then the next section, against the ledger of every earlier one: before drafting a section, list the micro-fact keys and pattern counts already used; after writing it, confirm no key repeats and no pattern passed its cap. Report any collision in the audit instead of shipping it.
 
 Do not expose private chain-of-thought; give concise teaching reasoning only.
 
@@ -583,12 +601,12 @@ Deliver the parts in this order. Use these headings **exactly**. Do not add answ
 - Source-truth conflicts excluded or reframed: …
 
 # UNIT INVENTORY
-| # | Page(s) | Topic | Unit (fact or relationship, a few words) | FMGE pattern (G no. or 1C lead-in) | Yield | Best tier | Image? | Use |
-|---|---|---|---|---|---|---|---|---|
-| 1 | p.12 | Cold chain | Vaccine carrier: capacity and ice packs | "[Equipment] holds:" | High | 1 | no | yes |
-| 2 | p.14 | Cold chain | VVM stages -> use or discard | G-style image identification | High | 2 | yes | yes |
-| 3 | p.15 | Cold chain | Brand of ILR used in one state | none | Low | - | no | no |
-| … | | | | | | | | |
+| # | Page(s) | Topic | Unit (fact or relationship, a few words) | Micro-fact key | FMGE pattern (G no. or 1C lead-in) | Yield | Best tier | Image? | Use |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | p.12 | Cold chain | Vaccine carrier: capacity and ice packs | carrier capacity | "[Equipment] holds:" | High | 1 | no | yes |
+| 2 | p.14 | Cold chain | VVM stages -> use or discard | VVM stage | G-style image identification | High | 2 | yes | yes |
+| 3 | p.15 | Cold chain | Brand of ILR used in one state | ILR brand | none | Low | - | no | no |
+| … | | | | | | | | | |
 
 Rejected units (failed a gate): <unit — gate>, one per line, or none.
 
@@ -665,7 +683,8 @@ Answer-key rules:
 
 - The heading is exactly `### Q<n> — **<letter> — <option text>**`, using em dashes.
 - `**Source:**` must contain at least one `p.<n>` viewer page for the answer, plus the page that defeats the closest distractor if different.
-- The teaching explanation is the only plain paragraph. It is shown to students, so write it as teaching, not as an audit note. Do not add textbook enrichment, external mechanisms, timing rules or guidelines merely because they are true.
+- The teaching explanation is the only plain paragraph. It is shown to students, so write it as teaching, not as an audit note. Never write "listed", "specified", "here" or "the notes/handout"; state the fact itself ("Hydroclaving operates at about 132°C", not "Hydroclaving is listed at 132°C").
+- No citation markers, links or tool artefacts (for example `:contentReference[...]`, `【…】`) anywhere in the reply. Validation sources are named in words in the audit. Do not add textbook enrichment, external mechanisms, timing rules or guidelines merely because they are true.
 
 ## Part 3
 
@@ -687,9 +706,9 @@ Answer-key rules:
 - Images needing answer masking:
 
 # QUESTION-DNA LEDGER
-| Q | Tier | Concept | Direction tested | Archetype | Answer relationship | Pages |
-|---|---|---|---|---|---|---|
-| 1 | 1 | … | … | … | … | … |
+| Q | Tier | Concept | Micro-fact key | Direction tested | Archetype | Answer relationship | Pages |
+|---|---|---|---|---|---|---|---|
+| 1 | 1 | … | … | … | … | … | … |
 ```
 
 Audit rules: the audit covers the section just delivered; report only counts you can read off it. Do not print "0 ambiguous questions" or any other pass claim you did not actually check item by item. The DNA ledger is how later sections and later blocks avoid repeats, so fill every row; label rows S<s>-Q<n>.
@@ -712,7 +731,8 @@ Target: FMGE · four-option single best answer · bank size = High + in-budget M
 Direct questions: PRESERVE · short clinical framing: WHERE IT DISCRIMINATES · image items: REAL FIGURES WHEN THE PDF SUPPORTS
 Stand-alone stems (no reference to notes/source): REQUIRED · stated premises in stems: FORBIDDEN · population/product/version named when the answer depends on it: REQUIRED
 Stem form: MATCH THE SUBJECT PROFILE (section 1A) · negatives ~5% · stems at or under ~55 words
-Block coherence (no cross-item give-aways, no shared option sets, no repeated micro-facts): REQUIRED
+Bank coherence across ALL sections (no give-aways in stems, options or explanations; no shared option sets; one item per micro-fact key and per figure; ≤2 items per pattern): REQUIRED
+Distractor truth check (ranges, synonyms, other real values, neighbouring terms) and scope/outcome gates: REQUIRED · key integrity re-read after any option reordering: REQUIRED
 Option parity, ascending numeric options and answer-letter balance: REQUIRED · all/none of the above and pair/combination items: FORBIDDEN
 Existing PDF solved questions and earlier blocks: STRICT SEMANTIC EXCLUSION
 Printed text, clear handwriting, tables, diagrams: USE

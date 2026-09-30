@@ -26,6 +26,14 @@ SOURCE_REFERENCE_RE = re.compile(
 	r"|\b(?:shown|displayed|annotated|listed|given|depicted) (?:in|on) the (?:notes?|source|pdf|table|figure|chart|slide|page)\b",
 	re.IGNORECASE,
 )
+# "The preferred method listed…" still points at the notes, even without naming them.
+LISTED_RE = re.compile(r"\b(?:listed|specified|mentioned|stated)\b", re.IGNORECASE)
+# Explanations are read by students; audit notes and pointers at the notes belong in the audit.
+EXPLANATION_NOTE_RE = re.compile(
+	r"\b(?:listed|specified|handout|here)\b|should not be presented|excluded from the options"
+	r"|\bthis does not make\b",
+	re.IGNORECASE,
+)
 # Without an attached image, "shown"/"displayed" can only refer to the notes.
 SHOWN_RE = re.compile(r"\b(?:shown|displayed|annotated|depicted)\b", re.IGNORECASE)
 # The stem must not hand the learner the fact that decides the answer.
@@ -332,7 +340,11 @@ def lint_bank(bank: dict) -> tuple[list[str], list[str]]:
 		stem = q["stem"]
 		has_image = bool(q.get("image_url"))
 
-		if SOURCE_REFERENCE_RE.search(stem) or (not has_image and SHOWN_RE.search(stem)):
+		if (
+			SOURCE_REFERENCE_RE.search(stem)
+			or LISTED_RE.search(stem)
+			or (not has_image and SHOWN_RE.search(stem))
+		):
 			errors.append(f"{label}: stem refers to the study material instead of standing alone")
 		if PREMISE_LEAK_RE.search(stem):
 			errors.append(f"{label}: stem states the fact the answer depends on")
@@ -370,8 +382,22 @@ def lint_bank(bank: dict) -> tuple[list[str], list[str]]:
 			if values not in (sorted(values), sorted(values, reverse=True)):
 				warnings.append(f"{label}: numeric options are not in ascending order")
 
-		if not q.get("explanation"):
+		explanation = q.get("explanation") or ""
+		if not explanation:
 			errors.append(f"{label}: missing teaching explanation")
+		elif SOURCE_REFERENCE_RE.search(explanation) or EXPLANATION_NOTE_RE.search(explanation):
+			warnings.append(f"{label}: explanation points at the notes or carries an audit note")
+		# A key moved during letter balancing leaves an explanation that argues for another option.
+		explained = _normalize(explanation)
+		answer_words = {word for word in answer.split() if len(word) >= 4}
+		if answer_words and not answer_words & set(explained.split()):
+			for letter, option in zip("ABCD", q["options"], strict=True):
+				other = _normalize(option)
+				if letter != q["correct_option"] and len(other) >= 5 and other in explained:
+					errors.append(
+						f"{label}: explanation names option {letter}, not the keyed answer; check the key"
+					)
+					break
 		if not SOURCE_PAGE_RE.search(q.get("source") or ""):
 			errors.append(f"{label}: source citation has no PDF page (p.N)")
 

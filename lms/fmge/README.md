@@ -40,7 +40,7 @@ Generate or validate the packaged bank:
        python3 scripts/fmge/build_question_bank.py --source <md> --lint
        python3 scripts/fmge/build_question_bank.py --source <md> --strict
 
-   The lint blocks stems that point at the notes ("shown in the notes", "according to the source"), stems that state the deciding fact, duplicate options and all/none-of-the-above. It warns on long stems, a correct option much longer than its distractors, a skewed or streaky answer key, and a block with no image items. For a new block, also pass `--bank-id`, `--id-prefix`, `--title` and `--subject`. The question count and timer (1 minute per question) come from the file; `--expected N` makes the build fail on any other count. When the file holds several sections, build each one separately as its own block:
+   The lint blocks stems that point at the notes ("shown in the notes", "according to the source", a bare "listed" or "specified"), explanations that argue for an option other than the key, stems that state the deciding fact, duplicate options and all/none-of-the-above. It warns on explanations that point at the notes or carry audit notes, long stems, a correct option much longer than its distractors, a skewed or streaky answer key, and a block with no image items. For a new block, also pass `--bank-id`, `--id-prefix`, `--title` and `--subject`. The question count and timer (1 minute per question) come from the file; `--expected N` makes the build fail on any other count. When the file holds several sections, build each one separately as its own block:
 
        python3 scripts/fmge/build_question_bank.py --source <md> --section 2 --bank-id fmge-psm-block-2 --id-prefix PSM-B2 --title "FMGE PSM Mock 1 - Section 2" --output lms/fmge/data/psm_block_2.json
 

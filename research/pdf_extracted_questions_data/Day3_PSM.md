@@ -14,7 +14,7 @@
 - All 106 retained answer-key citations were checked against the 140-page source PDF using viewer page numbers. The cited pages support the keyed facts after the wording corrections below; this is a source check, not a claim that every handout statement is current clinical guidance.
 - S3-Q4: [WHO VIA supply guidance](https://iris.who.int/bitstream/handle/10665/331698/9789240002630-eng.pdf) accepts 3–5% acetic acid. The options now have only one valid concentration.
 - S3-Q7: [India's Bio-Medical Waste Management Rules](https://cpcb.nic.in/uploads/Projects/Bio-Medical-Waste/Bio-medical_Waste_Management_Rules_2016.pdf) specify a temperature above 1,200°C when discarded cytotoxic drugs are incinerated, while a general incinerator's primary chamber has an 800°C minimum.
-- S3-Q15: [CDC vitamin D](https://www.cdc.gov/breastfeeding-special-circumstances/hcp/diet-micronutrients/vitamin-d.html) and [vitamin K](https://www.cdc.gov/breastfeeding-special-circumstances/hcp/diet-micronutrients/vitamin-k.html) guidance show why the original “scarce in breast milk” stem admitted two answers; the revised stem tests daily 400 IU vitamin D supplementation.
+- S3-Q15: [CDC vitamin D](https://www.cdc.gov/breastfeeding-special-circumstances/hcp/diet-micronutrients/vitamin-d.html) and [vitamin K](https://www.cdc.gov/breastfeeding-special-circumstances/hcp/diet-micronutrients/vitamin-k.html) guidance show why the original “scarce in breast milk” stem admitted two answers; the revised stem asks for the *most* deficient vitamin, which p.11 ranks as D first and K second. (An earlier revision asked about 400 IU vitamin D; that dose is not in the notes.)
 - S4-Q27: [WHO midwifery education](https://cdn.who.int/media/docs/default-source/mca-documents/maternal-nb/midwifery/midwifery-education-module-2.pdf) supports suckling-induced oxytocin and uterine contraction but says early suckling has not been shown to reduce postpartum-haemorrhage incidence. The revised item asks about the physiological response.
 - Further programme and public-health spot checks used [WHO TB diagnosis](https://tbksp.who.int/en/node/3147), [WHO HIV testing](https://www.who.int/publications/i/978-92-4-155058-1), [India's PM POSHAN norms](https://pmposhan.education.gov.in/aboutus.html), and [India's National Air Quality Index](https://cpcb.nic.in/displaypdf.php?id=bmF0aW9uYWwtYWlyLXF1YWxpdHktaW5kZXgvQWJvdXRfQVFJLnBkZg%3D%3D).
 
@@ -339,7 +339,7 @@ Sullage is domestic liquid waste without human excreta; sewage includes it.
 **Topic:** Medical entomology — vectors  
 **Source:** PDF p.128, p.127 | E0 | Table/Handwritten  
 **Closest distractor:** A. Sand fly — the sand-fly diseases are listed separately on p.127  
-Onchocerciasis is transmitted by the black fly. Sand flies transmit the leishmaniases listed separately.
+Onchocerciasis (river blindness) is transmitted by the *Simulium* black fly. Sand flies transmit kala-azar and oriental sore.
 
 ### Q12 — **A — Acute malnutrition**
 **Archetype:** close discrimination  
@@ -353,7 +353,7 @@ Low weight-for-height indicates wasting and acute malnutrition. Normal height-fo
 **Topic:** School meals — upper-primary norm  
 **Source:** PDF p.25 | E1 | Table/Handwritten  
 **Closest distractor:** B. 450 kcal — that is the primary-school norm, p.25  
-Class VII is upper primary, for which the listed meal energy norm is 700 kcal; 450 kcal applies to primary classes.
+Class VII is upper primary, where the mid-day meal provides 700 kcal and 20 g protein; primary classes receive 450 kcal.
 
 ### Q14 — **C — Prospective screening**
 **Archetype:** close discrimination  
@@ -388,7 +388,7 @@ The identical readings are precise. Their distance from the reference value make
 **Topic:** Biomedical waste — incineration exclusions  
 **Source:** PDF p.70, p.71 | E1 | Multi-page  
 **Closest distractor:** C. Discarded medicine — incineration is among its listed disposal methods, p.70  
-PVC-containing waste is listed as unsuitable for incineration. The other listed wastes have incineration pathways.
+Burning PVC releases dioxins and furans, so chlorinated plastics must not be incinerated. Anatomical waste, soiled dressings and discarded medicines are incinerated.
 
 ### Q19 — **B — Secondary follow-up**
 **Archetype:** close discrimination  
@@ -606,7 +606,7 @@ C. *Bacillus subtilis*
 D. *Geobacillus stearothermophilus*
 
 ### Q12
-The preferred method listed for disposal of municipal refuse is:
+The preferred method for disposal of municipal refuse is:
 
 A. Open dumping  
 B. Deep burial  
@@ -730,7 +730,7 @@ C. Chlorination
 D. Sedimentation
 
 ### Q28
-A programme targets the larvae of mosquitoes transmitting malaria. Which biological control is listed?
+A programme targets the larvae of mosquitoes transmitting malaria. Which biological control agent is used?
 
 A. Gambusia fish  
 B. DDT  
@@ -814,7 +814,7 @@ Lichens are biological indicators of air pollution.
 **Topic:** Waste disposal — municipal refuse  
 **Source:** PDF p.124 | E0 | Printed/Handwritten  
 **Closest distractor:** A. Open dumping — sanitary landfill is the disposal method specified, p.124  
-Sanitary landfill is the preferred refuse-disposal method listed here.
+Sanitary landfill (controlled tipping) is the preferred method of refuse disposal.
 
 ### Q13 — **B — Sandfly**
 **Archetype:** direct recall  
@@ -913,7 +913,7 @@ Kitchen-origin solid waste is termed garbage.
 **Source:** PDF p.109 | E2 | Table  
 **Closest distractor:** A. Further boiling — boiling removes temporary bicarbonate hardness, p.109  
 **Concept link:** Boiling removes temporary hardness (p.109) + permutit ion exchange removes permanent hardness (p.109) → choose ion exchange when hardness persists.  
-Hardness persisting after boiling requires a method for permanent hardness. Permutit ion exchange is the listed method.
+Hardness that persists after boiling is permanent hardness from sulphates and chlorides. The permutit (base-exchange) process removes it.
 
 ### Q28 — **A — Gambusia fish**
 **Archetype:** two-step integration  
@@ -921,7 +921,7 @@ Hardness persisting after boiling requires a method for permanent hardness. Perm
 **Source:** PDF p.129–130 | E2 | Table/Multi-page  
 **Closest distractor:** D. Malathion — it is listed as a chemical adult-control option, not the specified biological larval control, p.130  
 **Concept link:** Malaria is transmitted by *Anopheles* (p.129) + Gambusia feeds on *Anopheles* larvae (p.130) → use Gambusia for biological larval control.  
-*Anopheles* transmits malaria, and Gambusia is the listed fish for its larval control.
+*Anopheles* transmits malaria, and Gambusia fish eat its larvae. DDT, pyrethrum and malathion are chemical controls.
 
 # FINAL PATTERN AUDIT
 - Total; Tier 1 / 2 / 3: 26; 13 / 11 / 2.
@@ -1086,7 +1086,7 @@ D. Blackfly
 ## TIER 2 — DISCRIMINATIVE APPLICATION
 
 ### Q15
-A five-month-old is exclusively breastfed and received vitamin K at birth. Which vitamin should be supplemented daily at 400 IU?
+An exclusively breastfed newborn receives intramuscular vitamin K at birth. Which vitamin is the most deficient in breast milk?
 
 A. Vitamin A  
 B. Vitamin D  
@@ -1240,7 +1240,7 @@ Screening searches for unrecognized disease in apparently healthy people. Testin
 
 **Closest distractor:** C. 800°C — the minimum primary-chamber temperature for a general biomedical-waste incinerator, not the cytotoxic-drug threshold
 
-Discarded cytotoxic drugs must be incinerated above 1,200°C under India's Bio-Medical Waste Management Rules. The 800°C figure is the general incinerator's primary-chamber minimum.
+Discarded cytotoxic drugs must be incinerated above 1,200°C under India's Bio-Medical Waste Management Rules.
 
 ### Q8 — **C — Reduce potential disaster damage**
 **Archetype:** direct recall  
@@ -1295,9 +1295,9 @@ Hard ticks are vectors of Kyasanur Forest disease in India.
 **Archetype:** close discrimination  
 **Topic:** Infant feeding — vitamins  
 **Source:** PDF p.11 | E1 | Handwritten  
-**Closest distractor:** C. Vitamin K — the page specifies a birth dose, not daily 400 IU supplementation
+**Closest distractor:** C. Vitamin K — it is the second most deficient, p.11
 
-Exclusively breastfed infants need 400 IU of vitamin D daily. The vitamin K injection at birth addresses a different deficiency risk.
+Vitamin D is the most deficient vitamin in breast milk, so exclusively breastfed infants can develop rickets. Vitamin K is the second most deficient, which is why 1 mg is given intramuscularly at birth.
 
 ### Q16 — **A — 40:60**
 **Archetype:** close discrimination  
@@ -1311,7 +1311,7 @@ Human milk has a casein:whey ratio of approximately 40:60, compared with 80:20 i
 **Topic:** Newborn classification — weight versus gestational centile  
 **Source:** PDF p.5 | E1 | Table/Handwritten  
 **Closest distractor:** C. Small for gestational age — that requires weight below the tenth centile, p.5  
-A birth weight of 2.4 kg meets the low-birth-weight definition. A weight above the tenth gestational centile does not meet the listed small-for-gestational-age criterion.
+A birth weight of 2.4 kg meets the low-birth-weight definition. Small for gestational age requires a weight below the tenth centile, which this baby is above.
 
 ### Q18 — **B — Mass screening**
 **Archetype:** close discrimination  
@@ -1331,7 +1331,7 @@ Clumps of nonbeaded acid-fast bacilli support leprosy; the contrasting tuberculo
 **Archetype:** close discrimination  
 **Topic:** Biomedical waste — thermal treatment  
 **Source:** PDF p.71 | E0 | Table  
-**Closest distractor:** A. Incineration — it runs far hotter, above 800°C, p.71  
+**Closest distractor:** A. Incineration — it runs far hotter, p.71  
 Hydroclaving operates at about 132°C, while autoclaving operates at 121°C.
 
 ### Q22 — **A — Exhaust ventilation**
@@ -1368,7 +1368,7 @@ Sewage is approximately 99.9% water.
 **Source:** PDF p.129 | E2 | Table/Diagram  
 **Closest distractor:** C. Polluted roadside drains — those are assigned to *Culex*, p.129  
 **Concept link:** Brugian filariasis is associated with *Mansonia* (p.129) + *Mansonia* larvae attach to aquatic-plant roots (p.129) → inspect the roots.  
-*Mansonia* is the listed vector for Brugian filariasis, and its larvae attach to the roots of aquatic plants.
+*Mansonia* transmits Brugian filariasis, and its larvae attach to the roots of aquatic plants such as *Pistia*.
 
 ### Q27 — **D — *Anopheles* mosquito**
 **Archetype:** image  
@@ -1384,7 +1384,7 @@ The blood film contains falciparum gametocytes. Malaria is transmitted by *Anoph
 **Source:** PDF p.37–38, p.51 | E2 | Table/Multi-page  
 **Closest distractor:** D. Another random capillary glucose check — random glucose is placed in the screening column, while OGTT is listed for diagnosis, p.51  
 **Concept link:** Screening in an asymptomatic person does not itself establish diagnosis (p.37–38) + the two-hour OGTT is listed as a diagnostic test for diabetes (p.51) → select OGTT.  
-A high random screening glucose in an asymptomatic person needs diagnostic assessment. The two-hour OGTT is a listed diagnostic test.
+A high random screening glucose in an asymptomatic person needs diagnostic assessment. The two-hour OGTT is a diagnostic test for diabetes.
 
 # FINAL PATTERN AUDIT
 - Total; Tier 1 / 2 / 3: 26; 13 / 10 / 3.
@@ -1418,7 +1418,7 @@ A high random screening glucose in an asymptomatic person needs diagnostic asses
 | S3-Q12 | 1 | Sleeping sickness | Disease → vector | Recall | Sleeping sickness → tsetse | 127 |
 | S3-Q13 | 1 | Mosquito-net mesh | Equipment → density | Recall | Mesh → >150 holes/in² | 130 |
 | S3-Q14 | 1 | KFD | Disease → vector class | Recall | KFD → hard tick | 128 |
-| S3-Q15 | 2 | Breast-milk vitamins | Feeding context → daily supplement | Discrimination | Exclusive breastfeeding → 400 IU vitamin D daily | 11 |
+| S3-Q15 | 2 | Breast-milk vitamins | Breast milk → most deficient vitamin | Discrimination | Most deficient → vitamin D (K second) | 11 |
 | S3-Q16 | 2 | Milk proteins | Species → casein:whey ratio | Discrimination | Human → 40:60 | 13 |
 | S3-Q17 | 2 | Birth-weight classifications | Weight and centile → category | Discrimination | <2.5 kg, >10th centile → LBW | 5 |
 | S3-Q18 | 2 | Mass screening | Population coverage → approach | Discrimination | All adults → mass | 42 |
@@ -1596,7 +1596,7 @@ A PHC screens a large, apparently healthy population before individual diagnosti
 A. Tissue confirmation of every result  
 B. Performance only by a specialist  
 C. Diagnostic certainty sufficient to start treatment  
-D. Quick, cheap and acceptable to the population
+D. Quick and inexpensive
 
 ### Q21
 A used scalpel has undergone sterilization in the white sharps stream. What follows before final disposal?
@@ -1697,14 +1697,14 @@ The daily supplementary allocation for pregnant and lactating women is 600 kcal.
 **Topic:** Breast milk — amino acids  
 **Source:** PDF p.12–13 | E0 | Handwritten  
 **Closest distractor:** B. Cysteine — taurine is the amino acid identified with brain development, p.12  
-Taurine is the breast-milk amino acid linked here to brain development.
+Taurine is the amino acid in breast milk linked to brain development; DHA is the essential fatty acid.
 
 ### Q6 — **B — Oral cancer**
 **Archetype:** direct recall  
 **Topic:** Cancer screening — oral examination  
 **Source:** PDF p.50 | E0 | Table  
 **Closest distractor:** A. Cervical cancer — its listed screening methods are VIA and Pap smear, p.49  
-Bimanual oral palpation is listed as an oral-cancer screening examination.
+Bimanual oral palpation screens for oral cancer; biopsy confirms the diagnosis.
 
 ### Q7 — **A — Ziehl–Neelsen stain**
 **Archetype:** direct recall  
@@ -1725,7 +1725,7 @@ Ziehl–Neelsen staining demonstrates acid-fast bacilli such as *M. tuberculosis
 **Topic:** Biomedical waste — hot-air oven  
 **Source:** PDF p.72 | E0 | Table  
 **Closest distractor:** C. 132°C — that is the hydroclaving temperature, p.71  
-Hot-air oven (dry-heat) sterilization needs at least 160°C; autoclaving uses moist heat at 121°C.
+Hot-air oven sterilization needs at least 160°C; autoclaving uses steam under pressure at 121°C.
 
 ### Q10 — **A — Likelihood of survival**
 **Archetype:** direct recall  
@@ -1746,7 +1746,7 @@ Candela measures luminous intensity.
 **Topic:** Entomology — plague vector  
 **Source:** PDF p.127 | E0 | Table  
 **Closest distractor:** A. Sandfly — its listed associations include kala-azar, p.127  
-The rat flea is the listed vector of plague.
+The rat flea (*Xenopsylla cheopis*) transmits plague and endemic typhus.
 
 ### Q13 — **D — Reduviid bug**
 **Archetype:** direct recall  
@@ -1790,12 +1790,12 @@ The school mid-day meal adds to the child’s home diet; it does not replace hom
 **Closest distractor:** D. Usual clinical diagnosis — the opportunity to alter outcome ends at the earlier final critical point, p.39  
 Useful screening detects disease after it first becomes detectable but before the final critical point for effective intervention.
 
-### Q20 — **D — Quick, cheap and acceptable to the population**
+### Q20 — **D — Quick and inexpensive**
 **Archetype:** close discrimination  
 **Topic:** Screening — population test selection  
 **Source:** PDF p.37–38 | E1 | Table/Multi-page  
 **Closest distractor:** C. Diagnostic certainty sufficient to start treatment — that is the role of the diagnostic test after referral, p.38  
-An initial population screening test should be quick, inexpensive and acceptable. A positive screen leads to diagnostic assessment; it is not itself the basis for treatment.
+A screening test is quicker and cheaper but less accurate than a diagnostic test. A positive screen leads to diagnostic assessment; it is not itself the basis for treatment.
 
 ### Q21 — **C — Shred or mutilate it**
 **Archetype:** management  
@@ -1823,14 +1823,14 @@ Collect the sample from a gentle stream without splashing or touching the bottle
 **Topic:** Sewage — infection transmission  
 **Source:** PDF p.123, p.127–128 | E1 | Multi-page  
 **Closest distractor:** B. Plague — its listed transmission involves the rat flea, p.127  
-Sewage containing human excreta can support poliovirus transmission; the other listed diseases have vector associations.
+Sewage contains human excreta, so it can spread faeco-oral infections such as poliovirus. Plague, kala-azar and Kyasanur Forest disease are vector-borne.
 
 ### Q25 — **C — Intolerable**
 **Archetype:** calculation  
 **Topic:** Heat stress — predicted four-hour sweat rate  
 **Source:** PDF p.118 | E1 | Table  
 **Closest distractor:** B. Just tolerable — that band ends at 4.5 L over four hours, p.118  
-At 1.2 L per hour, predicted loss over four hours is 4.8 L, above the listed 4.5 L limit.
+At 1.2 L per hour, the four-hour sweat rate is 4.8 L. Above 4.5 L is intolerable; 3–4.5 L is just tolerable.
 
 ### Q27 — **D — Uterine contraction from oxytocin**
 **Archetype:** two-step integration  
