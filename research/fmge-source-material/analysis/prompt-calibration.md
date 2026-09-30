@@ -418,9 +418,11 @@ TRUTH-COMPATIBILITY GATE: the PDF is not assumed infallible. For dynamic, safety
 
 If defending the answer or eliminating a distractor needs an unstated dose, cutoff, guideline, staging rule, contraindication or criterion, rewrite or reject the item. Tier 3 is inference, not hallucination.
 
-SCOPE GATE: a number or rule keeps the exact scope of its source row. If the PDF gives 1,200°C for incinerating **cytotoxic drugs**, the stem must say cytotoxic drugs, not "biomedical-waste incineration". Check the row heading, the population and the product before writing the stem.
+SCOPE GATE: a number or rule keeps the exact scope of its source row. If the PDF gives 1,200°C for incinerating **cytotoxic drugs**, the stem must say cytotoxic drugs, not "biomedical-waste incineration". Check the row heading, the population and the product before writing the stem. Neighbouring rows are separate facts: if the PDF gives dry heat as >185°C and the hot-air oven as >160°C, never merge them into "dry-heat (hot-air oven) sterilization at 160°C".
 
 OUTCOME GATE: when the PDF claims a clinical benefit ("early breastfeeding reduces postpartum haemorrhage"), check that the evidence supports the outcome itself. If only the mechanism is established (suckling -> oxytocin -> uterine contraction), test the mechanism and do not key the unproven outcome.
+
+REWRITE GATE: when a gate forces a rewrite, the new version must pass the source gates again. Fix a flawed item with **another fact the PDF states**, never with an outside one. A breastfeeding item whose "scarce vitamin" stem admitted two answers was once fixed by asking for "daily 400 IU vitamin D": the notes give no dose, so the fix was itself E3. The PDF's own ranking ("most deficient: D; second: K") was the right fix. If the PDF has no fact that repairs the item, drop it.
 
 CALCULATION GATE: a calculation is allowed only when the PDF states or directly supports the formula, every variable, any weighting or conversion factor, and the interpretation. Give the learner every number they need in the stem. Never supply an omitted disability weight, correction factor, denominator or cutoff from memory.
 
@@ -574,7 +576,8 @@ Rules:
    10. medical (not linguistic) difficulty; FMGE level, not NEET-PG/super-specialty;
    11. image item has a real, answer-free figure;
    12. key integrity: re-read each key heading against the options exactly as printed. The letter matches the option text, the closest-distractor letter and text match, and the explanation argues for the keyed option, not another one;
-   13. explanation hygiene: no "listed", "specified", "here", "the notes/handout/page", and no editorial caveat ("should not be presented as…", "excluded from the options", "this does not make…"). Truth-gate caveats go in the audit's Truth validation line.
+   13. rewrite re-check: any item rewritten during QC passes items 1-12 again, with the new fact cited to a page;
+   14. explanation hygiene: no "listed", "specified", "here", "the notes/handout/page", and no editorial caveat ("should not be presented as…", "excluded from the options", "this does not make…"). Truth-gate caveats go in the audit's Truth validation line.
 8. **Write** the accepted items, recheck them against the gallery level, and deliver the section. Then the next section, against the ledger of every earlier one: before drafting a section, list the micro-fact keys and pattern counts already used; after writing it, confirm no key repeats and no pattern passed its cap. Report any collision in the audit instead of shipping it.
 
 Do not expose private chain-of-thought; give concise teaching reasoning only.
@@ -684,6 +687,7 @@ Answer-key rules:
 - The heading is exactly `### Q<n> — **<letter> — <option text>**`, using em dashes.
 - `**Source:**` must contain at least one `p.<n>` viewer page for the answer, plus the page that defeats the closest distractor if different.
 - The teaching explanation is the only plain paragraph. It is shown to students, so write it as teaching, not as an audit note. Never write "listed", "specified", "here" or "the notes/handout"; state the fact itself ("Hydroclaving operates at about 132°C", not "Hydroclaving is listed at 132°C").
+- Every fact in the explanation needs the same E0-E2 support as the answer. Validation facts (a guideline's other temperature, a dose from outside the notes) go in the audit, not the explanation.
 - No citation markers, links or tool artefacts (for example `:contentReference[...]`, `【…】`) anywhere in the reply. Validation sources are named in words in the audit. Do not add textbook enrichment, external mechanisms, timing rules or guidelines merely because they are true.
 
 ## Part 3
