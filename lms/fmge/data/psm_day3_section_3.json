@@ -4,8 +4,8 @@
   "title": "Day 3 PSM — Section 3",
   "subject": "Community Medicine",
   "description": "FMGE Community Medicine practice from the reviewed Day 3 PSM question bank, section 3 of 4.",
-  "expected_questions": 26,
-  "duration_minutes": 26,
+  "expected_questions": 32,
+  "duration_minutes": 32,
   "max_attempts": 1,
   "passing_percentage": 50,
   "show_answers": 0,
@@ -32,22 +32,22 @@
       "answer": "4 years"
     },
     {
-      "id": "PSM-D3-S3-Q015",
-      "number": 15,
+      "id": "PSM-D3-S3-Q017",
+      "number": 17,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "An exclusively breastfed newborn receives intramuscular vitamin K at birth. Which vitamin is the most deficient in breast milk?",
+      "stem": "A newborn weighs 2.4 kg but is above the tenth weight centile for gestational age. Which designation applies?",
       "options": [
-        "Vitamin A",
-        "Vitamin D",
-        "Vitamin K",
-        "Vitamin C"
+        "Extremely low birth weight",
+        "Very low birth weight",
+        "Small for gestational age",
+        "Low birth weight"
       ],
-      "correct_option": "B",
-      "source": "PDF p.11 | E1 | Handwritten",
-      "explanation": "Vitamin D is the most deficient vitamin in breast milk, so exclusively breastfed infants can develop rickets. Vitamin K is the second most deficient, which is why 1 mg is given intramuscularly at birth.",
-      "answer_label": "Vitamin D",
-      "answer": "Vitamin D"
+      "correct_option": "D",
+      "source": "PDF p.5 | E1 | Table/Handwritten",
+      "explanation": "A birth weight of 2.4 kg meets the low-birth-weight definition. Small for gestational age requires a weight below the tenth centile, which this baby is above.",
+      "answer_label": "Low birth weight",
+      "answer": "Low birth weight"
     },
     {
       "id": "PSM-D3-S3-Q002",
@@ -68,42 +68,6 @@
       "answer": "180 days"
     },
     {
-      "id": "PSM-D3-S3-Q016",
-      "number": 16,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "The casein:whey ratio in human milk is approximately:",
-      "options": [
-        "40:60",
-        "60:40",
-        "70:30",
-        "80:20"
-      ],
-      "correct_option": "A",
-      "source": "PDF p.13 | E0 | Table/Handwritten",
-      "explanation": "Human milk has a casein:whey ratio of approximately 40:60, compared with 80:20 in cow’s milk.",
-      "answer_label": "40:60",
-      "answer": "40:60"
-    },
-    {
-      "id": "PSM-D3-S3-Q026",
-      "number": 26,
-      "tier": 3,
-      "difficulty": "hard",
-      "stem": "For Brugian filariasis vector surveillance, where should larvae be sought?",
-      "options": [
-        "Clean open ponds",
-        "Roots of aquatic plants",
-        "Polluted roadside drains",
-        "Rainwater containers"
-      ],
-      "correct_option": "B",
-      "source": "PDF p.129 | E2 | Table/Diagram",
-      "explanation": "*Mansonia* transmits Brugian filariasis, and its larvae attach to the roots of aquatic plants such as *Pistia*.",
-      "answer_label": "Roots of aquatic plants",
-      "answer": "Roots of aquatic plants"
-    },
-    {
       "id": "PSM-D3-S3-Q003",
       "number": 3,
       "tier": 1,
@@ -120,24 +84,6 @@
       "explanation": "ICDS is administered through the Ministry of Women and Child Development.",
       "answer_label": "Ministry of Women and Child Development",
       "answer": "Ministry of Women and Child Development"
-    },
-    {
-      "id": "PSM-D3-S3-Q017",
-      "number": 17,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "A newborn weighs 2.4 kg but is above the tenth weight centile for gestational age. Which designation applies?",
-      "options": [
-        "Extremely low birth weight",
-        "Very low birth weight",
-        "Small for gestational age",
-        "Low birth weight"
-      ],
-      "correct_option": "D",
-      "source": "PDF p.5 | E1 | Table/Handwritten",
-      "explanation": "A birth weight of 2.4 kg meets the low-birth-weight definition. Small for gestational age requires a weight below the tenth centile, which this baby is above.",
-      "answer_label": "Low birth weight",
-      "answer": "Low birth weight"
     },
     {
       "id": "PSM-D3-S3-Q004",
@@ -158,22 +104,22 @@
       "answer": "5%"
     },
     {
-      "id": "PSM-D3-S3-Q005",
-      "number": 5,
-      "tier": 1,
-      "difficulty": "direct",
-      "stem": "Screening seeks unrecognized disease among people who are:",
+      "id": "PSM-D3-S3-Q026",
+      "number": 26,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "For Brugian filariasis vector surveillance, where should larvae be sought?",
       "options": [
-        "Apparently healthy",
-        "Symptomatic and seeking care",
-        "Close contacts receiving prophylaxis",
-        "Under follow-up after treatment"
+        "Clean open ponds",
+        "Roots of aquatic plants",
+        "Polluted roadside drains",
+        "Rainwater containers"
       ],
-      "correct_option": "A",
-      "source": "PDF p.37–38 | E0 | Printed/Handwritten",
-      "explanation": "Screening searches for unrecognized disease in apparently healthy people. Testing someone who presents with symptoms is diagnosis.",
-      "answer_label": "Apparently healthy",
-      "answer": "Apparently healthy"
+      "correct_option": "B",
+      "source": "PDF p.129 | E2 | Table/Diagram",
+      "explanation": "*Mansonia* transmits Brugian filariasis, and its larvae attach to the roots of aquatic plants such as *Pistia*.",
+      "answer_label": "Roots of aquatic plants",
+      "answer": "Roots of aquatic plants"
     },
     {
       "id": "PSM-D3-S3-Q018",
@@ -194,6 +140,24 @@
       "answer": "Mass screening"
     },
     {
+      "id": "PSM-D3-S3-Q005",
+      "number": 5,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Screening seeks unrecognized disease among people who are:",
+      "options": [
+        "Apparently healthy",
+        "Symptomatic and seeking care",
+        "Close contacts receiving prophylaxis",
+        "Under follow-up after treatment"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.37–38 | E0 | Printed/Handwritten",
+      "explanation": "Screening searches for unrecognized disease in apparently healthy people. Testing someone who presents with symptoms is diagnosis.",
+      "answer_label": "Apparently healthy",
+      "answer": "Apparently healthy"
+    },
+    {
       "id": "PSM-D3-S3-Q007",
       "number": 7,
       "tier": 1,
@@ -207,9 +171,27 @@
       ],
       "correct_option": "D",
       "source": "PDF p.70–71 | E1 | Table",
-      "explanation": "Discarded cytotoxic drugs must be incinerated above 1,200°C under India's Bio-Medical Waste Management Rules.",
+      "explanation": "When discarded cytotoxic drugs are incinerated, the temperature must exceed 1,200°C. Incineration is one disposal route, not a requirement to use it for every cytotoxic drug.",
       "answer_label": "1,200°C",
       "answer": "1,200°C"
+    },
+    {
+      "id": "PSM-D3-S3-Q008",
+      "number": 8,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Disaster mitigation aims primarily to:",
+      "options": [
+        "Assign triage tags",
+        "Expand hospital surge capacity",
+        "Reduce potential disaster damage",
+        "Provide delayed rehabilitation"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.88 | E0 | Handwritten",
+      "explanation": "Mitigation reduces the damage that a hazard could cause.",
+      "answer_label": "Reduce potential disaster damage",
+      "answer": "Reduce potential disaster damage"
     },
     {
       "id": "PSM-D3-S3-Q019",
@@ -230,22 +212,94 @@
       "answer": "Leprosy"
     },
     {
-      "id": "PSM-D3-S3-Q008",
-      "number": 8,
+      "id": "PSM-D3-S3-Q009",
+      "number": 9,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "Disaster mitigation aims primarily to:",
+      "stem": "START expands to Simple Triage and Rapid:",
       "options": [
-        "Assign triage tags",
-        "Expand hospital surge capacity",
-        "Reduce potential disaster damage",
-        "Provide delayed rehabilitation"
+        "Transfer",
+        "Treatment",
+        "Testing",
+        "Transport"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.92 | E0 | Handwritten",
+      "explanation": "START stands for Simple Triage and Rapid Treatment.",
+      "answer_label": "Treatment",
+      "answer": "Treatment"
+    },
+    {
+      "id": "PSM-D3-S3-Q010",
+      "number": 10,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which indicator is used in Horrocks’ apparatus?",
+      "options": [
+        "Starch–iodide",
+        "Phenolphthalein",
+        "Methylene blue",
+        "Methyl orange"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.107 | E0 | Handwritten",
+      "explanation": "Horrocks’ apparatus uses starch–iodide indicator to demonstrate a colour change.",
+      "answer_label": "Starch–iodide",
+      "answer": "Starch–iodide"
+    },
+    {
+      "id": "PSM-D3-S3-Q021",
+      "number": 21,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Which biomedical-waste treatment operates at about 132°C, compared with 121°C for autoclaving?",
+      "options": [
+        "Incineration",
+        "Microwaving",
+        "Hydroclaving",
+        "Dry-heat sterilization"
       ],
       "correct_option": "C",
-      "source": "PDF p.88 | E0 | Handwritten",
-      "explanation": "Mitigation reduces the damage that a hazard could cause.",
-      "answer_label": "Reduce potential disaster damage",
-      "answer": "Reduce potential disaster damage"
+      "source": "PDF p.71 | E0 | Table",
+      "explanation": "Hydroclaving operates at about 132°C, while autoclaving operates at 121°C.",
+      "answer_label": "Hydroclaving",
+      "answer": "Hydroclaving"
+    },
+    {
+      "id": "PSM-D3-S3-Q011",
+      "number": 11,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The water seal of an RCA sanitary latrine is at least:",
+      "options": [
+        "0.5 cm",
+        "1 cm",
+        "2 cm",
+        "5 cm"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.125 | E0 | Diagram/Handwritten",
+      "explanation": "The RCA sanitary latrine has a water seal at least 2 cm deep.",
+      "answer_label": "2 cm",
+      "answer": "2 cm"
+    },
+    {
+      "id": "PSM-D3-S3-Q012",
+      "number": 12,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The vector of African sleeping sickness is the:",
+      "options": [
+        "Sandfly",
+        "Blackfly",
+        "Rat flea",
+        "Tsetse fly"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.127 | E0 | Table",
+      "explanation": "The tsetse fly transmits African sleeping sickness.",
+      "answer_label": "Tsetse fly",
+      "answer": "Tsetse fly"
     },
     {
       "id": "PSM-D3-S3-Q027",
@@ -269,94 +323,22 @@
       "answer": "*Anopheles* mosquito"
     },
     {
-      "id": "PSM-D3-S3-Q021",
-      "number": 21,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "Which biomedical-waste treatment operates at about 132°C, compared with 121°C for autoclaving?",
-      "options": [
-        "Incineration",
-        "Microwaving",
-        "Hydroclaving",
-        "Dry-heat sterilization"
-      ],
-      "correct_option": "C",
-      "source": "PDF p.71 | E0 | Table",
-      "explanation": "Hydroclaving operates at about 132°C, while autoclaving operates at 121°C.",
-      "answer_label": "Hydroclaving",
-      "answer": "Hydroclaving"
-    },
-    {
-      "id": "PSM-D3-S3-Q009",
-      "number": 9,
+      "id": "PSM-D3-S3-Q013",
+      "number": 13,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "START expands to Simple Triage and Rapid:",
+      "stem": "A mosquito net should have at least how many holes per square inch?",
       "options": [
-        "Transfer",
-        "Treatment",
-        "Testing",
-        "Transport"
+        "50",
+        "100",
+        "125",
+        "150"
       ],
-      "correct_option": "B",
-      "source": "PDF p.92 | E0 | Handwritten",
-      "explanation": "START stands for Simple Triage and Rapid Treatment.",
-      "answer_label": "Treatment",
-      "answer": "Treatment"
-    },
-    {
-      "id": "PSM-D3-S3-Q022",
-      "number": 22,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "A room needs removal of stale indoor air. Which ventilation system is designed for this?",
-      "options": [
-        "Exhaust ventilation",
-        "Plenum ventilation",
-        "Natural lighting",
-        "Air humidification"
-      ],
-      "correct_option": "A",
-      "source": "PDF p.115 | E0 | Diagram/Handwritten",
-      "explanation": "Exhaust ventilation removes stale air from a room; plenum ventilation supplies fresh air.",
-      "answer_label": "Exhaust ventilation",
-      "answer": "Exhaust ventilation"
-    },
-    {
-      "id": "PSM-D3-S3-Q010",
-      "number": 10,
-      "tier": 1,
-      "difficulty": "direct",
-      "stem": "Which indicator is used in Horrocks’ apparatus?",
-      "options": [
-        "Starch–iodide",
-        "Phenolphthalein",
-        "Methylene blue",
-        "Methyl orange"
-      ],
-      "correct_option": "A",
-      "source": "PDF p.107 | E0 | Handwritten",
-      "explanation": "Horrocks’ apparatus uses starch–iodide indicator to demonstrate a colour change.",
-      "answer_label": "Starch–iodide",
-      "answer": "Starch–iodide"
-    },
-    {
-      "id": "PSM-D3-S3-Q011",
-      "number": 11,
-      "tier": 1,
-      "difficulty": "direct",
-      "stem": "The water seal of an RCA sanitary latrine is at least:",
-      "options": [
-        "0.5 cm",
-        "1 cm",
-        "2 cm",
-        "5 cm"
-      ],
-      "correct_option": "C",
-      "source": "PDF p.125 | E0 | Diagram/Handwritten",
-      "explanation": "The RCA sanitary latrine has a water seal at least 2 cm deep.",
-      "answer_label": "2 cm",
-      "answer": "2 cm"
+      "correct_option": "D",
+      "source": "PDF p.130 | E0 | Handwritten",
+      "explanation": "A mosquito net should have at least 150 holes per square inch.",
+      "answer_label": "150",
+      "answer": "150"
     },
     {
       "id": "PSM-D3-S3-Q023",
@@ -377,40 +359,40 @@
       "answer": "*Clostridium perfringens*"
     },
     {
-      "id": "PSM-D3-S3-Q012",
-      "number": 12,
+      "id": "PSM-D3-S3-Q014",
+      "number": 14,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "The vector of African sleeping sickness is the:",
+      "stem": "Which vector is associated with Kyasanur Forest disease in India?",
       "options": [
-        "Sandfly",
-        "Blackfly",
-        "Rat flea",
-        "Tsetse fly"
+        "Hard tick",
+        "Soft tick",
+        "Louse",
+        "Blackfly"
       ],
-      "correct_option": "D",
-      "source": "PDF p.127 | E0 | Table",
-      "explanation": "The tsetse fly transmits African sleeping sickness.",
-      "answer_label": "Tsetse fly",
-      "answer": "Tsetse fly"
+      "correct_option": "A",
+      "source": "PDF p.128 | E0 | Table",
+      "explanation": "Hard ticks are vectors of Kyasanur Forest disease in India.",
+      "answer_label": "Hard tick",
+      "answer": "Hard tick"
     },
     {
-      "id": "PSM-D3-S3-Q028",
-      "number": 28,
-      "tier": 3,
-      "difficulty": "hard",
-      "stem": "An asymptomatic adult has a high random glucose result at a screening camp. Which test can establish diabetes?",
+      "id": "PSM-D3-S3-Q015",
+      "number": 15,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "An exclusively breastfed newborn receives intramuscular vitamin K at birth. Which vitamin is the most deficient in breast milk?",
       "options": [
-        "Urine glucose strip",
-        "Two-hour oral glucose tolerance test",
-        "Symptom questionnaire",
-        "Another random capillary glucose check"
+        "Vitamin A",
+        "Vitamin D",
+        "Vitamin K",
+        "Vitamin C"
       ],
       "correct_option": "B",
-      "source": "PDF p.37–38, p.51 | E2 | Table/Multi-page",
-      "explanation": "A high random screening glucose in an asymptomatic person needs diagnostic assessment. The two-hour OGTT is a diagnostic test for diabetes.",
-      "answer_label": "Two-hour oral glucose tolerance test",
-      "answer": "Two-hour oral glucose tolerance test"
+      "source": "PDF p.11 | E1 | Handwritten",
+      "explanation": "Vitamin D is the most deficient vitamin in breast milk, so exclusively breastfed infants can develop rickets. Vitamin K is the second most deficient, which is why 1 mg is given intramuscularly at birth.",
+      "answer_label": "Vitamin D",
+      "answer": "Vitamin D"
     },
     {
       "id": "PSM-D3-S3-Q024",
@@ -431,28 +413,46 @@
       "answer": "2 minutes"
     },
     {
-      "id": "PSM-D3-S3-Q013",
-      "number": 13,
+      "id": "PSM-D3-S3-Q016",
+      "number": 16,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "A mosquito net should have at least how many holes per square inch?",
+      "stem": "The casein:whey ratio in human milk is approximately:",
       "options": [
-        "50",
-        "100",
-        "125",
-        "150"
+        "40:60",
+        "60:40",
+        "70:30",
+        "80:20"
       ],
-      "correct_option": "D",
-      "source": "PDF p.130 | E0 | Handwritten",
-      "explanation": "A mosquito net should have at least 150 holes per square inch.",
-      "answer_label": "150",
-      "answer": "150"
+      "correct_option": "A",
+      "source": "PDF p.13 | E0 | Table/Handwritten",
+      "explanation": "Human milk has a casein:whey ratio of approximately 40:60, compared with 80:20 in cow’s milk.",
+      "answer_label": "40:60",
+      "answer": "40:60"
+    },
+    {
+      "id": "PSM-D3-S3-Q022",
+      "number": 22,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "A room needs removal of stale indoor air. Which ventilation system is designed for this?",
+      "options": [
+        "Exhaust ventilation",
+        "Plenum ventilation",
+        "Natural lighting",
+        "Air humidification"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.115 | E0 | Diagram/Handwritten",
+      "explanation": "Exhaust ventilation removes stale air from a room; plenum ventilation supplies fresh air.",
+      "answer_label": "Exhaust ventilation",
+      "answer": "Exhaust ventilation"
     },
     {
       "id": "PSM-D3-S3-Q025",
       "number": 25,
-      "tier": 2,
-      "difficulty": "moderate",
+      "tier": 1,
+      "difficulty": "direct",
       "stem": "Approximately what percentage of sewage is water?",
       "options": [
         "70%",
@@ -467,22 +467,130 @@
       "answer": "99.9%"
     },
     {
-      "id": "PSM-D3-S3-Q014",
-      "number": 14,
+      "id": "PSM-D3-S3-Q033",
+      "number": 33,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A worker spends one 8-hour shift in a workshop at about 95 dB. The expected auditory effect is:",
+      "options": [
+        "Tympanic-membrane rupture",
+        "Permanent hearing loss",
+        "Auditory fatigue",
+        "No measurable change"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.119 | E1 | Handwritten",
+      "explanation": "Auditory fatigue, a temporary threshold shift, begins at about 90 dB. Permanent loss needs higher or prolonged exposure, and rupture needs 150–160 dB.",
+      "answer_label": "Auditory fatigue",
+      "answer": "Auditory fatigue"
+    },
+    {
+      "id": "PSM-D3-S3-Q029",
+      "number": 29,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "Which vector is associated with Kyasanur Forest disease in India?",
+      "stem": "The world's worst industrial chemical disaster occurred at:",
       "options": [
-        "Hard tick",
-        "Soft tick",
-        "Louse",
-        "Blackfly"
+        "Bhopal",
+        "Chernobyl",
+        "Seveso",
+        "Minamata"
       ],
       "correct_option": "A",
-      "source": "PDF p.128 | E0 | Table",
-      "explanation": "Hard ticks are vectors of Kyasanur Forest disease in India.",
-      "answer_label": "Hard tick",
-      "answer": "Hard tick"
+      "source": "PDF p.94 | E0 | Handwritten",
+      "explanation": "The 1984 Bhopal methyl isocyanate leak is regarded as the worst industrial chemical disaster.",
+      "answer_label": "Bhopal",
+      "answer": "Bhopal"
+    },
+    {
+      "id": "PSM-D3-S3-Q028",
+      "number": 28,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "An asymptomatic adult has a high random glucose result at a screening camp. Which test can establish diabetes?",
+      "options": [
+        "Urine glucose strip",
+        "Two-hour oral glucose tolerance test",
+        "Symptom questionnaire",
+        "Another random capillary glucose check"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.37–38, p.51 | E2 | Table/Multi-page",
+      "explanation": "A high random screening glucose in an asymptomatic person needs diagnostic assessment. The two-hour OGTT is a diagnostic test for diabetes.",
+      "answer_label": "Two-hour oral glucose tolerance test",
+      "answer": "Two-hour oral glucose tolerance test"
+    },
+    {
+      "id": "PSM-D3-S3-Q030",
+      "number": 30,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The most common severity category of intellectual disability is:",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Severe",
+        "Profound"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.21 | E0 | Handwritten",
+      "explanation": "Mild intellectual disability accounts for the large majority of cases.",
+      "answer_label": "Mild",
+      "answer": "Mild"
+    },
+    {
+      "id": "PSM-D3-S3-Q031",
+      "number": 31,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The School Health Committee of 1960 was headed by:",
+      "options": [
+        "Joseph Bhore",
+        "Renuka Ray",
+        "A. L. Mudaliar",
+        "Kartar Singh"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.20 | E0 | Handwritten",
+      "explanation": "The Renuka Ray School Health Committee (1960) made the school-health recommendations; the Bhore Committee had earlier introduced the concept.",
+      "answer_label": "Renuka Ray",
+      "answer": "Renuka Ray"
+    },
+    {
+      "id": "PSM-D3-S3-Q034",
+      "number": 34,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A classroom for 30 students should provide a floor area of at least:",
+      "options": [
+        "150 sq ft",
+        "200 sq ft",
+        "250 sq ft",
+        "300 sq ft"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.20 | E1 | Handwritten",
+      "explanation": "At least 10 sq ft per student gives \\(30\\times10=300\\) sq ft.",
+      "answer_label": "300 sq ft",
+      "answer": "300 sq ft"
+    },
+    {
+      "id": "PSM-D3-S3-Q032",
+      "number": 32,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The largest source of population exposure to man-made ionizing radiation is:",
+      "options": [
+        "Nuclear power generation",
+        "Medical diagnostic X-rays",
+        "Nuclear-weapons fallout",
+        "Consumer products"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.121 | E0 | Handwritten",
+      "explanation": "Medical diagnostic X-rays are the largest man-made source of radiation exposure.",
+      "answer_label": "Medical diagnostic X-rays",
+      "answer": "Medical diagnostic X-rays"
     }
   ]
 }

@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "bank_id": "fmge-psm-day1-section-2",
+  "title": "FMGE PSM Day 1 Section 2",
+  "subject": "Community Medicine",
+  "description": "An 18-question PSM section from the reviewed Day 1 notes.",
+  "expected_questions": 18,
+  "duration_minutes": 18,
+  "max_attempts": 1,
+  "passing_percentage": 50,
+  "show_answers": 0,
+  "show_submission_history": 1,
+  "shuffle_questions": 0,
+  "enable_negative_marking": 0,
+  "questions": [
+    {
+      "id": "PSM-D1-Q042",
+      "number": 42,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which mosquito is the principal vector of rural malaria in India?",
+      "options": [
+        "Anopheles culicifacies",
+        "Culex tritaeniorhynchus",
+        "Anopheles stephensi",
+        "Aedes aegypti"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.6 | E0 | Handwritten",
+      "explanation": "Anopheles culicifacies is the principal rural malaria vector in India.",
+      "answer_label": "Anopheles culicifacies",
+      "answer": "Anopheles culicifacies"
+    },
+    {
+      "id": "PSM-D1-Q043",
+      "number": 43,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which mosquito is the principal vector of urban malaria in India?",
+      "options": [
+        "Aedes aegypti",
+        "Anopheles stephensi",
+        "Culex tritaeniorhynchus",
+        "Anopheles culicifacies"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.6 | E0 | Handwritten",
+      "explanation": "Anopheles stephensi is the principal urban malaria vector in India.",
+      "answer_label": "Anopheles stephensi",
+      "answer": "Anopheles stephensi"
+    },
+    {
+      "id": "PSM-D1-Q044",
+      "number": 44,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Ticks of which genus transmit Kyasanur Forest disease?",
+      "options": [
+        "Haemaphysalis",
+        "Ixodes",
+        "Dermacentor",
+        "Rhipicephalus"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.7 | E0 | Handwritten",
+      "explanation": "Kyasanur Forest disease is transmitted by Haemaphysalis ticks.",
+      "answer_label": "Haemaphysalis",
+      "answer": "Haemaphysalis"
+    },
+    {
+      "id": "PSM-D1-Q045",
+      "number": 45,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The neonatal period extends through approximately how many days after birth?",
+      "options": [
+        "7",
+        "28",
+        "60",
+        "90"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.14 | E0 | Handwritten",
+      "explanation": "The neonatal period comprises the first four weeks of life.",
+      "answer_label": "28",
+      "answer": "28"
+    },
+    {
+      "id": "PSM-D1-Q046",
+      "number": 46,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Disease-free exposed and unexposed groups are followed forward. Which capability is an advantage of this design?",
+      "options": [
+        "Completing follow-up without participant attrition",
+        "Studying very rare diseases with small samples",
+        "Assessing several prior exposures for one disease",
+        "Assessing several outcomes after one exposure"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.28 | E0 | Table/Handwritten",
+      "explanation": "A cohort can assess multiple outcomes after a defined exposure.",
+      "answer_label": "Assessing several outcomes after one exposure",
+      "answer": "Assessing several outcomes after one exposure"
+    },
+    {
+      "id": "PSM-D1-Q047",
+      "number": 47,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which study design can investigate several previous risk factors for one disease?",
+      "options": [
+        "Case-control study",
+        "Field trial",
+        "Community trial",
+        "Cohort study"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.28 | E0 | Table/Handwritten",
+      "explanation": "Case-control studies can examine several prior exposures for one disease.",
+      "answer_label": "Case-control study",
+      "answer": "Case-control study"
+    },
+    {
+      "id": "PSM-D1-Q048",
+      "number": 48,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The Framingham Heart Study is a classic example of which study design?",
+      "options": [
+        "Cross-sectional study",
+        "Ecological study",
+        "Case-control study",
+        "Cohort study"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.23 | E0 | Handwritten",
+      "explanation": "The Framingham Heart Study is a cohort investigation.",
+      "answer_label": "Cohort study",
+      "answer": "Cohort study"
+    },
+    {
+      "id": "PSM-D1-Q049",
+      "number": 49,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Compared with following exposure-defined groups forward, investigating prior exposures in disease-defined groups is generally:",
+      "options": [
+        "Slower and less expensive",
+        "Quicker and more expensive",
+        "Quicker and less expensive",
+        "Slower and more expensive"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.28 | E0 | Table/Handwritten",
+      "explanation": "Case-control studies are generally quicker and less expensive than prospective cohorts.",
+      "answer_label": "Quicker and less expensive",
+      "answer": "Quicker and less expensive"
+    },
+    {
+      "id": "PSM-D1-Q050",
+      "number": 50,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "In a single-blind trial, who is ordinarily unaware of the treatment allocation?",
+      "options": [
+        "The investigator alone",
+        "The data analyst alone",
+        "The participant",
+        "Both participant and investigator"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.35 | E0 | Handwritten",
+      "explanation": "In the conventional participant-blinded single-blind trial, the participant is unaware of allocation.",
+      "answer_label": "The participant",
+      "answer": "The participant"
+    },
+    {
+      "id": "PSM-D1-Q051",
+      "number": 51,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "An open-label trial ordinarily blinds:",
+      "options": [
+        "Investigators only",
+        "Participants only",
+        "Neither participants nor investigators",
+        "Both participants and investigators"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.35 | E0 | Handwritten",
+      "explanation": "An open-label study keeps participants and investigators aware of treatment allocation.",
+      "answer_label": "Neither participants nor investigators",
+      "answer": "Neither participants nor investigators"
+    },
+    {
+      "id": "PSM-D1-Q052",
+      "number": 52,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Microdosing is associated with which phase of drug development?",
+      "options": [
+        "Phase 0",
+        "Phase I",
+        "Phase II",
+        "Phase III"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.46 | E0 | Table/Handwritten",
+      "explanation": "Phase 0 is associated with exploratory microdosing.",
+      "answer_label": "Phase 0",
+      "answer": "Phase 0"
+    },
+    {
+      "id": "PSM-D1-Q053",
+      "number": 53,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The principal objective of a Phase II clinical trial is assessment of:",
+      "options": [
+        "Therapeutic efficacy",
+        "Long-term post-marketing effects",
+        "First-in-human tolerability",
+        "Microdose disposition"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.46 | E0 | Table/Handwritten",
+      "explanation": "Phase II assesses therapeutic efficacy in patients.",
+      "answer_label": "Therapeutic efficacy",
+      "answer": "Therapeutic efficacy"
+    },
+    {
+      "id": "PSM-D1-Q054",
+      "number": 54,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Large comparative trials of a new drug against an existing treatment are generally conducted in:",
+      "options": [
+        "Phase IV",
+        "Phase III",
+        "Phase I",
+        "Phase 0"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.46 | E0 | Table/Handwritten",
+      "explanation": "Phase III provides comparative assessment before marketing.",
+      "answer_label": "Phase III",
+      "answer": "Phase III"
+    },
+    {
+      "id": "PSM-D1-Q055",
+      "number": 55,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which cases form the numerator of disease prevalence?",
+      "options": [
+        "Deaths from the disease during follow-up",
+        "Recovered cases from the previous year",
+        "New cases arising during follow-up only",
+        "All current cases, both new and pre-existing"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.59 | E0 | Handwritten",
+      "explanation": "Prevalence counts all current cases, including new and pre-existing cases.",
+      "answer_label": "All current cases, both new and pre-existing",
+      "answer": "All current cases, both new and pre-existing"
+    },
+    {
+      "id": "PSM-D1-Q056",
+      "number": 56,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Where is the headquarters of the International Labour Organization?",
+      "options": [
+        "New York",
+        "Geneva",
+        "Rome",
+        "Paris"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.76 | E0 | Handwritten",
+      "explanation": "The International Labour Organization is headquartered in Geneva.",
+      "answer_label": "Geneva",
+      "answer": "Geneva"
+    },
+    {
+      "id": "PSM-D1-Q057",
+      "number": 57,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Where is the headquarters of the Food and Agriculture Organization?",
+      "options": [
+        "New York",
+        "Paris",
+        "Rome",
+        "Geneva"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.76 | E0 | Handwritten",
+      "explanation": "The Food and Agriculture Organization is headquartered in Rome.",
+      "answer_label": "Rome",
+      "answer": "Rome"
+    },
+    {
+      "id": "PSM-D1-Q058",
+      "number": 58,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which under-five mortality level, per 1,000 live births, is used as the reduction threshold in SDG target 3.2?",
+      "options": [
+        "12",
+        "25",
+        "50",
+        "70"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.79 | E0 | Handwritten",
+      "explanation": "The under-five mortality reduction threshold in SDG target 3.2 is 25 deaths per 1,000 live births.",
+      "answer_label": "25",
+      "answer": "25"
+    },
+    {
+      "id": "PSM-D1-Q059",
+      "number": 59,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which neonatal mortality level, per 1,000 live births, is used as the reduction threshold in SDG target 3.2?",
+      "options": [
+        "12",
+        "25",
+        "50",
+        "70"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.79 | E0 | Handwritten",
+      "explanation": "The neonatal mortality reduction threshold in SDG target 3.2 is 12 deaths per 1,000 live births.",
+      "answer_label": "12",
+      "answer": "12"
+    }
+  ]
+}

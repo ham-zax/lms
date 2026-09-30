@@ -30,9 +30,9 @@ const props = defineProps({
 		required: true,
 	},
 })
-const day1Mock = computed(() => props.quiz === 'fmge-psm-day-1-mock')
-const day4Mock = computed(() => props.quiz === 'fmge-psm-day-4-mock')
-const day3Mock = computed(() => props.quiz === 'fmge-psm-day-3-compact-mock')
+const day1Mock = computed(() => ['fmge-psm-day-1-mock', 'fmge-psm-day-1-section-2'].includes(props.quiz))
+const day4Mock = computed(() => ['fmge-psm-day-4-mock', 'fmge-psm-day-4-section-2'].includes(props.quiz))
+const day3Mock = computed(() => /^day-3-psm-section-[1-4]$/.test(props.quiz))
 const publicFMGE = computed(
 	() => day1Mock.value || day4Mock.value || day3Mock.value || props.quiz === 'fmge-psm-mock-1-section-1'
 )

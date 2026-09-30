@@ -4,8 +4,8 @@
   "title": "Day 3 PSM — Section 4",
   "subject": "Community Medicine",
   "description": "FMGE Community Medicine practice from the reviewed Day 3 PSM question bank, section 4 of 4.",
-  "expected_questions": 26,
-  "duration_minutes": 26,
+  "expected_questions": 31,
+  "duration_minutes": 31,
   "max_attempts": 1,
   "passing_percentage": 50,
   "show_answers": 0,
@@ -125,24 +125,6 @@
       "answer": "600 kcal"
     },
     {
-      "id": "PSM-D3-S4-Q027",
-      "number": 27,
-      "tier": 3,
-      "difficulty": "hard",
-      "stem": "A woman starts breastfeeding immediately after vaginal delivery. Which hormone-mediated maternal response helps limit postpartum blood loss?",
-      "options": [
-        "Uterine relaxation from prolactin",
-        "Cervical dilation from progesterone",
-        "Reduced clotting from oestrogen",
-        "Uterine contraction from oxytocin"
-      ],
-      "correct_option": "D",
-      "source": "PDF p.14 | E2 | Diagram/Handwritten",
-      "explanation": "Suckling releases oxytocin, which contracts the uterus and helps limit postpartum bleeding. Prolactin drives milk production, not uterine contraction.",
-      "answer_label": "Uterine contraction from oxytocin",
-      "answer": "Uterine contraction from oxytocin"
-    },
-    {
       "id": "PSM-D3-S4-Q005",
       "number": 5,
       "tier": 1,
@@ -174,9 +156,27 @@
       ],
       "correct_option": "D",
       "source": "PDF p.37–38 | E1 | Table/Multi-page",
-      "explanation": "A screening test is quicker and cheaper but less accurate than a diagnostic test. A positive screen leads to diagnostic assessment; it is not itself the basis for treatment.",
+      "explanation": "An initial population screening test should be quick and inexpensive. A positive screen leads to diagnostic assessment rather than being treated as a confirmed diagnosis.",
       "answer_label": "Quick and inexpensive",
       "answer": "Quick and inexpensive"
+    },
+    {
+      "id": "PSM-D3-S4-Q027",
+      "number": 27,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A woman starts breastfeeding immediately after vaginal delivery. Which hormone-mediated maternal response helps limit postpartum blood loss?",
+      "options": [
+        "Uterine relaxation from prolactin",
+        "Cervical dilation from progesterone",
+        "Reduced clotting from oestrogen",
+        "Uterine contraction from oxytocin"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.14 | E2 | Diagram/Handwritten",
+      "explanation": "Suckling releases oxytocin, which contracts the uterus and helps limit postpartum bleeding. Prolactin drives milk production, not uterine contraction.",
+      "answer_label": "Uterine contraction from oxytocin",
+      "answer": "Uterine contraction from oxytocin"
     },
     {
       "id": "PSM-D3-S4-Q006",
@@ -219,7 +219,7 @@
       "number": 21,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "A used scalpel has undergone sterilization in the white sharps stream. What follows before final disposal?",
+      "stem": "A sterilized used scalpel will be sent to an authorized iron foundry. Which further processing step is appropriate?",
       "options": [
         "Recycle it intact",
         "Send it directly to a foundry",
@@ -228,7 +228,7 @@
       ],
       "correct_option": "C",
       "source": "PDF p.69 | E1 | Table",
-      "explanation": "Sterilized waste sharps are rendered unusable by shredding or mutilation before final disposal.",
+      "explanation": "In the metal-recovery pathway, sterilized waste sharps are rendered unusable by shredding or mutilation before transfer to an authorized foundry.",
       "answer_label": "Shred or mutilate it",
       "answer": "Shred or mutilate it"
     },
@@ -305,24 +305,6 @@
       "answer": "Likelihood of survival"
     },
     {
-      "id": "PSM-D3-S4-Q011",
-      "number": 11,
-      "tier": 1,
-      "difficulty": "direct",
-      "stem": "Candela is a unit of:",
-      "options": [
-        "Luminous flux",
-        "Luminous intensity",
-        "Illuminance",
-        "Luminance"
-      ],
-      "correct_option": "B",
-      "source": "PDF p.126 | E0 | Table",
-      "explanation": "Candela measures luminous intensity.",
-      "answer_label": "Luminous intensity",
-      "answer": "Luminous intensity"
-    },
-    {
       "id": "PSM-D3-S4-Q023",
       "number": 23,
       "tier": 2,
@@ -341,6 +323,24 @@
       "answer": "From a gentle stream without splashing"
     },
     {
+      "id": "PSM-D3-S4-Q011",
+      "number": 11,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Candela is a unit of:",
+      "options": [
+        "Luminous flux",
+        "Luminous intensity",
+        "Illuminance",
+        "Luminance"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.126 | E0 | Table",
+      "explanation": "Candela measures luminous intensity.",
+      "answer_label": "Luminous intensity",
+      "answer": "Luminous intensity"
+    },
+    {
       "id": "PSM-D3-S4-Q012",
       "number": 12,
       "tier": 1,
@@ -357,6 +357,78 @@
       "explanation": "The rat flea (*Xenopsylla cheopis*) transmits plague and endemic typhus.",
       "answer_label": "Rat flea",
       "answer": "Rat flea"
+    },
+    {
+      "id": "PSM-D3-S4-Q024",
+      "number": 24,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Untreated sewage contaminates a village water supply. Transmission of which disease is supported?",
+      "options": [
+        "Poliomyelitis",
+        "Plague",
+        "Kala-azar",
+        "Kyasanur Forest disease"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.123, p.127–128 | E1 | Multi-page",
+      "explanation": "Sewage contains human excreta, so it can spread faeco-oral infections such as poliomyelitis. Plague, kala-azar and Kyasanur Forest disease are vector-borne.",
+      "answer_label": "Poliomyelitis",
+      "answer": "Poliomyelitis"
+    },
+    {
+      "id": "PSM-D3-S4-Q013",
+      "number": 13,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which vector transmits Chagas disease?",
+      "options": [
+        "Tsetse fly",
+        "Sandfly",
+        "Rat flea",
+        "Reduviid bug"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.127 | E0 | Table",
+      "explanation": "The reduviid, or kissing, bug transmits Chagas disease.",
+      "answer_label": "Reduviid bug",
+      "answer": "Reduviid bug"
+    },
+    {
+      "id": "PSM-D3-S4-Q014",
+      "number": 14,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which vector is associated with epidemic typhus?",
+      "options": [
+        "Rat flea",
+        "Hard tick",
+        "Body louse",
+        "Blackfly"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.127–128 | E0 | Table",
+      "explanation": "The body louse transmits epidemic typhus; rat fleas are associated with endemic typhus.",
+      "answer_label": "Body louse",
+      "answer": "Body louse"
+    },
+    {
+      "id": "PSM-D3-S4-Q025",
+      "number": 25,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A worker’s predicted sweat loss is 1.2 L/hour over four hours. The P4SR category is:",
+      "options": [
+        "Comfort zone",
+        "Just tolerable",
+        "Intolerable",
+        "Below comfort range"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.118 | E1 | Table",
+      "explanation": "At 1.2 L per hour, the four-hour sweat rate is 4.8 L. Above 4.5 L is intolerable; 3–4.5 L is just tolerable.",
+      "answer_label": "Intolerable",
+      "answer": "Intolerable"
     },
     {
       "id": "PSM-D3-S4-Q028",
@@ -380,60 +452,6 @@
       "answer": "Yellow"
     },
     {
-      "id": "PSM-D3-S4-Q013",
-      "number": 13,
-      "tier": 1,
-      "difficulty": "direct",
-      "stem": "Which vector transmits Chagas disease?",
-      "options": [
-        "Tsetse fly",
-        "Sandfly",
-        "Rat flea",
-        "Reduviid bug"
-      ],
-      "correct_option": "D",
-      "source": "PDF p.127 | E0 | Table",
-      "explanation": "The reduviid, or kissing, bug transmits Chagas disease.",
-      "answer_label": "Reduviid bug",
-      "answer": "Reduviid bug"
-    },
-    {
-      "id": "PSM-D3-S4-Q024",
-      "number": 24,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "Untreated sewage contaminates a village water supply. Transmission of which disease is supported?",
-      "options": [
-        "Poliomyelitis",
-        "Plague",
-        "Kala-azar",
-        "Kyasanur Forest disease"
-      ],
-      "correct_option": "A",
-      "source": "PDF p.123, p.127–128 | E1 | Multi-page",
-      "explanation": "Sewage contains human excreta, so it can spread faeco-oral infections such as poliomyelitis. Plague, kala-azar and Kyasanur Forest disease are vector-borne.",
-      "answer_label": "Poliomyelitis",
-      "answer": "Poliomyelitis"
-    },
-    {
-      "id": "PSM-D3-S4-Q014",
-      "number": 14,
-      "tier": 1,
-      "difficulty": "direct",
-      "stem": "Which vector is associated with epidemic typhus?",
-      "options": [
-        "Rat flea",
-        "Hard tick",
-        "Body louse",
-        "Blackfly"
-      ],
-      "correct_option": "C",
-      "source": "PDF p.127–128 | E0 | Table",
-      "explanation": "The body louse transmits epidemic typhus; rat fleas are associated with endemic typhus.",
-      "answer_label": "Body louse",
-      "answer": "Body louse"
-    },
-    {
       "id": "PSM-D3-S4-Q015",
       "number": 15,
       "tier": 1,
@@ -452,24 +470,6 @@
       "answer": "Boat-shaped"
     },
     {
-      "id": "PSM-D3-S4-Q025",
-      "number": 25,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "A worker’s predicted sweat loss is 1.2 L/hour over four hours. The P4SR category is:",
-      "options": [
-        "Comfort zone",
-        "Just tolerable",
-        "Intolerable",
-        "Below comfort range"
-      ],
-      "correct_option": "C",
-      "source": "PDF p.118 | E1 | Table",
-      "explanation": "At 1.2 L per hour, the four-hour sweat rate is 4.8 L. Above 4.5 L is intolerable; 3–4.5 L is just tolerable.",
-      "answer_label": "Intolerable",
-      "answer": "Intolerable"
-    },
-    {
       "id": "PSM-D3-S4-Q016",
       "number": 16,
       "tier": 1,
@@ -486,6 +486,96 @@
       "explanation": "Lumen measures luminous flux, or the flow of light.",
       "answer_label": "Lumen",
       "answer": "Lumen"
+    },
+    {
+      "id": "PSM-D3-S4-Q032",
+      "number": 32,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A 30-year-old woman carries a BRCA1 mutation. The preferred breast-cancer screening test for her is:",
+      "options": [
+        "Clinical examination alone",
+        "Breast self-examination",
+        "Annual breast MRI",
+        "Fine-needle aspiration cytology"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.48 | E1 | Handwritten",
+      "explanation": "MRI is the preferred screening test for young high-risk women, whose dense breast tissue limits mammography.",
+      "answer_label": "Annual breast MRI",
+      "answer": "Annual breast MRI"
+    },
+    {
+      "id": "PSM-D3-S4-Q029",
+      "number": 29,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "A village is a problem village if no safe water source exists within:",
+      "options": [
+        "0.5 km",
+        "1.6 km",
+        "3 km",
+        "5 km"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.110 | E0 | Handwritten",
+      "explanation": "A problem village has no safe source within 1.6 km, water only below 15 m, a source more than 100 m below, or excess iron, salt, fluoride or arsenic.",
+      "answer_label": "1.6 km",
+      "answer": "1.6 km"
+    },
+    {
+      "id": "PSM-D3-S4-Q030",
+      "number": 30,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Under the national blindness-control programme, first-level vision screening of schoolchildren is done by:",
+      "options": [
+        "Trained school teachers",
+        "Ophthalmologists",
+        "ASHAs",
+        "Anganwadi workers"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.22 | E0 | Handwritten",
+      "explanation": "Trained teachers perform first-level vision screening in schools. Children with poor vision are referred for refraction.",
+      "answer_label": "Trained school teachers",
+      "answer": "Trained school teachers"
+    },
+    {
+      "id": "PSM-D3-S4-Q033",
+      "number": 33,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A classroom has a floor area of 480 sq ft. Its combined door and window area should be at least:",
+      "options": [
+        "60 sq ft",
+        "120 sq ft",
+        "160 sq ft",
+        "240 sq ft"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.20 | E1 | Handwritten",
+      "explanation": "Doors and windows should together equal at least 25% of floor area: \\(0.25\\times480=120\\) sq ft.",
+      "answer_label": "120 sq ft",
+      "answer": "120 sq ft"
+    },
+    {
+      "id": "PSM-D3-S4-Q031",
+      "number": 31,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The most common genetic cause of intellectual disability is:",
+      "options": [
+        "Down syndrome",
+        "Fragile X syndrome",
+        "Phenylketonuria",
+        "Tuberous sclerosis"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.21 | E0 | Handwritten",
+      "explanation": "Down syndrome is the most common genetic cause of intellectual disability. Fragile X is the most common inherited cause.",
+      "answer_label": "Down syndrome",
+      "answer": "Down syndrome"
     }
   ]
 }

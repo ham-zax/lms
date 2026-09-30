@@ -4,8 +4,8 @@
   "title": "Day 3 PSM — Section 1",
   "subject": "Community Medicine",
   "description": "FMGE Community Medicine practice from the reviewed Day 3 PSM question bank, section 1 of 4.",
-  "expected_questions": 28,
-  "duration_minutes": 28,
+  "expected_questions": 34,
+  "duration_minutes": 34,
   "max_attempts": 1,
   "passing_percentage": 50,
   "show_answers": 0,
@@ -13,6 +13,24 @@
   "shuffle_questions": 0,
   "enable_negative_marking": 0,
   "questions": [
+    {
+      "id": "PSM-D3-S1-Q001",
+      "number": 1,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Birth weight normally triples by:",
+      "options": [
+        "6 months",
+        "9 months",
+        "12 months",
+        "18 months"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.5 | E0 | Handwritten",
+      "explanation": "Birth weight approximately doubles by five months and triples by one year.",
+      "answer_label": "12 months",
+      "answer": "12 months"
+    },
     {
       "id": "PSM-D3-S1-Q012",
       "number": 12,
@@ -32,22 +50,22 @@
       "answer": "Acute malnutrition"
     },
     {
-      "id": "PSM-D3-S1-Q001",
-      "number": 1,
+      "id": "PSM-D3-S1-Q002",
+      "number": 2,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "Birth weight normally triples by:",
+      "stem": "The predominant immunoglobulin in human milk is:",
       "options": [
-        "6 months",
-        "9 months",
-        "12 months",
-        "18 months"
+        "IgA",
+        "IgD",
+        "IgE",
+        "IgG"
       ],
-      "correct_option": "C",
-      "source": "PDF p.5 | E0 | Handwritten",
-      "explanation": "Birth weight approximately doubles by five months and triples by one year.",
-      "answer_label": "12 months",
-      "answer": "12 months"
+      "correct_option": "A",
+      "source": "PDF p.12 | E0 | Handwritten",
+      "explanation": "Secretory IgA is the predominant immunoglobulin in human milk.",
+      "answer_label": "IgA",
+      "answer": "IgA"
     },
     {
       "id": "PSM-D3-S1-Q024",
@@ -86,42 +104,6 @@
       "answer": "700 kcal"
     },
     {
-      "id": "PSM-D3-S1-Q002",
-      "number": 2,
-      "tier": 1,
-      "difficulty": "direct",
-      "stem": "The predominant immunoglobulin in human milk is:",
-      "options": [
-        "IgA",
-        "IgD",
-        "IgE",
-        "IgG"
-      ],
-      "correct_option": "A",
-      "source": "PDF p.12 | E0 | Handwritten",
-      "explanation": "Secretory IgA is the predominant immunoglobulin in human milk.",
-      "answer_label": "IgA",
-      "answer": "IgA"
-    },
-    {
-      "id": "PSM-D3-S1-Q014",
-      "number": 14,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "Blood donated at a camp is screened for HIV before transfusion. This is:",
-      "options": [
-        "Opportunistic screening",
-        "Prescriptive screening",
-        "Prospective screening",
-        "Multiphasic screening"
-      ],
-      "correct_option": "C",
-      "source": "PDF p.41 | E1 | Table/Handwritten",
-      "explanation": "Screening donated blood protects the eventual recipient, fitting prospective screening. Prescriptive screening primarily benefits the person tested.",
-      "answer_label": "Prospective screening",
-      "answer": "Prospective screening"
-    },
-    {
       "id": "PSM-D3-S1-Q003",
       "number": 3,
       "tier": 1,
@@ -143,40 +125,22 @@
       "answer": "Infantometer"
     },
     {
-      "id": "PSM-D3-S1-Q015",
-      "number": 15,
+      "id": "PSM-D3-S1-Q014",
+      "number": 14,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "At one sitting, each factory worker has a blood-pressure measurement, a blood-glucose test and a vision test. Giving several different tests at one sitting is called:",
+      "stem": "Blood donated at a camp is screened for HIV before transfusion. This is:",
       "options": [
-        "Multiphasic screening",
-        "Selective screening",
-        "Case finding",
-        "Serial testing"
+        "Opportunistic screening",
+        "Prescriptive screening",
+        "Prospective screening",
+        "Multiphasic screening"
       ],
-      "correct_option": "A",
-      "source": "PDF p.42 | E1 | Printed/Handwritten",
-      "explanation": "Giving several different tests at one sitting makes screening multiphasic. Selective screening targets a high-risk group, whatever tests it uses.",
-      "answer_label": "Multiphasic screening",
-      "answer": "Multiphasic screening"
-    },
-    {
-      "id": "PSM-D3-S1-Q025",
-      "number": 25,
-      "tier": 3,
-      "difficulty": "hard",
-      "stem": "A used plastic urinary catheter is collected for biomedical-waste disposal. After treatment, its final pathway is:",
-      "options": [
-        "Incineration",
-        "Deep burial",
-        "Sharps pit",
-        "Recycling"
-      ],
-      "correct_option": "D",
-      "source": "PDF p.69, p.70 | E2 | Multi-page",
-      "explanation": "A used plastic catheter follows the red-category treatment pathway and is then recycled.",
-      "answer_label": "Recycling",
-      "answer": "Recycling"
+      "correct_option": "C",
+      "source": "PDF p.41 | E1 | Table/Handwritten",
+      "explanation": "Screening donated blood protects the eventual recipient, fitting prospective screening. Prescriptive screening primarily benefits the person tested.",
+      "answer_label": "Prospective screening",
+      "answer": "Prospective screening"
     },
     {
       "id": "PSM-D3-S1-Q004",
@@ -197,22 +161,22 @@
       "answer": "Stunting"
     },
     {
-      "id": "PSM-D3-S1-Q016",
-      "number": 16,
+      "id": "PSM-D3-S1-Q015",
+      "number": 15,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "A test finds 90 true positives, 10 false negatives, 20 false positives and 80 true negatives. Its sensitivity is:",
+      "stem": "At one sitting, each factory worker has a blood-pressure measurement, a blood-glucose test and a vision test. Giving several different tests at one sitting is called:",
       "options": [
-        "70%",
-        "80%",
-        "90%",
-        "100%"
+        "Multiphasic screening",
+        "Selective screening",
+        "Case finding",
+        "Serial testing"
       ],
-      "correct_option": "C",
-      "source": "PDF p.52 | E1 | Table/Handwritten",
-      "explanation": "Sensitivity is \\(90/(90+10)\\times100=90\\%\\). False positives and true negatives are outside its denominator.",
-      "answer_label": "90%",
-      "answer": "90%"
+      "correct_option": "A",
+      "source": "PDF p.42 | E1 | Printed/Handwritten",
+      "explanation": "Giving several different tests at one sitting makes screening multiphasic. Selective screening targets a high-risk group, whatever tests it uses.",
+      "answer_label": "Multiphasic screening",
+      "answer": "Multiphasic screening"
     },
     {
       "id": "PSM-D3-S1-Q005",
@@ -233,22 +197,40 @@
       "answer": "Block"
     },
     {
-      "id": "PSM-D3-S1-Q017",
-      "number": 17,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "Three readings are 150/90, 150/90 and 150/90 mmHg; the reference is 120/80 mmHg. They are:",
+      "id": "PSM-D3-S1-Q025",
+      "number": 25,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A used plastic urinary catheter is collected for biomedical-waste disposal. After treatment, its final pathway is:",
       "options": [
-        "Accurate and precise",
-        "Accurate but imprecise",
-        "Inaccurate and imprecise",
-        "Inaccurate but precise"
+        "Incineration",
+        "Deep burial",
+        "Sharps pit",
+        "Recycling"
       ],
       "correct_option": "D",
-      "source": "PDF p.56 | E1 | Table/Handwritten",
-      "explanation": "The identical readings are precise. Their distance from the reference value makes them inaccurate.",
-      "answer_label": "Inaccurate but precise",
-      "answer": "Inaccurate but precise"
+      "source": "PDF p.69, p.70 | E2 | Multi-page",
+      "explanation": "A used plastic catheter follows the red-category treatment pathway and is then recycled.",
+      "answer_label": "Recycling",
+      "answer": "Recycling"
+    },
+    {
+      "id": "PSM-D3-S1-Q016",
+      "number": 16,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A test finds 90 true positives, 10 false negatives, 20 false positives and 80 true negatives. Its sensitivity is:",
+      "options": [
+        "70%",
+        "80%",
+        "90%",
+        "100%"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.52 | E1 | Table/Handwritten",
+      "explanation": "Sensitivity is \\(90/(90+10)\\times100=90\\%\\). False positives and true negatives are outside its denominator.",
+      "answer_label": "90%",
+      "answer": "90%"
     },
     {
       "id": "PSM-D3-S1-Q006",
@@ -269,40 +251,22 @@
       "answer": "External validity"
     },
     {
-      "id": "PSM-D3-S1-Q026",
-      "number": 26,
-      "tier": 3,
-      "difficulty": "hard",
-      "stem": "At a flood-relief camp, free residual chlorine is 0.1 mg/L one hour after water treatment. The next action is:",
-      "options": [
-        "Increase the chlorine dose",
-        "Keep the dose unchanged",
-        "Repeat sampling next week",
-        "Replace chlorine with UV"
-      ],
-      "correct_option": "A",
-      "source": "PDF p.93, p.106 | E2 | Multi-page",
-      "explanation": "A residual of 0.1 mg/L is inadequate after treatment. Additional chlorine is needed before the supply is accepted.",
-      "answer_label": "Increase the chlorine dose",
-      "answer": "Increase the chlorine dose"
-    },
-    {
-      "id": "PSM-D3-S1-Q018",
-      "number": 18,
+      "id": "PSM-D3-S1-Q017",
+      "number": 17,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "All of the following are suitable for biomedical-waste incineration EXCEPT:",
+      "stem": "Three readings are 150/90, 150/90 and 150/90 mmHg; the reference is 120/80 mmHg. They are:",
       "options": [
-        "Blood-soaked dressing",
-        "Anatomical tissue",
-        "Discarded medicine",
-        "PVC-containing waste"
+        "Accurate and precise",
+        "Accurate but imprecise",
+        "Inaccurate and imprecise",
+        "Inaccurate but precise"
       ],
       "correct_option": "D",
-      "source": "PDF p.70, p.71 | E1 | Multi-page",
-      "explanation": "Burning PVC releases dioxins and furans, so chlorinated plastics must not be incinerated. Anatomical waste, soiled dressings and discarded medicines are incinerated.",
-      "answer_label": "PVC-containing waste",
-      "answer": "PVC-containing waste"
+      "source": "PDF p.56 | E1 | Table/Handwritten",
+      "explanation": "The identical readings are precise. Their distance from the reference value makes them inaccurate.",
+      "answer_label": "Inaccurate but precise",
+      "answer": "Inaccurate but precise"
     },
     {
       "id": "PSM-D3-S1-Q007",
@@ -323,6 +287,60 @@
       "answer": "Blue"
     },
     {
+      "id": "PSM-D3-S1-Q018",
+      "number": 18,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "All of the following are suitable for biomedical-waste incineration EXCEPT:",
+      "options": [
+        "Blood-soaked dressing",
+        "Anatomical tissue",
+        "Discarded medicine",
+        "PVC-containing waste"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.70, p.71 | E1 | Multi-page",
+      "explanation": "Burning PVC releases dioxins and furans, so chlorinated plastics must not be incinerated. Anatomical waste, soiled dressings and discarded medicines are incinerated.",
+      "answer_label": "PVC-containing waste",
+      "answer": "PVC-containing waste"
+    },
+    {
+      "id": "PSM-D3-S1-Q008",
+      "number": 8,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Autoclaving sterilizes by:",
+      "options": [
+        "Steam under pressure",
+        "Dry heat oxidation",
+        "Microwave heating",
+        "Chemical inactivation"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.71 | E0 | Table/Handwritten",
+      "explanation": "An autoclave uses steam under pressure. Dry heat is a separate sterilization approach.",
+      "answer_label": "Steam under pressure",
+      "answer": "Steam under pressure"
+    },
+    {
+      "id": "PSM-D3-S1-Q026",
+      "number": 26,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "At a flood-relief camp, free residual chlorine is 0.1 mg/L one hour after water treatment. The next action is:",
+      "options": [
+        "Increase the chlorine dose",
+        "Keep the dose unchanged",
+        "Repeat sampling next week",
+        "Replace chlorine with UV"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.93, p.106 | E2 | Multi-page",
+      "explanation": "A residual of 0.1 mg/L is inadequate after treatment. Additional chlorine is needed before the supply is accepted.",
+      "answer_label": "Increase the chlorine dose",
+      "answer": "Increase the chlorine dose"
+    },
+    {
       "id": "PSM-D3-S1-Q019",
       "number": 19,
       "tier": 2,
@@ -341,40 +359,22 @@
       "answer": "Secondary follow-up"
     },
     {
-      "id": "PSM-D3-S1-Q008",
-      "number": 8,
+      "id": "PSM-D3-S1-Q009",
+      "number": 9,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "Autoclaving sterilizes by:",
+      "stem": "The capacity of a health system to expand its disaster response is:",
       "options": [
-        "Dry heat oxidation",
-        "Steam under pressure",
-        "Microwave heating",
-        "Chemical inactivation"
+        "Disaster mitigation",
+        "Surge capacity",
+        "Rehabilitation",
+        "Triage"
       ],
       "correct_option": "B",
-      "source": "PDF p.71 | E0 | Table/Handwritten",
-      "explanation": "An autoclave uses steam under pressure. Dry heat is a separate sterilization approach.",
-      "answer_label": "Steam under pressure",
-      "answer": "Steam under pressure"
-    },
-    {
-      "id": "PSM-D3-S1-Q027",
-      "number": 27,
-      "tier": 3,
-      "difficulty": "hard",
-      "stem": "A water sample has hardness due to calcium bicarbonate. Which household measure reduces it?",
-      "options": [
-        "Chlorination",
-        "Boiling",
-        "UV irradiation",
-        "Ozonation"
-      ],
-      "correct_option": "B",
-      "source": "PDF p.109, p.104 | E2 | Table/Handwritten",
-      "explanation": "Bicarbonate hardness is temporary and can be reduced by boiling. Chlorination addresses disinfection.",
-      "answer_label": "Boiling",
-      "answer": "Boiling"
+      "source": "PDF p.88 | E0 | Handwritten",
+      "explanation": "Surge capacity is the health system’s ability to respond when disaster demand rises.",
+      "answer_label": "Surge capacity",
+      "answer": "Surge capacity"
     },
     {
       "id": "PSM-D3-S1-Q020",
@@ -395,22 +395,22 @@
       "answer": "Poor"
     },
     {
-      "id": "PSM-D3-S1-Q009",
-      "number": 9,
+      "id": "PSM-D3-S1-Q010",
+      "number": 10,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "The capacity of a health system to expand its disaster response is:",
+      "stem": "Domestic liquid waste without human excreta is:",
       "options": [
-        "Surge capacity",
-        "Disaster mitigation",
-        "Rehabilitation",
-        "Triage"
+        "Garbage",
+        "Refuse",
+        "Sewage",
+        "Sullage"
       ],
-      "correct_option": "A",
-      "source": "PDF p.88 | E0 | Handwritten",
-      "explanation": "Surge capacity is the health system’s ability to respond when disaster demand rises.",
-      "answer_label": "Surge capacity",
-      "answer": "Surge capacity"
+      "correct_option": "D",
+      "source": "PDF p.123 | E0 | Table/Handwritten",
+      "explanation": "Sullage is domestic liquid waste without human excreta; sewage includes it.",
+      "answer_label": "Sullage",
+      "answer": "Sullage"
     },
     {
       "id": "PSM-D3-S1-Q021",
@@ -431,22 +431,40 @@
       "answer": "Lux"
     },
     {
-      "id": "PSM-D3-S1-Q010",
-      "number": 10,
+      "id": "PSM-D3-S1-Q011",
+      "number": 11,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "Domestic liquid waste without human excreta is:",
+      "stem": "The vector of onchocerciasis is the:",
       "options": [
-        "Garbage",
-        "Refuse",
-        "Sewage",
-        "Sullage"
+        "Sand fly",
+        "Hard tick",
+        "Black fly",
+        "Rat flea"
       ],
-      "correct_option": "D",
-      "source": "PDF p.123 | E0 | Table/Handwritten",
-      "explanation": "Sullage is domestic liquid waste without human excreta; sewage includes it.",
-      "answer_label": "Sullage",
-      "answer": "Sullage"
+      "correct_option": "C",
+      "source": "PDF p.128, p.127 | E0 | Table/Handwritten",
+      "explanation": "Onchocerciasis (river blindness) is transmitted by the *Simulium* black fly. Sand flies transmit kala-azar and oriental sore.",
+      "answer_label": "Black fly",
+      "answer": "Black fly"
+    },
+    {
+      "id": "PSM-D3-S1-Q027",
+      "number": 27,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A water sample has hardness due to calcium bicarbonate. Which household measure reduces it?",
+      "options": [
+        "Chlorination",
+        "Boiling",
+        "UV irradiation",
+        "Ozonation"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.109, p.104 | E2 | Table/Handwritten",
+      "explanation": "Bicarbonate hardness is temporary and can be reduced by boiling. Chlorination addresses disinfection.",
+      "answer_label": "Boiling",
+      "answer": "Boiling"
     },
     {
       "id": "PSM-D3-S1-Q022",
@@ -467,40 +485,22 @@
       "answer": "Chloroscope"
     },
     {
-      "id": "PSM-D3-S1-Q028",
-      "number": 28,
-      "tier": 3,
-      "difficulty": "hard",
-      "stem": "Dengue cases are rising in a ward. Which source-reduction measure targets the main vector’s breeding site?",
-      "options": [
-        "Clear dirty drains",
-        "Remove aquatic weeds",
-        "Empty water-holding containers",
-        "Spray walls with DDT"
-      ],
-      "correct_option": "C",
-      "source": "PDF p.129, p.130 | E2 | Multi-page",
-      "explanation": "Removing water from containers targets the breeding sites of Aedes mosquitoes. Clearing dirty drains targets a different breeding pattern.",
-      "answer_label": "Empty water-holding containers",
-      "answer": "Empty water-holding containers"
-    },
-    {
-      "id": "PSM-D3-S1-Q011",
-      "number": 11,
+      "id": "PSM-D3-S1-Q029",
+      "number": 29,
       "tier": 1,
       "difficulty": "direct",
-      "stem": "The vector of onchocerciasis is the:",
+      "stem": "The nodal ministry for disaster management in India is the:",
       "options": [
-        "Sand fly",
-        "Hard tick",
-        "Black fly",
-        "Rat flea"
+        "Ministry of Health and Family Welfare",
+        "Ministry of Home Affairs",
+        "Ministry of Defence",
+        "Ministry of Rural Development"
       ],
-      "correct_option": "C",
-      "source": "PDF p.128, p.127 | E0 | Table/Handwritten",
-      "explanation": "Onchocerciasis (river blindness) is transmitted by the *Simulium* black fly. Sand flies transmit kala-azar and oriental sore.",
-      "answer_label": "Black fly",
-      "answer": "Black fly"
+      "correct_option": "B",
+      "source": "PDF p.94 | E0 | Handwritten",
+      "explanation": "The Ministry of Home Affairs is the nodal ministry for disaster management in India. Health services form one component of the response.",
+      "answer_label": "Ministry of Home Affairs",
+      "answer": "Ministry of Home Affairs"
     },
     {
       "id": "PSM-D3-S1-Q023",
@@ -519,6 +519,114 @@
       "explanation": "Human milk has more lactose, whereas cow’s milk has a higher casein proportion.",
       "answer_label": "Lactose",
       "answer": "Lactose"
+    },
+    {
+      "id": "PSM-D3-S1-Q030",
+      "number": 30,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The recommended noise level for hospital wards is:",
+      "options": [
+        "20–35 dB",
+        "40–55 dB",
+        "60–70 dB",
+        "75–85 dB"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.119 | E0 | Handwritten",
+      "explanation": "Hospital wards should stay within about 20–35 dB. Quiet is needed for rest and recovery.",
+      "answer_label": "20–35 dB",
+      "answer": "20–35 dB"
+    },
+    {
+      "id": "PSM-D3-S1-Q033",
+      "number": 33,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A patient's screening test is positive. The measure that shows how likely he is to actually have the disease is:",
+      "options": [
+        "Sensitivity",
+        "Specificity",
+        "Negative predictive value",
+        "Positive predictive value"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.55 | E0 | Handwritten",
+      "explanation": "Positive predictive value is the proportion of positive results that are true positives. It is the diagnostic power of a screening test; negative predictive value excludes disease.",
+      "answer_label": "Positive predictive value",
+      "answer": "Positive predictive value"
+    },
+    {
+      "id": "PSM-D3-S1-Q031",
+      "number": 31,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The IQ range of moderate intellectual disability is:",
+      "options": [
+        "10–19",
+        "20–34",
+        "35–49",
+        "50–69"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.21 | E0 | Table/Handwritten",
+      "explanation": "Moderate intellectual disability corresponds to an IQ of 35–49. Mild is 50–69 and severe is 20–34.",
+      "answer_label": "35–49",
+      "answer": "35–49"
+    },
+    {
+      "id": "PSM-D3-S1-Q028",
+      "number": 28,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Dengue cases are rising in a ward. Which source-reduction measure targets the main vector’s breeding site?",
+      "options": [
+        "Clear dirty drains",
+        "Remove aquatic weeds",
+        "Empty water-holding containers",
+        "Spray walls with DDT"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.129, p.130 | E2 | Multi-page",
+      "explanation": "Removing water from containers targets the breeding sites of Aedes mosquitoes. Clearing dirty drains targets a different breeding pattern.",
+      "answer_label": "Empty water-holding containers",
+      "answer": "Empty water-holding containers"
+    },
+    {
+      "id": "PSM-D3-S1-Q034",
+      "number": 34,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A hill hamlet's nearest safe spring is 800 m away but lies 120 m below the houses. Regarding water supply, the hamlet:",
+      "options": [
+        "Qualifies as a problem village by elevation",
+        "Qualifies as a problem village by distance",
+        "Qualifies as a problem village by depth",
+        "Does not qualify as a problem village"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.110 | E1 | Handwritten",
+      "explanation": "An 800 m distance is within 1.6 km, but a source more than 100 m below the settlement meets the elevation criterion. Any one criterion makes a problem village.",
+      "answer_label": "Qualifies as a problem village by elevation",
+      "answer": "Qualifies as a problem village by elevation"
+    },
+    {
+      "id": "PSM-D3-S1-Q032",
+      "number": 32,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Desks recommended for school classrooms are of the:",
+      "options": [
+        "Plus type",
+        "Zero type",
+        "Minus type",
+        "Standing type"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.20 | E0 | Diagram/Handwritten",
+      "explanation": "Minus-type desks, whose edge projects over the seat, support upright posture while writing.",
+      "answer_label": "Minus type",
+      "answer": "Minus type"
     }
   ]
 }

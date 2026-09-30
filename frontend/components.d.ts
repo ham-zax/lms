@@ -158,6 +158,7 @@ declare module 'vue' {
     ShortcutTooltip: typeof import('./src/components/ShortcutTooltip.vue')['default']
     SidebarLink: typeof import('./src/components/Sidebar/SidebarLink.vue')['default']
     SkeletonLoader: typeof import('./src/components/SkeletonLoader.vue')['default']
+    SourceReference: typeof import('./src/components/FMGE/SourceReference.vue')['default']
     StudentLessonSidebar: typeof import('./src/components/StudentLessonSidebar.vue')['default']
     TabbedDetailPage: typeof import('./src/components/Layouts/TabbedDetailPage.vue')['default']
     Tags: typeof import('./src/components/Tags.vue')['default']

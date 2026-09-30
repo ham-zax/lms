@@ -150,6 +150,13 @@ class BuilderTestCase(unittest.TestCase):
 		keys = {q["number"]: q["correct_option"] for q in self.build(text)["questions"]}
 		self.assertEqual(keys, {1: "B", 2: "B", 3: "A", 4: "C"})
 
+	def test_rejects_stale_key_text_after_option_reordering(self):
+		text = render(CLEAN_QUESTIONS).replace(
+			"### Q4 — **C — Normal saline**", "### Q4 — **A — Normal saline**"
+		)
+		with self.assertRaisesRegex(ValueError, "Q4: answer-key text does not match option A"):
+			self.build(text)
+
 	def test_parses_the_prompt_output_contract(self):
 		text = "\n".join(
 			[
@@ -212,7 +219,10 @@ class BuilderTestCase(unittest.TestCase):
 		_, warnings = builder.lint_bank(self.build(render(questions)))
 		self.assertIn("Q1: asks for a pair/combination; FMGE items test one relationship", warnings)
 		self.assertIn("Q1: numeric options are not in ascending order", warnings)
-		self.assertIn("Q1 and Q4 share 3+ options; vary the option sets", warnings)
+		self.assertIn(
+			"Q1 and Q4 share 3+ options; check for duplicate relationships or cues when selecting a mock",
+			warnings,
+		)
 
 	def test_image_warning_follows_the_subject_profile(self):
 		bank = self.build(render(CLEAN_QUESTIONS), subject="Community Medicine")
@@ -234,6 +244,28 @@ class BuilderTestCase(unittest.TestCase):
 		questions = [(n, stem, options, "A") for n, stem, options, _ in CLEAN_QUESTIONS]
 		_, warnings = builder.lint_bank(self.build(render(questions)))
 		self.assertIn("answer key: 4 consecutive 'A' answers", warnings)
+
+	def test_flags_balanced_but_repeating_answer_cycle(self):
+		for cycle in ("AB", "ACD", "BCAD"):
+			with self.subTest(cycle=cycle):
+				questions = [
+					(n, f"Stem {n}?", [f"a{n}", f"b{n}", f"c{n}", f"d{n}"], letter)
+					for n, letter in enumerate(cycle * 3, 1)
+				]
+				_, warnings = builder.lint_bank(
+					self.build(render(questions, tier_for=lambda n: 1), expected=len(questions))
+				)
+				self.assertIn(f"answer key: '{cycle}' repeats at least 3 times in succession", warnings)
+
+	def test_irregular_balanced_answers_do_not_trigger_cycle_warning(self):
+		questions = [
+			(n, f"Stem {n}?", [f"a{n}", f"b{n}", f"c{n}", f"d{n}"], letter)
+			for n, letter in enumerate("BDACCADBADCB", 1)
+		]
+		_, warnings = builder.lint_bank(
+			self.build(render(questions, tier_for=lambda n: 1), expected=len(questions))
+		)
+		self.assertFalse(any("repeats at least" in warning for warning in warnings))
 
 	def test_count_comes_from_the_source_by_default(self):
 		with tempfile.TemporaryDirectory() as tmp:

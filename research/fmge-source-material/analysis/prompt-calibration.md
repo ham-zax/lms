@@ -1,6 +1,6 @@
-# FMGE source-grounded three-tier question-bank master prompt (v9.3)
+# FMGE source-grounded three-tier question-bank master prompt (v9.6)
 
-Paste everything below this line into the web session, together with the notes PDF. The prompt is self-contained.
+Paste everything below this line into the web session, together with the notes PDF. The prompt is self-contained. This is pass 1 of a three-prompt workflow: generate text here, correct it with `prompt-review.md`, then give the reviewed bank and source PDF to `prompt-paper-creator.md` for image preparation and mock-paper assembly. This session returns text and image placeholders; file production belongs to pass 3.
 
 ---
 
@@ -47,7 +47,7 @@ Official subject blueprint (marks out of 300):
 | Pharmacology | 13 | Ophthalmology | 15 |
 | Forensic Medicine | 10 | ENT | 15 |
 
-When the PDF covers several subjects, allocate questions roughly by this blueprint within what the PDF supports.
+Use this blueprint when selecting mixed-subject mocks within available topics. Preserve every distinct eligible unit in the full bank; blueprint proportions do not remove valid coverage.
 
 ---
 
@@ -87,7 +87,7 @@ The remainder of each row is longer direct questions. Community Medicine is 63% 
 How to use this:
 
 - **Match each section's stem form to its subject row.** A Community Medicine section should be mostly short direct questions; an Anatomy, Dermatology, Radiology or Orthopaedics section should lean on images.
-- **Tier is about reasoning, not stem form.** A Tier 2 or Tier 3 item can still be a one-liner. Tier 2: "Minimum antenatal visits under the RCH programme is:", where RCH 4 must be told apart from WHO 8. Tier 3: "Which of the following vaccines is contraindicated in pregnancy?", with a live vaccine among inactivated ones, which needs two recalled facts. Do not dress recall up as a vignette to raise its tier.
+- **Tier is about reasoning, not stem form.** A Tier 2/3 item can be a one-liner. A directly memorized schedule or contraindication stays Tier 1; competing options alone do not create two steps. Apply section 8 even when a gallery label suggests a higher tier.
 - **Use the real lead-ins.** Mostly plain direct questions and "Which of the following…". Use "next best step" and "…of choice" only where they fit.
 - **Vignettes should mostly ask diagnosis or management.** That is what half and a fifth of real vignettes ask.
 
@@ -119,7 +119,7 @@ What gets asked inside a chapter is its core: definitions and classifications, "
 These are real FMGE questions, reconstructed from candidate recall (2021-2025; wording lightly edited and some distractors tidied), with their level, form and trap. They show what the numbers in section 1A cannot: how hard real questions are, how much detail they ask for, how they are worded and how close the wrong options sit.
 
 Use the gallery **only to calibrate**:
-- Tier 1 should feel like the Tier 1 examples, Tier 2 like the Tier 2 examples, and Tier 3 no harder than the Tier 3 examples.
+- Use the examples for wording and upper difficulty bounds. Their historical tier labels are illustrative; section 8 governs the final tier by the simplest valid solution.
 - Match their grain of detail, their wording and length, and how close their distractors are.
 - Never copy, paraphrase or re-test a gallery question, and never take a fact from it. Examinable facts come only from the uploaded PDF. Gallery questions are part of the exclusion set (section 7).
 
@@ -378,7 +378,7 @@ Basic sciences should be clinically portable when the PDF allows it (anatomy -> 
 - Distractors come from the same neighbourhood: same disease family, drug class, adjacent management steps, competing investigations, nearby anatomical structures, similar organisms, related complications. A Tier 2/3 distractor should often be right in a nearby scenario but wrong for this stem.
 - Every distractor must be plausible **for the setting in the stem** (no walk-in cooler offered for a subcentre outreach session, no tertiary procedure for a field-level question).
 - No joke options, irrelevant organ systems, grammatical giveaways or repeated absolute words.
-- **Numeric options in ascending order** (doses, years, rates, ranges), as FMGE papers print them.
+- **Numeric options in ascending order** (doses, years, rates, ranges), as FMGE papers print them. Calendar dates count as numeric: order day-month options chronologically within the year (5 June, 7 April is wrong; 7 April, 5 June is right).
 - **One relationship per item.** No "Which pair/combination correctly gives X and Y?" items that join two unrelated recalls. Only use a matched pair when the pairing itself is the fact being tested (e.g. vaccine -> diluent).
 - **Distractor truth check.** Every distractor must be wrong under current guidance too, not merely absent from the PDF. Before accepting an item, check each distractor for:
   - an accepted range that includes it (VIA uses 3-5% acetic acid, so 3% cannot be a distractor to 5%);
@@ -386,9 +386,9 @@ Basic sciences should be clinically portable when the PDF allows it (anatomy -> 
   - another real value for the same thing (915 MHz is also a microwave-treatment frequency, so it cannot be a distractor to 2,450 MHz);
   - a neighbouring term the stem also fits (blood-pressure, glucose and vision tests at one visit are multiphasic, but arguably also multipurpose or mass screening);
   - a second option that the stem's wording also satisfies ("Which vitamin is scarce in breast milk?" fits vitamin K as well as vitamin D).
-  If any check hits, replace the distractor or tighten the stem.
-- **No common-sense giveaways.** Each distractor must tempt a candidate who half-knows the topic. If a layperson could reject it without medical knowledge ("Stop the school meal", "Slow, costly testing"), replace it.
-- **Answer-letter balance**: within each section each letter is correct in 20-30% of items, with no run of more than 3 identical letters and no visible pattern. Balance letters by ordering the options **before** writing the answer key; after any reordering, rewrite that item's key heading, closest-distractor letter and explanation. A 6/7/7/8 split is fine. Never move a key to even out a count.
+  If any check hits, replace the distractor or tighten the stem using PDF-supported distinctions. Classifications can overlap: mass describes the population and multiphasic describes several tests. They are not mutually exclusive unless the task specifies the axis.
+- **Distractor plausibility.** For each wrong option identify the nearby PDF-supported confusion that makes it tempting and the source-supported distinction that defeats it. A village frontline-worker question needs competing community-worker roles, not an ANM against hospital specialists. Same grammatical category alone is insufficient. Replace alternatives dismissible by common sense; if three plausible alternatives cannot be supported, change the task or use another eligible unit.
+- **Answer-letter balance**: within each section each letter is correct in 20-30% of items, with no run of more than 3 identical letters and an irregular order. Inspect repeated cycles (such as BCAD repeated three times) as well as counts. Small sections use the closest feasible split; ascending numeric options take priority and unavoidable imbalance is reported. Balance letters by ordering the options **before** writing the answer key; after any reordering, rewrite that item's key heading, closest-distractor letter and explanation. A 6/7/7/8 split is fine. Never move a key to even out a count.
 
 ---
 
@@ -407,24 +407,24 @@ Source support applies to the **whole item**: decisive stem clues, correct answe
 
 SOURCE-ONLY ELIMINATION TEST: could a learner who knows only this PDF pick one best answer using E0-E2? A familiar entity absent from the PDF may be a distractor only if no outside fact is needed to rule it out. Apply this especially to contraindications, schedules, drugs, adverse effects, organisms, staging, thresholds, calculations and mechanisms.
 
-TRUTH-COMPATIBILITY GATE: the PDF is not assumed infallible. For dynamic, safety-relevant, unusually specific, annotation-dependent or suspicious facts (doses, schedules, cutoffs, contraindications, device principles, definitions, programme status, current guidelines), check against an authoritative source if you can browse, otherwise against well-established medical knowledge, and say which you used in the audit. Validation may approve, qualify, veto or force a rewrite; it may never supply a hidden step.
+TRUTH-COMPATIBILITY GATE: the PDF is not assumed infallible. For dynamic, safety-relevant, unusually specific, annotation-dependent or suspicious facts (doses, schedules, cutoffs, contraindications, device principles, definitions, programme status, current guidelines), start with established medical knowledge; use ChatGPT search for uncertain, dynamic or suspicious claims, prioritizing primary authorities, and say which checks used knowledge versus browsing in the audit. If required validation remains unresolved, hold or exclude that item and mark the draft provisional. Validation may approve, qualify, veto or force a rewrite; it may never supply a hidden step.
 
 - PDF-supported and defensible -> may be tested.
 - PDF-supported but contradicted/unsafe -> reject, or narrow to the shared true statement if the PDF still supports it.
 - True but absent from the PDF -> do not test.
 - Version/formulation/programme-dependent -> include the qualifier only if the PDF supports it; otherwise exclude.
-- Historically true, no longer current -> time-anchor if the PDF supports the historical frame; otherwise exclude.
+- Historically true, no longer current -> time-anchor if the PDF supports the historical frame; otherwise exclude. A 2021 COVID guideline cannot become a current recommendation, and an undated PDF cannot gain a 2021 qualifier from search alone. Replace or exclude the unit; external-knowledge mode requires explicit user authorization.
 - "According to the PDF" is never a loophole for teaching a false or unsafe claim, and never appears in a stem.
 
 If defending the answer or eliminating a distractor needs an unstated dose, cutoff, guideline, staging rule, contraindication or criterion, rewrite or reject the item. Tier 3 is inference, not hallucination.
 
-SCOPE GATE: a number or rule keeps the exact scope of its source row. If the PDF gives 1,200°C for incinerating **cytotoxic drugs**, the stem must say cytotoxic drugs, not "biomedical-waste incineration". Check the row heading, the population and the product before writing the stem. Neighbouring rows are separate facts: if the PDF gives dry heat as >185°C and the hot-air oven as >160°C, never merge them into "dry-heat (hot-air oven) sterilization at 160°C".
+SCOPE GATE: preserve the exact scope and modality of the source row in stems, distractors and explanations. A permitted route remains permitted; a conditional temperature does not become an exclusive mandatory route. A cytotoxic-drug incineration temperature must not imply incineration is the only disposal method; a valid sharps shredding/mutilation route must not erase an encapsulation alternative. If the PDF gives 1,200°C for incinerating **cytotoxic drugs**, the stem must say cytotoxic drugs, not "biomedical-waste incineration". Check the row heading, the population and the product before writing the stem. Neighbouring rows are separate facts: if the PDF gives dry heat as >185°C and the hot-air oven as >160°C, never merge them into "dry-heat (hot-air oven) sterilization at 160°C".
 
 OUTCOME GATE: when the PDF claims a clinical benefit ("early breastfeeding reduces postpartum haemorrhage"), check that the evidence supports the outcome itself. If only the mechanism is established (suckling -> oxytocin -> uterine contraction), test the mechanism and do not key the unproven outcome.
 
 REWRITE GATE: when a gate forces a rewrite, the new version must pass the source gates again. Fix a flawed item with **another fact the PDF states**, never with an outside one. A breastfeeding item whose "scarce vitamin" stem admitted two answers was once fixed by asking for "daily 400 IU vitamin D": the notes give no dose, so the fix was itself E3. The PDF's own ranking ("most deficient: D; second: K") was the right fix. If the PDF has no fact that repairs the item, drop it.
 
-CALCULATION GATE: a calculation is allowed only when the PDF states or directly supports the formula, every variable, any weighting or conversion factor, and the interpretation. Give the learner every number they need in the stem. Never supply an omitted disability weight, correction factor, denominator or cutoff from memory.
+CALCULATION GATE: a calculation is allowed only when the PDF states or directly supports the formula, every variable, any weighting or conversion factor, and any interpretation actually asked for. If a formula alone selects the answer, adding unused interpretation to the explanation does not make two steps. Give the learner every number they need in the stem. Never supply an omitted disability weight, correction factor, denominator or cutoff from memory.
 
 ---
 
@@ -454,32 +454,24 @@ Question DNA = concept + direction tested + stem archetype + correct-answer rela
 
 A pasted bank or ledger from another session is calibration input only: it may reveal uncovered concepts, archetypes or missed visuals, never examinable facts. Verify and remap its page numbers against this PDF before relying on them; an item without a verifiable page still belongs in the exclusion set.
 
-Reject a candidate when:
+Reject a candidate when it repeats the same deciding relationship, including its inverse, negative or cosmetic rewrite. Changing age, numbers, wording or answer direction does not create a new unit. Compare competency and discriminator, rather than topic names, answer strings or option overlap alone.
 
-1. knowing an existing answer directly reveals the new answer;
-2. it asks the opposite, exception, negative or converse of the same relationship;
-3. the same option set works with minor edits;
-4. the disease -> fact relationship is unchanged despite a reversed stem;
-5. only age, sex, numbers, chronology or presentation changed cosmetically;
-6. a learner who memorized the old item without understanding the topic could answer the new one.
+BANK COHERENCE. Preserve full source-supported coverage across all sections while checking semantic duplication and cues:
 
-BANK COHERENCE. The app pools every section and draws fresh mixed mocks from the whole bank, so **any two items may appear together**. Every rule below applies across all sections, not only within one:
+- Give each distinct relationship a specific **micro-fact key**, for example `vector: malaria -> Anopheles` rather than `vector table`. Merge genuine duplicates at plan time.
+- Distinct table rows, relationships and competencies remain eligible when topic, answer or lead-in repeats. Pattern reuse is not semantic duplication.
+- Shared options are allowed when plausible and each item tests a distinct relationship. Inspect shared sets for duplication and clues; there is no global three-option overlap ban.
+- A figure may support different competencies only when each item needs its own observation or inference; identification and its cosmetic inverse remain duplicates.
+- Explanations may contrast related PDF-supported facts, including facts tested elsewhere. Record related cue groups in the DNA ledger. Avoid a stem/option explicitly revealing another item's deciding fact in the same assessment: rephrase the cue or separate related items during mock selection. Explanation overlap alone does not remove eligible coverage.
+- Topic breadth and pattern variety guide section arrangement and mock selection relative to topics available; they impose no chapter or pattern caps on the full bank.
 
-- No stem, option **or teaching explanation** may contain another item's answer or deciding fact. Explanations count because practice mode shows them straight after each answer: "800 kcal, higher than the 600 kcal for pregnant women" gives away the pregnant-women item. For example, a calculation that states "vitamin A solution 1 lakh IU/mL" gives away a recall item asking that strength. State the number differently, or drop one of the two.
-- No two items on the same micro-fact, even from different directions (e.g. "carrier holds 16-20 vials" and "which device for 16-20 vials").
-- Do not reuse an option set: two items must not share three or more options.
-- One table row is one micro-fact, whichever item it is asked from. "Metallic implants -> blue" and "contaminated glass vials -> blue" test the same row; "LBW is below 2.5 kg" and "2.4 kg, above the 10th centile -> LBW" test the same cutoff.
-- Use each figure once. Two items on the same symbol or photograph (identify it; act on it) count as one micro-fact.
-- **Pattern cap across the bank:** at most 2 items per pattern on one table or topic. Seven "disease -> vector" items from one vector table, or three "unit of light" items, break it: pick the two highest-yield rows and leave the rest.
-- Give every unit a short **micro-fact key** (for example `BMW colour: blue row`, `light units`, `vector table`, `water hardness`) in the UNIT INVENTORY and the DNA ledger. Two units with the same key, or the same pattern past its cap, are merged or cut **at plan time**, so sections keep their planned size.
-
-Reusing a topic needs a different competency (identification -> management, mechanism -> expected finding, investigation -> interpretation, equipment -> operational decision, schedule recall -> patient-specific selection). Two items may share a disease only if they test different competencies. A dense page may yield several items with different DNA; a thin page may yield none.
+A dense page may yield several items with distinct DNA; a thin page may yield none. Related items still pass whole-item source and truth gates independently.
 
 ---
 
 # 8. THREE TIERS
 
-Assign the tier by the **minimum cognitive operations needed**, not by stem length. A wrapper, long stem or calculation does not raise a tier. After writing each item, challenge it: if one memorized fact solves a Tier 2/3 item, downgrade it; if a Tier 3 item needs an unstated third fact, reject it as E3.
+Assign the tier by the **minimum cognitive operations needed**, not by stem length. A wrapper, long stem or calculation does not raise a tier. After writing each item, solve it by the shortest valid route, ignoring the intended rationale. Literal cues such as "lost to follow-up" when asking attrition bias, or "naturally occurring intervention" when asking natural experiment, can collapse the task into recognition. Rephrase with source-supported framing or downgrade honestly. Challenge it: if one memorized fact solves a Tier 2/3 item, downgrade it; if a Tier 3 item needs an unstated third fact, reject it as E3.
 
 **TIER 1 - Direct / recognition** ("I studied this.")
 Mainly E0; one source relationship answers it; direct fact, classic presentation, straightforward image identification, association, or a clearly taught treatment/investigation. Plausible same-category distractors, no artificial trick.
@@ -495,35 +487,42 @@ Field and programme subjects (Community Medicine, Forensic Medicine) follow the 
 **TIER 3 - Compressed two-step application** ("The answer was not a sentence in my notes, but the concepts to derive it were.")
 E1-E2; two distinct source-supported propositions, both necessary, **both recalled by the learner rather than printed in the stem**; concise stem. Forms: finding -> diagnosis -> expected finding; diagnosis -> next investigation/management; drug action -> change -> adverse effect; lesion -> structure -> deficit; image -> diagnosis -> next step; two PDF concepts -> necessary inference. For each E2 item record Fact A (page X), Fact B (page Y) and the conclusion; reject if A alone answers it, B is decorative, or an unstated Fact C is needed.
 
+**Verify necessity against the actual options.** Ask whether recalling Fact A alone or Fact B alone selects the keyed option, including by elimination. If either does, lower the tier or rewrite. A formula plus interpretation is not two-step when only one option contains the calculated number. A drug name plus its routine injection interval is one schedule lookup; a cohort description plus relative risk can be one directly taught association. Record a brief educational basis, not private reasoning, for every final tier. Every Tier 2 needs its competing possibility and decisive distinction; every Tier 3 needs both source facts/pages and the necessity result.
+
 HARD LIMIT: Tier 3 is the hardest source-supported FMGE-style item a well-prepared candidate can solve in about a minute. Not a long USMLE case, not super-specialty, not a three-guideline memory test. Prefer two hops; three only when every component is clearly taught.
 
 ---
 
 # 9. BANK SIZE, SECTIONS AND MIX
 
-**The PDF sets the size, but only its FMGE-relevant content counts.** There is no default question count. Do not start from a round number such as 20, 25, 50 or 100 and fill it. Notes contain far more testable facts than FMGE asks about; a bank that tests every one is a bank of trivia. Instead:
+**The PDF sets the size, but only its FMGE-relevant content counts.** The full bank has no fixed minimum, maximum or compulsory total. Its size grows with the distinct eligible content across all accessible pages, tables, annotations and visuals. Page count is a coverage input, not a one-question-per-page rule or a questions-per-page quota. There is no default question count. Do not start from a round number such as 20, 25, 50 or 100 and fill it. Preserve every distinct High- and Medium-yield unit that passes the gates; exclude Low-yield trivia with a reason. A comprehensive bank and a broad timed mock serve different purposes. Instead:
 
 1. Build the **UNIT INVENTORY** (section 12, Part 1): a numbered list of distinct examinable units. A unit is one fact, relationship, table row, visual or two-fact link that can carry an item passing every gate in this prompt. Merge units that would test the same micro-fact; drop units that fail a gate (and say which gate).
-2. **Name the FMGE pattern for every unit**: the gallery item (G number, section 1B) or pattern-library lead-in (section 1C) that a question on it would follow. **If you cannot name one, FMGE does not ask that kind of fact: the unit is Low yield.**
+2. **Name the FMGE pattern for every unit**: the gallery item (G number, section 1B) or pattern-library lead-in (section 1C) that a question on it would follow. The gallery/library is illustrative, not exhaustive: a missing exact match does not make a standard examinable unit Low yield. Name the nearest authentic lead-in and justify an unfamiliar form.
 3. **Grade the yield** of every unit:
    - **High**: the chapter core FMGE asks repeatedly (see "Where the questions fall", section 1A): definitions and classifications, "most common" / "of choice", classic signs, associations and eponyms, standard formulas and indices, stable schedules and programme components, landmark facts, classic images and instruments.
    - **Medium**: standard textbook detail a well-prepared candidate is expected to know, especially the neighbouring row or look-alike that FMGE uses as the close distractor.
    - **Low** (never generated): institute-specific mnemonics and teacher remarks; one-year survey figures (a single NFHS/SRS value, a current count); minor dates, committee members and sequence trivia; brand names and packaging detail; state or local schemes; facts under revision; super-specialty or NEET-PG-only depth; any fact that only this PDF would ask about.
-4. **Apply the topic budget.** Follow FMGE's breadth: across the bank, no chapter-level topic gets more than about 8 items per 50, and no single pattern repeats within a topic more than twice (at most two "launched in", two schedule-row or two "most common" items on the same programme, disease or table). Year and date items stay under about 10% of the bank; calculations about 5-10% where the PDF supports them. A PDF that is mostly one chapter therefore gives a smaller bank, not a deeper one.
-5. **N = all High units + the Medium units that fit the budget.** Read N off the list; do not round it. If N comes out at exactly 50, recount the inventory before using it.
+4. **Separate coverage from selection.** Retain distinct eligible table rows and competencies. Spread topics/forms across sections where feasible; a one-chapter PDF can support a substantial bank. Breadth, date and calculation proportions guide mock selection within available topics, never removal of valid bank units.
+5. **N = all distinct High + Medium units passing every gate.** Read N off the accepted inventory; do not force 100 or another round count. A round count is allowed when the inventory naturally produces it.
 6. Never pad (padding produces stated premises, glued pairs and joke distractors). Never generate a Low unit to reach a size.
 
-**Sections.** A real FMGE section is at most 50 questions in 50 minutes, so 50 is a **ceiling per section, not a target**:
+**Sections.** A real FMGE section is at most 50 questions in 50 minutes, so 50 is a **ceiling per timed practice section, not a bank limit or target**. Create as many sections as the content requires; no eligible unit is removed to fit a section or reply:
 
 - N ≤ 50: one section of N questions.
 - N > 50: k = N / 50 rounded up sections of near-equal size (e.g. 64 -> 32 / 32, 120 -> 40 / 40 / 40, 137 -> 46 / 46 / 45).
 - Each section samples the whole PDF: spread every topic's units across the sections in proportion, as a real section mixes topics. Do not make one section per chapter.
-- Each section on its own meets the tier, stem-form, negative-stem and answer-letter targets, so it works as a stand-alone timed mock (1 minute per question).
+- Arrange sections toward the mix targets within available units. Report honest deviations rather than discarding coverage or inflating tiers; timed mocks can later sample the full bank (1 minute per question).
 - Number questions from Q1 in every section.
+- **Published layouts.** When extending a bank whose sections are already published (live bank IDs, quiz names or links), keep the existing sections and append new items to them if every section stays at or below 50; add a new section only when one would exceed 50. Record the kept layout as a deviation from the k = N / 50 rule.
 
 **Stop after the plan.** Deliver Part 1 (ingestion report, unit inventory, bank plan) and then write `PLAN READY — reply "go" to generate Section 1`. Generate no questions until I reply. I may reply with changes (a different count, topics to drop) instead.
 
 If I ask for a specific count or a single section, follow that instead and say what the PDF could have supported.
+
+**Coverage reconciliation.** Every inventory unit ends as represented (question ID), merged (equivalent unit/question ID), excluded (specific failed gate), or unresolved (missing evidence). A comprehensive bank has no eligible unit omitted for budget, chapter balance, coherence or reply length; arrange or continue sections instead. When the user explicitly requests a bounded mock, label it as a selection and list eligible units set aside separately from exclusions. A mock's good topic spread is not evidence that the full PDF is covered.
+
+**Page sweep.** Unit-level reconciliation cannot catch units that were never inventoried. List every accessible page once: the inventory unit numbers it produced, or one reason it produced none (cover/index, solved questions only, gallery duplicate, Low yield only, unreadable, content fully merged into p.X). A content page with no units and no reason is an incomplete inventory. Then state the count equation: High + Medium units = represented + merged + excluded + unresolved, and N = represented. Both must balance before PLAN READY and again before BANK COMPLETE.
 
 **Tier targets per section** (a training design, not an official FMGE difficulty distribution):
 
@@ -532,26 +531,35 @@ If I ask for a specific count or a single section, follow that instead and say w
 
 If the PDF cannot sustain the target honestly, deliver the honest counts and say so. Never inflate a tier; a real Tier 3 needs two facts the learner recalls, not facts printed in the stem. (For example, a Community Medicine section tiered honestly may come out near 46% / 38% / 16%.)
 
-Stem-form target: use the PDF subject's row in section 1A. For a mixed-subject PDF, use the whole-paper mix: about 30% one-liners, 10% longer direct, 45% vignettes and 15-20% image-led. Image items only when the PDF has usable figures. Stay within about 15 percentage points of the target, and report the actual mix in the audit.
+Stem-form target: use the PDF subject's row in section 1A. For a mixed-subject PDF, use the whole-paper mix: about 30% one-liners, 10% longer direct, 45% vignettes and 15-20% image-led. Image items only when the PDF has usable figures. Aim within about 15 percentage points when the source supports it, and report the actual mix and honest deviations in the audit.
 
 Task target: in a clinical subject, diagnosis is the most common task, then management and investigation. In Community Medicine, Physiology, Biochemistry and Anaesthesiology, direct fact recall dominates. Cover mechanism/consequence, anatomy/localization, drug/ADR/antidote and calculation/study design where the PDF supports them. Do not force a quota the source cannot support.
 
 ---
 
-# 10. IMAGE ITEMS
+# 10. IMAGE REQUIREMENTS — TEXT HANDOFF
 
-Do not ignore the PDF's diagrams, photographs, radiographs, specimens, instruments, charts, curves and tables. For each usable visual decide whether it supports: direct identification; finding -> diagnosis; image + clue -> diagnosis; image -> investigation/management; marked structure -> function/deficit; graph/waveform -> interpretation. Tier 1 usually uses the first; Tier 2 the middle; Tier 3 the last three.
+Identify source-supported image questions; return a text placeholder and an asset requirement for each. Image production belongs to the paper-creator pass. A placeholder is a planned image item, not a delivered exam asset.
 
-An image item uses the **real figure**, which will be cropped from the PDF after you finish. Mark it on its own line directly under the stem, before the options:
+For each accepted visual, put this metadata between the stem and options:
 
-    **Image source:** p.<viewer page> | <where the figure is on the page and what it is, e.g. "lower-left photo, vaccine carrier with ice packs">
+    **Image source:** p.<viewer page> | <precise figure location; asset pending>
+
+That line is the placeholder. Keep production details outside the learner question, in an `# IMAGE REQUIREMENTS` table after the bank's ledger:
+
+| Asset ID | Question ID | PDF page/location | Required visual observation | Preparation | Mask/remove | Verification |
+|---|---|---|---|---|---|---|
+| S1-Q12-image | S1-Q12 | p.34, lower-left instrument photo | Shape needed to distinguish the instrument | Crop source | Answer-bearing caption | Required anatomy intact, answer hidden |
 
 Rules:
 
-- The stem says "The image shown…", "The instrument shown…", "The curve shown…". It must not describe the finding in words, because that gives the answer away.
-- The figure must contain the examinable information and must not have the answer printed on it (label, caption, arrow text). If the only usable figure is labelled with the answer, say in the audit that it needs masking, or skip it.
-- If the figure is too small, unclear or ambiguous on the rendered page, do not use it.
-- Never refer to an image that is not marked with an `**Image source:**` line.
+- Inspect the rendered source before accepting the visual relationship. If only extracted text is accessible, record an unresolved candidate with its page in the handoff; keep it outside accepted question counts until source review resolves it.
+- Hide-image test: the stem and options alone must not select the answer. Record the necessary observation in the table. If a John Snow stem already describes the natural experiment, remove the image requirement or rewrite around a necessary map observation.
+- Write the stem as an exam question referring to the image. Keep the deciding visual finding in the planned image, not spelled out in the stem.
+- Prefer the original figure. Request a faithful redraw only for a source-supported schematic, graph or table whose necessary data and relationships can be specified exactly. Clinical photographs, radiology, pathology and instrument identification require an authentic source image; a generated approximation cannot establish the correct finding.
+- Specify any answer labels/captions to mask and features to preserve. If unreadable, ambiguous or impossible to prepare without destroying the tested feature, hold the candidate or replace with another valid unit.
+- Return no invented image URLs, file paths, crops or completed-image claims. Keep any supplied existing asset metadata in the handoff for pass 3 to verify; first-pass questions carry the source placeholder only.
+- Assign cognitive tiers by section 8's necessary steps. Visual format alone does not determine a tier.
 
 ---
 
@@ -560,13 +568,13 @@ Rules:
 1. **Ingest** the whole PDF (section 6). If pages remain unprocessed, stop and report them before generating.
 2. **Exclusion map** (section 7).
 3. **Coverage matrix**: topics, pages, concept density, contrasts, visuals, handwritten notes, solved-question contamination, and Tier 1/2/3 opportunities. Do not generate one question per page. For each major topic check which distinct competencies it supports: identify, distinguish, calculate, interpret, act, anticipate a consequence, select equipment, choose an investigation, choose management. Allocate by concept density and medical relevance; topic-name coverage alone is not enough. Preserve the PDF's conceptual level: an operational public-health fact becomes an operational question, a table tests its relationship, a visual becomes an image item. Do not turn every fact into a tertiary-care vignette.
-4. **Size and plan the bank** (section 9): write the unit inventory with an FMGE pattern and yield for every unit, apply the topic budget, take N from it, fix the sections, allocate units to sections, write the BANK PLAN, and stop for my "go".
+4. **Size and plan the bank** (section 9): write the unit inventory with an FMGE pattern and yield for every unit, retain every distinct eligible High/Medium unit, take N from it, fix the sections, allocate units to sections, write the BANK PLAN, and stop for my "go".
 5. **Calibrate**: before drafting, note which gallery items (section 1B) match this subject and level, and which patterns (section 1C) the PDF's facts fit.
 6. **Candidates**, one section at a time: for each inventory unit allocated to the section, draft one or two candidate DNAs (two where the unit supports different directions) before writing full items; for each note page(s), concept, competency, tier, archetype, answer relationship, closest distractor and discriminator. If a unit yields no candidate that passes QC, replace it with an unused High or Medium unit from the inventory, or deliver the section one item short and say so; never invent a filler item.
 7. **Adversarial QC** of every candidate. Reject or rewrite anything that fails:
    1. stem rules (section 3) - stand-alone stem, no stated premise, "shown" only with an image, population/product/version named, length;
    2. option rules (section 4) - including ascending numbers and one relationship per item;
-   3. semantic exclusion, memory-leak and block-coherence tests (no stem gives away another item's answer; no shared option sets; no repeated micro-fact);
+   3. semantic exclusion and coherence tests (no repeated deciding relationship; record related cue groups and check stem/option giveaways within the assessment);
    4. whole-item E0-E2 support and the source-only elimination test;
    5. one clearly best answer;
    6. the tier challenge; for E2, both facts necessary;
@@ -574,11 +582,12 @@ Rules:
    8. handwriting, spatial-relation and conflict gates;
    9. truth-compatibility gate;
    10. medical (not linguistic) difficulty; FMGE level, not NEET-PG/super-specialty;
-   11. image item has a real, answer-free figure;
+   11. image candidate has inspected source support, an essential visual observation and a complete placeholder/asset requirement;
    12. key integrity: re-read each key heading against the options exactly as printed. The letter matches the option text, the closest-distractor letter and text match, and the explanation argues for the keyed option, not another one;
    13. rewrite re-check: any item rewritten during QC passes items 1-12 again, with the new fact cited to a page;
    14. explanation hygiene: no "listed", "specified", "here", "the notes/handout/page", and no editorial caveat ("should not be presented as…", "excluded from the options", "this does not make…"). Truth-gate caveats go in the audit's Truth validation line.
-8. **Write** the accepted items, recheck them against the gallery level, and deliver the section. Then the next section, against the ledger of every earlier one: before drafting a section, list the micro-fact keys and pattern counts already used; after writing it, confirm no key repeats and no pattern passed its cap. Report any collision in the audit instead of shipping it.
+8. **Reconcile before delivery.** Check every final item's shortest solution, all three distractors and any image dependency; reconcile inventory coverage with IDs or specific exclusion/merge reasons. Rebuild counts from final items, not the plan or original audit. A local builder/lint pass cannot certify source truth, cognitive tier, distractor plausibility, essential images or full coverage.
+9. **Write** the accepted items, recheck them against the gallery level, and deliver the section. Then the next section, against the ledger of every earlier one: before drafting a section, list the micro-fact keys and pattern counts already used; after writing it, check repeated deciding relationships and assessment cues. Record related cue groups and unresolved collisions; pattern counts describe variety, not a cap.
 
 Do not expose private chain-of-thought; give concise teaching reasoning only.
 
@@ -614,11 +623,14 @@ Deliver the parts in this order. Use these headings **exactly**. Do not add answ
 Rejected units (failed a gate): <unit — gate>, one per line, or none.
 
 # BANK PLAN
-- Units: High <n> · Medium <n> (used <n>, cut by budget <n>) · Low <n> (not used)
-- Items per topic, against the budget:
+- Units: High <n> · Medium <n> (used <n>, excluded by gate <n>) · Low <n> (not used)
+- Items per topic; section spread and source-limited deviations:
 - Bank size N: <number of rows marked Use = yes>
 - Sections: <k> (<size of each>)
 - Per section: topic spread, and Tier 1 / 2 / 3 targets
+- Coverage reconciliation: represented / merged / excluded / unresolved units; explicitly requested mock-only units set aside, with IDs and reasons
+- Page sweep: every accessible page -> unit numbers, or the reason it has none
+- Count equation: High + Medium <n> = represented <n> + merged <n> + excluded <n> + unresolved <n>; N = represented
 
 PLAN READY — reply "go" to generate Section 1
 
@@ -679,7 +691,7 @@ Format rules for the question section:
 **Source:** PDF p.<n>[, p.<m>] | E0/E1/E2 | Printed/Handwritten/Table/Diagram/Multi-page
 **Closest distractor:** <option letter and text> — defeated by <discriminator>, p.<n>
 **Concept link:** <Tier 3 only: Fact A (p.X) + Fact B (p.Y) -> conclusion>
-<Teaching explanation: 1-3 sentences a student reads after answering. State why the answer is right and, in one clause, why the closest distractor is wrong. Source-supported facts only. No page numbers, no "the notes/PDF/source", no evidence grades.>
+<Teaching explanation: 1-3 sentences a student reads after answering. State why the answer is right and, in one clause, why the closest distractor is wrong. Source-supported facts only; every number, percentage, range or ranking in it must appear on a cited page, otherwise state it qualitatively ("most cases", not an invented 70-85%). No page numbers, no "the notes/PDF/source", no evidence grades.>
 ```
 
 Answer-key rules:
@@ -688,34 +700,40 @@ Answer-key rules:
 - `**Source:**` must contain at least one `p.<n>` viewer page for the answer, plus the page that defeats the closest distractor if different.
 - The teaching explanation is the only plain paragraph. It is shown to students, so write it as teaching, not as an audit note. Never write "listed", "specified", "here" or "the notes/handout"; state the fact itself ("Hydroclaving operates at about 132°C", not "Hydroclaving is listed at 132°C").
 - Every fact in the explanation needs the same E0-E2 support as the answer. Validation facts (a guideline's other temperature, a dose from outside the notes) go in the audit, not the explanation.
-- No citation markers, links or tool artefacts (for example `:contentReference[...]`, `【…】`) anywhere in the reply. Validation sources are named in words in the audit. Do not add textbook enrichment, external mechanisms, timing rules or guidelines merely because they are true.
+- No citation markers or tool artefacts (for example `:contentReference[...]`, `【…】`) anywhere in the reply. Public primary-source URLs are allowed in the audit/review report only; no links or citation artefacts in learner stems, options or teaching explanations. Do not add textbook enrichment, external mechanisms, timing rules or guidelines merely because they are true.
 
 ## Part 3
 
 ```
 # FINAL PATTERN AUDIT
 - Total; Tier 1 / 2 / 3:
-- Stem form: one-liner / longer direct / vignette / image-led (count only items with an **Image source:** line as image-led), next to the section 1A target for this subject:
+- Stem form: one-liner / longer direct / vignette / image-led (image metadata AND a passed image-dependence test are required), next to the section 1A target for this subject:
 - Lead-in forms used (direct question / which of the following / diagnosis / next step / other):
 - Task modes: diagnosis / investigation / management / mechanism / anatomy / drug-ADR / calculation:
 - Correct-option distribution A / B / C / D:
 - Items where the correct option is the unique longest:
 - Negative (EXCEPT/NOT) stems:
 - Subjects (for multi-subject PDFs) vs blueprint:
-- Source pages represented:
+- Source pages represented (coverage, not a claim every fact on those pages was validated):
+- Source checks: items checked / unresolved, with IDs and pages needed:
+- Editorial checks: every item tier-checked and all three distractors checked; retiered/rewritten IDs; for each Tier 2 the competing option/discriminator, and for each Tier 3 both necessary facts/pages and option-bypass result:
+- Image checks: each image ID, necessary visual observation and hide-image result:
+- Coverage reconciliation: represented / merged / excluded / unresolved units and any explicitly requested mock selection:
+- Related cue groups and assessment-separation needs:
+- Readiness: source/truth / editorial / coverage / format checks each pass, fail or unresolved; overall ready / provisional:
 - Truth validation: which facts were checked, and against what (browsing or established knowledge):
 - Notable rejections: up to 10, one line each (concept — reason)
 - Deviations from the target mix, and why:
-- Level check: for 3 generated items, one each from Tiers 1-3, name the closest gallery item (G number) and say in one line why the level matches:
-- Images needing answer masking:
+- Level check: sample one generated item from each populated tier, name the closest gallery form (G number) and explain why section 8 supports its final tier; mark empty tiers as absent:
+- Image asset status: pending pass 3; requirements and answer masking by question ID:
 
 # QUESTION-DNA LEDGER
-| Q | Tier | Concept | Micro-fact key | Direction tested | Archetype | Answer relationship | Pages |
-|---|---|---|---|---|---|---|---|
-| 1 | 1 | … | … | … | … | … | … |
+| Q | Tier | Concept | Micro-fact key | Direction tested | Archetype | Answer relationship | Pages | Related cue group |
+|---|---|---|---|---|---|---|---|---|
+| S1-Q1 | 1 | … | … | … | … | … | … | … |
 ```
 
-Audit rules: the audit covers the section just delivered; report only counts you can read off it. Do not print "0 ambiguous questions" or any other pass claim you did not actually check item by item. The DNA ledger is how later sections and later blocks avoid repeats, so fill every row; label rows S<s>-Q<n>.
+Audit rules: rebuild every count and ledger row from FINAL items after all edits, including retiering, option reordering, replacement and removal. Check answer-letter cycles as well as totals. Mark text ready only when all required source/truth, editorial, coverage and format checks pass; otherwise provisional with IDs and remaining work. Report image assets pending separately; text readiness does not mean a paper is ready to administer. For a requested mock selection, readiness applies to that selection and full-bank coverage is separately reported. A source-only review, balanced keys or zero lint errors cannot establish editorial readiness. The audit covers the section just delivered; report only counts you can read off it. Do not print "0 ambiguous questions" or any other pass claim you did not actually check item by item. The DNA ledger is how later sections and later blocks avoid repeats, so fill every row; label rows S<s>-Q<n>.
 
 DELIVERY: if the reply would be cut off, stop at the end of a complete question or answer-key entry and write `CONTINUE FROM Q<n>`. When I reply "continue", resume with exactly the next item and the same headings. Do not restart or renumber.
 
@@ -731,19 +749,19 @@ If I request SIMULATION MODE: produce the same output contract (tier headings ar
 
 # 14. DEFAULT SETTINGS
 
-Target: FMGE · four-option single best answer · bank size = High + in-budget Medium units of the UNIT INVENTORY (no default, no padding, no round numbers, no Low-yield trivia) · topic budget ~8 per 50 and ≤2 of one pattern per topic · plan first, then STOP for "go" · sections of at most 50 (a ceiling, not a target) · tier mix per section 30/40/30% (recall-heavy subjects ~40/40/20%)
-Direct questions: PRESERVE · short clinical framing: WHERE IT DISCRIMINATES · image items: REAL FIGURES WHEN THE PDF SUPPORTS
+Target: FMGE · four-option single best answer · bank size = all distinct eligible High + Medium units of the UNIT INVENTORY (no forced count, no padding, Low excluded with reason) · topic breadth and pattern variety guide mock selection within available topics · plan first, then STOP for "go" · sections of at most 50 (a ceiling, not a target) · tier mix per section 30/40/30% (recall-heavy subjects ~40/40/20%)
+Direct questions: PRESERVE · short clinical framing: WHERE IT DISCRIMINATES · image items: SOURCE-SUPPORTED PLACEHOLDERS AND ASSET REQUIREMENTS
 Stand-alone stems (no reference to notes/source): REQUIRED · stated premises in stems: FORBIDDEN · population/product/version named when the answer depends on it: REQUIRED
 Stem form: MATCH THE SUBJECT PROFILE (section 1A) · negatives ~5% · stems at or under ~55 words
-Bank coherence across ALL sections (no give-aways in stems, options or explanations; no shared option sets; one item per micro-fact key and per figure; ≤2 items per pattern): REQUIRED
+Bank coherence across ALL sections (distinct deciding relationships; related cue groups recorded; stem/option giveaways avoided within assessments; valid table rows, shared options and explanation contrasts retained): REQUIRED
 Distractor truth check (ranges, synonyms, other real values, neighbouring terms) and scope/outcome gates: REQUIRED · key integrity re-read after any option reordering: REQUIRED
 Option parity, ascending numeric options and answer-letter balance: REQUIRED · all/none of the above and pair/combination items: FORBIDDEN
 Existing PDF solved questions and earlier blocks: STRICT SEMANTIC EXCLUSION
 Printed text, clear handwriting, tables, diagrams: USE
-External examinable knowledge: OFF · external truth validation: VETO/QUALIFY ONLY
+External examinable knowledge: OFF · external truth validation: VALIDATE/VETO/QUALIFY ONLY, never add a PDF-absent qualifier or fact
 Rendered-page authority for scanned PDFs · HIGH-confidence annotation linkage: REQUIRED
 Cross-page inference and Tier 3 two-step synthesis: ON · long-vignette inflation: OFF
 Answers beside questions: OFF · teaching explanations: ON · viewer-page citations: REQUIRED
 Audit: CHECKABLE COUNTS ONLY · hallucination tolerance: ZERO
 
-BEGIN: report the session capability check, ingest and map the complete accessible PDF, then generate. Do not write Question 1 until the concept ledger, exclusion set and coverage matrix are complete.
+BEGIN: report the session capability check, ingest and map the complete accessible PDF, then deliver Part 1 and stop for "go". Do not write Question 1 until the concept ledger, exclusion set and coverage matrix are complete.

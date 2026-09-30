@@ -286,6 +286,13 @@ def build_bank(
 		answer = answers[question["number"]]
 		question.update(answer)
 		correct_index = ord(question["correct_option"]) - ord("A")
+		key_text = clean_inline(answer["answer"]).replace("*", "").casefold()
+		option_text = clean_inline(question["options"][correct_index]).replace("*", "").casefold()
+		if key_text != option_text:
+			raise ValueError(
+				f"Q{question['number']}: answer-key text does not match option "
+				f"{question['correct_option']} ('{question['options'][correct_index]}')"
+			)
 		question["answer_label"] = question.pop("answer")
 		question["answer"] = question["options"][correct_index]
 
@@ -417,7 +424,10 @@ def lint_bank(bank: dict) -> tuple[list[str], list[str]]:
 	for index, (number, options) in enumerate(option_sets):
 		for other_number, other_options in option_sets[index + 1 :]:
 			if len(options & other_options) >= 3:
-				warnings.append(f"Q{number} and Q{other_number} share 3+ options; vary the option sets")
+				warnings.append(
+					f"Q{number} and Q{other_number} share 3+ options; check for duplicate relationships "
+					"or cues when selecting a mock"
+				)
 
 	total = len(questions)
 	if total:
@@ -430,6 +440,19 @@ def lint_bank(bank: dict) -> tuple[list[str], list[str]]:
 		run = re.search(r"([A-D])\1{3,}", keys)
 		if run:
 			warnings.append(f"answer key: {len(run.group(0))} consecutive '{run.group(1)}' answers")
+		for width in range(2, 5):
+			cycle = next(
+				(
+					keys[start : start + width]
+					for start in range(len(keys) - width * 3 + 1)
+					if len(set(keys[start : start + width])) > 1
+					and keys[start : start + width * 3] == keys[start : start + width] * 3
+				),
+				None,
+			)
+			if cycle:
+				warnings.append(f"answer key: '{cycle}' repeats at least 3 times in succession")
+				break
 
 		longest = 0
 		for q in questions:

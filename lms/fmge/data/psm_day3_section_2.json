@@ -4,8 +4,8 @@
   "title": "Day 3 PSM — Section 2",
   "subject": "Community Medicine",
   "description": "FMGE Community Medicine practice from the reviewed Day 3 PSM question bank, section 2 of 4.",
-  "expected_questions": 26,
-  "duration_minutes": 26,
+  "expected_questions": 32,
+  "duration_minutes": 32,
   "max_attempts": 1,
   "passing_percentage": 50,
   "show_answers": 0,
@@ -32,22 +32,22 @@
       "answer": "60 mg"
     },
     {
-      "id": "PSM-D3-S2-Q015",
-      "number": 15,
+      "id": "PSM-D3-S2-Q016",
+      "number": 16,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "Under Anganwadi supplementary nutrition norms, the daily energy allocation for a severely malnourished child aged 6–72 months is:",
+      "stem": "A woman has a positive VIA screening result. Which procedure can establish the cervical diagnosis?",
       "options": [
-        "300 kcal",
-        "450 kcal",
-        "600 kcal",
-        "800 kcal"
+        "Colposcopic punch biopsy",
+        "Repeat VIA",
+        "Pap smear",
+        "Colposcopy without biopsy"
       ],
-      "correct_option": "D",
-      "source": "PDF p.24 | E0 | Table",
-      "explanation": "A severely malnourished child aged 6–72 months receives 800 kcal daily under Anganwadi supplementary nutrition.",
-      "answer_label": "800 kcal",
-      "answer": "800 kcal"
+      "correct_option": "A",
+      "source": "PDF p.38, p.49 | E1 | Table/Multi-page",
+      "explanation": "VIA and cytology are screening procedures. A colposcopically directed punch biopsy provides diagnostic tissue.",
+      "answer_label": "Colposcopic punch biopsy",
+      "answer": "Colposcopic punch biopsy"
     },
     {
       "id": "PSM-D3-S2-Q003",
@@ -68,24 +68,6 @@
       "answer": "6 months"
     },
     {
-      "id": "PSM-D3-S2-Q016",
-      "number": 16,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "A woman has a positive VIA screening result. Which procedure can establish the cervical diagnosis?",
-      "options": [
-        "Colposcopic punch biopsy",
-        "Repeat VIA",
-        "Pap smear",
-        "Colposcopy without biopsy"
-      ],
-      "correct_option": "A",
-      "source": "PDF p.38, p.49 | E1 | Table/Multi-page",
-      "explanation": "VIA and cytology are screening procedures. A colposcopically directed punch biopsy provides diagnostic tissue.",
-      "answer_label": "Colposcopic punch biopsy",
-      "answer": "Colposcopic punch biopsy"
-    },
-    {
       "id": "PSM-D3-S2-Q004",
       "number": 4,
       "tier": 1,
@@ -102,42 +84,6 @@
       "explanation": "Anganwadi centres deliver ICDS services to mothers and children.",
       "answer_label": "Anganwadi centre",
       "answer": "Anganwadi centre"
-    },
-    {
-      "id": "PSM-D3-S2-Q017",
-      "number": 17,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "A test gives 60 true-negative and 20 false-negative results. Its negative predictive value is:",
-      "options": [
-        "50%",
-        "60%",
-        "75%",
-        "80%"
-      ],
-      "correct_option": "C",
-      "source": "PDF p.52 | E1 | Diagram",
-      "explanation": "Negative predictive value is TN/(TN + FN), so it is 60/80, or 75%.",
-      "answer_label": "75%",
-      "answer": "75%"
-    },
-    {
-      "id": "PSM-D3-S2-Q027",
-      "number": 27,
-      "tier": 3,
-      "difficulty": "hard",
-      "stem": "Well water remains hard after boiling. Which process can soften it?",
-      "options": [
-        "Further boiling",
-        "Permutit ion exchange",
-        "Chlorination",
-        "Sedimentation"
-      ],
-      "correct_option": "B",
-      "source": "PDF p.109 | E2 | Table",
-      "explanation": "Hardness that persists after boiling is permanent hardness from sulphates and chlorides. The permutit (base-exchange) process removes it.",
-      "answer_label": "Permutit ion exchange",
-      "answer": "Permutit ion exchange"
     },
     {
       "id": "PSM-D3-S2-Q005",
@@ -158,22 +104,40 @@
       "answer": "Hypoesthetic patch"
     },
     {
-      "id": "PSM-D3-S2-Q018",
-      "number": 18,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "A clinic visitor is offered a screening test during an unrelated appointment. This is:",
+      "id": "PSM-D3-S2-Q027",
+      "number": 27,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Well water remains hard after boiling. Which process can soften it?",
       "options": [
-        "Mass screening",
-        "Opportunistic screening",
-        "Selective screening",
-        "Prescriptive screening"
+        "Further boiling",
+        "Permutit ion exchange",
+        "Chlorination",
+        "Sedimentation"
       ],
       "correct_option": "B",
-      "source": "PDF p.41–42 | E1 | Table",
-      "explanation": "Screening offered because a person is already in contact with a service is opportunistic screening.",
-      "answer_label": "Opportunistic screening",
-      "answer": "Opportunistic screening"
+      "source": "PDF p.109 | E2 | Table",
+      "explanation": "Hardness that persists after boiling is permanent hardness from sulphates and chlorides. The permutit (base-exchange) process removes it.",
+      "answer_label": "Permutit ion exchange",
+      "answer": "Permutit ion exchange"
+    },
+    {
+      "id": "PSM-D3-S2-Q017",
+      "number": 17,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A test gives 60 true-negative and 20 false-negative results. Its negative predictive value is:",
+      "options": [
+        "50%",
+        "60%",
+        "75%",
+        "80%"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.52 | E1 | Diagram",
+      "explanation": "Negative predictive value is TN/(TN + FN), so it is 60/80, or 75%.",
+      "answer_label": "75%",
+      "answer": "75%"
     },
     {
       "id": "PSM-D3-S2-Q006",
@@ -192,24 +156,6 @@
       "explanation": "GeneXpert MTB/RIF detects *M. tuberculosis* and rifampicin resistance.",
       "answer_label": "Rifampicin",
       "answer": "Rifampicin"
-    },
-    {
-      "id": "PSM-D3-S2-Q019",
-      "number": 19,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "Liquid chemical biomedical waste requires which step before discharge?",
-      "options": [
-        "Chemical treatment",
-        "Dry-heat sterilization",
-        "Incineration",
-        "Deep burial"
-      ],
-      "correct_option": "A",
-      "source": "PDF p.70 | E0 | Table/Handwritten",
-      "explanation": "Liquid chemical biomedical waste is treated before it enters the drain.",
-      "answer_label": "Chemical treatment",
-      "answer": "Chemical treatment"
     },
     {
       "id": "PSM-D3-S2-Q007",
@@ -248,22 +194,22 @@
       "answer": "Hypochlorous acid"
     },
     {
-      "id": "PSM-D3-S2-Q020",
-      "number": 20,
+      "id": "PSM-D3-S2-Q018",
+      "number": 18,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "Solidification with cement and lime is used for large quantities of toxic biomedical waste. The process is:",
+      "stem": "A clinic visitor is offered a screening test during an unrelated appointment. This is:",
       "options": [
-        "Deep burial",
-        "Microwaving",
-        "Inertization",
-        "Autoclaving"
+        "Mass screening",
+        "Opportunistic screening",
+        "Selective screening",
+        "Prescriptive screening"
       ],
-      "correct_option": "C",
-      "source": "PDF p.73 | E0 | Diagram/Handwritten",
-      "explanation": "Inertization incorporates toxic waste into a solid mixture using cement and lime.",
-      "answer_label": "Inertization",
-      "answer": "Inertization"
+      "correct_option": "B",
+      "source": "PDF p.41–42 | E1 | Table",
+      "explanation": "Screening offered because a person is already in contact with a service is opportunistic screening.",
+      "answer_label": "Opportunistic screening",
+      "answer": "Opportunistic screening"
     },
     {
       "id": "PSM-D3-S2-Q009",
@@ -287,24 +233,6 @@
       "answer": "Air humidity"
     },
     {
-      "id": "PSM-D3-S2-Q022",
-      "number": 22,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "Microwave treatment of biomedical waste operates at a frequency of:",
-      "options": [
-        "60 MHz",
-        "1,210 MHz",
-        "1,800 MHz",
-        "2,450 MHz"
-      ],
-      "correct_option": "D",
-      "source": "PDF p.72 | E0 | Table/Handwritten",
-      "explanation": "Biomedical-waste microwave treatment operates at 2,450 MHz.",
-      "answer_label": "2,450 MHz",
-      "answer": "2,450 MHz"
-    },
-    {
       "id": "PSM-D3-S2-Q010",
       "number": 10,
       "tier": 1,
@@ -323,22 +251,22 @@
       "answer": "Lichens"
     },
     {
-      "id": "PSM-D3-S2-Q023",
-      "number": 23,
+      "id": "PSM-D3-S2-Q019",
+      "number": 19,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "All of the following describe green disaster triage EXCEPT:",
+      "stem": "Liquid chemical biomedical waste requires which step before discharge?",
       "options": [
-        "The patient can walk",
-        "Immediate resuscitation is required",
-        "The injuries are minor",
-        "Treatment has low urgency"
+        "Chemical treatment",
+        "Dry-heat sterilization",
+        "Incineration",
+        "Deep burial"
       ],
-      "correct_option": "B",
-      "source": "PDF p.91 | E0 | Table",
-      "explanation": "Green identifies ambulatory casualties with minor injuries. Immediate resuscitation places a casualty in a higher-priority category.",
-      "answer_label": "Immediate resuscitation is required",
-      "answer": "Immediate resuscitation is required"
+      "correct_option": "A",
+      "source": "PDF p.70 | E0 | Table/Handwritten",
+      "explanation": "Liquid chemical biomedical waste is treated before it enters the drain.",
+      "answer_label": "Chemical treatment",
+      "answer": "Chemical treatment"
     },
     {
       "id": "PSM-D3-S2-Q011",
@@ -359,42 +287,6 @@
       "answer": "*Escherichia coli*"
     },
     {
-      "id": "PSM-D3-S2-Q028",
-      "number": 28,
-      "tier": 3,
-      "difficulty": "hard",
-      "stem": "A programme targets the larvae of mosquitoes transmitting malaria. Which biological control agent is used?",
-      "options": [
-        "Gambusia fish",
-        "DDT",
-        "Pyrethrum",
-        "Malathion"
-      ],
-      "correct_option": "A",
-      "source": "PDF p.129–130 | E2 | Table/Multi-page",
-      "explanation": "*Anopheles* transmits malaria, and Gambusia fish eat its larvae. DDT, pyrethrum and malathion are chemical controls.",
-      "answer_label": "Gambusia fish",
-      "answer": "Gambusia fish"
-    },
-    {
-      "id": "PSM-D3-S2-Q024",
-      "number": 24,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "During war, minor injuries are given priority so personnel can return to duty. This is:",
-      "options": [
-        "Reverse triage",
-        "START triage",
-        "Routine disaster triage",
-        "Diagnostic screening"
-      ],
-      "correct_option": "A",
-      "source": "PDF p.91–92 | E1 | Multi-page",
-      "explanation": "Reverse triage can prioritize personnel with minor injuries for prompt return to duty.",
-      "answer_label": "Reverse triage",
-      "answer": "Reverse triage"
-    },
-    {
       "id": "PSM-D3-S2-Q012",
       "number": 12,
       "tier": 1,
@@ -413,22 +305,22 @@
       "answer": "Sanitary landfill"
     },
     {
-      "id": "PSM-D3-S2-Q025",
-      "number": 25,
-      "tier": 2,
-      "difficulty": "moderate",
-      "stem": "Under the persons-per-room overcrowding criterion, three rooms accommodate at most:",
+      "id": "PSM-D3-S2-Q028",
+      "number": 28,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A programme targets the larvae of mosquitoes transmitting malaria. Which biological control agent is used?",
       "options": [
-        "3 persons",
-        "4 persons",
-        "5 persons",
-        "6 persons"
+        "Gambusia fish",
+        "DDT",
+        "Pyrethrum",
+        "Malathion"
       ],
-      "correct_option": "C",
-      "source": "PDF p.120 | E1 | Table",
-      "explanation": "The persons-per-room table allows up to five people in a three-room dwelling.",
-      "answer_label": "5 persons",
-      "answer": "5 persons"
+      "correct_option": "A",
+      "source": "PDF p.129–130 | E2 | Table/Multi-page",
+      "explanation": "*Anopheles* transmits malaria, and Gambusia fish eat its larvae. DDT, pyrethrum and malathion are chemical controls.",
+      "answer_label": "Gambusia fish",
+      "answer": "Gambusia fish"
     },
     {
       "id": "PSM-D3-S2-Q013",
@@ -449,22 +341,22 @@
       "answer": "Sandfly"
     },
     {
-      "id": "PSM-D3-S2-Q026",
-      "number": 26,
+      "id": "PSM-D3-S2-Q020",
+      "number": 20,
       "tier": 2,
       "difficulty": "moderate",
-      "stem": "Solid waste originating from a household kitchen is termed:",
+      "stem": "Solidification with cement and lime is used for large quantities of toxic biomedical waste. The process is:",
       "options": [
-        "Sewage",
-        "Sullage",
-        "Industrial refuse",
-        "Garbage"
+        "Deep burial",
+        "Microwaving",
+        "Inertization",
+        "Autoclaving"
       ],
-      "correct_option": "D",
-      "source": "PDF p.123 | E0 | Table",
-      "explanation": "Kitchen-origin solid waste is termed garbage.",
-      "answer_label": "Garbage",
-      "answer": "Garbage"
+      "correct_option": "C",
+      "source": "PDF p.73 | E0 | Diagram/Handwritten",
+      "explanation": "Inertization incorporates toxic waste into a solid mixture using cement and lime.",
+      "answer_label": "Inertization",
+      "answer": "Inertization"
     },
     {
       "id": "PSM-D3-S2-Q014",
@@ -483,6 +375,222 @@
       "explanation": "Infant length rises from about 50 cm at birth to about 75 cm by one year.",
       "answer_label": "75 cm",
       "answer": "75 cm"
+    },
+    {
+      "id": "PSM-D3-S2-Q015",
+      "number": 15,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Under Anganwadi supplementary nutrition norms, the daily energy allocation for a severely malnourished child aged 6–72 months is:",
+      "options": [
+        "300 kcal",
+        "450 kcal",
+        "600 kcal",
+        "800 kcal"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.24 | E0 | Table",
+      "explanation": "A severely malnourished child aged 6–72 months receives 800 kcal daily under Anganwadi supplementary nutrition.",
+      "answer_label": "800 kcal",
+      "answer": "800 kcal"
+    },
+    {
+      "id": "PSM-D3-S2-Q023",
+      "number": 23,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "All of the following describe green disaster triage EXCEPT:",
+      "options": [
+        "The patient can walk",
+        "Immediate resuscitation is required",
+        "The injuries are minor",
+        "Treatment has low urgency"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.91 | E0 | Table",
+      "explanation": "Green identifies ambulatory casualties with minor injuries. Immediate resuscitation places a casualty in a higher-priority category.",
+      "answer_label": "Immediate resuscitation is required",
+      "answer": "Immediate resuscitation is required"
+    },
+    {
+      "id": "PSM-D3-S2-Q022",
+      "number": 22,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Microwave treatment of biomedical waste operates at a frequency of:",
+      "options": [
+        "60 MHz",
+        "1,210 MHz",
+        "1,800 MHz",
+        "2,450 MHz"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.72 | E0 | Table/Handwritten",
+      "explanation": "Biomedical-waste microwave treatment operates at 2,450 MHz.",
+      "answer_label": "2,450 MHz",
+      "answer": "2,450 MHz"
+    },
+    {
+      "id": "PSM-D3-S2-Q026",
+      "number": 26,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Solid waste originating from a household kitchen is termed:",
+      "options": [
+        "Sewage",
+        "Sullage",
+        "Industrial refuse",
+        "Garbage"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.123 | E0 | Table",
+      "explanation": "Kitchen-origin solid waste is termed garbage.",
+      "answer_label": "Garbage",
+      "answer": "Garbage"
+    },
+    {
+      "id": "PSM-D3-S2-Q029",
+      "number": 29,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The International Day for Disaster Risk Reduction is observed on:",
+      "options": [
+        "5 June",
+        "7 April",
+        "13 October",
+        "16 October"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.94 | E0 | Handwritten",
+      "explanation": "The International Day for Disaster Risk Reduction is observed on 13 October.",
+      "answer_label": "13 October",
+      "answer": "13 October"
+    },
+    {
+      "id": "PSM-D3-S2-Q024",
+      "number": 24,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "During war, minor injuries are given priority so personnel can return to duty. This is:",
+      "options": [
+        "Reverse triage",
+        "START triage",
+        "Routine disaster triage",
+        "Diagnostic screening"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.91–92 | E1 | Multi-page",
+      "explanation": "Reverse triage can prioritize personnel with minor injuries for prompt return to duty.",
+      "answer_label": "Reverse triage",
+      "answer": "Reverse triage"
+    },
+    {
+      "id": "PSM-D3-S2-Q030",
+      "number": 30,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Direct rupture of the tympanic membrane by a sudden noise occurs at about:",
+      "options": [
+        "90 dB",
+        "100 dB",
+        "120 dB",
+        "150–160 dB"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.119 | E0 | Handwritten",
+      "explanation": "A sudden noise of about 150–160 dB can rupture the tympanic membrane. Auditory fatigue begins around 90 dB.",
+      "answer_label": "150–160 dB",
+      "answer": "150–160 dB"
+    },
+    {
+      "id": "PSM-D3-S2-Q034",
+      "number": 34,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A 15-year-old boy has a mental age of 9 years. He is best classified as having:",
+      "options": [
+        "Severe intellectual disability",
+        "Moderate intellectual disability",
+        "Mild intellectual disability",
+        "Borderline intellectual functioning"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.21 | E2 | Table/Handwritten",
+      "explanation": "IQ \\(=9/15\\times100=60\\), which lies in the mild band of 50–69.",
+      "answer_label": "Mild intellectual disability",
+      "answer": "Mild intellectual disability"
+    },
+    {
+      "id": "PSM-D3-S2-Q031",
+      "number": 31,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The maximum number of students recommended per classroom is:",
+      "options": [
+        "25",
+        "30",
+        "35",
+        "40"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.20 | E0 | Handwritten",
+      "explanation": "A classroom should hold no more than 40 students.",
+      "answer_label": "40",
+      "answer": "40"
+    },
+    {
+      "id": "PSM-D3-S2-Q032",
+      "number": 32,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "After the Chernobyl accident, the radionuclide chiefly responsible for the rise in childhood thyroid cancer was:",
+      "options": [
+        "Iodine-131",
+        "Caesium-137",
+        "Strontium-90",
+        "Radon-222"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.121 | E0 | Handwritten",
+      "explanation": "Radioactive iodine-131 concentrates in the thyroid. Childhood exposure after Chernobyl increased thyroid cancer.",
+      "answer_label": "Iodine-131",
+      "answer": "Iodine-131"
+    },
+    {
+      "id": "PSM-D3-S2-Q025",
+      "number": 25,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Under the persons-per-room overcrowding criterion, three rooms accommodate at most:",
+      "options": [
+        "3 persons",
+        "4 persons",
+        "5 persons",
+        "6 persons"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.120 | E1 | Table",
+      "explanation": "The persons-per-room table allows up to five people in a three-room dwelling.",
+      "answer_label": "5 persons",
+      "answer": "5 persons"
+    },
+    {
+      "id": "PSM-D3-S2-Q033",
+      "number": 33,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The standard population screening test for breast cancer in average-risk women aged 50–69 years is:",
+      "options": [
+        "Breast MRI",
+        "Mammography",
+        "Breast ultrasonography",
+        "Fine-needle aspiration cytology"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.48 | E0 | Handwritten",
+      "explanation": "Mammography is the standard population screening test for breast cancer. FNAC and biopsy are used for diagnosis.",
+      "answer_label": "Mammography",
+      "answer": "Mammography"
     }
   ]
 }

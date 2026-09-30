@@ -2,7 +2,7 @@
 
 from lms.fmge.course import PSMCourse
 
-COURSE = PSMCourse(day=4, question_count=38)
+COURSE = PSMCourse(day=4)
 COURSE_NAME = COURSE.course_name
 QUIZ_NAME = COURSE.quiz_name
 BANK_ID = COURSE.bank_id

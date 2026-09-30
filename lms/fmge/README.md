@@ -28,8 +28,8 @@ Generate or validate the packaged bank:
 
 ## Making a new or replacement block
 
-1. In a web session whose model can see the PDF's page images, upload the notes PDF and paste `research/fmge-source-material/analysis/prompt-calibration.md` (everything below its first line). The prompt is self-contained: it includes the measured FMGE pattern, a gallery of real recalled questions with levels and traps, and a pattern library. Optionally paste extra real questions for the subject below it (`python3 scripts/fmge/reference_set.py --subject "Community Medicine"` draws about 15 from the local recall corpus; `--seed N` gives a different set). The session first lists every examinable unit in the PDF (UNIT INVENTORY), sets the question count to that list's length, and stops; check the plan and reply "go". It then delivers the bank as sections of up to 50 questions, each headed `# SECTION s OF k`; reply "next section" to get each one. Save the whole thread's reply as `research/pdf_extracted_questions_data/<Source>_combined.md`. Its output contract is exactly the Markdown this builder parses.
-2. Crop each `**Image source:** p.N | …` figure and paste the printed lines under it:
+1. In a web session whose model can see the PDF's page images, upload the notes PDF and paste `research/fmge-source-material/analysis/prompt-calibration.md` (everything below its first line). The prompt is self-contained: it includes the measured FMGE pattern, a gallery of real recalled questions with levels and traps, and a pattern library. Optionally paste extra real questions for the subject below it (`python3 scripts/fmge/reference_set.py --subject "Community Medicine"` draws about 15 from the local recall corpus; `--seed N` gives a different set). The session first lists every examinable unit in the PDF (UNIT INVENTORY), sets the count to all distinct eligible High/Medium units, and stops; check the plan and reply "go". It then delivers the bank as sections of up to 50 questions, each headed `# SECTION s OF k`; reply "next section" to get each one. Save the whole thread's reply as `research/pdf_extracted_questions_data/<Source>_combined.md`. Its output contract is exactly the Markdown this builder parses.
+2. Run `research/fmge-source-material/analysis/prompt-review.md` with the source PDF and the complete draft. Save the corrected text bank, review report and IMAGE REQUIREMENTS. Then use `prompt-paper-creator.md` in a session with file/image tools to fill the source placeholders, assemble the selected practice paper and verify its outputs. Calibration and review identify images; the creator prepares and inspects them. For source crops, the local tool prints the image metadata to add under each placeholder:
 
        uv run scripts/fmge/extract_pdf_image.py --page N --preview /tmp/page.png   # pick the box
        uv run scripts/fmge/extract_pdf_image.py --page N --crop L,T,R,B --name psm-b2-q012 --alt "…"
@@ -40,7 +40,7 @@ Generate or validate the packaged bank:
        python3 scripts/fmge/build_question_bank.py --source <md> --lint
        python3 scripts/fmge/build_question_bank.py --source <md> --strict
 
-   The lint blocks stems that point at the notes ("shown in the notes", "according to the source", a bare "listed" or "specified"), explanations that argue for an option other than the key, stems that state the deciding fact, duplicate options and all/none-of-the-above. It warns on explanations that point at the notes or carry audit notes, long stems, a correct option much longer than its distractors, a skewed or streaky answer key, and a block with no image items. For a new block, also pass `--bank-id`, `--id-prefix`, `--title` and `--subject`. The question count and timer (1 minute per question) come from the file; `--expected N` makes the build fail on any other count. When the file holds several sections, build each one separately as its own block:
+   The lint blocks stems that point at the notes ("shown in the notes", "according to the source", a bare "listed" or "specified"), explanations that argue for an option other than the key, stems that state the deciding fact, duplicate options and all/none-of-the-above. It warns on explanations that point at the notes or carry audit notes, long stems, a correct option much longer than its distractors, a skewed or streaky answer key, repeated answer cycles, and a block with no image items. For a new block, also pass `--bank-id`, `--id-prefix`, `--title` and `--subject`. The question count and timer (1 minute per question) come from the file; `--expected N` makes the build fail on any other count. When the file holds several sections, build each one separately as its own block:
 
        python3 scripts/fmge/build_question_bank.py --source <md> --section 2 --bank-id fmge-psm-block-2 --id-prefix PSM-B2 --title "FMGE PSM Mock 1 - Section 2" --output lms/fmge/data/psm_block_2.json
 
@@ -85,11 +85,11 @@ The public copy is served through a Cloudflare Tunnel; see [HOSTING.md](HOSTING.
 
 This is currently a 50-question PSM section, not a complete 300-question FMGE exam.
 
-## Day 3 compact course
+## Day 3 course
 
-`lms.fmge.day3_course.install_day3_psm_course` imports the four Day 3 section banks as a 106-question pool and creates one course lesson, **FMGE PSM Day 3 Mock**. The course page links to `/lms/fmge/day3/mock`, which works without signing in while the course is published.
+`lms.fmge.day3_course.install_day3_psm_course` imports the 129 reviewed questions in four sections (`psm_day3_section_1.json` to `psm_day3_section_4.json`; 34, 32, 32 and 31 questions) and creates **FMGE PSM Day 3** with one chapter and a quiz lesson per section. `/lms/fmge/day3/mock` (add `?section=2`, `3` or `4` for the later sections) works without signing in while the course is published, with the same untimed practice and timed mode (one minute per question) as Days 1 and 4. Results are anonymous and not saved.
 
-Each new page load or **Try Again** draws 54 questions from the full pool: 27 Tier 1, 21 Tier 2, and 6 Tier 3. The tier slots follow a fixed repeating pattern, while the questions within each tier change. Related questions that would cue or answer each other (for example the three light-unit items) are grouped in `CONCEPT_GROUPS` in `day3_mock.py`, and one draw takes at most the group's limit. The other 52 questions are set aside for that attempt. Timed and practice modes grade only the selected questions; a signed selection token binds the answer request to that draw. Results are anonymous and not saved.
+The installer replaces the earlier single-lesson random-draw mock (`fmge-psm-day-3-compact-mock`) only when that lesson has no enrollments or submissions; otherwise it stops so the learner work can be reviewed first.
 
 On the local bench, start the services described in [HOSTING.md](HOSTING.md), then run:
 
@@ -99,17 +99,19 @@ Run that command from the bench's `sites/` directory. The local mock is `http://
 
 ## Day 1 course
 
-`lms.fmge.day1_course.install_day1_psm_course` imports the reviewed 41-question
-`psm_day1.json` bank and creates **FMGE PSM Day 1**, one practice chapter and one
-native quiz lesson. The public route `/lms/fmge/day1/mock` offers untimed practice
-with immediate feedback and a 41-minute mock, with explanations and links into
-the matching Day 1 PDF. All 41 questions are used, with tiers interleaved.
+`lms.fmge.day1_course.install_day1_psm_course` imports the 59 reviewed questions
+in two sections (`psm_day1.json`, 41 questions; `psm_day1_section_2.json`, 18
+questions) and creates **FMGE PSM Day 1** with one chapter and a quiz lesson per
+section. `/lms/fmge/day1/mock` (add `?section=2` for section 2) offers untimed
+practice with immediate feedback and a timed mock of one minute per question,
+with explanations and links into the matching Day 1 PDF (41 Tier 1, 18 Tier 2).
 
 The source is `research/pdf_extracted_questions_data/Day1_PSM.md`; the review is
 `research/pdf_extracted_questions_data/Day1_PSM_review.md`. Rebuild or check it:
 
 ```sh
-python3 scripts/fmge/build_question_bank.py --source research/pdf_extracted_questions_data/Day1_PSM.md --output lms/fmge/data/psm_day1.json --bank-id fmge-psm-day1 --id-prefix PSM-D1 --title "FMGE PSM Day 1 Mock" --description "A 41-question PSM mock from the reviewed Day 1 notes." --expected 41 --strict
+python3 scripts/fmge/build_question_bank.py --source research/pdf_extracted_questions_data/Day1_PSM.md --section 1 --output lms/fmge/data/psm_day1.json --bank-id fmge-psm-day1 --id-prefix PSM-D1 --title "FMGE PSM Day 1 Mock" --description "A 41-question PSM section from the reviewed Day 1 notes." --expected 41 --strict
+python3 scripts/fmge/build_question_bank.py --source research/pdf_extracted_questions_data/Day1_PSM.md --section 2 --output lms/fmge/data/psm_day1_section_2.json --bank-id fmge-psm-day1-section-2 --id-prefix PSM-D1 --title "FMGE PSM Day 1 Section 2" --description "An 18-question PSM section from the reviewed Day 1 notes." --expected 18 --strict
 ```
 
 Add `--check` to validate the packaged output without rewriting it. From a bench:
@@ -121,13 +123,14 @@ bench --site fmge.localhost execute lms.fmge.day1_course.verify_day1_psm_course
 
 The installer reconciles the existing Day 1 records on rerun. The PDF asset is a
 symlink to `research/pdf_extracted_questions_data/Day1 PSM.pdf`; Q40 uses the
-cropped map at `lms/public/fmge/images/psm-d1-q040.png`.
+spot-map identification crop at `lms/public/fmge/images/psm-d1-q040.png`.
 
 ## Day 4 course
 
-`lms.fmge.day4_course.install_day4_psm_course` imports the 38 reviewed questions
-in `psm_day4.json` and publishes **FMGE PSM Day 4** with one chapter and quiz
-lesson. `/lms/fmge/day4/mock` offers untimed practice and a 38-minute timed mock,
+`lms.fmge.day4_course.install_day4_psm_course` imports the 80 reviewed questions
+in two sections (`psm_day4.json`, 38; `psm_day4_section_2.json`, 42) and publishes
+**FMGE PSM Day 4** with one chapter and a quiz lesson per section.
+`/lms/fmge/day4/mock` (add `?section=2`) offers untimed practice and a timed mock,
 with explanations and page links into `day4-psm-notes.pdf`. Topics include
 biostatistics, contraception, health services, occupational health and demography.
 
@@ -135,7 +138,8 @@ The source and review are `research/pdf_extracted_questions_data/Day4_PSM.md`
 and `Day4_PSM_review.md`. Rebuild with:
 
 ```sh
-python3 scripts/fmge/build_question_bank.py --source research/pdf_extracted_questions_data/Day4_PSM.md --output lms/fmge/data/psm_day4.json --bank-id fmge-psm-day4 --id-prefix PSM-D4 --title "FMGE PSM Day 4 Mock" --description "A 38-question PSM mock from the reviewed Day 4 notes." --expected 38 --strict
+python3 scripts/fmge/build_question_bank.py --source research/pdf_extracted_questions_data/Day4_PSM.md --section 1 --output lms/fmge/data/psm_day4.json --bank-id fmge-psm-day4 --id-prefix PSM-D4 --title "FMGE PSM Day 4 Mock" --description "A 38-question PSM mock from the reviewed Day 4 notes." --expected 38 --strict
+python3 scripts/fmge/build_question_bank.py --source research/pdf_extracted_questions_data/Day4_PSM.md --section 2 --output lms/fmge/data/psm_day4_section_2.json --bank-id fmge-psm-day4-section-2 --id-prefix PSM-D4 --title "FMGE PSM Day 4 Section 2" --description "A 42-question PSM section from the reviewed Day 4 notes." --expected 42 --strict
 bench --site fmge.localhost execute lms.fmge.day4_course.install_day4_psm_course
 bench --site fmge.localhost execute lms.fmge.day4_course.verify_day4_psm_course
 ```

@@ -1,0 +1,773 @@
+{
+  "schema_version": 1,
+  "bank_id": "fmge-psm-day4-section-2",
+  "title": "FMGE PSM Day 4 Section 2",
+  "subject": "Community Medicine",
+  "description": "A 42-question PSM section from the reviewed Day 4 notes.",
+  "expected_questions": 42,
+  "duration_minutes": 42,
+  "max_attempts": 1,
+  "passing_percentage": 50,
+  "show_answers": 0,
+  "show_submission_history": 1,
+  "shuffle_questions": 0,
+  "enable_negative_marking": 0,
+  "questions": [
+    {
+      "id": "PSM-D4-Q039",
+      "number": 39,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which is the most commonly used measure of dispersion?",
+      "options": [
+        "Range",
+        "Variance",
+        "Coefficient of variation",
+        "Standard deviation"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.9-p.10 | E0 | Handwritten/Printed",
+      "explanation": "Standard deviation (root-mean-square deviation) is the most commonly used measure of dispersion. Variance is its square and is less directly interpretable.",
+      "answer_label": "Standard deviation",
+      "answer": "Standard deviation"
+    },
+    {
+      "id": "PSM-D4-Q057",
+      "number": 57,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "How is the data set 2, 3, 3, 5, 7, 9, 9 best described?",
+      "options": [
+        "Unimodal",
+        "Bimodal",
+        "Without a mode",
+        "Symmetrical with mode 5"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.8 | E1 | Handwritten",
+      "explanation": "The mode is the most frequent value. In this set, 3 and 9 each appear twice, so the data are bimodal.",
+      "answer_label": "Bimodal",
+      "answer": "Bimodal"
+    },
+    {
+      "id": "PSM-D4-Q074",
+      "number": 74,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Haemoglobin, which is normally distributed, is measured in the same 40 women before and after 12 weeks of iron supplementation. Which test compares the two sets of values?",
+      "options": [
+        "Paired t-test",
+        "Unpaired t-test",
+        "Sign test",
+        "Chi-square test"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.5, p.19 | E2 | Table/Handwritten",
+      "explanation": "Normally distributed quantitative data from the same subjects measured twice call for the paired t-test.",
+      "answer_label": "Paired t-test",
+      "answer": "Paired t-test"
+    },
+    {
+      "id": "PSM-D4-Q040",
+      "number": 40,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "For a 2 × 2 contingency table, what is the critical chi-square value at the 95% confidence level?",
+      "options": [
+        "1.96",
+        "2.58",
+        "3.84",
+        "5.99"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.24 | E0 | Handwritten",
+      "explanation": "A 2 × 2 table has 1 degree of freedom, and its critical χ² value at the 95% confidence level is 3.84.",
+      "answer_label": "3.84",
+      "answer": "3.84"
+    },
+    {
+      "id": "PSM-D4-Q058",
+      "number": 58,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A distribution has a mean of 42, a median of 35 and a mode of 30. The distribution is:",
+      "options": [
+        "Negatively skewed",
+        "Normal",
+        "Leptokurtic",
+        "Positively skewed"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.17 | E1 | Diagram/Handwritten",
+      "explanation": "Mean > median > mode indicates a right (positive) skew.",
+      "answer_label": "Positively skewed",
+      "answer": "Positively skewed"
+    },
+    {
+      "id": "PSM-D4-Q041",
+      "number": 41,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Haemoglobin values of 200 women, grouped into class intervals, are best presented as a:",
+      "options": [
+        "Histogram",
+        "Bar chart",
+        "Pie chart",
+        "Pictogram"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.26 | E0 | Table/Handwritten",
+      "explanation": "Haemoglobin is a continuous quantitative variable, and grouped continuous data are shown by a histogram. Bar charts, pie charts and pictograms display qualitative data.",
+      "answer_label": "Histogram",
+      "answer": "Histogram"
+    },
+    {
+      "id": "PSM-D4-Q059",
+      "number": 59,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Mean systolic blood pressure, which is normally distributed, is compared between 60 smokers and 60 non-smokers. Which test is appropriate?",
+      "options": [
+        "Correlation coefficient",
+        "ANOVA",
+        "Unpaired t-test",
+        "Paired t-test"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.19 | E1 | Table",
+      "explanation": "Comparing the means of a normally distributed variable between two independent groups needs the unpaired t-test.",
+      "answer_label": "Unpaired t-test",
+      "answer": "Unpaired t-test"
+    },
+    {
+      "id": "PSM-D4-Q042",
+      "number": 42,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "An ogive is used to depict:",
+      "options": [
+        "Proportions of a whole",
+        "Cumulative frequency",
+        "Correlation between two variables",
+        "Comparison of discrete categories"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.27 | E0 | Handwritten",
+      "explanation": "An ogive is a cumulative frequency curve.",
+      "answer_label": "Cumulative frequency",
+      "answer": "Cumulative frequency"
+    },
+    {
+      "id": "PSM-D4-Q060",
+      "number": 60,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "If the probability of a Type II error is 0.2, what is the power of the study?",
+      "options": [
+        "0.05",
+        "0.2",
+        "0.8",
+        "0.95"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.41 | E1 | Handwritten",
+      "explanation": "Power = 1 − β = 1 − 0.2 = 0.8.",
+      "answer_label": "0.8",
+      "answer": "0.8"
+    },
+    {
+      "id": "PSM-D4-Q075",
+      "number": 75,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A systematic sample of 50 households is drawn from a list of 1,000, and the random start is the 7th household. Which household is the third one selected?",
+      "options": [
+        "27th",
+        "40th",
+        "47th",
+        "67th"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.37 | E2 | Handwritten",
+      "explanation": "The sampling interval is 20, so the selected households are the 7th, 27th and 47th.",
+      "answer_label": "47th",
+      "answer": "47th"
+    },
+    {
+      "id": "PSM-D4-Q043",
+      "number": 43,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which diagram best shows the incidence of malaria in a district over 15 years?",
+      "options": [
+        "Pie chart",
+        "Scatter diagram",
+        "Pictogram",
+        "Line chart"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.27 | E0 | Handwritten",
+      "explanation": "A line chart shows the trend of a variable over time.",
+      "answer_label": "Line chart",
+      "answer": "Line chart"
+    },
+    {
+      "id": "PSM-D4-Q061",
+      "number": 61,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Which contraceptive approach has a Pearl Index of zero?",
+      "options": [
+        "Abstinence",
+        "Coitus interruptus",
+        "Calendar method",
+        "Lactational amenorrhoea method"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.62 | E0 | Handwritten",
+      "explanation": "Complete abstinence is the only approach with a Pearl Index of zero; every other method has some failure rate.",
+      "answer_label": "Abstinence",
+      "answer": "Abstinence"
+    },
+    {
+      "id": "PSM-D4-Q044",
+      "number": 44,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "In simple random sampling, every unit of the population has:",
+      "options": [
+        "A chance of selection proportional to its stratum's size",
+        "An equal and known chance of selection",
+        "A chance of selection determined by accessibility",
+        "A chance of selection only if it volunteers"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.36 | E0 | Handwritten",
+      "explanation": "In simple random sampling, each unit has an equal and known chance of selection. Random-number tables are the preferred way to draw the sample.",
+      "answer_label": "An equal and known chance of selection",
+      "answer": "An equal and known chance of selection"
+    },
+    {
+      "id": "PSM-D4-Q062",
+      "number": 62,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "After vasectomy, for about how long should the couple use another contraceptive method before semen analysis confirms sterility?",
+      "options": [
+        "2 days",
+        "2 weeks",
+        "3 months",
+        "12 months"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.72 | E0 | Handwritten",
+      "explanation": "After vasectomy, the couple should use a barrier or other method for about 3 months, until semen analysis confirms azoospermia.",
+      "answer_label": "3 months",
+      "answer": "3 months"
+    },
+    {
+      "id": "PSM-D4-Q076",
+      "number": 76,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "What is the most common adverse effect of the three-monthly injectable contraceptive provided in India's public family-planning programme?",
+      "options": [
+        "Deep vein thrombosis",
+        "Toxic shock syndrome",
+        "Pelvic inflammatory disease",
+        "Irregular menstrual bleeding"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.69 | E2 | Handwritten",
+      "explanation": "The programme's three-monthly injectable is DMPA (Antara), whose most common adverse effect is irregular menstrual bleeding.",
+      "answer_label": "Irregular menstrual bleeding",
+      "answer": "Irregular menstrual bleeding"
+    },
+    {
+      "id": "PSM-D4-Q045",
+      "number": 45,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "What is contraception used after unprotected intercourse called?",
+      "options": [
+        "Interceptive contraception",
+        "Conventional contraception",
+        "Barrier contraception",
+        "Natural contraception"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.57 | E0 | Handwritten",
+      "explanation": "Interceptive (postcoital or emergency) contraception is used after intercourse. Conventional contraceptives such as condoms and spermicides are used at the time of intercourse.",
+      "answer_label": "Interceptive contraception",
+      "answer": "Interceptive contraception"
+    },
+    {
+      "id": "PSM-D4-Q063",
+      "number": 63,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Which is an example of community participation in primary health care?",
+      "options": [
+        "Oral rehydration salts",
+        "Kangaroo mother care",
+        "Shakir's tape",
+        "Chinese barefoot doctors"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.86 | E0 | Handwritten",
+      "explanation": "Community participation is exemplified by ASHA and China's barefoot doctors. ORS, KMC and Shakir's tape are appropriate technologies.",
+      "answer_label": "Chinese barefoot doctors",
+      "answer": "Chinese barefoot doctors"
+    },
+    {
+      "id": "PSM-D4-Q046",
+      "number": 46,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which spermicide is commonly used in contraceptive preparations?",
+      "options": [
+        "Chlorhexidine",
+        "Mifepristone",
+        "Nonoxynol-9",
+        "Clotrimazole"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.57 | E0 | Handwritten",
+      "explanation": "Nonoxynol-9 is the spermicide commonly used in contraceptive foams, creams and sponges. It damages the sperm membrane and acrosome.",
+      "answer_label": "Nonoxynol-9",
+      "answer": "Nonoxynol-9"
+    },
+    {
+      "id": "PSM-D4-Q064",
+      "number": 64,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Where is the multipurpose health worker (MPW) posted?",
+      "options": [
+        "Subcentre",
+        "Village",
+        "Primary health centre",
+        "Anganwadi centre"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.92 | E0 | Table/Handwritten",
+      "explanation": "The multipurpose worker is posted at the subcentre. ASHA works at village level and the Anganwadi worker at the Anganwadi centre.",
+      "answer_label": "Subcentre",
+      "answer": "Subcentre"
+    },
+    {
+      "id": "PSM-D4-Q047",
+      "number": 47,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "The Billings method of contraception is also called the:",
+      "options": [
+        "Calendar method",
+        "Symptothermal method",
+        "Lactational amenorrhoea method",
+        "Ovulation method"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.62 | E0 | Handwritten",
+      "explanation": "The cervical mucus method is also called the Billings or ovulation method.",
+      "answer_label": "Ovulation method",
+      "answer": "Ovulation method"
+    },
+    {
+      "id": "PSM-D4-Q065",
+      "number": 65,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Which AYUSH system originated in Greece?",
+      "options": [
+        "Siddha",
+        "Sowa-Rigpa",
+        "Unani",
+        "Homeopathy"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.97 | E0 | Handwritten",
+      "explanation": "Unani medicine is of Greek origin. Siddha and Sowa-Rigpa are of Indian origin.",
+      "answer_label": "Unani",
+      "answer": "Unani"
+    },
+    {
+      "id": "PSM-D4-Q077",
+      "number": 77,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "The nonsteroidal oral contraceptive developed at CDRI Lucknow is contraindicated in:",
+      "options": [
+        "Hypertension",
+        "Polycystic ovarian disease",
+        "Diabetes mellitus",
+        "Smoking after 35 years of age"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.69 | E2 | Handwritten",
+      "explanation": "Ormeloxifene (centchroman) is contraindicated in polycystic ovarian disease.",
+      "answer_label": "Polycystic ovarian disease",
+      "answer": "Polycystic ovarian disease"
+    },
+    {
+      "id": "PSM-D4-Q048",
+      "number": 48,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which progestogen does the combined oral contraceptive Mala-N contain?",
+      "options": [
+        "Desogestrel",
+        "Norethisterone",
+        "Levonorgestrel",
+        "Medroxyprogesterone acetate"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.67 | E0 | Handwritten",
+      "explanation": "Mala-N contains levonorgestrel 150 mcg with ethinyl estradiol 30 mcg.",
+      "answer_label": "Levonorgestrel",
+      "answer": "Levonorgestrel"
+    },
+    {
+      "id": "PSM-D4-Q066",
+      "number": 66,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "An arc welder with years of exposure to iron-oxide fumes has small, dense opacities on a chest X-ray but no functional impairment. What is the most likely diagnosis?",
+      "options": [
+        "Siderosis",
+        "Stannosis",
+        "Byssinosis",
+        "Bagassosis"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.109 | E1 | Table/Handwritten",
+      "explanation": "Iron-oxide exposure in welders causes siderosis, a benign pneumoconiosis with radiological opacities but little functional impairment.",
+      "answer_label": "Siderosis",
+      "answer": "Siderosis"
+    },
+    {
+      "id": "PSM-D4-Q049",
+      "number": 49,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "ASHA was introduced under the:",
+      "options": [
+        "National Rural Health Mission, 2005",
+        "National Urban Health Mission, 2013",
+        "Integrated Child Development Services, 1975",
+        "Reproductive and Child Health Programme, 1997"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.93 | E0 | Handwritten",
+      "explanation": "ASHA was introduced under the National Rural Health Mission in 2005.",
+      "answer_label": "National Rural Health Mission, 2005",
+      "answer": "National Rural Health Mission, 2005"
+    },
+    {
+      "id": "PSM-D4-Q067",
+      "number": 67,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A farmer develops fever, cough and breathlessness a few hours after handling mouldy hay. What is the most likely diagnosis?",
+      "options": [
+        "Bagassosis",
+        "Byssinosis",
+        "Bird-fancier's lung",
+        "Farmer's lung"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.109 | E1 | Table/Handwritten",
+      "explanation": "Acute hypersensitivity pneumonitis after handling mouldy hay is farmer's lung.",
+      "answer_label": "Farmer's lung",
+      "answer": "Farmer's lung"
+    },
+    {
+      "id": "PSM-D4-Q050",
+      "number": 50,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "What is free medical care provided to the population by the government called?",
+      "options": [
+        "Voluntary health insurance",
+        "State medicine",
+        "Private practice",
+        "Out-of-pocket care"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.96 | E0 | Handwritten",
+      "explanation": "State medicine means medical care provided free by the government.",
+      "answer_label": "State medicine",
+      "answer": "State medicine"
+    },
+    {
+      "id": "PSM-D4-Q078",
+      "number": 78,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "Where did the system of medicine based on the principle \"similia similibus curentur\" originate?",
+      "options": [
+        "India",
+        "Greece",
+        "Germany",
+        "Tibet"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.97 | E2 | Handwritten",
+      "explanation": "The principle \"like cures like\" belongs to homeopathy, founded by Samuel Hahnemann in Germany.",
+      "answer_label": "Germany",
+      "answer": "Germany"
+    },
+    {
+      "id": "PSM-D4-Q068",
+      "number": 68,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "A furniture worker who has been exposed to hardwood dust for years is at increased risk of:",
+      "options": [
+        "Hepatic angiosarcoma",
+        "Sinonasal adenocarcinoma",
+        "Mesothelioma",
+        "Bladder carcinoma"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.114 | E1 | Handwritten",
+      "explanation": "Wood dust, like nickel and chromium, is linked to cancer of the nose and paranasal sinuses.",
+      "answer_label": "Sinonasal adenocarcinoma",
+      "answer": "Sinonasal adenocarcinoma"
+    },
+    {
+      "id": "PSM-D4-Q051",
+      "number": 51,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Which pneumoconiosis is caused by inhaling coal dust?",
+      "options": [
+        "Silicosis",
+        "Asbestosis",
+        "Berylliosis",
+        "Anthracosis"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.109 | E0 | Table/Handwritten",
+      "explanation": "Inhaling coal dust causes anthracosis (coal workers' pneumoconiosis).",
+      "answer_label": "Anthracosis",
+      "answer": "Anthracosis"
+    },
+    {
+      "id": "PSM-D4-Q069",
+      "number": 69,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "Periodic medical examination of workers exposed to benzene is which level of prevention?",
+      "options": [
+        "Primary — health promotion",
+        "Primary — specific protection",
+        "Secondary — early diagnosis and treatment",
+        "Tertiary — rehabilitation"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.115 | E1 | Handwritten",
+      "explanation": "Periodic examination of exposed workers aims at early detection, so it is secondary prevention.",
+      "answer_label": "Secondary — early diagnosis and treatment",
+      "answer": "Secondary — early diagnosis and treatment"
+    },
+    {
+      "id": "PSM-D4-Q052",
+      "number": 52,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Occupational exposure to radon in underground miners is linked to:",
+      "options": [
+        "Lung cancer",
+        "Leukaemia",
+        "Urinary bladder cancer",
+        "Skin cancer"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.114 | E0 | Handwritten",
+      "explanation": "Radon exposure in miners is a recognised cause of lung cancer.",
+      "answer_label": "Lung cancer",
+      "answer": "Lung cancer"
+    },
+    {
+      "id": "PSM-D4-Q079",
+      "number": 79,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A worker in a sugarcane-processing unit develops hypersensitivity pneumonitis after handling stored fibrous residue. Which organism is implicated?",
+      "options": [
+        "Micropolyspora faeni",
+        "Aspergillus fumigatus",
+        "Bacillus anthracis",
+        "Thermoactinomyces sacchari"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.109, p.111 | E2 | Multi-page/Handwritten",
+      "explanation": "Exposure to stored sugarcane bagasse causes bagassosis, due to Thermoactinomyces sacchari.",
+      "answer_label": "Thermoactinomyces sacchari",
+      "answer": "Thermoactinomyces sacchari"
+    },
+    {
+      "id": "PSM-D4-Q070",
+      "number": 70,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "All of the following are demographic processes EXCEPT:",
+      "options": [
+        "Fertility",
+        "Morbidity",
+        "Marriage",
+        "Mortality"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.132 | E0 | Handwritten",
+      "explanation": "Demography studies fertility, marriage, mortality, migration and social mobility. Morbidity is a health measure, not a demographic process.",
+      "answer_label": "Morbidity",
+      "answer": "Morbidity"
+    },
+    {
+      "id": "PSM-D4-Q053",
+      "number": 53,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "Bird-fancier's lung results from exposure to:",
+      "options": [
+        "Silica dust",
+        "Bird droppings",
+        "Cotton dust",
+        "Asbestos fibres"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.109 | E0 | Table/Handwritten",
+      "explanation": "Bird-fancier's lung is hypersensitivity pneumonitis caused by avian proteins in bird droppings.",
+      "answer_label": "Bird droppings",
+      "answer": "Bird droppings"
+    },
+    {
+      "id": "PSM-D4-Q071",
+      "number": 71,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "What is the movement of people from one social class to another called?",
+      "options": [
+        "Social mobility",
+        "Migration",
+        "Urbanisation",
+        "Demographic transition"
+      ],
+      "correct_option": "A",
+      "source": "PDF p.132 | E0 | Handwritten",
+      "explanation": "Social mobility is movement between social classes, whereas migration is physical movement from one place to another.",
+      "answer_label": "Social mobility",
+      "answer": "Social mobility"
+    },
+    {
+      "id": "PSM-D4-Q054",
+      "number": 54,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "In which stage of the demographic cycle does the death rate exceed the birth rate?",
+      "options": [
+        "High stationary",
+        "Late expanding",
+        "Low stationary",
+        "Declining"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.133 | E0 | Table/Handwritten",
+      "explanation": "In the declining stage, the death rate exceeds the birth rate, so the population falls.",
+      "answer_label": "Declining",
+      "answer": "Declining"
+    },
+    {
+      "id": "PSM-D4-Q072",
+      "number": 72,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "In India, the child sex ratio is calculated for which age group?",
+      "options": [
+        "0–4 years",
+        "0–6 years",
+        "0–14 years",
+        "0–18 years"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.137 | E0 | Handwritten",
+      "explanation": "Child sex ratio = females aged 0–6 years / males aged 0–6 years × 1000.",
+      "answer_label": "0–6 years",
+      "answer": "0–6 years"
+    },
+    {
+      "id": "PSM-D4-Q055",
+      "number": 55,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "In India, the census is conducted under the Ministry of:",
+      "options": [
+        "Health and Family Welfare",
+        "Home Affairs",
+        "Statistics and Programme Implementation",
+        "Women and Child Development"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.135 | E0 | Handwritten",
+      "explanation": "The Indian census is conducted every 10 years under the Ministry of Home Affairs, through the Registrar General and Census Commissioner.",
+      "answer_label": "Home Affairs",
+      "answer": "Home Affairs"
+    },
+    {
+      "id": "PSM-D4-Q080",
+      "number": 80,
+      "tier": 3,
+      "difficulty": "hard",
+      "stem": "A town had 48,000 people on 1 January and 50,000 on 1 July, and recorded 400 deaths during the year. What is its crude death rate per 1,000 population?",
+      "options": [
+        "0.8",
+        "8.0",
+        "8.3",
+        "80"
+      ],
+      "correct_option": "B",
+      "source": "PDF p.133 | E2 | Handwritten",
+      "explanation": "CDR = deaths / mid-year population × 1,000 = 400 / 50,000 × 1,000 = 8.0.",
+      "answer_label": "8.0",
+      "answer": "8.0"
+    },
+    {
+      "id": "PSM-D4-Q073",
+      "number": 73,
+      "tier": 2,
+      "difficulty": "moderate",
+      "stem": "What is the denominator of the child–woman ratio?",
+      "options": [
+        "Live births in the year",
+        "Married women aged 15–49 years",
+        "All women",
+        "Women aged 15–49 years"
+      ],
+      "correct_option": "D",
+      "source": "PDF p.143 | E0 | Handwritten",
+      "explanation": "Child–woman ratio = children aged 0–4 years / women aged 15–49 years × 1000.",
+      "answer_label": "Women aged 15–49 years",
+      "answer": "Women aged 15–49 years"
+    },
+    {
+      "id": "PSM-D4-Q056",
+      "number": 56,
+      "tier": 1,
+      "difficulty": "direct",
+      "stem": "How often is the independent retrospective survey of the Sample Registration System carried out?",
+      "options": [
+        "Every month",
+        "Every 3 months",
+        "Every 6 months",
+        "Every 12 months"
+      ],
+      "correct_option": "C",
+      "source": "PDF p.140 | E0 | Handwritten",
+      "explanation": "In SRS, continuous enumeration is cross-checked by an independent survey every 6 months. This dual record makes it the most accurate source of vital rates.",
+      "answer_label": "Every 6 months",
+      "answer": "Every 6 months"
+    }
+  ]
+}

@@ -257,31 +257,33 @@ export const routes = [
 		path: '/fmge/day1/mock',
 		name: 'FMGEDay1Mock',
 		component: () => import('@/pages/QuizPage.vue'),
-		props: {
-			quizID: 'fmge-psm-day-1-mock',
+		props: (route) => ({
+			quizID: route.query.section === '2' ? 'fmge-psm-day-1-section-2' : 'fmge-psm-day-1-mock',
 			publicFMGE: true,
 			day1Mock: true,
-		},
+		}),
 	},
 	{
 		path: '/fmge/day4/mock',
 		name: 'FMGEDay4Mock',
 		component: () => import('@/pages/QuizPage.vue'),
-		props: {
-			quizID: 'fmge-psm-day-4-mock',
+		props: (route) => ({
+			quizID: route.query.section === '2' ? 'fmge-psm-day-4-section-2' : 'fmge-psm-day-4-mock',
 			publicFMGE: true,
 			day4Mock: true,
-		},
+		}),
 	},
 	{
 		path: '/fmge/day3/mock',
 		name: 'FMGEDay3Mock',
 		component: () => import('@/pages/QuizPage.vue'),
-		props: {
-			quizID: 'fmge-psm-day-3-compact-mock',
+		props: (route) => ({
+			quizID: `day-3-psm-section-${
+				['2', '3', '4'].includes(route.query.section) ? route.query.section : 1
+			}`,
 			publicFMGE: true,
 			day3Mock: true,
-		},
+		}),
 	},
 	{
 		path: '/fmge/mock',

@@ -11,7 +11,9 @@
 - Source-truth conflicts excluded or reframed: The PDF’s use of sputum smear as the default initial TB diagnostic test and Western blot as HIV confirmation was excluded against current WHO guidance. The blanket post-disaster vaccination statement, chlorine-resistance claims and “television” as the largest indoor radiation source were also excluded.
 
 ## REFERENCE VERIFICATION
+- Content corrections on 2026-09-30 preserve conditional disposal routes and reclassify seven single-relationship items as Tier 1. Audits below are recomputed from the final items; see `Day3_PSM_review.md` for changes and verification limits.
 - All 106 retained answer-key citations were checked against the 140-page source PDF using viewer page numbers. The cited pages support the keyed facts after the wording corrections below; this is a source check, not a claim that every handout statement is current clinical guidance.
+- v9.5 additions (2026-10-01): the 23 new items (Q29 onward in each section) were checked against their cited pages (p.20–22, 48, 55, 94, 110, 119, 121) and against standard community-medicine references (Park’s school-environment, noise and problem-village standards; ICD-10 intellectual-disability bands; UNSCEAR radiation sources; UN International Day for Disaster Risk Reduction). No live web check was run for these additions.
 - S3-Q4: [WHO VIA supply guidance](https://iris.who.int/bitstream/handle/10665/331698/9789240002630-eng.pdf) accepts 3–5% acetic acid. The options now have only one valid concentration.
 - S3-Q7: [India's Bio-Medical Waste Management Rules](https://cpcb.nic.in/uploads/Projects/Bio-Medical-Waste/Bio-medical_Waste_Management_Rules_2016.pdf) specify a temperature above 1,200°C when discarded cytotoxic drugs are incinerated, while a general incinerator's primary chamber has an 800°C minimum.
 - S3-Q15: [CDC vitamin D](https://www.cdc.gov/breastfeeding-special-circumstances/hcp/diet-micronutrients/vitamin-d.html) and [vitamin K](https://www.cdc.gov/breastfeeding-special-circumstances/hcp/diet-micronutrients/vitamin-k.html) guidance show why the original “scarce in breast milk” stem admitted two answers; the revised stem asks for the *most* deficient vitamin, which p.11 ranks as D first and K second. (An earlier revision asked about 400 IU vitamin D; that dose is not in the notes.)
@@ -19,12 +21,13 @@
 - Further programme and public-health spot checks used [WHO TB diagnosis](https://tbksp.who.int/en/node/3147), [WHO HIV testing](https://www.who.int/publications/i/978-92-4-155058-1), [India's PM POSHAN norms](https://pmposhan.education.gov.in/aboutus.html), and [India's National Air Quality Index](https://cpcb.nic.in/displaypdf.php?id=bmF0aW9uYWwtYWlyLXF1YWxpdHktaW5kZXgvQWJvdXRfQVFJLnBkZg%3D%3D).
 
 # BANK PLAN
-- Examinable units found: 112 (maternal/child health and school programmes 28; screening 22; biomedical waste 16; disasters 8; environmental health 38)
-- Bank size N: 106; six planned items were removed after cross-section review: S2-Q2 repeated S3-Q17's low-birth-weight cutoff, S2-Q21's autoclave temperature is stated in S3-Q21, S3-Q6 repeated the cytotoxic symbol used by S4-Q28, S3-Q20 repeated S1-Q7's blue waste stream, S4-Q19 repeated S1-Q16's sensitivity concept, and S4-Q26 was a third hardness item with an incorrect answer key. Conflicted and outdated candidates were excluded before counting.
-- Sections: 4 (28 / 26 / 26 / 26)
+- Examinable units found: 135 (maternal/child health and school programmes 38; screening 25; biomedical waste 16; disasters 11; environmental health 45)
+- Bank size N: 129 (106 retained + 23 added by the v9.5 gap review below); in the original 106, six planned items were removed after cross-section review: S2-Q2 repeated S3-Q17's low-birth-weight cutoff, S2-Q21's autoclave temperature is stated in S3-Q21, S3-Q6 repeated the cytotoxic symbol used by S4-Q28, S3-Q20 repeated S1-Q7's blue waste stream, S4-Q19 repeated S1-Q16's sensitivity concept, and S4-Q26 was a third hardness item with an incorrect answer key. Conflicted and outdated candidates were excluded before counting.
+- Sections: 4 (34 / 32 / 32 / 31). v9.5 would allow ceil(129/50) = 3 sections; four are kept so the live course structure, bank IDs and quiz links stay unchanged, and every section remains under 50.
+- v9.5 gap review (2026-10-01): every page without a citation was re-read. New units: school-health environment and committee (p.20), intellectual-disability classification (p.21), school vision screening (p.22), breast-cancer screening (p.48), positive predictive value (p.55), disaster administration in India (p.94), problem-village criteria (p.110), noise levels (p.119) and radiation sources (p.121), added as Q29 onward in each section. Excluded: PDF-solved questions (lead time p.58, Langelier index p.136, water standards p.137, seating arrangement p.138, vector images p.133–134); gallery duplicates (p.4 Td booster, p.122 lead apron); truth-gate failures (p.15 conflicting “best indicator” links, p.94 hydrological disasters as the maximum-mortality type, p.119 tolerable level “<90 dB”, p.121 cosmic rays as the largest outdoor source and the rad-based permissible limits, p.20 six-monthly school examination); and weak or conflicting pages (p.18–19 growth-chart versions, p.47 Western blot, p.74–75 COVID waste, p.108 a further Horrocks calculation). Pages 1–2, 6, 9, 26–36, 40, 53–54, 59–67, 76–87, 89, 95–103, 116, 131–132, 135 and 139–140 are covers, outlines, blank templates, worked calculations or motivational pages.
 - Per section: all five topic blocks are mixed. Section 1 has 9 maternal/child, 5 screening, 4 biomedical-waste, 3 disaster and 7 environmental-health items. The remaining sections distribute the other units approximately evenly. Question numbers retain their original IDs after deduplication.
 
-# SECTION 1 OF 4 — 28 QUESTIONS
+# SECTION 1 OF 4 — 34 QUESTIONS
 
 # QUESTION BANK — SECTION 1
 
@@ -93,16 +96,16 @@ D. Yellow
 ### Q8
 Autoclaving sterilizes by:
 
-A. Dry heat oxidation  
-B. Steam under pressure  
+A. Steam under pressure
+B. Dry heat oxidation
 C. Microwave heating  
 D. Chemical inactivation
 
 ### Q9
 The capacity of a health system to expand its disaster response is:
 
-A. Surge capacity  
-B. Disaster mitigation  
+A. Disaster mitigation
+B. Surge capacity
 C. Rehabilitation  
 D. Triage
 
@@ -121,6 +124,38 @@ A. Sand fly
 B. Hard tick  
 C. Black fly  
 D. Rat flea
+
+### Q29
+The nodal ministry for disaster management in India is the:
+
+A. Ministry of Health and Family Welfare  
+B. Ministry of Home Affairs  
+C. Ministry of Defence  
+D. Ministry of Rural Development
+
+### Q30
+The recommended noise level for hospital wards is:
+
+A. 20–35 dB  
+B. 40–55 dB  
+C. 60–70 dB  
+D. 75–85 dB
+
+### Q31
+The IQ range of moderate intellectual disability is:
+
+A. 10–19  
+B. 20–34  
+C. 35–49  
+D. 50–69
+
+### Q32
+Desks recommended for school classrooms are of the:
+
+A. Plus type  
+B. Zero type  
+C. Minus type  
+D. Standing type
 
 ## TIER 2 — DISCRIMINATIVE APPLICATION
 
@@ -220,6 +255,22 @@ B. Sodium
 C. Methionine  
 D. Lactose
 
+### Q33
+A patient's screening test is positive. The measure that shows how likely he is to actually have the disease is:
+
+A. Sensitivity  
+B. Specificity  
+C. Negative predictive value  
+D. Positive predictive value
+
+### Q34
+A hill hamlet's nearest safe spring is 800 m away but lies 120 m below the houses. Regarding water supply, the hamlet:
+
+A. Qualifies as a problem village by elevation  
+B. Qualifies as a problem village by distance  
+C. Qualifies as a problem village by depth  
+D. Does not qualify as a problem village
+
 ## TIER 3 — COMPRESSED TWO-STEP APPLICATION
 
 ### Q24
@@ -313,18 +364,18 @@ External validity asks whether results apply in other settings. Internal validit
 **Closest distractor:** B. White — white is for waste sharps, p.69  
 Discarded metallic implants belong in the blue category; sharps such as needles and blades belong in white.
 
-### Q8 — **B — Steam under pressure**
+### Q8 — **A — Steam under pressure**
 **Archetype:** mechanism  
 **Topic:** Sterilization — autoclaving  
 **Source:** PDF p.71 | E0 | Table/Handwritten  
-**Closest distractor:** A. Dry heat oxidation — that is distinct from the steam-under-pressure method, p.71  
+**Closest distractor:** B. Dry heat oxidation — that is distinct from the steam-under-pressure method, p.71
 An autoclave uses steam under pressure. Dry heat is a separate sterilization approach.
 
-### Q9 — **A — Surge capacity**
+### Q9 — **B — Surge capacity**
 **Archetype:** direct recall  
 **Topic:** Disaster management — health-system response  
 **Source:** PDF p.88 | E0 | Handwritten  
-**Closest distractor:** B. Disaster mitigation — mitigation reduces disaster risk or damage, p.88  
+**Closest distractor:** A. Disaster mitigation — mitigation reduces disaster risk or damage, p.88
 Surge capacity is the health system’s ability to respond when disaster demand rises.
 
 ### Q10 — **D — Sullage**
@@ -465,19 +516,61 @@ Bicarbonate hardness is temporary and can be reduced by boiling. Chlorination ad
 **Concept link:** Dengue is linked to Aedes breeding in artificial rainwater containers (p.129) + source reduction removes breeding sites (p.130) → empty those containers.  
 Removing water from containers targets the breeding sites of Aedes mosquitoes. Clearing dirty drains targets a different breeding pattern.
 
+### Q29 — **B — Ministry of Home Affairs**
+**Archetype:** direct recall  
+**Topic:** Disaster management — administration in India  
+**Source:** PDF p.94 | E0 | Handwritten  
+**Closest distractor:** A. Ministry of Health and Family Welfare — it leads the health response, while overall disaster management rests with Home Affairs, p.94  
+The Ministry of Home Affairs is the nodal ministry for disaster management in India. Health services form one component of the response.
+
+### Q30 — **A — 20–35 dB**
+**Archetype:** direct recall  
+**Topic:** Noise — acceptable indoor levels  
+**Source:** PDF p.119 | E0 | Handwritten  
+**Closest distractor:** B. 40–55 dB — hospital wards are held to the lowest band, 20–35 dB, p.119  
+Hospital wards should stay within about 20–35 dB. Quiet is needed for rest and recovery.
+
+### Q31 — **C — 35–49**
+**Archetype:** direct recall  
+**Topic:** Intellectual disability — IQ classification  
+**Source:** PDF p.21 | E0 | Table/Handwritten  
+**Closest distractor:** D. 50–69 — that range defines mild intellectual disability, p.21  
+Moderate intellectual disability corresponds to an IQ of 35–49. Mild is 50–69 and severe is 20–34.
+
+### Q32 — **C — Minus type**
+**Archetype:** direct recall  
+**Topic:** School health — classroom furniture  
+**Source:** PDF p.20 | E0 | Diagram/Handwritten  
+**Closest distractor:** B. Zero type — the recommended desk edge overlaps the seat, which is the minus type, p.20  
+Minus-type desks, whose edge projects over the seat, support upright posture while writing.
+
+### Q33 — **D — Positive predictive value**
+**Archetype:** close discrimination  
+**Topic:** Screening tests — predictive value  
+**Source:** PDF p.55 | E0 | Handwritten  
+**Closest distractor:** A. Sensitivity — it describes detection among people who have the disease, not the meaning of a positive result, p.55  
+Positive predictive value is the proportion of positive results that are true positives. It is the diagnostic power of a screening test; negative predictive value excludes disease.
+
+### Q34 — **A — Qualifies as a problem village by elevation**
+**Archetype:** close discrimination  
+**Topic:** Water supply — problem village  
+**Source:** PDF p.110 | E1 | Handwritten  
+**Closest distractor:** D. Does not qualify — the distance is acceptable, but an elevation difference above 100 m is itself a criterion, p.110  
+An 800 m distance is within 1.6 km, but a source more than 100 m below the settlement meets the elevation criterion. Any one criterion makes a problem village.
+
 # FINAL PATTERN AUDIT
-- Total; Tier 1 / 2 / 3: 28; 11 / 12 / 5
-- Stem form: one-liner 15 / longer direct 3 / vignette or field scenario 9 / image-led 1; Community Medicine reference: approximately 50% one-liner, 22% vignette and 2% image-led
-- Lead-in forms used: plain direct or completion 20 / which or what 6 / diagnosis 0 / next-best-step wording 0 / identify 1 / negative 1
-- Task modes: fact or classification 16 / diagnosis 0 / investigation 1 / management or action 7 / mechanism 1 / anatomy 0 / drug-ADR 0 / calculation 1 / interpretation 2
-- Correct-option distribution A / B / C / D: 7 / 7 / 7 / 7
-- Items where the correct option is the unique longest: 2 (Q19, Q28)
-- Negative (EXCEPT/NOT) stems: 1 (Q18)
+- Total; Tier 1 / 2 / 3: 34; 15 / 14 / 5.
+- Stem form: one-liner / longer direct / vignette / image-led: 20 / 7 / 6 / 1. Counts use image first, then the builder vignette rule, then a 15-word one-liner cutoff; these mechanical categories do not assign difficulty.
+- Lead-in forms used: which/what 0 / identify 1 / other direct or completion 33.
+- Answer-key archetype labels: calculation 1; close discrimination 12; direct recall 13; image 1; investigation 1; mechanism 1; two-step integration 5. These labels describe format; final tier headings govern difficulty.
+- Correct-option distribution A / B / C / D: 9 / 8 / 9 / 8.
+- Items where the correct option is the unique longest: 5 (Q15, Q19, Q26, Q28, Q34). Measured by character count after removing option formatting.
+- Negative (EXCEPT/NOT) stems: 1.
 - Subjects (for multi-subject PDFs) vs blueprint: Community Medicine 28/28; the official full-paper allocation is 30/300
-- Source pages represented: p.5, 10, 12–13, 16–17, 23, 25, 41–42, 52, 56–57, 69–71, 88, 90, 93, 104–107, 109, 117, 123, 126–130
+- Source pages represented: p.5, 10, 12–13, 16–17, 20–21, 23, 25, 41–42, 52, 55–57, 69–71, 88, 90, 93–94, 104–107, 109–110, 117, 119, 123, 126–130
 - Truth validation: WHO severe-malnutrition criteria; India’s 2016 biomedical-waste rules; government school-meal norms; CPCB AQI bands; WHO emergency-water guidance; and CDC dengue-vector guidance were checked by browsing. Q26 uses 0.1 mg/L, below both the PDF’s emergency figure and WHO’s cited emergency range.
 - Notable rejections: p.4 Td booster — gallery G4 tests the same relationship; p.18–19 growth-chart reference — conflicting versions; p.43 default sputum smear — superseded as an initial TB test; p.47 Western blot confirmation — contrary to WHO testing guidance; p.74 COVID waste table — no usable time anchor; p.93 blanket vaccination advice — unsafe generalization; p.104 “no effect on polio” — unsafe generalization; p.121 largest indoor radiation source — erroneous; p.122 lead-apron thickness — gallery G34 duplication; p.131 Paris Green question — already solved in the PDF
-- Deviations from the target mix, and why: Longer direct stems are fewer and field scenarios more numerous than the subject estimate; operational rules supported short decisions. One answer-free instrument image was used in this section.
+- Deviations from the target mix, and why: Longer direct stems are fewer and field scenarios more numerous than the subject estimate; operational rules supported short decisions. One answer-free instrument image was used in this section. New v9.5 gap items Q29–Q34 (2026-10-01) cover p.20–21, 55, 94, 110, 119; items Q1–Q28 are retained unchanged.
 - Level check: Q1 resembles G16 in direct numeric recall; Q15 resembles G6 in using one design clue to distinguish neighbouring terms; Q25 resembles G12 in requiring recognition followed by a consequence, while remaining a short question.
 - Image crop checked: Q3 shows the measuring board without the handwritten title or answer.
 
@@ -513,10 +606,16 @@ Removing water from containers targets the breeding sites of Aedes mosquitoes. C
 | S1-Q26 | 3 | Emergency chlorination | Low residual → action | Two-step integration | Inadequate residual → increase dose | 93, 106 |
 | S1-Q27 | 3 | Temporary hardness | Salt → treatment | Two-step integration | Bicarbonate hardness → boiling | 109 |
 | S1-Q28 | 3 | Dengue source reduction | Disease → breeding-site action | Two-step integration | Aedes containers → empty containers | 129–130 |
+| S1-Q29 | 1 | Disaster-management ministry | Country → nodal ministry | Direct recall | India → Home Affairs | 94 |
+| S1-Q30 | 1 | Hospital-ward noise | Setting → acceptable level | Direct recall | Wards → 20–35 dB | 119 |
+| S1-Q31 | 1 | Moderate intellectual disability | Severity → IQ range | Direct recall | Moderate → 35–49 | 21 |
+| S1-Q32 | 1 | School desks | Furniture → recommended type | Direct recall | Desk → minus type | 20 |
+| S1-Q33 | 2 | Positive predictive value | Positive result → measure | Close discrimination | Probability of disease → PPV | 55 |
+| S1-Q34 | 2 | Problem village by elevation | Hill source → classification | Close discrimination | >100 m below → problem village | 110 |
 
 END OF SECTION 1 OF 4 — reply "next section"
 
-# SECTION 2 OF 4 — 26 QUESTIONS
+# SECTION 2 OF 4 — 32 QUESTIONS
 
 # QUESTION BANK — SECTION 2
 
@@ -629,8 +728,6 @@ B. 60 cm
 C. 70 cm  
 D. 75 cm
 
-## TIER 2 — DISCRIMINATIVE APPLICATION
-
 ### Q15
 Under Anganwadi supplementary nutrition norms, the daily energy allocation for a severely malnourished child aged 6–72 months is:
 
@@ -638,6 +735,64 @@ A. 300 kcal
 B. 450 kcal  
 C. 600 kcal  
 D. 800 kcal
+
+### Q22
+Microwave treatment of biomedical waste operates at a frequency of:
+
+A. 60 MHz  
+B. 1,210 MHz  
+C. 1,800 MHz  
+D. 2,450 MHz
+
+### Q26
+Solid waste originating from a household kitchen is termed:
+
+A. Sewage  
+B. Sullage  
+C. Industrial refuse  
+D. Garbage
+
+### Q29
+The International Day for Disaster Risk Reduction is observed on:
+
+A. 5 June  
+B. 7 April  
+C. 13 October  
+D. 16 October
+
+### Q30
+Direct rupture of the tympanic membrane by a sudden noise occurs at about:
+
+A. 90 dB  
+B. 100 dB  
+C. 120 dB  
+D. 150–160 dB
+
+### Q31
+The maximum number of students recommended per classroom is:
+
+A. 25  
+B. 30  
+C. 35  
+D. 40
+
+### Q32
+After the Chernobyl accident, the radionuclide chiefly responsible for the rise in childhood thyroid cancer was:
+
+A. Iodine-131  
+B. Caesium-137  
+C. Strontium-90  
+D. Radon-222
+
+### Q33
+The standard population screening test for breast cancer in average-risk women aged 50–69 years is:
+
+A. Breast MRI  
+B. Mammography  
+C. Breast ultrasonography  
+D. Fine-needle aspiration cytology
+
+## TIER 2 — DISCRIMINATIVE APPLICATION
 
 ### Q16
 A woman has a positive VIA screening result. Which procedure can establish the cervical diagnosis?
@@ -679,14 +834,6 @@ B. Microwaving
 C. Inertization  
 D. Autoclaving
 
-### Q22
-Microwave treatment of biomedical waste operates at a frequency of:
-
-A. 60 MHz  
-B. 1,210 MHz  
-C. 1,800 MHz  
-D. 2,450 MHz
-
 ### Q23
 All of the following describe green disaster triage EXCEPT:
 
@@ -711,14 +858,6 @@ B. 4 persons
 C. 5 persons  
 D. 6 persons
 
-### Q26
-Solid waste originating from a household kitchen is termed:
-
-A. Sewage  
-B. Sullage  
-C. Industrial refuse  
-D. Garbage
-
 ## TIER 3 — COMPRESSED TWO-STEP APPLICATION
 
 ### Q27
@@ -736,6 +875,14 @@ A. Gambusia fish
 B. DDT  
 C. Pyrethrum  
 D. Malathion
+
+### Q34
+A 15-year-old boy has a mental age of 9 years. He is best classified as having:
+
+A. Severe intellectual disability  
+B. Moderate intellectual disability  
+C. Mild intellectual disability  
+D. Borderline intellectual functioning
 
 # ANSWER KEY AND TEACHING REVIEW
 
@@ -831,7 +978,7 @@ Sandflies transmit kala-azar.
 Infant length rises from about 50 cm at birth to about 75 cm by one year.
 
 ### Q15 — **D — 800 kcal**
-**Archetype:** close discrimination  
+**Archetype:** direct recall  
 **Topic:** Anganwadi nutrition — beneficiary norms  
 **Source:** PDF p.24 | E0 | Table  
 **Closest distractor:** C. 600 kcal — that is the allocation for pregnant and lactating women, p.24  
@@ -901,7 +1048,7 @@ Reverse triage can prioritize personnel with minor injuries for prompt return to
 The persons-per-room table allows up to five people in a three-room dwelling.
 
 ### Q26 — **D — Garbage**
-**Archetype:** close discrimination  
+**Archetype:** direct recall  
 **Topic:** Domestic waste — terminology  
 **Source:** PDF p.123 | E0 | Table  
 **Closest distractor:** C. Industrial refuse — garbage specifically denotes kitchen-origin solid waste, p.123  
@@ -923,20 +1070,63 @@ Hardness that persists after boiling is permanent hardness from sulphates and ch
 **Concept link:** Malaria is transmitted by *Anopheles* (p.129) + Gambusia feeds on *Anopheles* larvae (p.130) → use Gambusia for biological larval control.  
 *Anopheles* transmits malaria, and Gambusia fish eat its larvae. DDT, pyrethrum and malathion are chemical controls.
 
+### Q29 — **C — 13 October**
+**Archetype:** direct recall  
+**Topic:** Disaster management — observance  
+**Source:** PDF p.94 | E0 | Handwritten  
+**Closest distractor:** D. 16 October — that is World Food Day; disaster risk reduction is marked three days earlier, p.94  
+The International Day for Disaster Risk Reduction is observed on 13 October.
+
+### Q30 — **D — 150–160 dB**
+**Archetype:** direct recall  
+**Topic:** Noise — auditory effects  
+**Source:** PDF p.119 | E0 | Handwritten  
+**Closest distractor:** B. 100 dB — prolonged exposure at this level is linked to permanent hearing loss, not immediate rupture, p.119  
+A sudden noise of about 150–160 dB can rupture the tympanic membrane. Auditory fatigue begins around 90 dB.
+
+### Q31 — **D — 40**
+**Archetype:** direct recall  
+**Topic:** School health — classroom standards  
+**Source:** PDF p.20 | E0 | Handwritten  
+**Closest distractor:** C. 35 — the school-environment standard allows up to 40 students, p.20  
+A classroom should hold no more than 40 students.
+
+### Q32 — **A — Iodine-131**
+**Archetype:** direct recall  
+**Topic:** Radiation — nuclear accidents  
+**Source:** PDF p.121 | E0 | Handwritten  
+**Closest distractor:** B. Caesium-137 — it was also released but causes long-term whole-body contamination rather than thyroid-specific uptake, p.121  
+Radioactive iodine-131 concentrates in the thyroid. Childhood exposure after Chernobyl increased thyroid cancer.
+
+### Q33 — **B — Mammography**
+**Archetype:** direct recall  
+**Topic:** Breast cancer — screening  
+**Source:** PDF p.48 | E0 | Handwritten  
+**Closest distractor:** D. Fine-needle aspiration cytology — it is a diagnostic test for a lesion, not a population screen, p.48  
+Mammography is the standard population screening test for breast cancer. FNAC and biopsy are used for diagnosis.
+
+### Q34 — **C — Mild intellectual disability**
+**Archetype:** two-step integration  
+**Topic:** Intellectual disability — IQ calculation  
+**Source:** PDF p.21 | E2 | Table/Handwritten  
+**Closest distractor:** D. Borderline intellectual functioning — that band is 70–79; the calculated IQ is lower, p.21  
+**Concept link:** IQ is mental age divided by chronological age × 100 (p.21) + an IQ of 60 lies in the 50–69 band (p.21) → mild intellectual disability.  
+IQ \(=9/15\times100=60\), which lies in the mild band of 50–69.
+
 # FINAL PATTERN AUDIT
-- Total; Tier 1 / 2 / 3: 26; 13 / 11 / 2.
-- Stem form: one-liner / longer direct / vignette / image-led: 13 / 5 / 7 / 1; Community Medicine reference: approximately 50% one-liners, 22% vignettes, 2% images.
-- Lead-in forms used (direct question / which of the following / diagnosis / next step / other): 20 / 1 / 0 / 0 / 5.
-- Task modes: diagnosis 1 / investigation 1 / management 3 / mechanism 1 / anatomy 0 / drug-ADR 0 / calculation 1; remaining items test definitions, classification, instruments, programmes and vectors.
-- Correct-option distribution A / B / C / D: 7 / 7 / 6 / 6.
-- Items where the correct option is the unique longest: 4.
+- Total; Tier 1 / 2 / 3: 32; 21 / 8 / 3.
+- Stem form: one-liner / longer direct / vignette / image-led: 26 / 3 / 2 / 1. Counts use image first, then the builder vignette rule, then a 15-word one-liner cutoff; these mechanical categories do not assign difficulty.
+- Lead-in forms used: which/what 2 / identify 0 / other direct or completion 30.
+- Answer-key archetype labels: calculation 1; close discrimination 6; direct recall 19; image 1; investigation 1; management 1; two-step integration 3. These labels describe format; final tier headings govern difficulty.
+- Correct-option distribution A / B / C / D: 8 / 8 / 8 / 8.
+- Items where the correct option is the unique longest: 9 (Q5, Q7, Q12, Q18, Q20, Q23, Q27, Q28, Q30). Measured by character count after removing option formatting.
 - Negative (EXCEPT/NOT) stems: 1.
 - Subjects (for multi-subject PDFs) vs blueprint: Community Medicine 26/26; the source is a Community Medicine handout.
-- Source pages represented: 3, 7, 11, 23–24, 38, 41–42, 44–45, 49, 52, 57, 70, 72–73, 91–92, 104, 109, 111, 113–114, 120, 123–124, 127–130.
+- Source pages represented: 3, 7, 11, 20–21, 23–24, 38, 41–42, 44–45, 48–49, 52, 57, 70, 72–73, 91–92, 94, 104, 109, 111, 113–114, 119–121, 123–124, 127–130.
 - Truth validation: AMB composition checked against NHM guidance; Anganwadi nutrition norms against Ministry of Women and Child Development guidance; TB molecular testing, water indicators, hardness treatment and Gambusia use against WHO material.
 - Notable rejections: day-seven newborn weight nadir — the annotation overstates typical timing; biohazard-symbol identification — already asked in the PDF; another specificity calculation — repeats a solved PDF question; direct incineration of untreated culture waste — unsafe.
-- Deviations from the target mix, and why: Two Tier 3 items passed the two-fact test; the remaining operational facts support direct recall or one discrimination.
-- Level check: Q15 resembles G1 in distinguishing neighbouring programme-table rows; Q28 resembles G19 in requiring two recalled links.
+- Deviations from the target mix, and why: Two Tier 3 items passed the two-fact test; the remaining operational facts support direct recall or one discrimination. New v9.5 gap items Q29–Q34 (2026-10-01) cover p.20–21, 48, 94, 119, 121; items Q1–Q28 are retained unchanged.
+- Level check: Q15 resembles G1 in direct programme-table recall; Q28 resembles G19 in requiring two recalled links.
 - Image crop checked: Q9 shows the instrument without the written heading or answer.
 
 # QUESTION-DNA LEDGER
@@ -956,23 +1146,29 @@ Hardness that persists after boiling is permanent hardness from sulphates and ch
 | S2-Q12 | 1 | Refuse disposal | Waste → method | Recall | Refuse → sanitary landfill | 124 |
 | S2-Q13 | 1 | Kala-azar | Disease → vector | Recall | Kala-azar → sandfly | 127 |
 | S2-Q14 | 1 | Infant length | Age → expected length | Recall | One year → 75 cm | 7 |
-| S2-Q15 | 2 | Severe malnutrition allocation | Beneficiary → energy norm | Discrimination | Severe malnutrition → 800 kcal | 24 |
+| S2-Q15 | 1 | Severe malnutrition allocation | Beneficiary → energy norm | Recall | Severe malnutrition → 800 kcal | 24 |
 | S2-Q16 | 2 | Cervical screening | Positive screen → diagnostic procedure | Investigation | VIA positive → punch biopsy | 38, 49 |
 | S2-Q17 | 2 | Negative predictive value | Cell counts → NPV | Calculation | 60/(60+20) → 75% | 52 |
 | S2-Q18 | 2 | Opportunistic screening | Encounter → approach | Discrimination | Existing visit → opportunistic | 41–42 |
 | S2-Q19 | 2 | Liquid chemical waste | Waste → pretreatment | Management | Liquid chemical waste → chemical treatment | 70 |
 | S2-Q20 | 2 | Toxic-waste solidification | Process description → name | Discrimination | Cement and lime → inertization | 73 |
-| S2-Q22 | 2 | Microwave treatment | Method → frequency | Recall | Microwave → 2,450 MHz | 72 |
+| S2-Q22 | 1 | Microwave treatment | Method → frequency | Recall | Microwave → 2,450 MHz | 72 |
 | S2-Q23 | 2 | Green triage | Category → excluded feature | Negative | Green → no immediate resuscitation | 91 |
 | S2-Q24 | 2 | Reverse triage | Wartime priority → method | Discrimination | Minor injuries prioritized → reverse | 91–92 |
 | S2-Q25 | 2 | Housing crowding | Room count → allowed occupants | Application | Three rooms → five people | 120 |
-| S2-Q26 | 2 | Domestic garbage | Origin → waste term | Discrimination | Kitchen solids → garbage | 123 |
+| S2-Q26 | 1 | Domestic garbage | Origin → waste term | Recall | Kitchen solids → garbage | 123 |
 | S2-Q27 | 3 | Permanent hardness | Persistent hardness → treatment | Two-step | Boiling failure → ion exchange | 109 |
 | S2-Q28 | 3 | Malaria larval control | Disease → vector → biological measure | Two-step | Malaria → *Anopheles* → Gambusia | 129–130 |
+| S2-Q29 | 1 | Disaster-reduction day | Observance → date | Direct recall | Disaster risk reduction → 13 October | 94 |
+| S2-Q30 | 1 | Tympanic-membrane rupture | Effect → noise level | Direct recall | Rupture → 150–160 dB | 119 |
+| S2-Q31 | 1 | Classroom size | Standard → maximum students | Direct recall | Classroom → 40 | 20 |
+| S2-Q32 | 1 | Chernobyl radionuclide | Disaster → thyroid isotope | Direct recall | Thyroid cancer → iodine-131 | 121 |
+| S2-Q33 | 1 | Breast-cancer screening | Average risk → test | Direct recall | Women 50–69 → mammography | 48 |
+| S2-Q34 | 3 | IQ classification | Ages → severity | Two-step integration | IQ 60 → mild | 21 |
 
 END OF SECTION 2 OF 4 — reply "next section"
 
-# SECTION 3 OF 4 — 26 QUESTIONS
+# SECTION 3 OF 4 — 32 QUESTIONS
 
 # QUESTION BANK — SECTION 3
 
@@ -1083,8 +1279,6 @@ B. Soft tick
 C. Louse  
 D. Blackfly
 
-## TIER 2 — DISCRIMINATIVE APPLICATION
-
 ### Q15
 An exclusively breastfed newborn receives intramuscular vitamin K at birth. Which vitamin is the most deficient in breast milk?
 
@@ -1100,6 +1294,56 @@ A. 40:60
 B. 60:40  
 C. 70:30  
 D. 80:20
+
+### Q22
+A room needs removal of stale indoor air. Which ventilation system is designed for this?
+
+A. Exhaust ventilation  
+B. Plenum ventilation  
+C. Natural lighting  
+D. Air humidification
+
+### Q25
+Approximately what percentage of sewage is water?
+
+A. 70%  
+B. 80%  
+C. 90%  
+D. 99.9%
+
+### Q29
+The world's worst industrial chemical disaster occurred at:
+
+A. Bhopal  
+B. Chernobyl  
+C. Seveso  
+D. Minamata
+
+### Q30
+The most common severity category of intellectual disability is:
+
+A. Mild  
+B. Moderate  
+C. Severe  
+D. Profound
+
+### Q31
+The School Health Committee of 1960 was headed by:
+
+A. Joseph Bhore  
+B. Renuka Ray  
+C. A. L. Mudaliar  
+D. Kartar Singh
+
+### Q32
+The largest source of population exposure to man-made ionizing radiation is:
+
+A. Nuclear power generation  
+B. Medical diagnostic X-rays  
+C. Nuclear-weapons fallout  
+D. Consumer products
+
+## TIER 2 — DISCRIMINATIVE APPLICATION
 
 ### Q17
 A newborn weighs 2.4 kg but is above the tenth weight centile for gestational age. Which designation applies?
@@ -1133,14 +1377,6 @@ B. Microwaving
 C. Hydroclaving  
 D. Dry-heat sterilization
 
-### Q22
-A room needs removal of stale indoor air. Which ventilation system is designed for this?
-
-A. Exhaust ventilation  
-B. Plenum ventilation  
-C. Natural lighting  
-D. Air humidification
-
 ### Q23
 Which water indicator can point to earlier or intermittent faecal contamination?
 
@@ -1157,13 +1393,21 @@ B. 1 minute
 C. 2 minutes  
 D. 5 minutes
 
-### Q25
-Approximately what percentage of sewage is water?
+### Q33
+A worker spends one 8-hour shift in a workshop at about 95 dB. The expected auditory effect is:
 
-A. 70%  
-B. 80%  
-C. 90%  
-D. 99.9%
+A. Tympanic-membrane rupture  
+B. Permanent hearing loss  
+C. Auditory fatigue  
+D. No measurable change
+
+### Q34
+A classroom for 30 students should provide a floor area of at least:
+
+A. 150 sq ft  
+B. 200 sq ft  
+C. 250 sq ft  
+D. 300 sq ft
 
 ## TIER 3 — COMPRESSED TWO-STEP APPLICATION
 
@@ -1240,7 +1484,7 @@ Screening searches for unrecognized disease in apparently healthy people. Testin
 
 **Closest distractor:** C. 800°C — the minimum primary-chamber temperature for a general biomedical-waste incinerator, not the cytotoxic-drug threshold
 
-Discarded cytotoxic drugs must be incinerated above 1,200°C under India's Bio-Medical Waste Management Rules.
+When discarded cytotoxic drugs are incinerated, the temperature must exceed 1,200°C. Incineration is one disposal route, not a requirement to use it for every cytotoxic drug.
 
 ### Q8 — **C — Reduce potential disaster damage**
 **Archetype:** direct recall  
@@ -1292,7 +1536,7 @@ A mosquito net should have at least 150 holes per square inch.
 Hard ticks are vectors of Kyasanur Forest disease in India.
 
 ### Q15 — **B — Vitamin D**
-**Archetype:** close discrimination  
+**Archetype:** direct recall  
 **Topic:** Infant feeding — vitamins  
 **Source:** PDF p.11 | E1 | Handwritten  
 **Closest distractor:** C. Vitamin K — it is the second most deficient, p.11
@@ -1300,7 +1544,7 @@ Hard ticks are vectors of Kyasanur Forest disease in India.
 Vitamin D is the most deficient vitamin in breast milk, so exclusively breastfed infants can develop rickets. Vitamin K is the second most deficient, which is why 1 mg is given intramuscularly at birth.
 
 ### Q16 — **A — 40:60**
-**Archetype:** close discrimination  
+**Archetype:** direct recall  
 **Topic:** Infant feeding — milk proteins  
 **Source:** PDF p.13 | E0 | Table/Handwritten  
 **Closest distractor:** D. 80:20 — that is the casein:whey ratio listed for cow’s milk, p.13  
@@ -1335,7 +1579,7 @@ Clumps of nonbeaded acid-fast bacilli support leprosy; the contrasting tuberculo
 Hydroclaving operates at about 132°C, while autoclaving operates at 121°C.
 
 ### Q22 — **A — Exhaust ventilation**
-**Archetype:** close discrimination  
+**Archetype:** direct recall  
 **Topic:** Air — ventilation  
 **Source:** PDF p.115 | E0 | Diagram/Handwritten  
 **Closest distractor:** B. Plenum ventilation — it brings fresh air in, p.115  
@@ -1386,18 +1630,60 @@ The blood film contains falciparum gametocytes. Malaria is transmitted by *Anoph
 **Concept link:** Screening in an asymptomatic person does not itself establish diagnosis (p.37–38) + the two-hour OGTT is listed as a diagnostic test for diabetes (p.51) → select OGTT.  
 A high random screening glucose in an asymptomatic person needs diagnostic assessment. The two-hour OGTT is a diagnostic test for diabetes.
 
+### Q29 — **A — Bhopal**
+**Archetype:** direct recall  
+**Topic:** Disasters — man-made  
+**Source:** PDF p.94 | E0 | Handwritten  
+**Closest distractor:** B. Chernobyl — it was a nuclear-reactor accident, not a chemical release, p.94  
+The 1984 Bhopal methyl isocyanate leak is regarded as the worst industrial chemical disaster.
+
+### Q30 — **A — Mild**
+**Archetype:** direct recall  
+**Topic:** Intellectual disability — distribution  
+**Source:** PDF p.21 | E0 | Handwritten  
+**Closest distractor:** B. Moderate — it is less frequent than mild disability, which makes up most cases, p.21  
+Mild intellectual disability accounts for the large majority of cases.
+
+### Q31 — **B — Renuka Ray**
+**Archetype:** direct recall  
+**Topic:** School health — committees  
+**Source:** PDF p.20 | E0 | Handwritten  
+**Closest distractor:** A. Joseph Bhore — his 1946 committee laid out the school-health concept, but the 1960 recommendations came from Renuka Ray, p.20  
+The Renuka Ray School Health Committee (1960) made the school-health recommendations; the Bhore Committee had earlier introduced the concept.
+
+### Q32 — **B — Medical diagnostic X-rays**
+**Archetype:** direct recall  
+**Topic:** Radiation — sources  
+**Source:** PDF p.121 | E0 | Handwritten  
+**Closest distractor:** A. Nuclear power generation — its contribution to population dose is small compared with medical imaging, p.121  
+Medical diagnostic X-rays are the largest man-made source of radiation exposure.
+
+### Q33 — **C — Auditory fatigue**
+**Archetype:** close discrimination  
+**Topic:** Noise — auditory effects  
+**Source:** PDF p.119 | E1 | Handwritten  
+**Closest distractor:** B. Permanent hearing loss — it follows exposure above about 100 dB, usually repeated, p.119  
+Auditory fatigue, a temporary threshold shift, begins at about 90 dB. Permanent loss needs higher or prolonged exposure, and rupture needs 150–160 dB.
+
+### Q34 — **D — 300 sq ft**
+**Archetype:** calculation  
+**Topic:** School health — classroom standards  
+**Source:** PDF p.20 | E1 | Handwritten  
+**Closest distractor:** C. 250 sq ft — this gives each student less than the minimum 10 sq ft, p.20  
+At least 10 sq ft per student gives \(30\times10=300\) sq ft.
+
 # FINAL PATTERN AUDIT
-- Total; Tier 1 / 2 / 3: 26; 13 / 10 / 3.
-- Stem form: one-liner / longer direct / vignette / image-led: 14 / 6 / 5 / 1; Community Medicine reference: approximately 50% one-liners, 22% vignettes, 2% images.
-- Task modes: diagnosis 1 / investigation 1 / management 1 / mechanism 0 / anatomy 0 / drug-ADR 0 / calculation 0; remaining items test programme facts, classification, environmental measures and vectors.
-- Correct-option distribution A / B / C / D: 6 / 6 / 7 / 7.
-- Items where the correct option is the unique longest: 4.
+- Total; Tier 1 / 2 / 3: 32; 21 / 8 / 3.
+- Stem form: one-liner / longer direct / vignette / image-led: 25 / 3 / 3 / 1. Counts use image first, then the builder vignette rule, then a 15-word one-liner cutoff; these mechanical categories do not assign difficulty.
+- Answer-key archetype labels: calculation 1; close discrimination 5; direct recall 21; image 1; management 1; short clinical diagnosis 1; two-step integration 2. These labels describe format; final tier headings govern difficulty.
+- Correct-option distribution A / B / C / D: 8 / 8 / 8 / 8.
+- Items where the correct option is the unique longest: 10 (Q2, Q3, Q7, Q8, Q12, Q22, Q23, Q25, Q27, Q32). Measured by character count after removing option formatting.
 - Negative (EXCEPT/NOT) stems: 0.
 - Subjects (for multi-subject PDFs) vs blueprint: Community Medicine 26/26; the source is a Community Medicine handout.
-- Source pages represented: 3, 5, 7, 11, 13, 23, 37–38, 42–43, 45–46, 49, 51, 70–71, 88, 92, 107, 111–112, 115, 123, 125, 127–130.
+- Source pages represented: 3, 5, 7, 11, 13, 20–21, 23, 37–38, 42–43, 45–46, 49, 51, 70–71, 88, 92, 94, 107, 111–112, 115, 119, 121, 123, 125, 127–130.
 - Truth validation: postpartum IFA duration checked against NHM guidance; past contamination indicated by *C. perfringens* against WHO guidance; the need for diagnostic confirmation of asymptomatic hyperglycaemia against current diabetes standards.
 - Notable rejections: Japanese encephalitis → “dirty water” — too broad across *Culex* species; an untreated microbiology-culture disposal pathway — unsafe; a second biohazard-logo question — duplicates the PDF’s solved item; precise newborn weight nadir on day seven — medically overgeneralized.
-- Deviations from the target mix, and why: Three Tier 3 questions had two necessary source-supported links; a fourth would have repeated a screening or vector microfact. No suitable distinct negative stem survived the exclusion checks.
+- Deviations from the target mix, and why: Three Tier 3 questions had two necessary source-supported links; a fourth would have repeated a screening or vector microfact. No suitable distinct negative stem survived the exclusion checks. New v9.5 gap items Q29–Q34 (2026-10-01) cover p.20–21, 94, 119, 121; items Q1–Q28 are retained unchanged.
 - Level check: Q4 resembles G1 in direct programme-detail recall; Q17 resembles G5 in distinguishing related public-health classifications; Q27 resembles G19 in moving from an observed finding through identification to a second answer.
 - Image crop checked: Q27 shows the blood film without the disease heading or gametocyte caption.
 
@@ -1418,24 +1704,30 @@ A high random screening glucose in an asymptomatic person needs diagnostic asses
 | S3-Q12 | 1 | Sleeping sickness | Disease → vector | Recall | Sleeping sickness → tsetse | 127 |
 | S3-Q13 | 1 | Mosquito-net mesh | Equipment → density | Recall | Mesh → >150 holes/in² | 130 |
 | S3-Q14 | 1 | KFD | Disease → vector class | Recall | KFD → hard tick | 128 |
-| S3-Q15 | 2 | Breast-milk vitamins | Breast milk → most deficient vitamin | Discrimination | Most deficient → vitamin D (K second) | 11 |
-| S3-Q16 | 2 | Milk proteins | Species → casein:whey ratio | Discrimination | Human → 40:60 | 13 |
+| S3-Q15 | 1 | Breast-milk vitamins | Breast milk → most deficient vitamin | Recall | Most deficient → vitamin D (K second) | 11 |
+| S3-Q16 | 1 | Milk proteins | Species → casein:whey ratio | Recall | Human → 40:60 | 13 |
 | S3-Q17 | 2 | Birth-weight classifications | Weight and centile → category | Discrimination | <2.5 kg, >10th centile → LBW | 5 |
 | S3-Q18 | 2 | Mass screening | Population coverage → approach | Discrimination | All adults → mass | 42 |
 | S3-Q19 | 2 | Leprosy bacilli | Microscopy → disease | Diagnosis | Nonbeaded clumps → leprosy | 43, 45 |
 | S3-Q21 | 2 | Hydroclaving | Temperature → method | Discrimination | 132°C → hydroclave | 71 |
-| S3-Q22 | 2 | Exhaust ventilation | Airflow need → method | Discrimination | Remove stale air → exhaust | 115 |
+| S3-Q22 | 1 | Exhaust ventilation | Airflow need → method | Recall | Remove stale air → exhaust | 115 |
 | S3-Q23 | 2 | Earlier faecal contamination | Timing → indicator | Discrimination | Earlier/intermittent → *C. perfringens* | 111 |
 | S3-Q24 | 2 | Tap-water sampling | Preparation → running time | Management | Flame tap → run two minutes | 112 |
-| S3-Q25 | 2 | Sewage composition | Waste type → water fraction | Recall | Sewage → 99.9% water | 123 |
+| S3-Q25 | 1 | Sewage composition | Waste type → water fraction | Recall | Sewage → 99.9% water | 123 |
 | S3-Q26 | 3 | Brugian filariasis | Disease → mosquito → habitat | Two-step | Brugian → *Mansonia* → aquatic roots | 129 |
 | S3-Q27 | 3 | Falciparum malaria | Blood film → disease → vector | Image/two-step | Gametocytes → malaria → *Anopheles* | 46, 129 |
 | S3-Q28 | 3 | Diabetes screening | Screening result → diagnostic test | Two-step | Random screen → confirm with OGTT | 37–38, 51 |
+| S3-Q29 | 1 | Worst man-made disaster | Disaster type → event | Direct recall | Industrial chemical → Bhopal | 94 |
+| S3-Q30 | 1 | Intellectual-disability severity | Distribution → commonest | Direct recall | Commonest → mild | 21 |
+| S3-Q31 | 1 | School Health Committee | Committee → chair | Direct recall | 1960 school health → Renuka Ray | 20 |
+| S3-Q32 | 1 | Man-made radiation | Source → largest | Direct recall | Man-made → X-rays | 121 |
+| S3-Q33 | 2 | Auditory fatigue | Exposure → effect | Close discrimination | 95 dB shift → auditory fatigue | 119 |
+| S3-Q34 | 2 | Classroom floor space | Students → minimum area | Calculation | 30 × 10 → 300 sq ft | 20 |
 
 END OF SECTION 3 OF 4 — reply "next section"
 
 
-# SECTION 4 OF 4 — 26 QUESTIONS
+# SECTION 4 OF 4 — 31 QUESTIONS
 
 # QUESTION BANK — SECTION 4
 
@@ -1572,6 +1864,30 @@ B. Lumen
 C. Lux  
 D. Lambert
 
+### Q29
+A village is a problem village if no safe water source exists within:
+
+A. 0.5 km  
+B. 1.6 km  
+C. 3 km  
+D. 5 km
+
+### Q30
+Under the national blindness-control programme, first-level vision screening of schoolchildren is done by:
+
+A. Trained school teachers  
+B. Ophthalmologists  
+C. ASHAs  
+D. Anganwadi workers
+
+### Q31
+The most common genetic cause of intellectual disability is:
+
+A. Down syndrome  
+B. Fragile X syndrome  
+C. Phenylketonuria  
+D. Tuberous sclerosis
+
 ## TIER 2 — DISCRIMINATIVE APPLICATION
 
 ### Q17
@@ -1599,7 +1915,7 @@ C. Diagnostic certainty sufficient to start treatment
 D. Quick and inexpensive
 
 ### Q21
-A used scalpel has undergone sterilization in the white sharps stream. What follows before final disposal?
+A sterilized used scalpel will be sent to an authorized iron foundry. Which further processing step is appropriate?
 
 A. Recycle it intact  
 B. Send it directly to a foundry  
@@ -1637,6 +1953,22 @@ A. Comfort zone
 B. Just tolerable  
 C. Intolerable  
 D. Below comfort range
+
+### Q32
+A 30-year-old woman carries a BRCA1 mutation. The preferred breast-cancer screening test for her is:
+
+A. Clinical examination alone  
+B. Breast self-examination  
+C. Annual breast MRI  
+D. Fine-needle aspiration cytology
+
+### Q33
+A classroom has a floor area of 480 sq ft. Its combined door and window area should be at least:
+
+A. 60 sq ft  
+B. 120 sq ft  
+C. 160 sq ft  
+D. 240 sq ft
 
 ## TIER 3 — COMPRESSED TWO-STEP APPLICATION
 
@@ -1795,14 +2127,14 @@ Useful screening detects disease after it first becomes detectable but before th
 **Topic:** Screening — population test selection  
 **Source:** PDF p.37–38 | E1 | Table/Multi-page  
 **Closest distractor:** C. Diagnostic certainty sufficient to start treatment — that is the role of the diagnostic test after referral, p.38  
-A screening test is quicker and cheaper but less accurate than a diagnostic test. A positive screen leads to diagnostic assessment; it is not itself the basis for treatment.
+An initial population screening test should be quick and inexpensive. A positive screen leads to diagnostic assessment rather than being treated as a confirmed diagnosis.
 
 ### Q21 — **C — Shred or mutilate it**
 **Archetype:** management  
 **Topic:** Biomedical waste — sharps treatment sequence  
 **Source:** PDF p.69 | E1 | Table  
-**Closest distractor:** B. Send it directly to a foundry — destruction or shredding follows sterilization before final recovery or disposal, p.69  
-Sterilized waste sharps are rendered unusable by shredding or mutilation before final disposal.
+**Closest distractor:** B. Send it directly to a foundry — this recovery pathway includes destruction or shredding after sterilization, p.69  
+In the metal-recovery pathway, sterilized waste sharps are rendered unusable by shredding or mutilation before transfer to an authorized foundry.
 
 ### Q22 — **D — Chlorination**
 **Archetype:** close discrimination  
@@ -1850,19 +2182,54 @@ Suckling releases oxytocin, which contracts the uterus and helps limit postpartu
 **Concept link:** The pictured “C” symbol identifies cytotoxic material (p.68) + cytotoxic discarded drugs enter the yellow stream (p.70) → choose yellow.  
 The symbol identifies a cytotoxic drug. Discarded cytotoxic drugs belong in the yellow biomedical-waste stream.
 
+### Q29 — **B — 1.6 km**
+**Archetype:** direct recall  
+**Topic:** Water supply — problem village  
+**Source:** PDF p.110 | E0 | Handwritten  
+**Closest distractor:** C. 3 km — the distance criterion is 1.6 km, p.110  
+A problem village has no safe source within 1.6 km, water only below 15 m, a source more than 100 m below, or excess iron, salt, fluoride or arsenic.
+
+### Q30 — **A — Trained school teachers**
+**Archetype:** direct recall  
+**Topic:** School health — vision screening  
+**Source:** PDF p.22 | E0 | Handwritten  
+**Closest distractor:** B. Ophthalmologists — they manage referred children; first-level screening is done by teachers, p.22  
+Trained teachers perform first-level vision screening in schools. Children with poor vision are referred for refraction.
+
+### Q31 — **A — Down syndrome**
+**Archetype:** direct recall  
+**Topic:** Intellectual disability — causes  
+**Source:** PDF p.21 | E0 | Handwritten  
+**Closest distractor:** B. Fragile X syndrome — it is the most common inherited cause, but Down syndrome is the most common genetic cause overall, p.21  
+Down syndrome is the most common genetic cause of intellectual disability. Fragile X is the most common inherited cause.
+
+### Q32 — **C — Annual breast MRI**
+**Archetype:** close discrimination  
+**Topic:** Breast cancer — high-risk screening  
+**Source:** PDF p.48 | E1 | Handwritten  
+**Closest distractor:** A. Clinical examination alone — it is too insensitive for a high-risk young woman, p.48  
+MRI is the preferred screening test for young high-risk women, whose dense breast tissue limits mammography.
+
+### Q33 — **B — 120 sq ft**
+**Archetype:** calculation  
+**Topic:** School health — classroom standards  
+**Source:** PDF p.20 | E1 | Handwritten  
+**Closest distractor:** C. 160 sq ft — this uses one third of the floor area; the standard is one quarter, p.20  
+Doors and windows should together equal at least 25% of floor area: \(0.25\times480=120\) sq ft.
+
 # FINAL PATTERN AUDIT
-- Total; Tier 1 / 2 / 3: 26; 16 / 8 / 2.
-- Stem form: one-liner / longer direct / vignette / image-led: 15 / 3 / 6 / 2; Community Medicine reference: approximately 50% one-liners, 22% vignettes, 2% images.
-- Lead-in forms used (direct question / which of the following / diagnosis / next step / other): 20 / 4 / 0 / 0 / 2.
-- Task modes: diagnosis 0 / investigation 1 / management 3 / mechanism 1 / anatomy 0 / drug-ADR 0 / calculation 1; remaining items test nutrition, screening principles, environmental measurements, waste handling and vectors.
-- Correct-option distribution A / B / C / D: 6 / 6 / 7 / 7.
-- Items where the correct option is the unique longest: 6.
+- Total; Tier 1 / 2 / 3: 31; 19 / 10 / 2.
+- Stem form: one-liner / longer direct / vignette / image-led: 22 / 4 / 3 / 2. Counts use image first, then the builder vignette rule, then a 15-word one-liner cutoff; these mechanical categories do not assign difficulty.
+- Lead-in forms used: which/what 8 / identify 0 / other direct or completion 23.
+- Answer-key archetype labels: calculation 2; close discrimination 8; direct recall 15; image 2; management 3; two-step integration 1. These labels describe format; final tier headings govern difficulty.
+- Correct-option distribution A / B / C / D: 8 / 8 / 8 / 7.
+- Items where the correct option is the unique longest: 7 (Q1, Q7, Q11, Q13, Q14, Q28, Q30). Measured by character count after removing option formatting.
 - Negative (EXCEPT/NOT) stems: 0.
 - Subjects (for multi-subject PDFs) vs blueprint: Community Medicine 26/26; the source is a Community Medicine handout.
-- Source pages represented: 3, 8, 12, 14, 24–25, 37–39, 43, 50, 68–70, 72, 91, 104, 106, 112, 118, 123, 126–129.
+- Source pages represented: 3, 8, 12, 14, 20–22, 24–25, 37–39, 43, 48, 50, 68–70, 72, 91, 104, 106, 110, 112, 118, 123, 126–129.
 - Truth validation: pregnancy IFA timing and Anganwadi nutrition norms checked against Indian programme guidance; breastfeeding’s oxytocin and uterine-contraction mechanism against WHO material, without claiming proven prevention of postpartum haemorrhage; microwave indicator and sharps sequence against Indian biomedical-waste guidance; the lack of a residual after boiling against WHO material.
 - Notable rejections: exact day-ten newborn-weight recovery — too rigid for a stand-alone clinical fact; DDT → acetylcholinesterase inhibition — the annotation is false; another Horrocks-dose calculation — the PDF already works that relationship; school-vision referral threshold — programme version insufficiently pinned down; routine post-disaster vaccination — unsafe generalization.
-- Deviations from the target mix, and why: Two remaining items met the two-fact Tier 3 rule. Vector and instrument facts stayed in Tier 1 rather than being wrapped in artificial cases.
+- Deviations from the target mix, and why: Two remaining items met the two-fact Tier 3 rule. Vector and instrument facts stayed in Tier 1 rather than being wrapped in artificial cases. New v9.5 gap items Q29–Q33 (2026-10-01) cover p.20–22, 48, 110; items Q1–Q28 are retained unchanged.
 - Level check: Q11 resembles G20 in direct unit recall; Q27 resembles G19 in requiring a short two-link inference.
 - Image crops checked: Q28 shows only the triangular symbol, without the handwritten “cytotoxic” label; Q2 shows only the scale photograph.
 
@@ -1889,12 +2256,17 @@ The symbol identifies a cytotoxic drug. Discarded cytotoxic drugs belong in the 
 | S4-Q17 | 2 | School meal | Meal → home-food decision | Management | School meal → supplement | 25 |
 | S4-Q18 | 2 | Effective screening window | Opportunity → endpoint | Discrimination | Detect before final critical point | 39 |
 | S4-Q20 | 2 | Population screening | Setting → test profile | Discrimination | Large healthy population → rapid, inexpensive | 37–38 |
-| S4-Q21 | 2 | Waste-sharps pathway | Sterilization → next operation | Management | Heat-treated sharps → destruction | 69 |
+| S4-Q21 | 2 | Waste-sharps metal recovery | Recovery route → further processing | Management | Sterilized sharps → destruction before foundry transfer | 69 |
 | S4-Q22 | 2 | Disinfectant residual | Desired effect → method | Discrimination | Continuing residual → chlorine | 104, 106 |
 | S4-Q23 | 2 | Tap sample | Preparation → collection method | Management | Flushed tap → gentle stream | 112 |
 | S4-Q24 | 2 | Sewage transmission | Exposure → disease | Discrimination | Sewage → poliovirus | 123, 127–128 |
 | S4-Q25 | 2 | P4SR | Hourly rate → four-hour category | Calculation | 1.2 × 4 = 4.8 L → intolerable | 118 |
 | S4-Q27 | 3 | Early breastfeeding | Suckling → oxytocin → uterus | Two-step | Oxytocin → uterine contraction | 14 |
 | S4-Q28 | 3 | Cytotoxic drug waste | Symbol → hazard → colour stream | Image/two-step | C symbol → cytotoxic → yellow | 68, 70 |
+| S4-Q29 | 1 | Problem village by distance | Criterion → distance | Direct recall | No source within → 1.6 km | 110 |
+| S4-Q30 | 1 | School vision screening | Programme → screener | Direct recall | School screening → teachers | 22 |
+| S4-Q31 | 1 | Intellectual-disability cause | Condition → commonest genetic | Direct recall | Genetic → Down syndrome | 21 |
+| S4-Q32 | 2 | High-risk breast screening | Young carrier → test | Close discrimination | BRCA1 at 30 → MRI | 48 |
+| S4-Q33 | 2 | Classroom openings | Floor area → window area | Calculation | 25% of 480 → 120 sq ft | 20 |
 
-BANK COMPLETE — 106 questions in 4 sections. Reserved candidates dropped: exact day-ten newborn-weight recovery (overgeneralized), DDT acetylcholinesterase inhibition (false annotation), and another Horrocks-dose calculation (repeats the PDF’s worked example). Six further questions were removed in the cross-section deduplication recorded in the bank plan.
+BANK COMPLETE — 129 questions in 4 sections (106 retained + 23 v9.5 additions). Reserved candidates dropped: exact day-ten newborn-weight recovery (overgeneralized), DDT acetylcholinesterase inhibition (false annotation), and another Horrocks-dose calculation (repeats the PDF’s worked example). Six further questions were removed in the cross-section deduplication recorded in the bank plan.

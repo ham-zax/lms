@@ -1361,6 +1361,9 @@ const handleBeforeUnload = (event) => {
 // question as the learner advanced. Pulling them all up front lets the
 // activeQuestion watcher read from a local map instead of round-tripping.
 const questionsByName = ref({})
+const sectionMock = computed(() => props.day1Mock || props.day4Mock || props.day3Mock)
+// Section 1 keeps its original quiz name; later sections end in -section-N.
+const mockSection = () => Number(props.quizName.match(/-section-(\d+)$/)?.[1] || 1)
 const quiz = createResource({
 	url: props.day1Mock
 		? 'lms.fmge.day1_mock.get_public_day1_quiz'
@@ -1372,7 +1375,11 @@ const quiz = createResource({
 		? 'lms.fmge.public_quiz.get_public_quiz'
 		: 'lms.lms.utils.get_quiz_with_questions',
 	makeParams() {
-		return props.publicFMGE ? {} : { quiz: props.quizName }
+		return sectionMock.value
+			? { section: mockSection() }
+			: props.publicFMGE
+			? {}
+			: { quiz: props.quizName }
 	},
 	// Keep this resource instance-local: its callbacks update component-local
 	// question and timer state on every mount.
@@ -1533,7 +1540,7 @@ const quizSubmission = createResource({
 		if (props.publicFMGE) {
 			return {
 				results: localStorage.getItem(quiz.data.title) || '[]',
-				...(props.day3Mock && { selection_token: quiz.data.selection_token }),
+				...(sectionMock.value && { section: mockSection() }),
 			}
 		}
 		return {
@@ -1911,7 +1918,6 @@ const resetQuiz = () => {
 
 const tryAgain = () => {
 	resetQuiz()
-	if (props.day3Mock) quiz.reload()
 }
 
 const getInstructions = (question) => {
@@ -2114,7 +2120,7 @@ const checkPracticeAnswer = () => {
 		{
 			question,
 			answer: answers[0],
-			...(props.day3Mock && { selection_token: quiz.data.selection_token }),
+			...(sectionMock.value && { section: mockSection() }),
 		}
 	)
 		.then((feedback) => {

@@ -3,8 +3,8 @@
 Reviewed on 2026-09-30 against `Day4 PSM.pdf`: 155 viewer pages, with p.155 blank.
 All 38 questions, answer letters and cited source pages were checked against
 extracted text and rendered handwritten tables/figures. No answer-letter
-transcription error was found. This bank samples five chapters; it does not
-cover every examinable fact in the PDF.
+transcription error was found. Section 2 (Q39–80) was added on 2026-10-01;
+see the v9.5 expansion below.
 
 | Item | Correction | Evidence |
 | --- | --- | --- |
@@ -46,3 +46,28 @@ request timed out after 55 seconds; archival is unconfirmed. The ORGI web-page
 capture failed with an upstream certificate-verification error. Both sources
 were available through web retrieval; no successful Khiip capture is claimed.
 Other linked primary references were retrieved through web tools, not archived.
+
+## v9.5 expansion — 2026-10-01
+
+Master prompt v9.5 replaces the fixed budget with every distinct High and
+Medium unit that passes the gates. Section 1 (Q1–38) is unchanged, and its
+rebuilt JSON is identical to the previous one. Section 2 (Q39–80, 42
+questions, tiers 18/17/7) covers the 38 Medium units that the budget had cut,
+the restored p.72 post-vasectomy unit, and four new units: p.57 nonoxynol-9,
+p.62 abstinence Pearl Index, p.69 ormeloxifene in PCOD, and p.97 Unani origin.
+
+Each answer was checked against the rendered page. Page claims excluded on
+truth grounds:
+
+- p.72: misidentifying the vas is the most common cause of vasectomy failure.
+- p.111: only four occupational diseases are notifiable.
+- p.114: skin cancer makes up 75% of occupational cancers.
+- p.93: IMR is the best indicator of ASHA's impact.
+- p.69: Saheli is taken once weekly (it is twice weekly for the first 3 months).
+- p.8: the handwritten "unimodal" note for the 3 and 9 example.
+
+Five Medium units stay excluded, with reasons in the inventory's Use column.
+Answer letters in section 2 are A 9, B 11, C 11 and D 11. The correct option is
+the unique longest in 6 of 42 questions, and the build lint reports 0 errors
+and 0 warnings. No Section 2 item has been checked against live external
+references yet.
