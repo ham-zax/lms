@@ -44,7 +44,7 @@ def _course(owner):
 	course.short_introduction = SHORT_INTRODUCTION
 	course.description = COURSE_DESCRIPTION
 	course.append("instructors", {"instructor": owner})
-	course.insert(ignore_permissions=True)
+	course.insert(ignore_permissions=True, set_name=COURSE_NAME)
 	if course.name != COURSE_NAME:
 		frappe.throw(_("The Day 3 course received an unexpected name."), frappe.ValidationError)
 	return course
@@ -147,7 +147,10 @@ def _replace_previous_section_lessons(chapter, sections):
 	if len(chapter.lessons) != len(sections):
 		frappe.throw(_("The Day 3 course has an unexpected lesson layout."), frappe.ValidationError)
 	if frappe.db.count("LMS Enrollment", {"course": chapter.course}):
-		frappe.throw(_("The Day 3 course has enrollments; review its lessons before replacing them."), frappe.ValidationError)
+		frappe.throw(
+			_("The Day 3 course has enrollments; review its lessons before replacing them."),
+			frappe.ValidationError,
+		)
 	lesson_names = []
 	for row, section in zip(chapter.lessons, sections, strict=True):
 		lesson = frappe.get_doc("Course Lesson", row.lesson)
@@ -166,7 +169,9 @@ def _replace_previous_section_lessons(chapter, sections):
 			or (blocks[0].get("data") or {}).get("quiz") != quiz.name
 			or frappe.db.count("LMS Quiz Submission", {"quiz": quiz.name})
 		):
-			frappe.throw(_("The previous Day 3 lessons contain work or unexpected content."), frappe.ValidationError)
+			frappe.throw(
+				_("The previous Day 3 lessons contain work or unexpected content."), frappe.ValidationError
+			)
 		lesson_names.append(lesson.name)
 	chapter.set("lessons", [])
 	chapter.save(ignore_permissions=True)

@@ -89,7 +89,7 @@ This is currently a 50-question PSM section, not a complete 300-question FMGE ex
 
 `lms.fmge.day3_course.install_day3_psm_course` imports the four Day 3 section banks as a 106-question pool and creates one course lesson, **FMGE PSM Day 3 Mock**. The course page links to `/lms/fmge/day3/mock`, which works without signing in while the course is published.
 
-Each new page load or **Try Again** draws 54 questions from the full pool: 27 Tier 1, 21 Tier 2, and 6 Tier 3. The tier slots follow a fixed repeating pattern, while the questions within each tier change. The other 52 questions are set aside for that attempt. Timed and practice modes grade only the selected questions; a signed selection token binds the answer request to that draw. Results are anonymous and not saved.
+Each new page load or **Try Again** draws 54 questions from the full pool: 27 Tier 1, 21 Tier 2, and 6 Tier 3. The tier slots follow a fixed repeating pattern, while the questions within each tier change. Related questions that would cue or answer each other (for example the three light-unit items) are grouped in `CONCEPT_GROUPS` in `day3_mock.py`, and one draw takes at most the group's limit. The other 52 questions are set aside for that attempt. Timed and practice modes grade only the selected questions; a signed selection token binds the answer request to that draw. Results are anonymous and not saved.
 
 On the local bench, start the services described in [HOSTING.md](HOSTING.md), then run:
 

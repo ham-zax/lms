@@ -9,6 +9,7 @@ import hmac
 import json
 import secrets
 import time
+from collections import Counter
 
 import frappe
 from frappe import _
@@ -26,6 +27,31 @@ TIER_COUNTS = {1: 27, 2: 21, 3: 6}
 POOL_COUNTS = {1: 53, 2: 41, 3: 12}
 SOURCE_DOCUMENT = "Day 3 PSM notes"
 TOKEN_MAX_AGE = 24 * 60 * 60
+SYSTEM_RANDOM = secrets.SystemRandom()
+
+# Questions in one group cue or answer each other, so one draw takes at most `limit` of them.
+CONCEPT_GROUPS = {
+	"light units": (1, ("PSM-D3-S1-Q021", "PSM-D3-S4-Q011", "PSM-D3-S4-Q016")),
+	"residual chlorine": (1, ("PSM-D3-S1-Q022", "PSM-D3-S1-Q026", "PSM-D3-S4-Q022")),
+	"water hardness": (1, ("PSM-D3-S1-Q027", "PSM-D3-S2-Q027")),
+	"anganwadi energy": (1, ("PSM-D3-S2-Q015", "PSM-D3-S4-Q004")),
+	"human milk composition": (1, ("PSM-D3-S1-Q023", "PSM-D3-S3-Q016")),
+	"faecal indicators": (1, ("PSM-D3-S2-Q011", "PSM-D3-S3-Q023")),
+	"screening types": (2, ("PSM-D3-S1-Q014", "PSM-D3-S1-Q015", "PSM-D3-S2-Q018", "PSM-D3-S3-Q018")),
+	"vectors": (
+		3,
+		(
+			"PSM-D3-S1-Q011",
+			"PSM-D3-S2-Q013",
+			"PSM-D3-S3-Q012",
+			"PSM-D3-S3-Q014",
+			"PSM-D3-S4-Q012",
+			"PSM-D3-S4-Q013",
+			"PSM-D3-S4-Q014",
+		),
+	),
+}
+GROUP_OF_ID = {qid: group for group, (limit, ids) in CONCEPT_GROUPS.items() for qid in ids}
 
 
 def _sign(payload):
@@ -34,9 +60,13 @@ def _sign(payload):
 
 
 def _token_for(names):
-	payload = base64.urlsafe_b64encode(
-		json.dumps({"q": names, "iat": int(time.time())}, separators=(",", ":")).encode()
-	).decode().rstrip("=")
+	payload = (
+		base64.urlsafe_b64encode(
+			json.dumps({"q": names, "iat": int(time.time())}, separators=(",", ":")).encode()
+		)
+		.decode()
+		.rstrip("=")
+	)
 	return f"{payload}.{_sign(payload)}"
 
 
@@ -48,6 +78,7 @@ def _pool():
 		frappe.throw(_("Day 3 mock is not available."), frappe.DoesNotExistError)
 	rows = {}
 	by_tier = {tier: [] for tier in TIER_COUNTS}
+	group_of = {}
 	for row in quiz.questions:
 		question = frappe.get_doc("LMS Question", row.question)
 		tier = cint(question.fmge_tier)
@@ -55,19 +86,37 @@ def _pool():
 			frappe.throw(_("Day 3 question pool is inconsistent."), frappe.ValidationError)
 		rows[question.name] = (row, question)
 		by_tier[tier].append(question.name)
+		if question.fmge_question_id in GROUP_OF_ID:
+			group_of[question.name] = GROUP_OF_ID[question.fmge_question_id]
 	if {tier: len(names) for tier, names in by_tier.items()} != POOL_COUNTS:
 		frappe.throw(_("Day 3 question pool is incomplete."), frappe.ValidationError)
-	return quiz, rows, by_tier
+	if len(group_of) != len(GROUP_OF_ID):
+		frappe.throw(_("Day 3 question pool is inconsistent."), frappe.ValidationError)
+	return quiz, rows, by_tier, group_of
 
 
-def select_questions(by_tier, sampler=secrets.SystemRandom()):
-	"""Draw within tiers and place each draw in a fixed tier slot."""
+def select_questions(by_tier, sampler=SYSTEM_RANDOM, group_of=None):
+	"""Draw within tiers, respecting concept-group limits, and place each draw in a fixed tier slot."""
 	if {tier: len(by_tier[tier]) for tier in TIER_COUNTS} != POOL_COUNTS:
 		raise ValueError("Day 3 question pool is incomplete")
-	selected = {
-		tier: iter(sampler.sample(by_tier[tier], count))
-		for tier, count in TIER_COUNTS.items()
-	}
+	group_of = group_of or {}
+	used = Counter()
+	selected = {}
+	# Smallest pool first, so group limits never starve the tier with the least slack.
+	for tier in sorted(TIER_COUNTS, key=POOL_COUNTS.get):
+		picks = []
+		for name in sampler.sample(by_tier[tier], len(by_tier[tier])):
+			group = group_of.get(name)
+			if group:
+				if used[group] >= CONCEPT_GROUPS[group][0]:
+					continue
+				used[group] += 1
+			picks.append(name)
+			if len(picks) == TIER_COUNTS[tier]:
+				break
+		if len(picks) != TIER_COUNTS[tier]:
+			raise ValueError("Day 3 question pool cannot fill its tier slots")
+		selected[tier] = iter(picks)
 	return [next(selected[tier]) for tier in TIER_PATTERN]
 
 
@@ -89,7 +138,10 @@ def _selected(token, rows):
 		not isinstance(names, list)
 		or len(names) != len(TIER_PATTERN)
 		or len(set(names)) != len(names)
-		or any(name not in rows or cint(rows[name][1].fmge_tier) != tier for name, tier in zip(names, TIER_PATTERN, strict=True))
+		or any(
+			name not in rows or cint(rows[name][1].fmge_tier) != tier
+			for name, tier in zip(names, TIER_PATTERN, strict=True)
+		)
 	):
 		frappe.throw(_("Invalid Day 3 mock selection."), frappe.ValidationError)
 	return names
@@ -98,8 +150,8 @@ def _selected(token, rows):
 @frappe.whitelist(allow_guest=True, methods=["GET", "POST"])
 @rate_limit(limit=60, seconds=60 * 60)
 def get_public_day3_quiz():
-	quiz, rows, by_tier = _pool()
-	names = select_questions(by_tier)
+	quiz, rows, by_tier, group_of = _pool()
+	names = select_questions(by_tier, group_of=group_of)
 	return {
 		"quiz": {
 			"name": quiz.name,
@@ -146,7 +198,7 @@ def submit_public_day3_quiz(results: str, selection_token: str):
 		frappe.throw(_("Invalid Day 3 answers."), frappe.ValidationError)
 	if not isinstance(answer_rows, list) or len(answer_rows) > len(TIER_PATTERN):
 		frappe.throw(_("Invalid Day 3 answers."), frappe.ValidationError)
-	quiz, rows, _ = _pool()
+	quiz, rows, _by_tier, _group_of = _pool()
 	names = _selected(selection_token, rows)
 	selected = set(names)
 	answers = {}
@@ -181,7 +233,7 @@ def submit_public_day3_quiz(results: str, selection_token: str):
 @frappe.whitelist(allow_guest=True, methods=["POST"])
 @rate_limit(limit=600, seconds=60 * 60)
 def check_public_day3_answer(question: str, answer: str, selection_token: str):
-	_, rows, _ = _pool()
+	_quiz, rows, _by_tier, _group_of = _pool()
 	if question not in _selected(selection_token, rows) or not _is_option(rows[question][1], answer):
 		frappe.throw(_("Invalid Day 3 answer."), frappe.ValidationError)
 	return _feedback(rows[question][1], answer, SOURCE_DOCUMENT, SOURCE_PDF_URL)
